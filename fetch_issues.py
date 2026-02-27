@@ -35,6 +35,7 @@ REPOS_FILE = DATA_DIR / "repos.json"
 TOKEN = os.environ.get("GITHUB_TOKEN", "")
 MAX_ISSUES_PER_REPO = 30          # Cap per repo to keep data manageable
 LOOKBACK_DAYS_NEW = 7             # "New" = opened in last 7 days
+ISSUE_MAX_AGE_DAYS = 90           # Only include issues created in last 3 months
 REQUEST_DELAY = 0.5               # Seconds between API calls (rate-limit friendly)
 
 GOOD_FIRST_ISSUE_LABELS = [
@@ -90,14 +91,17 @@ class GitHub:
     def get_repo_info(self, owner_repo: str) -> dict:
         return self.get(f"/repos/{owner_repo}") or {}
 
-    def get_open_issues(self, owner_repo: str, per_page: int = 30) -> list:
+    def get_open_issues(self, owner_repo: str, per_page: int = 30, since: str = "") -> list:
         """Fetch open issues (excludes PRs)."""
-        items = self.get(f"/repos/{owner_repo}/issues", {
+        params = {
             "state": "open",
             "sort": "created",
             "direction": "desc",
             "per_page": per_page,
-        })
+        }
+        if since:
+            params["since"] = since
+        items = self.get(f"/repos/{owner_repo}/issues", params)
         if not isinstance(items, list):
             return []
         return [i for i in items if "pull_request" not in i]
@@ -211,12 +215,23 @@ def fetch_all():
     issues_by_repo = {}
     repo_stats = {}
 
+    cutoff_dt = datetime.now(timezone.utc) - timedelta(days=ISSUE_MAX_AGE_DAYS)
+    since_param = cutoff_dt.strftime("%Y-%m-%dT%H:%M:%SZ")
+    log.info(f"📅 Only fetching issues created after {since_param} (last {ISSUE_MAX_AGE_DAYS} days)")
+
     for idx, repo in enumerate(unique_repos, 1):
         cat_key, cat_label = repo_to_category[repo]
         log.info(f"  [{idx}/{total}] {repo} ({cat_label})")
 
-        raw_issues = gh.get_open_issues(repo, per_page=MAX_ISSUES_PER_REPO)
+        raw_issues = gh.get_open_issues(repo, per_page=MAX_ISSUES_PER_REPO, since=since_param)
         processed = [process_issue(r, repo, cat_key, cat_label) for r in raw_issues]
+
+        # Hard filter: drop any issues older than the cutoff (since= filters by updated_at, not created_at)
+        processed = [
+            i for i in processed
+            if i["created_at"] >= cutoff_dt.isoformat().replace("+00:00", "Z")
+        ]
+
         all_issues.extend(processed)
         issues_by_repo[repo] = processed
 
