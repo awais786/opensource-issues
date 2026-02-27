@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Django Issue Hub — Open Issues Across the Django Ecosystem</title>
+<meta name="description" content="Live dashboard tracking open issues across 100+ Django, DRF, Wagtail, Celery, Open edX and Python open-source projects. Find contribution opportunities.">
+<meta property="og:title" content="Django Issue Hub">
+<meta property="og:description" content="Track open issues across 100+ Django ecosystem repos">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,500;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg: #0a0f1c;
+    --surface: #111827;
+    --surface2: #1a2236;
+    --border: #1e2a42;
+    --text: #e2e8f0;
+    --text-muted: #7a8ba7;
+    --accent: #22d3ee;
+    --accent-glow: rgba(34, 211, 238, 0.15);
+    --green: #10b981;
+    --green-glow: rgba(16, 185, 129, 0.15);
+    --orange: #f59e0b;
+    --red: #ef4444;
+    --purple: #a78bfa;
+    --font: 'DM Sans', system-ui, sans-serif;
+    --mono: 'JetBrains Mono', monospace;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* --- HEADER --- */
+.hero {
+    position: relative;
+    padding: 60px 24px 40px;
+    text-align: center;
+    overflow: hidden;
+    border-bottom: 1px solid var(--border);
+}
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 0%, rgba(34,211,238,0.08) 0%, transparent 70%),
+                radial-gradient(ellipse at 20% 100%, rgba(167,139,250,0.06) 0%, transparent 50%);
+    pointer-events: none;
+}
+.hero h1 {
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    position: relative;
+}
+.hero h1 .accent { color: var(--accent); }
+.hero p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin-top: 8px;
+    position: relative;
+}
+.hero .badge {
+    display: inline-block;
+    background: var(--accent-glow);
+    border: 1px solid rgba(34,211,238,0.3);
+    color: var(--accent);
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-family: var(--mono);
+    margin-top: 16px;
+    position: relative;
+}
+
+/* --- STATS ROW --- */
+.stats-row {
+    display: flex;
+    gap: 12px;
+    padding: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.stat-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px 28px;
+    text-align: center;
+    flex: 1;
+    min-width: 140px;
+    max-width: 200px;
+    transition: border-color 0.2s;
+}
+.stat-card:hover { border-color: var(--accent); }
+.stat-val {
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: var(--mono);
+    line-height: 1.2;
+}
+.stat-val.accent { color: var(--accent); }
+.stat-val.green { color: var(--green); }
+.stat-val.orange { color: var(--orange); }
+.stat-val.red { color: var(--red); }
+.stat-val.purple { color: var(--purple); }
+.stat-label {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-top: 4px;
+}
+
+/* --- CONTAINER --- */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* --- SECTION TITLES --- */
+.section-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 40px 0 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.section-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+}
+
+/* --- CATEGORY GRID --- */
+.cat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 14px;
+    margin-bottom: 40px;
+}
+.cat-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.cat-card:hover, .cat-card.active {
+    border-color: var(--accent);
+    background: var(--surface2);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(34,211,238,0.08);
+}
+.cat-icon { font-size: 1.6rem; margin-bottom: 6px; }
+.cat-name { font-weight: 600; font-size: 1rem; }
+.cat-desc { color: var(--text-muted); font-size: 0.82rem; margin: 4px 0 10px; }
+.cat-stats {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    font-size: 0.75rem;
+    font-family: var(--mono);
+    color: var(--text-muted);
+}
+.new-badge {
+    color: var(--accent);
+    background: var(--accent-glow);
+    padding: 1px 8px;
+    border-radius: 10px;
+}
+.gfi-badge {
+    color: var(--green);
+    background: var(--green-glow);
+    padding: 1px 8px;
+    border-radius: 10px;
+}
+
+/* --- FILTERS --- */
+.filters {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    align-items: center;
+}
+.filter-btn {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-family: var(--font);
+    cursor: pointer;
+    transition: all 0.15s;
+}
+.filter-btn:hover { border-color: var(--accent); color: var(--text); }
+.filter-btn.active { background: var(--accent-glow); border-color: var(--accent); color: var(--accent); }
+.search-input {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-family: var(--font);
+    width: 260px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+.search-input:focus { border-color: var(--accent); }
+.search-input::placeholder { color: var(--text-muted); }
+
+/* --- ISSUE TABLE --- */
+.issue-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.issue-table thead th {
+    text-align: left;
+    padding: 10px 12px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-muted);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    background: var(--bg);
+    z-index: 10;
+}
+.issue-row {
+    border-bottom: 1px solid var(--border);
+    transition: background 0.15s;
+}
+.issue-row:hover { background: var(--surface); }
+.issue-row td { padding: 14px 12px; vertical-align: top; }
+.col-priority { width: 40px; text-align: center; font-size: 0.9rem; }
+.col-category { width: 140px; }
+.col-date { width: 100px; font-family: var(--mono); font-size: 0.82rem; color: var(--text-muted); }
+
+.issue-title a {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.15s;
+}
+.issue-title a:hover { color: var(--accent); }
+.issue-meta {
+    display: flex;
+    gap: 12px;
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    margin-top: 4px;
+    flex-wrap: wrap;
+}
+.repo-name {
+    font-family: var(--mono);
+    color: var(--purple);
+    font-size: 0.78rem;
+}
+.issue-num { font-family: var(--mono); }
+.new-tag {
+    display: inline-block;
+    background: var(--accent);
+    color: var(--bg);
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 1px 6px;
+    border-radius: 4px;
+    margin-right: 6px;
+    vertical-align: middle;
+    letter-spacing: 0.04em;
+}
+.cat-tag {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    background: var(--surface2);
+    padding: 2px 10px;
+    border-radius: 10px;
+    white-space: nowrap;
+}
+
+/* Labels */
+.issue-labels { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 6px; }
+.label {
+    font-size: 0.7rem;
+    padding: 2px 8px;
+    border-radius: 10px;
+    background: var(--surface2);
+    color: var(--text-muted);
+    border: 1px solid var(--border);
+}
+.label-bug { border-color: rgba(239,68,68,0.4); color: var(--red); background: rgba(239,68,68,0.08); }
+.label-feature { border-color: rgba(167,139,250,0.4); color: var(--purple); background: rgba(167,139,250,0.08); }
+.label-gfi { border-color: rgba(16,185,129,0.4); color: var(--green); background: rgba(16,185,129,0.08); }
+.label-security { border-color: rgba(239,68,68,0.6); color: #fca5a5; background: rgba(239,68,68,0.12); }
+.label-help { border-color: rgba(245,158,11,0.4); color: var(--orange); background: rgba(245,158,11,0.08); }
+
+/* --- TOP REPOS BAR CHART --- */
+.top-repos { margin: 30px 0; }
+.repo-bar-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 6px 0;
+}
+.repo-bar-name {
+    width: 180px;
+    text-align: right;
+    font-family: var(--mono);
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    flex-shrink: 0;
+}
+.repo-bar-track {
+    flex: 1;
+    height: 20px;
+    background: var(--surface);
+    border-radius: 4px;
+    overflow: hidden;
+}
+.repo-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent), var(--purple));
+    border-radius: 4px;
+    transition: width 0.8s ease;
+}
+.repo-bar-count {
+    width: 50px;
+    font-family: var(--mono);
+    font-size: 0.85rem;
+    color: var(--text);
+    font-weight: 600;
+}
+
+/* --- FOOTER --- */
+.footer {
+    text-align: center;
+    padding: 40px 24px;
+    color: var(--text-muted);
+    font-size: 0.82rem;
+    border-top: 1px solid var(--border);
+    margin-top: 60px;
+}
+.footer a { color: var(--accent); text-decoration: none; }
+
+/* --- EMPTY STATE --- */
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--text-muted);
+}
+.empty-state .icon { font-size: 3rem; margin-bottom: 12px; }
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    .stats-row { gap: 8px; }
+    .stat-card { min-width: 100px; padding: 14px; }
+    .stat-val { font-size: 1.4rem; }
+    .col-category, .col-date { display: none; }
+    .repo-bar-name { width: 100px; font-size: 0.72rem; }
+    .search-input { width: 100%; }
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+    <h1>🐍 Django <span class="accent">Issue Hub</span></h1>
+    <p>Live open issues across 108+ Django ecosystem projects</p>
+    <div class="badge">Updated: 2026-02-27 09:54 UTC</div>
+</div>
+
+<!-- STATS -->
+<div class="stats-row">
+    <div class="stat-card">
+        <div class="stat-val accent">108</div>
+        <div class="stat-label">Repos Tracked</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-val">0</div>
+        <div class="stat-label">Open Issues</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-val green">0</div>
+        <div class="stat-label">New This Week</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-val orange">0</div>
+        <div class="stat-label">Good First Issues</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-val red">0</div>
+        <div class="stat-label">Bugs</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-val purple">0</div>
+        <div class="stat-label">Feature Requests</div>
+    </div>
+</div>
+
+<div class="container">
+
+    <!-- CATEGORIES -->
+    <div class="section-title">📂 Ecosystem Categories</div>
+    <div class="cat-grid">
+        <div class="cat-card" data-category="django_core">
+            <div class="cat-icon">🏗️</div>
+            <div class="cat-name">Django Core</div>
+            <div class="cat-desc">The Django framework itself and official packages</div>
+            <div class="cat-stats">
+                <span>6 repos</span>
+                <span>0 issues</span>
+                
+                
+            </div>
+        </div>
+        <div class="cat-card" data-category="rest_api">
+            <div class="cat-icon">🔌</div>
+            <div class="cat-name">REST & API</div>
+            <div class="cat-desc">API frameworks and tools</div>
+            <div class="cat-stats">
+                <span>12 repos</span>
+                <span>0 issues</span>
+                
+                
+            </div>
+        </div>
+        <div class="cat-card" data-category="graphql">
+            <div class="cat-icon">◈</div>
+            <div class="cat-name">GraphQL</div>
+            <div class="cat-desc">GraphQL integrations for Django</div>
+            <div class="cat-stats">
+                <span>3 repos</span>
+                <span>0 issues</span>
+                
+                
+            </div>
+        </div>
+        <div class="cat-card" data-category="cms">
+            <div class="cat-icon">📝</div>
+            <div class="cat-name">CMS & Content</div>
+            <div class="cat-desc">Content management systems built on Django</div>
+            <div class="cat-stats">
+                <span>8 repos</span>
+                <span>0 issues</span>
+                
+                
+            </div>
+        </div>
+        <div class="cat-card" data-category="openedx">
+            <div class="cat-icon">🎓</div>
+            <div class="cat-name">Open edX</div>
+            <div class="cat-desc">Open edX learning platform ecosystem</div>
+            <div class="cat-stats">
+                <span>10 repos</span>
+                <span>0 issues</span>
+                
+                
+            </div>
+        </div>
+        <div class="cat-card" data-category="task_queues">
+            <div class="cat-icon">⚡</div>
+            <div class="cat-name">Task Queues & Async</div>
+            <div class="cat-desc">Background task processing</div>
+            <div class="cat-stats">
+                <span>8 repos</span>
+                <span>0 issues</span>
+                
+                
+            </div>
+        </div>
+        <div class="cat-card" data-category="auth_security">
+            <div class="cat-icon">🔐</div>
+            <div class="cat-name">Auth & Security</div>
+            <div class="cat-desc">Authentication, authorization, and security</div>
+            <div class="cat-stats">
+                <span>7 repos</span>
+                <span>0 issues</span>
+                
+                
+            </div>
+        </div>
+        <div class="cat-card" data-category="database_orm">
+            <div class="cat-icon">🗄️</div>
+            <div class="cat-name">Database & ORM</div>
+            <div class="cat-desc">Database tools, migrations, and ORM extensions</div>
+            <div class="cat-stats">
+                <span>8 repos</span>
+                <span>0 issues</span>
+                
+                
+            </div>
+        </div>
+        <div class="cat-card" data-category="admin_ui">
+            <div class="cat-icon">🎨</div>
+            <div class="cat-name">Admin & UI</div>
+            <div class="cat-desc">Admin panels, dashboards, and UI tools</div>
+            <div class="cat-stats">
+                <span>7 repos</span>
+                <span>0 issues</span>
+                
+                
+            </div>
+        </div>
+        <div class="cat-card" data-category="forms_frontend">
+            <div class="cat-icon">📋</div>
+            <div class="cat-name">Forms & Frontend</div>
+            <div class="cat-desc">Form handling, HTMX, templates</div>
+            <div class="cat-stats">
+                <span>6 repos</span>
+                <span>0 issues</span>
+                
+                
+            </div>
+        </div>
+        <div class="cat-card" data-category="ecommerce">
+            <div class="cat-icon">🛒</div>
+            <div class="cat-name">E-Commerce</div>
+            <div class="cat-desc">Online store and payment frameworks</div>
+            <div class="cat-stats">
+                <span>4 repos</span>
+                <span>0 issues</span>
+                
+                
+            </div>
+        </div>
+        <div class="cat-card" data-category="storage_files">
+            <div class="cat-icon">📁</div>
+            <div class="cat-name">Storage & Files</div>
+            <div class="cat-desc">File handling, storage backends, media</div>
+            <div class="cat-stats">
+                <span>4 repos</span>
+                <span>0 issues</span>
+                
+                
+            </div>
+        </div>
+        <div class="cat-card" data-category="config_devops">
+            <div class="cat-icon">⚙️</div>
+            <div class="cat-name">Config & DevOps</div>
+            <div class="cat-desc">Configuration, deployment, monitoring</div>
+            <div class="cat-stats">
+                <span>9 repos</span>
+                <span>0 issues</span>
+                
+                
+            </div>
+        </div>
+        <div class="cat-card" data-category="testing">
+            <div class="cat-icon">🧪</div>
+            <div class="cat-name">Testing</div>
+            <div class="cat-desc">Testing tools and factories</div>
+            <div class="cat-stats">
+                <span>4 repos</span>
+                <span>0 issues</span>
+                
+                
+            </div>
+        </div>
+        <div class="cat-card" data-category="search">
+            <div class="cat-icon">🔍</div>
+            <div class="cat-name">Search</div>
+            <div class="cat-desc">Search engines and indexing</div>
+            <div class="cat-stats">
+                <span>3 repos</span>
+                <span>0 issues</span>
+                
+                
+            </div>
+        </div>
+        <div class="cat-card" data-category="i18n_geo">
+            <div class="cat-icon">🌍</div>
+            <div class="cat-name">i18n & Geo</div>
+            <div class="cat-desc">Internationalization, localization, geographic tools</div>
+            <div class="cat-stats">
+                <span>4 repos</span>
+                <span>0 issues</span>
+                
+                
+            </div>
+        </div>
+        <div class="cat-card" data-category="logging_monitoring">
+            <div class="cat-icon">📊</div>
+            <div class="cat-name">Logging & Monitoring</div>
+            <div class="cat-desc">Logging, profiling, error tracking</div>
+            <div class="cat-stats">
+                <span>4 repos</span>
+                <span>0 issues</span>
+                
+                
+            </div>
+        </div></div>
+
+    <!-- TOP REPOS -->
+    <div class="section-title">📊 Top Repos by Open Issues</div>
+    <div class="top-repos"></div>
+
+    <!-- FILTERS -->
+    <div class="section-title">🗂️ All Issues</div>
+    <div class="filters">
+        <input type="text" class="search-input" id="searchInput" placeholder="Search issues..." oninput="filterIssues()">
+        <button class="filter-btn active" data-filter="all" onclick="setFilter(this)">All</button>
+        <button class="filter-btn" data-filter="new" onclick="setFilter(this)">🆕 New</button>
+        <button class="filter-btn" data-filter="gfi" onclick="setFilter(this)">🟢 Good First Issue</button>
+        <button class="filter-btn" data-filter="bug" onclick="setFilter(this)">🐛 Bugs</button>
+        <button class="filter-btn" data-filter="critical" onclick="setFilter(this)">🔴 Critical</button>
+    </div>
+
+    <!-- ISSUE TABLE -->
+    <div style="overflow-x:auto;">
+    <table class="issue-table">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Issue</th>
+                <th>Category</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody id="issueBody">
+            <tr><td colspan="4"><div class="empty-state"><div class="icon">🚀</div><p>No issues fetched yet. Run the GitHub Action to populate data!</p></div></td></tr>
+        </tbody>
+    </table>
+    </div>
+
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+    <p>
+        <strong>Django Issue Hub</strong> — Open-source project tracking for the Django community<br>
+        Data refreshed daily via GitHub Actions · <a href="https://github.com/YOUR_USERNAME/django-issue-hub">⭐ Star on GitHub</a> ·
+        <a href="data/issues.json">📄 Raw JSON API</a>
+    </p>
+</div>
+
+<script>
+// --- Filtering logic ---
+let activeFilter = 'all';
+let activeCategory = null;
+
+function setFilter(btn) {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    activeFilter = btn.dataset.filter;
+    activeCategory = null;
+    document.querySelectorAll('.cat-card').forEach(c => c.classList.remove('active'));
+    filterIssues();
+}
+
+// Category card click
+document.querySelectorAll('.cat-card').forEach(card => {
+    card.addEventListener('click', () => {
+        const cat = card.dataset.category;
+        if (activeCategory === cat) {
+            activeCategory = null;
+            card.classList.remove('active');
+        } else {
+            document.querySelectorAll('.cat-card').forEach(c => c.classList.remove('active'));
+            card.classList.add('active');
+            activeCategory = cat;
+        }
+        filterIssues();
+    });
+});
+
+function filterIssues() {
+    const search = document.getElementById('searchInput').value.toLowerCase();
+    const rows = document.querySelectorAll('.issue-row');
+    let visible = 0;
+
+    rows.forEach(row => {
+        let show = true;
+
+        // Category filter
+        if (activeCategory && row.dataset.category !== activeCategory) show = false;
+
+        // Button filter
+        if (activeFilter === 'new' && row.dataset.new !== 'true') show = false;
+        if (activeFilter === 'gfi' && row.dataset.gfi !== 'true') show = false;
+        if (activeFilter === 'bug' && row.dataset.priority !== 'high') show = false;
+        if (activeFilter === 'critical' && row.dataset.priority !== 'critical') show = false;
+
+        // Search
+        if (search && !row.textContent.toLowerCase().includes(search)) show = false;
+
+        row.style.display = show ? '' : 'none';
+        if (show) visible++;
+    });
+}
+</script>
+</body>
+</html>

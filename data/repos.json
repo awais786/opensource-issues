@@ -1,0 +1,237 @@
+{
+  "meta": {
+    "name": "Django Ecosystem Issue Hub",
+    "description": "Live index of open issues across 100+ Django/Python open-source projects",
+    "version": "1.0.0",
+    "url": "https://github.com/YOUR_USERNAME/django-issue-hub",
+    "total_repos": 108
+  },
+  "categories": {
+    "django_core": {
+      "label": "Django Core",
+      "icon": "🏗️",
+      "description": "The Django framework itself and official packages",
+      "repos": [
+        "django/django",
+        "django/channels",
+        "django/asgiref",
+        "django/daphne",
+        "django/djangoproject.com",
+        "django/deps"
+      ]
+    },
+    "rest_api": {
+      "label": "REST & API",
+      "icon": "🔌",
+      "description": "API frameworks and tools",
+      "repos": [
+        "encode/django-rest-framework",
+        "encode/starlette",
+        "encode/httpx",
+        "axnsan12/drf-yasg",
+        "tfranzel/drf-spectacular",
+        "vbabiy/djangorestframework-camel-case",
+        "philipn/django-rest-framework-filters",
+        "camillobruni/django-rest-framework-simplejwt",
+        "James1345/django-rest-knox",
+        "rsinger86/drf-access-policy",
+        "em1208/drf-friendly-errors",
+        "miki725/django-rest-framework-bulk"
+      ]
+    },
+    "graphql": {
+      "label": "GraphQL",
+      "icon": "◈",
+      "description": "GraphQL integrations for Django",
+      "repos": [
+        "graphql-python/graphene-django",
+        "strawberry-graphql/strawberry-django",
+        "graphql-python/graphene"
+      ]
+    },
+    "cms": {
+      "label": "CMS & Content",
+      "icon": "📝",
+      "description": "Content management systems built on Django",
+      "repos": [
+        "wagtail/wagtail",
+        "wagtail/django-modelcluster",
+        "wagtail/wagtail-localize",
+        "django-cms/django-cms",
+        "django-cms/djangocms-text-ckeditor",
+        "django-cms/djangocms-blog",
+        "mezzanine/mezzanine",
+        "stephenmcd/mezzanine"
+      ]
+    },
+    "openedx": {
+      "label": "Open edX",
+      "icon": "🎓",
+      "description": "Open edX learning platform ecosystem",
+      "repos": [
+        "openedx/edx-platform",
+        "openedx/frontend-app-learning",
+        "openedx/edx-ora2",
+        "openedx/credentials",
+        "openedx/edx-notes-api",
+        "openedx/xblock-sdk",
+        "openedx/edx-proctoring",
+        "openedx/course-discovery",
+        "openedx/ecommerce",
+        "openedx/edx-analytics-dashboard"
+      ]
+    },
+    "task_queues": {
+      "label": "Task Queues & Async",
+      "icon": "⚡",
+      "description": "Background task processing",
+      "repos": [
+        "celery/celery",
+        "celery/django-celery-beat",
+        "celery/django-celery-results",
+        "celery/kombu",
+        "celery/billiard",
+        "rq/django-rq",
+        "Koed00/django-q",
+        "coleifer/huey"
+      ]
+    },
+    "auth_security": {
+      "label": "Auth & Security",
+      "icon": "🔐",
+      "description": "Authentication, authorization, and security",
+      "repos": [
+        "pennersr/django-allauth",
+        "jazzband/django-oauth-toolkit",
+        "jazzband/django-two-factor-auth",
+        "django-guardian/django-guardian",
+        "jazzband/django-simple-history",
+        "James1345/django-rest-knox",
+        "mozilla/django-csp"
+      ]
+    },
+    "database_orm": {
+      "label": "Database & ORM",
+      "icon": "🗄️",
+      "description": "Database tools, migrations, and ORM extensions",
+      "repos": [
+        "django-mptt/django-mptt",
+        "django-treebeard/django-treebeard",
+        "jazzband/django-polymorphic",
+        "carltongibson/django-filter",
+        "jazzband/django-model-utils",
+        "django-json-api/django-rest-framework-json-api",
+        "dmkuber/django-lifecycle",
+        "scholrly/neo4django"
+      ]
+    },
+    "admin_ui": {
+      "label": "Admin & UI",
+      "icon": "🎨",
+      "description": "Admin panels, dashboards, and UI tools",
+      "repos": [
+        "jazzband/django-debug-toolbar",
+        "fabiocaccamo/django-admin-interface",
+        "sehmaschine/django-grappelli",
+        "django-jet-admin/django-jet-reboot",
+        "farridav/django-jazzmin",
+        "viewflow/django-material",
+        "siliconcow/django-unfold"
+      ]
+    },
+    "forms_frontend": {
+      "label": "Forms & Frontend",
+      "icon": "📋",
+      "description": "Form handling, HTMX, templates",
+      "repos": [
+        "django-crispy-forms/django-crispy-forms",
+        "jazzband/django-widget-tweaks",
+        "adamchainz/django-htmx",
+        "adamchainz/django-browser-reload",
+        "django-compressor/django-compressor",
+        "jrief/django-formset"
+      ]
+    },
+    "ecommerce": {
+      "label": "E-Commerce",
+      "icon": "🛒",
+      "description": "Online store and payment frameworks",
+      "repos": [
+        "django-oscar/django-oscar",
+        "saleor/saleor",
+        "django-payments/django-payments",
+        "dj-stripe/dj-stripe"
+      ]
+    },
+    "storage_files": {
+      "label": "Storage & Files",
+      "icon": "📁",
+      "description": "File handling, storage backends, media",
+      "repos": [
+        "jschneier/django-storages",
+        "matthewwithanm/django-imagekit",
+        "johnsensible/django-sendfile",
+        "codingjoe/django-pictures"
+      ]
+    },
+    "config_devops": {
+      "label": "Config & DevOps",
+      "icon": "⚙️",
+      "description": "Configuration, deployment, monitoring",
+      "repos": [
+        "joke2k/django-environ",
+        "cookiecutter/cookiecutter-django",
+        "django-extensions/django-extensions",
+        "adamchainz/django-cors-headers",
+        "jazzband/django-configurations",
+        "jazzband/django-redis",
+        "niwinz/django-redis",
+        "evansd/whitenoise",
+        "getsentry/sentry-python"
+      ]
+    },
+    "testing": {
+      "label": "Testing",
+      "icon": "🧪",
+      "description": "Testing tools and factories",
+      "repos": [
+        "FactoryBoy/factory_boy",
+        "model-bakers/model_bakery",
+        "pytest-dev/pytest-django",
+        "jazzband/django-nose"
+      ]
+    },
+    "search": {
+      "label": "Search",
+      "icon": "🔍",
+      "description": "Search engines and indexing",
+      "repos": [
+        "django-haystack/django-haystack",
+        "django-es/django-elasticsearch-dsl",
+        "wagtail/wagtail" 
+      ]
+    },
+    "i18n_geo": {
+      "label": "i18n & Geo",
+      "icon": "🌍",
+      "description": "Internationalization, localization, geographic tools",
+      "repos": [
+        "django/django-localflavor",
+        "deschler/django-modeltranslation",
+        "django-parler/django-parler",
+        "GeoNode/geonode"
+      ]
+    },
+    "logging_monitoring": {
+      "label": "Logging & Monitoring",
+      "icon": "📊",
+      "description": "Logging, profiling, error tracking",
+      "repos": [
+        "jazzband/django-silk",
+        "tomchristie/django-pdb",
+        "bradmontgomery/django-querycount",
+        "yourlabs/django-session-security"
+      ]
+    }
+  }
+}
