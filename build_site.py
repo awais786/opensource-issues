@@ -579,7 +579,7 @@ body {{
     <div class="top-repos">{top_repos_html}</div>
 
     <!-- FILTERS -->
-    <div class="section-title">🗂️ All Issues</div>
+    <div class="section-title" id="issues-section">🗂️ All Issues</div>
     <div class="filters">
         <input type="text" class="search-input" id="searchInput" placeholder="Search issues..." oninput="filterIssues()">
         <button class="filter-btn active" data-filter="all" onclick="setFilter(this)">All</button>
@@ -644,6 +644,7 @@ document.querySelectorAll('.cat-card').forEach(card => {{
             activeCategory = cat;
         }}
         filterIssues();
+        document.getElementById('issues-section').scrollIntoView({{ behavior: 'smooth' }});
     }});
 }});
 
