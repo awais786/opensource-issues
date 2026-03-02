@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """
-Django Issue Hub — Static Site Builder
-========================================
+Open Source Issue Hub — Static Site Builder
+============================================
 Generates a beautiful static HTML dashboard from the fetched issue data.
-Output goes to docs/ for GitHub Pages deployment.
+Output goes to index.html for GitHub Pages deployment.
 """
 
 import json
@@ -14,6 +14,13 @@ from datetime import datetime, timezone
 SCRIPT_DIR = Path(__file__).parent
 ROOT = SCRIPT_DIR
 DATA_DIR = ROOT / "data"
+
+ECOSYSTEM_META = {
+    "django": {"label": "Django", "icon": "🏗️"},
+    "python": {"label": "Python", "icon": "🐍"},
+    "react":  {"label": "React",  "icon": "⚛️"},
+    "rust":   {"label": "Rust",   "icon": "🦀"},
+}
 
 
 def load_json(path: Path) -> dict | list:
@@ -30,10 +37,9 @@ def build_site():
 
     if not stats:
         print("⚠ No stats.json found. Run fetch_issues.py first.")
-        # Generate with placeholder data for initial deploy
         stats = {
             "generated_at": datetime.now(timezone.utc).isoformat(),
-            "total_repos": 108,
+            "total_repos": 156,
             "total_issues_fetched": 0,
             "total_new_issues": 0,
             "total_bugs": 0,
@@ -43,6 +49,7 @@ def build_site():
             "total_security": 0,
             "by_priority": {"critical": 0, "high": 0, "medium": 0, "low": 0},
             "by_category": {},
+            "by_ecosystem": {},
             "repos": {},
         }
 
@@ -51,38 +58,106 @@ def build_site():
 
     categories = repos_config.get("categories", {}) if repos_config else {}
 
-    # --- Build category cards ---
-    category_cards_html = ""
+    # ---------------------------------------------------------------------------
+    # Group categories by ecosystem (preserving order)
+    # ---------------------------------------------------------------------------
+    ecosystems_order = []
+    categories_by_ecosystem = {}
     for cat_key, cat_data in categories.items():
-        cat_stats = stats.get("by_category", {}).get(cat_key, {})
-        total = cat_stats.get("total_issues", 0)
-        new = cat_stats.get("new_issues", 0)
-        gfi = cat_stats.get("good_first_issues", 0)
-        num_repos = cat_stats.get("total_repos", len(cat_data.get("repos", [])))
+        eco = cat_data.get("ecosystem", "django")
+        if eco not in ecosystems_order:
+            ecosystems_order.append(eco)
+            categories_by_ecosystem[eco] = []
+        categories_by_ecosystem[eco].append((cat_key, cat_data))
 
-        category_cards_html += f"""
-        <div class="cat-card" data-category="{cat_key}">
-            <div class="cat-icon">{cat_data.get('icon', '📦')}</div>
-            <div class="cat-name">{cat_data.get('label', cat_key)}</div>
-            <div class="cat-desc">{cat_data.get('description', '')}</div>
-            <div class="cat-stats">
-                <span>{num_repos} repos</span>
-                <span>{total} issues</span>
-                {f'<span class="new-badge">{new} new</span>' if new else ''}
-                {f'<span class="gfi-badge">{gfi} good first</span>' if gfi else ''}
-            </div>
-        </div>"""
+    # Fall back: if no ecosystems found, treat all as django
+    if not ecosystems_order:
+        ecosystems_order = ["django"]
+        categories_by_ecosystem["django"] = list(categories.items())
 
-    # --- Build issue rows ---
-    # Sort: new first, then by priority, then by date
+    repo_stats = stats.get("repos", {})
+
+    # ---------------------------------------------------------------------------
+    # Build ecosystem tab bar
+    # ---------------------------------------------------------------------------
+    tab_buttons_html = ""
+    for i, eco_key in enumerate(ecosystems_order):
+        meta = ECOSYSTEM_META.get(eco_key, {"label": eco_key.title(), "icon": "📦"})
+        active_cls = " active" if i == 0 else ""
+        tab_buttons_html += f'<button class="eco-tab{active_cls}" data-eco="{eco_key}" onclick="setEcosystem(this)">{meta["icon"]} {meta["label"]}</button>\n        '
+
+    # ---------------------------------------------------------------------------
+    # Build per-ecosystem panels (category cards + top repos chart)
+    # ---------------------------------------------------------------------------
+    ecosystem_panels_html = ""
+    for i, eco_key in enumerate(ecosystems_order):
+        eco_cats = categories_by_ecosystem.get(eco_key, [])
+        meta = ECOSYSTEM_META.get(eco_key, {"label": eco_key.title(), "icon": "📦"})
+        eco_label = meta["label"]
+
+        # Category cards
+        eco_category_cards = ""
+        for cat_key, cat_data in eco_cats:
+            cat_stats = stats.get("by_category", {}).get(cat_key, {})
+            total = cat_stats.get("total_issues", 0)
+            new = cat_stats.get("new_issues", 0)
+            gfi = cat_stats.get("good_first_issues", 0)
+            num_repos = cat_stats.get("total_repos", len(cat_data.get("repos", [])))
+
+            eco_category_cards += f"""
+            <div class="cat-card" data-category="{cat_key}">
+                <div class="cat-icon">{cat_data.get('icon', '📦')}</div>
+                <div class="cat-name">{cat_data.get('label', cat_key)}</div>
+                <div class="cat-desc">{cat_data.get('description', '')}</div>
+                <div class="cat-stats">
+                    <span>{num_repos} repos</span>
+                    <span>{total} issues</span>
+                    {f'<span class="new-badge">{new} new</span>' if new else ''}
+                    {f'<span class="gfi-badge">{gfi} good first</span>' if gfi else ''}
+                </div>
+            </div>"""
+
+        # Top repos for this ecosystem
+        eco_repo_names = {r for _, cat_data in eco_cats for r in cat_data.get("repos", [])}
+        eco_repo_stats = [(r, v) for r, v in repo_stats.items() if r in eco_repo_names]
+        eco_top_repos = sorted(eco_repo_stats, key=lambda x: x[1].get("total_open_issues", 0), reverse=True)[:10]
+        eco_top_repos_html = ""
+        if eco_top_repos:
+            max_count = eco_top_repos[0][1].get("total_open_issues", 1) or 1
+            for repo, rs in eco_top_repos:
+                bar_width = min(100, (rs.get("total_open_issues", 0) / max_count) * 100)
+                eco_top_repos_html += f"""
+            <div class="repo-bar-row">
+                <div class="repo-bar-name">{repo.split('/')[-1]}</div>
+                <div class="repo-bar-track">
+                    <div class="repo-bar-fill" style="width:{bar_width}%"></div>
+                </div>
+                <div class="repo-bar-count">{rs.get('total_open_issues', 0)}</div>
+            </div>"""
+        else:
+            eco_top_repos_html = '<p style="color:var(--text-muted);padding:20px 0;">No repo data yet — run the fetcher to populate.</p>'
+
+        display_style = "" if i == 0 else ' style="display:none"'
+        ecosystem_panels_html += f"""
+    <div class="ecosystem-panel" data-ecosystem="{eco_key}"{display_style}>
+        <div class="section-title">📂 {eco_label} Categories</div>
+        <div class="cat-grid">{eco_category_cards}
+        </div>
+        <div class="section-title">📊 Top {eco_label} Repos by Open Issues</div>
+        <div class="top-repos">{eco_top_repos_html}
+        </div>
+    </div>"""
+
+    # ---------------------------------------------------------------------------
+    # Build issue rows
+    # ---------------------------------------------------------------------------
     priority_order = {"critical": 0, "high": 1, "medium": 2, "low": 3}
     sorted_issues = sorted(all_issues, key=lambda i: (
         0 if i.get("is_new") else 1,
         priority_order.get(i.get("priority", "low"), 4),
         i.get("created_at", ""),
-    ), reverse=False)
+    ))
 
-    # For initial load, limit to newest 200
     display_issues = sorted_issues[:500]
 
     issue_rows_html = ""
@@ -106,13 +181,14 @@ def build_site():
         new_tag = '<span class="new-tag">NEW</span>' if iss.get("is_new") else ""
         priority = iss.get("priority", "low")
         priority_dot = {"critical": "🔴", "high": "🟠", "medium": "🟡", "low": "🟢"}.get(priority, "⚪")
-        repo_short = iss.get("repo", "").split("/")[-1]
+        eco = iss.get("ecosystem", "django")
 
         issue_rows_html += f"""
         <tr class="issue-row" data-category="{iss.get('category', '')}" data-priority="{priority}"
             data-new="{str(iss.get('is_new', False)).lower()}"
             data-gfi="{str(iss.get('is_good_first_issue', False)).lower()}"
-            data-repo="{iss.get('repo', '')}">
+            data-repo="{iss.get('repo', '')}"
+            data-ecosystem="{eco}">
             <td class="col-priority">{priority_dot}</td>
             <td class="col-issue">
                 <div class="issue-title">
@@ -131,22 +207,9 @@ def build_site():
             <td class="col-date">{iss.get('created_at', '')[:10]}</td>
         </tr>"""
 
-    # --- Top repos by issues ---
-    repo_stats = stats.get("repos", {})
-    top_repos = sorted(repo_stats.items(), key=lambda x: x[1].get("total_open_issues", 0), reverse=True)[:15]
-    top_repos_html = ""
-    for repo, rs in top_repos:
-        bar_width = min(100, (rs.get("total_open_issues", 0) / max(1, top_repos[0][1].get("total_open_issues", 1))) * 100)
-        top_repos_html += f"""
-        <div class="repo-bar-row">
-            <div class="repo-bar-name">{repo.split('/')[-1]}</div>
-            <div class="repo-bar-track">
-                <div class="repo-bar-fill" style="width:{bar_width}%"></div>
-            </div>
-            <div class="repo-bar-count">{rs.get('total_open_issues', 0)}</div>
-        </div>"""
-
-    # --- Render full HTML ---
+    # ---------------------------------------------------------------------------
+    # Render full HTML
+    # ---------------------------------------------------------------------------
     generated_at = stats.get("generated_at", "never")
     if isinstance(generated_at, str) and len(generated_at) > 10:
         generated_at = generated_at[:16].replace("T", " ") + " UTC"
@@ -156,10 +219,10 @@ def build_site():
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Django Issue Hub — Open Issues Across the Django Ecosystem</title>
-<meta name="description" content="Live dashboard tracking open issues across 100+ Django, DRF, Wagtail, Celery, Open edX and Python open-source projects. Find contribution opportunities.">
-<meta property="og:title" content="Django Issue Hub">
-<meta property="og:description" content="Track open issues across 100+ Django ecosystem repos">
+<title>Open Source Issue Hub — Django, Python, React & Rust</title>
+<meta name="description" content="Live dashboard tracking open issues across 150+ open-source projects in Django, Python, React, and Rust ecosystems. Find contribution opportunities.">
+<meta property="og:title" content="Open Source Issue Hub">
+<meta property="og:description" content="Track open issues across Django, Python, React, and Rust ecosystem repos">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,500;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <style>
@@ -231,6 +294,39 @@ body {{
     font-family: var(--mono);
     margin-top: 16px;
     position: relative;
+}}
+
+/* --- ECOSYSTEM TABS --- */
+.ecosystem-tabs {{
+    display: flex;
+    gap: 8px;
+    padding: 20px 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    border-bottom: 1px solid var(--border);
+}}
+.eco-tab {{
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: var(--font);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}}
+.eco-tab:hover {{
+    border-color: var(--accent);
+    color: var(--text);
+}}
+.eco-tab.active {{
+    background: var(--accent-glow);
+    border-color: var(--accent);
+    color: var(--accent);
+    font-weight: 600;
 }}
 
 /* --- STATS ROW --- */
@@ -528,6 +624,7 @@ body {{
     .col-category, .col-date {{ display: none; }}
     .repo-bar-name {{ width: 100px; font-size: 0.72rem; }}
     .search-input {{ width: 100%; }}
+    .eco-tab {{ padding: 8px 14px; font-size: 0.9rem; }}
 }}
 </style>
 </head>
@@ -535,9 +632,14 @@ body {{
 
 <!-- HERO -->
 <div class="hero">
-    <h1>🐍 Django <span class="accent">Issue Hub</span></h1>
-    <p>Live open issues across {stats.get('total_repos', 108)}+ Django ecosystem projects</p>
+    <h1>Open Source <span class="accent">Issue Hub</span></h1>
+    <p>Live open issues across {stats.get('total_repos', 156)}+ open-source projects</p>
     <div class="badge">Updated: {generated_at}</div>
+</div>
+
+<!-- ECOSYSTEM TABS -->
+<div class="ecosystem-tabs">
+        {tab_buttons_html}
 </div>
 
 <!-- STATS -->
@@ -570,16 +672,11 @@ body {{
 
 <div class="container">
 
-    <!-- CATEGORIES -->
-    <div class="section-title">📂 Ecosystem Categories</div>
-    <div class="cat-grid">{category_cards_html}</div>
-
-    <!-- TOP REPOS -->
-    <div class="section-title">📊 Top Repos by Open Issues</div>
-    <div class="top-repos">{top_repos_html}</div>
+    <!-- ECOSYSTEM PANELS (categories + top repos, one per ecosystem) -->
+    {ecosystem_panels_html}
 
     <!-- FILTERS -->
-    <div class="section-title" id="issues-section">🗂️ All Issues</div>
+    <div class="section-title" id="issues-section">🗂️ Issues</div>
     <div class="filters">
         <input type="text" class="search-input" id="searchInput" placeholder="Search issues..." oninput="filterIssues()">
         <button class="filter-btn active" data-filter="all" onclick="setFilter(this)">All</button>
@@ -611,17 +708,37 @@ body {{
 <!-- FOOTER -->
 <div class="footer">
     <p>
-        <strong>Django Issue Hub</strong> — Open-source project tracking for the Django community<br>
-        Data refreshed daily via GitHub Actions · <a href="https://github.com/YOUR_USERNAME/django-issue-hub">⭐ Star on GitHub</a> ·
+        <strong>Open Source Issue Hub</strong> — Track contribution opportunities across Django, Python, React &amp; Rust<br>
+        Data refreshed daily via GitHub Actions · <a href="https://github.com/YOUR_USERNAME/opensource-issue-hub">⭐ Star on GitHub</a> ·
         <a href="data/issues.json">📄 Raw JSON API</a>
     </p>
 </div>
 
 <script>
-// --- Filtering logic ---
+// --- State ---
 let activeFilter = 'all';
 let activeCategory = null;
+let activeEcosystem = '{ecosystems_order[0] if ecosystems_order else "django"}';
 
+// --- Ecosystem tab switching ---
+function setEcosystem(btn) {{
+    document.querySelectorAll('.eco-tab').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    activeEcosystem = btn.dataset.eco;
+
+    // Show/hide ecosystem panels
+    document.querySelectorAll('.ecosystem-panel').forEach(p => {{
+        p.style.display = p.dataset.ecosystem === activeEcosystem ? '' : 'none';
+    }});
+
+    // Reset category selection
+    activeCategory = null;
+    document.querySelectorAll('.cat-card').forEach(c => c.classList.remove('active'));
+
+    filterIssues();
+}}
+
+// --- Filter button ---
 function setFilter(btn) {{
     document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
@@ -631,7 +748,7 @@ function setFilter(btn) {{
     filterIssues();
 }}
 
-// Category card click
+// --- Category card click ---
 document.querySelectorAll('.cat-card').forEach(card => {{
     card.addEventListener('click', () => {{
         const cat = card.dataset.category;
@@ -648,40 +765,44 @@ document.querySelectorAll('.cat-card').forEach(card => {{
     }});
 }});
 
+// --- Core filter function ---
 function filterIssues() {{
     const search = document.getElementById('searchInput').value.toLowerCase();
     const rows = document.querySelectorAll('.issue-row');
-    let visible = 0;
 
     rows.forEach(row => {{
         let show = true;
 
+        // Ecosystem filter
+        if (row.dataset.ecosystem !== activeEcosystem) show = false;
+
         // Category filter
-        if (activeCategory && row.dataset.category !== activeCategory) show = false;
+        if (show && activeCategory && row.dataset.category !== activeCategory) show = false;
 
         // Button filter
-        if (activeFilter === 'new' && row.dataset.new !== 'true') show = false;
-        if (activeFilter === 'gfi' && row.dataset.gfi !== 'true') show = false;
-        if (activeFilter === 'bug' && row.dataset.priority !== 'high') show = false;
-        if (activeFilter === 'critical' && row.dataset.priority !== 'critical') show = false;
+        if (show && activeFilter === 'new' && row.dataset.new !== 'true') show = false;
+        if (show && activeFilter === 'gfi' && row.dataset.gfi !== 'true') show = false;
+        if (show && activeFilter === 'bug' && row.dataset.priority !== 'high') show = false;
+        if (show && activeFilter === 'critical' && row.dataset.priority !== 'critical') show = false;
 
         // Search
-        if (search && !row.textContent.toLowerCase().includes(search)) show = false;
+        if (show && search && !row.textContent.toLowerCase().includes(search)) show = false;
 
         row.style.display = show ? '' : 'none';
-        if (show) visible++;
     }});
 }}
+
+// Initialize: show only django ecosystem issues on load
+filterIssues();
 </script>
 </body>
 </html>"""
 
-    # Write output to repo root (served directly by GitHub Pages)
     with open(ROOT / "index.html", "w", encoding="utf-8") as f:
         f.write(html)
 
     print(f"✅ Static site built → index.html")
-    print(f"   {len(display_issues)} issues rendered, {len(categories)} categories")
+    print(f"   {len(display_issues)} issues rendered, {len(categories)} categories across {len(ecosystems_order)} ecosystems")
 
 
 if __name__ == "__main__":

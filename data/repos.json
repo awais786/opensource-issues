@@ -1,16 +1,18 @@
 {
   "meta": {
-    "name": "Django Ecosystem Issue Hub",
-    "description": "Live index of open issues across 100+ Django/Python open-source projects",
-    "version": "1.0.0",
-    "url": "https://github.com/YOUR_USERNAME/django-issue-hub",
-    "total_repos": 108
+    "name": "Open Source Issue Hub",
+    "description": "Live index of open issues across 200+ open-source projects across Django, Python, React, and Rust ecosystems",
+    "version": "2.0.0",
+    "url": "https://github.com/YOUR_USERNAME/opensource-issue-hub",
+    "total_repos": 156
   },
   "categories": {
     "django_core": {
       "label": "Django Core",
       "icon": "🏗️",
       "description": "The Django framework itself and official packages",
+      "ecosystem": "django",
+      "ecosystem_label": "Django",
       "repos": [
         "django/django",
         "django/channels",
@@ -24,6 +26,8 @@
       "label": "REST & API",
       "icon": "🔌",
       "description": "API frameworks and tools",
+      "ecosystem": "django",
+      "ecosystem_label": "Django",
       "repos": [
         "encode/django-rest-framework",
         "encode/starlette",
@@ -43,6 +47,8 @@
       "label": "GraphQL",
       "icon": "◈",
       "description": "GraphQL integrations for Django",
+      "ecosystem": "django",
+      "ecosystem_label": "Django",
       "repos": [
         "graphql-python/graphene-django",
         "strawberry-graphql/strawberry-django",
@@ -53,6 +59,8 @@
       "label": "CMS & Content",
       "icon": "📝",
       "description": "Content management systems built on Django",
+      "ecosystem": "django",
+      "ecosystem_label": "Django",
       "repos": [
         "wagtail/wagtail",
         "wagtail/django-modelcluster",
@@ -68,6 +76,8 @@
       "label": "Open edX",
       "icon": "🎓",
       "description": "Open edX learning platform ecosystem",
+      "ecosystem": "django",
+      "ecosystem_label": "Django",
       "repos": [
         "openedx/edx-platform",
         "openedx/frontend-app-learning",
@@ -85,6 +95,8 @@
       "label": "Task Queues & Async",
       "icon": "⚡",
       "description": "Background task processing",
+      "ecosystem": "django",
+      "ecosystem_label": "Django",
       "repos": [
         "celery/celery",
         "celery/django-celery-beat",
@@ -100,6 +112,8 @@
       "label": "Auth & Security",
       "icon": "🔐",
       "description": "Authentication, authorization, and security",
+      "ecosystem": "django",
+      "ecosystem_label": "Django",
       "repos": [
         "pennersr/django-allauth",
         "jazzband/django-oauth-toolkit",
@@ -114,6 +128,8 @@
       "label": "Database & ORM",
       "icon": "🗄️",
       "description": "Database tools, migrations, and ORM extensions",
+      "ecosystem": "django",
+      "ecosystem_label": "Django",
       "repos": [
         "django-mptt/django-mptt",
         "django-treebeard/django-treebeard",
@@ -129,6 +145,8 @@
       "label": "Admin & UI",
       "icon": "🎨",
       "description": "Admin panels, dashboards, and UI tools",
+      "ecosystem": "django",
+      "ecosystem_label": "Django",
       "repos": [
         "jazzband/django-debug-toolbar",
         "fabiocaccamo/django-admin-interface",
@@ -143,6 +161,8 @@
       "label": "Forms & Frontend",
       "icon": "📋",
       "description": "Form handling, HTMX, templates",
+      "ecosystem": "django",
+      "ecosystem_label": "Django",
       "repos": [
         "django-crispy-forms/django-crispy-forms",
         "jazzband/django-widget-tweaks",
@@ -156,6 +176,8 @@
       "label": "E-Commerce",
       "icon": "🛒",
       "description": "Online store and payment frameworks",
+      "ecosystem": "django",
+      "ecosystem_label": "Django",
       "repos": [
         "django-oscar/django-oscar",
         "saleor/saleor",
@@ -167,6 +189,8 @@
       "label": "Storage & Files",
       "icon": "📁",
       "description": "File handling, storage backends, media",
+      "ecosystem": "django",
+      "ecosystem_label": "Django",
       "repos": [
         "jschneier/django-storages",
         "matthewwithanm/django-imagekit",
@@ -178,6 +202,8 @@
       "label": "Config & DevOps",
       "icon": "⚙️",
       "description": "Configuration, deployment, monitoring",
+      "ecosystem": "django",
+      "ecosystem_label": "Django",
       "repos": [
         "joke2k/django-environ",
         "cookiecutter/cookiecutter-django",
@@ -194,6 +220,8 @@
       "label": "Testing",
       "icon": "🧪",
       "description": "Testing tools and factories",
+      "ecosystem": "django",
+      "ecosystem_label": "Django",
       "repos": [
         "FactoryBoy/factory_boy",
         "model-bakers/model_bakery",
@@ -205,16 +233,20 @@
       "label": "Search",
       "icon": "🔍",
       "description": "Search engines and indexing",
+      "ecosystem": "django",
+      "ecosystem_label": "Django",
       "repos": [
         "django-haystack/django-haystack",
         "django-es/django-elasticsearch-dsl",
-        "wagtail/wagtail" 
+        "wagtail/wagtail"
       ]
     },
     "i18n_geo": {
       "label": "i18n & Geo",
       "icon": "🌍",
       "description": "Internationalization, localization, geographic tools",
+      "ecosystem": "django",
+      "ecosystem_label": "Django",
       "repos": [
         "django/django-localflavor",
         "deschler/django-modeltranslation",
@@ -226,11 +258,157 @@
       "label": "Logging & Monitoring",
       "icon": "📊",
       "description": "Logging, profiling, error tracking",
+      "ecosystem": "django",
+      "ecosystem_label": "Django",
       "repos": [
         "jazzband/django-silk",
         "tomchristie/django-pdb",
         "bradmontgomery/django-querycount",
         "yourlabs/django-session-security"
+      ]
+    },
+    "py_core": {
+      "label": "Python Core",
+      "icon": "🐍",
+      "description": "CPython interpreter, type system, and standard library",
+      "ecosystem": "python",
+      "ecosystem_label": "Python",
+      "repos": [
+        "python/cpython",
+        "python/mypy",
+        "python/typeshed",
+        "python/typing_extensions"
+      ]
+    },
+    "py_packaging": {
+      "label": "Packaging & Build",
+      "icon": "📦",
+      "description": "Package management, build tools, and distribution",
+      "ecosystem": "python",
+      "ecosystem_label": "Python",
+      "repos": [
+        "pypa/pip",
+        "pypa/setuptools",
+        "pypa/build",
+        "pypa/hatch"
+      ]
+    },
+    "py_web": {
+      "label": "Python Web",
+      "icon": "🌐",
+      "description": "Web frameworks and HTTP libraries for Python",
+      "ecosystem": "python",
+      "ecosystem_label": "Python",
+      "repos": [
+        "pallets/flask",
+        "tiangolo/fastapi",
+        "pallets/werkzeug",
+        "pallets/click"
+      ]
+    },
+    "py_tools": {
+      "label": "Dev Tools",
+      "icon": "🔧",
+      "description": "Linters, formatters, and Python developer tooling",
+      "ecosystem": "python",
+      "ecosystem_label": "Python",
+      "repos": [
+        "astral-sh/ruff",
+        "astral-sh/uv",
+        "psf/black",
+        "python-poetry/poetry"
+      ]
+    },
+    "react_core": {
+      "label": "React Core",
+      "icon": "⚛️",
+      "description": "The React library and core routing",
+      "ecosystem": "react",
+      "ecosystem_label": "React",
+      "repos": [
+        "facebook/react",
+        "remix-run/react-router"
+      ]
+    },
+    "react_meta": {
+      "label": "Meta Frameworks",
+      "icon": "🚀",
+      "description": "Full-stack frameworks built on React",
+      "ecosystem": "react",
+      "ecosystem_label": "React",
+      "repos": [
+        "vercel/next.js",
+        "remix-run/remix"
+      ]
+    },
+    "react_state": {
+      "label": "State Management",
+      "icon": "🗂️",
+      "description": "State management libraries for React apps",
+      "ecosystem": "react",
+      "ecosystem_label": "React",
+      "repos": [
+        "reduxjs/redux-toolkit",
+        "TanStack/query",
+        "pmndrs/zustand"
+      ]
+    },
+    "react_build": {
+      "label": "Build & Tooling",
+      "icon": "🛠️",
+      "description": "Bundlers and build tools for the React ecosystem",
+      "ecosystem": "react",
+      "ecosystem_label": "React",
+      "repos": [
+        "vitejs/vite",
+        "evanw/esbuild",
+        "parcel-bundler/parcel"
+      ]
+    },
+    "rust_core": {
+      "label": "Rust Core",
+      "icon": "🦀",
+      "description": "The Rust language and package manager",
+      "ecosystem": "rust",
+      "ecosystem_label": "Rust",
+      "repos": [
+        "rust-lang/rust",
+        "rust-lang/cargo"
+      ]
+    },
+    "rust_async": {
+      "label": "Async & Web",
+      "icon": "⚡",
+      "description": "Async runtimes and web frameworks for Rust",
+      "ecosystem": "rust",
+      "ecosystem_label": "Rust",
+      "repos": [
+        "tokio-rs/tokio",
+        "tokio-rs/axum",
+        "actix/actix-web"
+      ]
+    },
+    "rust_cli": {
+      "label": "CLI & Tooling",
+      "icon": "💻",
+      "description": "Command-line tools and utilities written in Rust",
+      "ecosystem": "rust",
+      "ecosystem_label": "Rust",
+      "repos": [
+        "clap-rs/clap",
+        "BurntSushi/ripgrep",
+        "sharkdp/bat"
+      ]
+    },
+    "rust_serde": {
+      "label": "Serialization",
+      "icon": "🔄",
+      "description": "Serialization and data format libraries for Rust",
+      "ecosystem": "rust",
+      "ecosystem_label": "Rust",
+      "repos": [
+        "serde-rs/serde",
+        "serde-rs/json"
       ]
     }
   }

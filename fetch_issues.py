@@ -145,7 +145,8 @@ def classify_issue(labels: list[str]) -> dict:
     }
 
 
-def process_issue(raw: dict, repo: str, category: str, category_label: str) -> dict:
+def process_issue(raw: dict, repo: str, category: str, category_label: str,
+                  ecosystem: str = "django", ecosystem_label: str = "Django") -> dict:
     """Transform raw GitHub issue to our schema."""
     labels = [l.get("name", "") for l in raw.get("labels", [])]
     created = raw.get("created_at", "")
@@ -169,6 +170,8 @@ def process_issue(raw: dict, repo: str, category: str, category_label: str) -> d
     return {
         "id": raw["id"],
         "repo": repo,
+        "ecosystem": ecosystem,
+        "ecosystem_label": ecosystem_label,
         "category": category,
         "category_label": category_label,
         "number": raw["number"],
@@ -204,7 +207,12 @@ def fetch_all():
     for cat_key, cat_data in categories.items():
         for repo in cat_data["repos"]:
             if repo not in repo_to_category:
-                repo_to_category[repo] = (cat_key, cat_data["label"])
+                repo_to_category[repo] = (
+                    cat_key,
+                    cat_data["label"],
+                    cat_data.get("ecosystem", "django"),
+                    cat_data.get("ecosystem_label", "Django"),
+                )
 
     unique_repos = list(repo_to_category.keys())
     total = len(unique_repos)
@@ -220,11 +228,11 @@ def fetch_all():
     log.info(f"📅 Only fetching issues created after {since_param} (last {ISSUE_MAX_AGE_DAYS} days)")
 
     for idx, repo in enumerate(unique_repos, 1):
-        cat_key, cat_label = repo_to_category[repo]
-        log.info(f"  [{idx}/{total}] {repo} ({cat_label})")
+        cat_key, cat_label, ecosystem, ecosystem_label = repo_to_category[repo]
+        log.info(f"  [{idx}/{total}] {repo} ({cat_label} / {ecosystem_label})")
 
         raw_issues = gh.get_open_issues(repo, per_page=MAX_ISSUES_PER_REPO, since=since_param)
-        processed = [process_issue(r, repo, cat_key, cat_label) for r in raw_issues]
+        processed = [process_issue(r, repo, cat_key, cat_label, ecosystem, ecosystem_label) for r in raw_issues]
 
         # Hard filter: drop any issues older than the cutoff (since= filters by updated_at, not created_at)
         processed = [
@@ -292,6 +300,24 @@ def fetch_all():
             "total_issues": len(cat_issues),
             "new_issues": sum(1 for i in cat_issues if i["is_new"]),
             "good_first_issues": sum(1 for i in cat_issues if i["is_good_first_issue"]),
+        }
+
+    # Per-ecosystem stats
+    seen_ecosystems = {}
+    for cat_data in categories.values():
+        eco = cat_data.get("ecosystem", "django")
+        if eco not in seen_ecosystems:
+            seen_ecosystems[eco] = cat_data.get("ecosystem_label", eco.title())
+    stats["by_ecosystem"] = {}
+    for eco_key, eco_label in seen_ecosystems.items():
+        eco_issues = [i for i in all_issues if i.get("ecosystem") == eco_key]
+        stats["by_ecosystem"][eco_key] = {
+            "label": eco_label,
+            "total_issues": len(eco_issues),
+            "new_issues": sum(1 for i in eco_issues if i["is_new"]),
+            "good_first_issues": sum(1 for i in eco_issues if i["is_good_first_issue"]),
+            "bugs": sum(1 for i in eco_issues if i["is_bug"]),
+            "features": sum(1 for i in eco_issues if i["is_feature"]),
         }
 
     # ---------------------------------------------------------------------------
