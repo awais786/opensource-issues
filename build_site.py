@@ -6,6 +6,7 @@ Generates a beautiful static HTML dashboard from the fetched issue data.
 Output goes to index.html for GitHub Pages deployment.
 """
 
+import html as html_mod
 import json
 import os
 from pathlib import Path
@@ -107,8 +108,8 @@ def build_site():
             eco_category_cards += f"""
             <div class="cat-card" data-category="{cat_key}">
                 <div class="cat-icon">{cat_data.get('icon', '📦')}</div>
-                <div class="cat-name">{cat_data.get('label', cat_key)}</div>
-                <div class="cat-desc">{cat_data.get('description', '')}</div>
+                <div class="cat-name">{html_mod.escape(cat_data.get('label', cat_key))}</div>
+                <div class="cat-desc">{html_mod.escape(cat_data.get('description', ''))}</div>
                 <div class="cat-stats">
                     <span>{num_repos} repos</span>
                     <span>{total} issues</span>
@@ -176,12 +177,15 @@ def build_site():
                 cls += " label-security"
             elif any(k in label_lower for k in ["help wanted"]):
                 cls += " label-help"
-            labels_html += f'<span class="{cls}">{label}</span>'
+            labels_html += f'<span class="{cls}">{html_mod.escape(label)}</span>'
 
         new_tag = '<span class="new-tag">NEW</span>' if iss.get("is_new") else ""
         priority = iss.get("priority", "low")
         priority_dot = {"critical": "🔴", "high": "🟠", "medium": "🟡", "low": "🟢"}.get(priority, "⚪")
         eco = iss.get("ecosystem", "django")
+        title = html_mod.escape(iss.get("title", "Untitled"))
+        author = html_mod.escape(iss.get("author", "unknown"))
+        cat_label = html_mod.escape(iss.get("category_label", ""))
 
         issue_rows_html += f"""
         <tr class="issue-row" data-category="{iss.get('category', '')}" data-priority="{priority}"
@@ -195,17 +199,17 @@ def build_site():
             <td class="col-issue">
                 <div class="issue-title">
                     {new_tag}
-                    <a href="{iss.get('url', '#')}" target="_blank" rel="noopener">{iss.get('title', 'Untitled')}</a>
+                    <a href="{iss.get('url', '#')}" target="_blank" rel="noopener">{title}</a>
                 </div>
                 <div class="issue-meta">
                     <span class="repo-name">{iss.get('repo', '')}</span>
                     <span class="issue-num">#{iss.get('number', '')}</span>
-                    <span>by {iss.get('author', 'unknown')}</span>
+                    <span>by {author}</span>
                     <span>💬 {iss.get('comments', 0)}</span>
                 </div>
                 <div class="issue-labels">{labels_html}</div>
             </td>
-            <td class="col-category"><span class="cat-tag">{iss.get('category_label', '')}</span></td>
+            <td class="col-category"><span class="cat-tag">{cat_label}</span></td>
             <td class="col-date">{iss.get('created_at', '')[:10]}</td>
         </tr>"""
 
