@@ -187,6 +187,8 @@ def build_site():
         <tr class="issue-row" data-category="{iss.get('category', '')}" data-priority="{priority}"
             data-new="{str(iss.get('is_new', False)).lower()}"
             data-gfi="{str(iss.get('is_good_first_issue', False)).lower()}"
+            data-bug="{str(iss.get('is_bug', False)).lower()}"
+            data-feature="{str(iss.get('is_feature', False)).lower()}"
             data-repo="{iss.get('repo', '')}"
             data-ecosystem="{eco}">
             <td class="col-priority">{priority_dot}</td>
@@ -683,6 +685,7 @@ body {{
         <button class="filter-btn" data-filter="new" onclick="setFilter(this)">🆕 New</button>
         <button class="filter-btn" data-filter="gfi" onclick="setFilter(this)">🟢 Good First Issue</button>
         <button class="filter-btn" data-filter="bug" onclick="setFilter(this)">🐛 Bugs</button>
+        <button class="filter-btn" data-filter="feature" onclick="setFilter(this)">✨ Feature Requests</button>
         <button class="filter-btn" data-filter="critical" onclick="setFilter(this)">🔴 Critical</button>
     </div>
 
@@ -782,7 +785,8 @@ function filterIssues() {{
         // Button filter
         if (show && activeFilter === 'new' && row.dataset.new !== 'true') show = false;
         if (show && activeFilter === 'gfi' && row.dataset.gfi !== 'true') show = false;
-        if (show && activeFilter === 'bug' && row.dataset.priority !== 'high') show = false;
+        if (show && activeFilter === 'bug' && row.dataset.bug !== 'true') show = false;
+        if (show && activeFilter === 'feature' && row.dataset.feature !== 'true') show = false;
         if (show && activeFilter === 'critical' && row.dataset.priority !== 'critical') show = false;
 
         // Search
