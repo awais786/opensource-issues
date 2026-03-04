@@ -17,10 +17,11 @@ ROOT = SCRIPT_DIR
 DATA_DIR = ROOT / "data"
 
 ECOSYSTEM_META = {
-    "django": {"label": "Django", "icon": "🏗️"},
-    "python": {"label": "Python", "icon": "🐍"},
-    "react":  {"label": "React",  "icon": "⚛️"},
-    "rust":   {"label": "Rust",   "icon": "🦀"},
+    "django":    {"label": "Django",    "icon": "🏗️"},
+    "python":    {"label": "Python",    "icon": "🐍"},
+    "react":     {"label": "React",     "icon": "⚛️"},
+    "rust":      {"label": "Rust",      "icon": "🦀"},
+    "ai_skills": {"label": "AI Skills", "icon": "🤖"},
 }
 
 
@@ -40,7 +41,7 @@ def build_site():
         print("⚠ No stats.json found. Run fetch_issues.py first.")
         stats = {
             "generated_at": datetime.now(timezone.utc).isoformat(),
-            "total_repos": 156,
+            "total_repos": 167,
             "total_issues_fetched": 0,
             "total_new_issues": 0,
             "total_bugs": 0,
@@ -225,10 +226,10 @@ def build_site():
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Open Source Issue Hub — Django, Python, React & Rust</title>
-<meta name="description" content="Live dashboard tracking open issues across 150+ open-source projects in Django, Python, React, and Rust ecosystems. Find contribution opportunities.">
+<title>Open Source Issue Hub — Django, Python, React, Rust & AI Skills</title>
+<meta name="description" content="Live dashboard tracking open issues across 160+ open-source projects in Django, Python, React, Rust, and AI Skills ecosystems. Find contribution opportunities.">
 <meta property="og:title" content="Open Source Issue Hub">
-<meta property="og:description" content="Track open issues across Django, Python, React, and Rust ecosystem repos">
+<meta property="og:description" content="Track open issues across Django, Python, React, Rust, and AI Skills ecosystem repos">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,500;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <style>
@@ -715,7 +716,7 @@ body {{
 <!-- FOOTER -->
 <div class="footer">
     <p>
-        <strong>Open Source Issue Hub</strong> — Track contribution opportunities across Django, Python, React &amp; Rust<br>
+        <strong>Open Source Issue Hub</strong> — Track contribution opportunities across Django, Python, React, Rust &amp; AI Skills<br>
         Data refreshed daily via GitHub Actions · <a href="https://github.com/YOUR_USERNAME/opensource-issue-hub">⭐ Star on GitHub</a> ·
         <a href="data/issues.json">📄 Raw JSON API</a>
     </p>
