@@ -4,7 +4,7 @@
     "description": "Live index of open issues across 200+ open-source projects across Django, Python, React, and Rust ecosystems",
     "version": "2.0.0",
     "url": "https://github.com/YOUR_USERNAME/opensource-issue-hub",
-    "total_repos": 156
+    "total_repos": 167
   },
   "categories": {
     "django_core": {
@@ -409,6 +409,26 @@
       "repos": [
         "serde-rs/serde",
         "serde-rs/json"
+      ]
+    },
+    "ai_skills": {
+      "label": "AI Skills",
+      "icon": "🤖",
+      "description": "Claude and AI agent skills repositories",
+      "ecosystem": "ai_skills",
+      "ecosystem_label": "AI Skills",
+      "repos": [
+        "anthropics/skills",
+        "anthropics/claude-cookbooks",
+        "alirezarezvani/claude-skills",
+        "K-Dense-AI/claude-scientific-skills",
+        "daymade/claude-code-skills",
+        "ComposioHQ/awesome-claude-skills",
+        "travisvn/awesome-claude-skills",
+        "VoltAgent/awesome-agent-skills",
+        "yusufkaraaslan/Skill_Seekers",
+        "affaan-m/everything-claude-code",
+        "hesreallyhim/awesome-claude-code"
       ]
     }
   }
