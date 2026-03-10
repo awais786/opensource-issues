@@ -50,7 +50,16 @@ Each issue object in `data/issues.json` has:
 - Boolean flags: `is_new`, `is_bug`, `is_feature`, `is_security`, `is_good_first_issue`, `is_help_wanted`
 - `priority`: `"critical"` / `"high"` / `"medium"` / `"low"`
 
-## Notes
+## User Profile (for contribution agents)
 
-- `pdfextraction.py`, `history_passport.pdf`, `converted_images/`, and `.idea/` are unrelated to the project and can be ignored.
-- The GitHub token is injected as `GITHUB_TOKEN` environment variable. Locally you must set it; in CI it comes from the repository secret.
+This is the single source of truth referenced by both the `issue-picker` and `make-pr` agents.
+
+### Skills (what I can do)
+- **Expert in:** Python, Django ORM, Django REST Framework, Celery, pytest, authentication/permissions
+- **Comfortable with:** Bug fixes, small features, writing tests, REST API work
+- **Avoid:** Deep C extensions, heavy frontend (JS/CSS/HTML), DevOps/infrastructure
+
+### Preferences (what to filter on)
+- **Preferred categories:** `django_core`, `rest_api`, `auth_security`, `database_orm`, `testing`, `task_queues`, `py_core`, `py_web`, `py_tools`, `logging_monitoring`, `ecommerce`, `ai_skills`
+- **Skip repos:** Wagtail (`wagtail/*`), Open edX (`openedx/*`, `edx/*`)
+- **Skip if title/labels contain:** `frontend`, `css`, `javascript`, `js`, `typescript`, `react`, `vue`, `angular`, `scss`, `sass`, `tailwind`, `webpack`, `docker`, `kubernetes`, `helm`, `terraform`, `ci/cd`, `nginx`, `aws`, `gcp`
