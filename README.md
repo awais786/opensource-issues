@@ -1,6 +1,6 @@
 # Open Source Issue Hub
 
-A live dashboard tracking open issues across 160+ open source projects across Django, Python, React, Rust, and AI Skills ecosystems — updated daily via GitHub Actions and served as a static site via GitHub Pages.
+A live dashboard tracking open issues across 160+ open source projects across Django, Python, React, Rust, and AI ecosystems — updated daily via GitHub Actions and served as a static site via GitHub Pages.
 
 **Live site:** `https://awais786.github.io/opensource-issues/`
 
@@ -27,10 +27,8 @@ A live dashboard tracking open issues across 160+ open source projects across Dj
 │   ├── fetch-issues.yml         # Daily automation workflow
 │   └── deploy-pages.yml         # GitHub Pages deployment
 └── .claude/
-    ├── skills/my-skills/        # Skill: pick the best issue to work on
-    └── agents/
-        ├── issue-picker/        # Agent: autonomously find & rank issues
-        └── make-pr/             # Agent: autonomously create a PR
+    ├── skills/pick-issue/       # Skill: find & recommend the best issue to work on
+    └── agents/make-pr/          # Agent: implement a fix and prepare a PR
 ```
 
 ## Setup
@@ -43,16 +41,12 @@ Go to **Settings → Pages → Source** and set it to **Deploy from branch: `mai
 ### 3. Trigger the first run
 Go to **Actions → Fetch Issues & Update Dashboard → Run workflow**.
 
-This will fetch issues from all repos, generate `index.html`, and commit everything back to the repo. GitHub Pages will pick it up automatically.
-
-After that, it runs automatically every day at 06:00 UTC.
+This fetches issues from all repos, generates `index.html`, and commits everything back. GitHub Pages picks it up automatically. After that it runs daily at 06:00 UTC.
 
 ### 4. (Optional) Customize the repo list
-Edit `data/repos.json` — it is the single source of truth for all tracked repos. Add, remove, or reorganize repos and categories there.
+Edit `data/repos.json` — the single source of truth for all tracked repos.
 
 ## Raw JSON API
-
-The data files are committed to the repo and served publicly:
 
 | File | Description |
 |------|-------------|
@@ -128,53 +122,74 @@ open index.html
 |------|-------------|
 | anthropics/skills | Official Claude skills repository |
 | anthropics/claude-cookbooks | Official Anthropic cookbooks & examples |
-| alirezarezvani/claude-skills | Domain expert skills (marketing, engineering, product) |
-| K-Dense-AI/claude-scientific-skills | Scientific/research skills (ML, bioinformatics, chemistry) |
-| daymade/claude-code-skills | Production-ready marketplace skills |
-| ComposioHQ/awesome-claude-skills | Productivity & integration skills |
-| travisvn/awesome-claude-skills | Curated awesome list |
-| VoltAgent/awesome-agent-skills | Community-adopted agent skills |
-| yusufkaraaslan/Skill_Seekers | Auto-generate skills from documentation |
-| affaan-m/everything-claude-code | Hooks, observers, session management |
-| hesreallyhim/awesome-claude-code | Curated Claude Code resources |
-
-## Claude Code Skills & Agents
-
-This repo ships two Claude Code skills and two agents for contribution workflows.
-
-### Skills
-
-#### `my-skills` — Pick an Issue
-Fetches live issues from the hub, scores them based on your profile, and recommends the best ones to work on.
-
-```
-/my-skills
-/my-skills rest_api good-first
-/my-skills bugs
-```
-
-Scoring criteria: `good_first_issue`, `help_wanted`, low comment count (less competition), recently updated, scoped priority.
-
-#### Profile (`skills/my-skills/profile.md`)
-Defines your expertise and preferences — which categories to focus on, which repos/labels to skip. Edit this file to personalize issue recommendations.
+| BerriAI/litellm | LLM proxy & unified API |
+| run-llama/llama_index | LlamaIndex RAG framework |
+| chroma-core/chroma | Open-source embedding database |
+| langchain-ai/langchain | LangChain framework |
+| modelcontextprotocol/python-sdk | MCP Python SDK |
 
 ---
 
-### Agents
+## Agentic Contribution Workflow
 
-#### `issue-picker` — Autonomous Issue Finder
-Fetches issues, filters and scores them, then verifies each is still open via the GitHub CLI before recommending. More thorough than the skill.
-
-```
-Use the issue-picker agent
-```
-
-#### `make-pr` — Autonomous PR Creator
-Give it an issue URL and it will: analyze the issue, explore the target repo, create a branch, implement the fix, run tests, and open a PR.
+This repo ships a **skill** and an **agent** that work together as a semi-autonomous open source contribution pipeline.
 
 ```
-Use the make-pr agent with https://github.com/owner/repo/issues/123
+/pick-issue [ecosystem]  →  you choose an issue  →  make-pr agent  →  you commit & push
 ```
+
+### `pick-issue` Skill
+
+Finds clean, unassigned issues tailored to your profile and presents verified top 5.
+
+**Usage:**
+```
+/pick-issue           # Django ecosystem (default)
+/pick-issue django    # Django/Python repos
+/pick-issue AI        # AI repos (litellm, llama_index, chroma, langchain)
+/pick-issue AI MCP    # AI repos with MCP preference
+```
+
+**What it does:**
+1. Fetches issues from hub or GitHub API depending on ecosystem
+2. Filters based on your profile (`skills/pick-issue/profile.md`)
+3. Scores issues by freshness, comment count, labels
+4. Verifies top 15 via live GitHub API — discards assigned, closed, or in-progress
+5. Presents top 5 guaranteed clean issues + top recommendation
+
+### `make-pr` Agent
+
+Give it an issue URL and it implements the fix autonomously, then hands off for you to commit.
+
+**Usage:**
+```
+Make a PR for https://github.com/owner/repo/issues/123
+```
+
+**What it does:**
+1. Validates issue is open, unassigned, no duplicate PRs
+2. Checks if fork exists, clones repo, syncs with upstream
+3. Reads CONTRIBUTING.md, installs deps, studies recent merged PRs
+4. Explores codebase, creates feature branch, implements minimal fix
+5. Shows diff and asks for approval
+6. Provides copy-paste commit + push + PR commands (never commits itself)
+7. Updates contribution history in memory
+
+### Contribution Memory
+
+Both tools use a persistent memory file that tracks which issues you've already worked on. The `pick-issue` skill automatically skips them in future sessions.
+
+Memory is stored at:
+```
+~/.claude/projects/.../memory/MEMORY.md
+```
+
+### Personalizing Your Profile
+
+Edit `.claude/skills/pick-issue/profile.md` to customize:
+- Your skills and comfort areas
+- Preferred issue categories
+- Repos and labels to skip
 
 ---
 

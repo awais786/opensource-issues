@@ -20,6 +20,10 @@ Check `$ARGUMENTS` for ecosystem hints:
 
 ## Steps
 
+### Step 0 — Skip Already-Worked Issues
+Check the `## Contribution History` section in MEMORY.md (loaded automatically into context).
+Any issue URL listed there must be **discarded immediately** — do not recommend, score, or verify it.
+
 ### Step 1a — Fetch Hub Issues
 Fetch: `https://awais786.github.io/opensource-issues/data/issues.json`
 

@@ -52,7 +52,7 @@ Each issue object in `data/issues.json` has:
 
 ## User Profile (for contribution agents)
 
-This is the single source of truth referenced by both the `issue-picker` and `make-pr` agents.
+This is the single source of truth referenced by both the `pick-issue` skill and `make-pr` agent.
 
 ### Skills (what I can do)
 - **Expert in:** Python, Django ORM, Django REST Framework, Celery, pytest, authentication/permissions

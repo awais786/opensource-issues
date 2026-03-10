@@ -228,7 +228,14 @@ Tested manually by <describe what you verified>. CI should validate the full sui
 <Any caveats, alternative approaches considered, or reviewer attention points.>"
 ```
 
-**4. Follow-up checklist:**
+**4. Update contribution history:**
+
+Append to `~/.claude/projects/-Users-awais-qureshi-Documents-devstack-opensource-issues/memory/MEMORY.md` under `## Contribution History`:
+```
+- https://github.com/<owner>/<repo>/issues/<number> — ✅ PR opened (<one-line description>)
+```
+
+**5. Follow-up checklist:**
 - [ ] Watch for CI status — fix any failures before marking ready for review
 - [ ] Respond to reviewer comments promptly
 - [ ] Once CI passes: `gh pr ready <pr-number> --repo <owner/repo>`
