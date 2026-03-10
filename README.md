@@ -27,8 +27,12 @@ A live dashboard tracking open issues across 160+ open source projects across Dj
 │   ├── fetch-issues.yml         # Daily automation workflow
 │   └── deploy-pages.yml         # GitHub Pages deployment
 └── .claude/
-    ├── skills/pick-issue/       # Skill: find & recommend the best issue to work on
-    └── agents/make-pr/          # Agent: implement a fix and prepare a PR
+    ├── settings.local.json      # Claude Code tool permissions
+    ├── skills/pick-issue/
+    │   ├── SKILL.md             # Skill: find & recommend the best issue to work on
+    │   └── profile.md           # Your expertise, preferences, and skip lists
+    └── agents/make-pr/
+        └── AGENT.md             # Agent: implement a fix and prepare a PR
 ```
 
 ## Setup
