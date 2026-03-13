@@ -2,8 +2,8 @@
 name: pick-issue
 description: Find and recommend clean open source issues to work on from Django, Python, or AI ecosystems. Verifies each issue is open, unassigned, and has no in-progress PR. Use when the user asks to find issues, pick a ticket, or wants contribution suggestions.
 disable-model-invocation: false
-allowed-tools: WebFetch
-argument-hint: [ecosystem: django|python|ai|all] [filter: good-first|bugs|all]
+allowed-tools: WebFetch, Read, Write, Bash
+argument-hint: [ecosystem: django|python|ai|all] [filter: good-first|bugs|all] [fresh]
 ---
 
 You are helping a Python/Django expert find the best open source issues to contribute to.
@@ -24,15 +24,40 @@ Check `$ARGUMENTS` for ecosystem hints:
 Check the `## Contribution History` section in MEMORY.md (loaded automatically into context).
 Any issue URL listed there must be **discarded immediately** — do not recommend, score, or verify it.
 
-### Step 1a — Fetch Hub Issues
+### Step 1a — Hub Issues (Django/Python ecosystem)
+
+**Cache path:** `/Users/awais.qureshi/Documents/devstack/opensource-issues/.claude/skills/pick-issue/cache/issues.json`
+**Cache TTL:** 24 hours
+
+Check if cache exists and is fresh:
+```bash
+CACHE=/Users/awais.qureshi/Documents/devstack/opensource-issues/.claude/skills/pick-issue/cache/issues.json
+if [ -f "$CACHE" ]; then
+  AGE=$(( $(date +%s) - $(stat -f %m "$CACHE" 2>/dev/null || stat -c %Y "$CACHE") ))
+  [ $AGE -lt 86400 ] && echo "fresh" || echo "stale"
+else
+  echo "missing"
+fi
+```
+
+- If **fresh** and `$ARGUMENTS` does NOT contain `fresh` → read from cache file, skip download
+- If **stale**, **missing**, or `$ARGUMENTS` contains `fresh` → fetch from URL, save to cache:
+
+```bash
+mkdir -p /Users/awais.qureshi/Documents/devstack/opensource-issues/.claude/skills/pick-issue/cache
+```
+
 Fetch: `https://awais786.github.io/opensource-issues/data/issues.json`
+Then write the result to the cache path above.
 
 ### Step 1b — Fetch AI Issues (only when ecosystem = "ai")
-Fetch these in parallel:
+
+Always fetch live (GitHub API data changes frequently):
 - `https://api.github.com/repos/run-llama/llama_index/issues?state=open&per_page=20&sort=created&direction=desc`
 - `https://api.github.com/repos/BerriAI/litellm/issues?state=open&per_page=20&sort=created&direction=desc`
 - `https://api.github.com/repos/chroma-core/chroma/issues?state=open&per_page=15&sort=created&direction=desc`
 - `https://api.github.com/repos/langchain-ai/langchain/issues?state=open&labels=good+first+issue&per_page=15`
+- `https://api.github.com/repos/modelcontextprotocol/python-sdk/issues?state=open&per_page=15&sort=created&direction=desc`
 
 Filter out pull requests (items with `pull_request` field).
 
@@ -66,7 +91,6 @@ https://api.github.com/repos/<owner>/<repo>/issues/<number>
 - `state` is not `"open"`
 - `assignees` array is non-empty (someone claimed it)
 - `pull_request` field exists in the response (it's a PR not an issue)
-- Body or comments mention a linked PR like "fixes #", "closes #", or "PR #" pointing to an open PR
 
 Check for linked PRs explicitly:
 ```
