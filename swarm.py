@@ -409,10 +409,26 @@ def main():
     issues: list = load_issues(force_fresh=args.fresh or args.fetch)
     devs:   list = load_json(DEVS_JSON, "Create data/devs.json with your team roster.")
 
+    # Friendly aliases
+    CATEGORY_ALIASES = {
+        "ai": "ai_skills",
+        "AI": "ai_skills",
+        "django": "django_core",
+        "python": "py_core",
+        "rest": "rest_api",
+        "testing": "testing",
+        "auth": "auth_security",
+        "celery": "task_queues",
+        "tasks": "task_queues",
+        "orm": "database_orm",
+        "db": "database_orm",
+    }
+
     if args.category:
-        issues = [i for i in issues if i.get("category") == args.category]
+        category = CATEGORY_ALIASES.get(args.category, args.category)
+        issues = [i for i in issues if i.get("category") == category]
         if not issues:
-            print(f"No issues found for category '{args.category}'")
+            print(f"No issues found for category '{category}'")
             sys.exit(1)
 
     print(f"Loaded {len(issues)} issues, {len(devs)} devs\n")

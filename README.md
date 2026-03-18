@@ -154,12 +154,21 @@ A 4-agent pipeline that finds the best issues across all 154 repos and assigns t
 
 **Usage (inside Claude Code):**
 ```
-/swarm                   # triage everything
-/swarm django_core       # filter by category
-/swarm awais786          # assign to one dev
-/swarm django_core awais786   # combine filters
-/swarm fresh             # ignore cache, re-analyse
+/swarm                      # triage everything
+/swarm AI                   # AI repos (litellm, llama_index, langchain…)
+/swarm django               # Django ecosystem
+/swarm python               # Python core/tools
+/swarm rest                 # REST & API
+/swarm auth                 # Auth & security
+/swarm db                   # Database & ORM
+/swarm celery               # Task queues
+/swarm awais786             # assign to one dev only
+/swarm AI awais786          # AI issues assigned to one dev
+/swarm django jawad-khan    # Django issues assigned to Jawad
+/swarm fresh                # ignore cache, re-analyse everything
 ```
+
+Full category names from `data/repos.json` also work directly (e.g. `/swarm ai_skills`, `/swarm task_queues`).
 
 **Pipeline:**
 
