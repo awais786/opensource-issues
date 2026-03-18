@@ -50,6 +50,16 @@ Each issue object in `data/issues.json` has:
 - Boolean flags: `is_new`, `is_bug`, `is_feature`, `is_security`, `is_good_first_issue`, `is_help_wanted`
 - `priority`: `"critical"` / `"high"` / `"medium"` / `"low"`
 
+## Contribution Workflow
+
+When making code changes to a fork/issue fix, always follow this sequence:
+
+1. Implement the fix
+2. Run the relevant tests to confirm they pass
+3. Commit the changes
+4. **Run `review-pr` agent before pushing** — get a PASS verdict before `git push`
+5. Push only after review passes (or NEEDS WORK items are resolved)
+
 ## User Profile (for contribution agents)
 
 This is the single source of truth referenced by both the `pick-issue` skill and `make-pr` agent.

@@ -1,0 +1,69 @@
+[
+  {
+    "github": "awais786",
+    "name": "Awais Qureshi",
+    "company": "Arbisoft",
+    "skills": [
+      "Python", "Django", "Django ORM", "Django REST Framework",
+      "Celery", "pytest", "authentication", "permissions",
+      "LiteLLM", "LangGraph", "Claude API", "AI/LLM integration"
+    ],
+    "preferred_categories": [
+      "django_core", "rest_api", "auth_security", "database_orm",
+      "testing", "task_queues", "py_core", "py_web", "py_tools",
+      "logging_monitoring", "ecommerce", "ai_skills"
+    ],
+    "avoid": ["frontend", "css", "javascript", "docker", "kubernetes", "rust"],
+    "experience": "senior",
+    "availability": "available"
+  },
+  {
+    "github": "jawad-khan",
+    "name": "Jawad Khan",
+    "company": "Arbisoft",
+    "skills": [
+      "Python", "Django", "Wagtail", "LangChain", "LiteLLM",
+      "RAG", "Anthropic SDK", "AI/LLM integration",
+      "Go", "REST API"
+    ],
+    "preferred_categories": [
+      "django_core", "rest_api", "py_web", "py_tools",
+      "ai_skills", "logging_monitoring"
+    ],
+    "avoid": ["rust", "deep C extensions", "infrastructure"],
+    "experience": "mid",
+    "availability": "available"
+  },
+  {
+    "github": "valkrypton",
+    "name": "Ali Tariq",
+    "company": "Arbisoft",
+    "skills": [
+      "Rust", "Python", "Django", "Wagtail",
+      "Meilisearch", "Diesel ORM", "Java",
+      "search engines", "database ORM"
+    ],
+    "preferred_categories": [
+      "database_orm", "py_tools", "py_core", "search"
+    ],
+    "avoid": ["frontend", "css", "javascript"],
+    "experience": "mid",
+    "availability": "available"
+  },
+  {
+    "github": "aznszn",
+    "name": "Azan Ali",
+    "company": "Arbisoft",
+    "skills": [
+      "Python", "JavaScript", "TypeScript", "Rust",
+      "Meilisearch", "Wagtail", "search integration",
+      "REST API"
+    ],
+    "preferred_categories": [
+      "rest_api", "py_web", "py_tools", "search"
+    ],
+    "avoid": ["deep C extensions", "infrastructure"],
+    "experience": "mid",
+    "availability": "available"
+  }
+]

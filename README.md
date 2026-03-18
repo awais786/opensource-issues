@@ -17,10 +17,13 @@ A live dashboard tracking open issues across 160+ open source projects across Dj
 .
 ├── fetch_issues.py              # GitHub API fetcher (runs as GitHub Action)
 ├── build_site.py                # Static site generator
+├── swarm.py                     # Multi-agent issue triage swarm
 ├── index.html                   # Generated dashboard (served by GitHub Pages)
 ├── data/
 │   ├── repos.json               # Single source of truth: all repos & categories
-│   ├── issues.json              # All fetched issues (auto-generated)
+│   ├── devs.json                # Team roster with skills (used by swarm)
+│   ├── issues.json              # All fetched issues (auto-generated, 24h TTL)
+│   ├── swarm_cache.json         # Cached complexity + fix analysis (auto-generated)
 │   ├── stats.json               # Aggregate statistics (auto-generated)
 │   └── issues_by_repo.json      # Issues grouped by repo (auto-generated)
 ├── .github/workflows/
@@ -28,6 +31,7 @@ A live dashboard tracking open issues across 160+ open source projects across Dj
 │   └── deploy-pages.yml         # GitHub Pages deployment
 └── .claude/
     ├── settings.local.json      # Claude Code tool permissions
+    ├── commands/swarm.md        # /swarm command
     ├── skills/pick-issue/
     │   ├── SKILL.md             # Skill: find & recommend the best issue to work on
     │   └── profile.md           # Your expertise, preferences, and skip lists
@@ -136,15 +140,50 @@ open index.html
 
 ## Agentic Contribution Workflow
 
-This repo ships a **skill** and an **agent** that work together as a semi-autonomous open source contribution pipeline.
+This repo ships a full **multi-agent pipeline** for finding, analysing, and implementing open source contributions.
 
 ```
-/pick-issue [ecosystem]  →  you choose an issue  →  make-pr agent  →  you commit & push
+/swarm  →  picks & assigns issues to your team  →  Make a PR for <url>  →  /pick-issue  →  commit & push
 ```
 
-### `pick-issue` Skill
+---
 
-Finds clean, unassigned issues tailored to your profile and presents verified top 5.
+### `/swarm` — Team Issue Triage
+
+A 4-agent pipeline that finds the best issues across all 154 repos and assigns them to the right developer based on their skills.
+
+**Usage (inside Claude Code):**
+```
+/swarm                   # triage everything
+/swarm django_core       # filter by category
+/swarm awais786          # assign to one dev
+/swarm django_core awais786   # combine filters
+/swarm fresh             # ignore cache, re-analyse
+```
+
+**Pipeline:**
+
+| Stage | Model | What it does |
+|-------|-------|-------------|
+| IssueFinder | Haiku | Filters 500+ issues down to top 8 candidates |
+| ComplexityAnalyzer | Haiku | Estimates effort in days per issue |
+| FixSuggester | Haiku | Drafts fix approach and skills needed |
+| DevAssigner | Opus | Matches issues to developers, outputs assignments |
+
+**Smart caching:**
+- `data/issues.json` auto-refreshes from GitHub Pages every 24 hours
+- Complexity + fix analysis is cached in `data/swarm_cache.json` — re-runs skip Claude calls for already-analysed issues
+- Already-worked issues from `MEMORY.md` are automatically skipped
+
+**Output:** markdown assignment table + a ready-to-run `Make a PR for <url>` command for the top pick.
+
+**Team roster:** Edit `data/devs.json` to add/update developers and their skills.
+
+---
+
+### `/pick-issue` Skill
+
+Finds clean, unassigned issues tailored to a single developer's profile.
 
 **Usage:**
 ```
@@ -161,6 +200,8 @@ Finds clean, unassigned issues tailored to your profile and presents verified to
 4. Verifies top 15 via live GitHub API — discards assigned, closed, or in-progress
 5. Presents top 5 guaranteed clean issues + top recommendation
 
+---
+
 ### `make-pr` Agent
 
 Give it an issue URL and it implements the fix autonomously, then hands off for you to commit.
@@ -176,14 +217,14 @@ Make a PR for https://github.com/owner/repo/issues/123
 3. Reads CONTRIBUTING.md, installs deps, studies recent merged PRs
 4. Explores codebase, creates feature branch, implements minimal fix
 5. Shows diff and asks for approval
-6. Provides copy-paste commit + push + PR commands (never commits itself)
-7. Updates contribution history in memory
+6. Commits locally and runs `review-pr` before handing off push commands
+
+---
 
 ### Contribution Memory
 
-Both tools use a persistent memory file that tracks which issues you've already worked on. The `pick-issue` skill automatically skips them in future sessions.
+All tools share a persistent memory file that tracks worked issues, team notes, and workflow rules. The `pick-issue` skill and `/swarm` automatically skip already-worked issues.
 
-Memory is stored at:
 ```
 ~/.claude/projects/.../memory/MEMORY.md
 ```
@@ -194,6 +235,8 @@ Edit `.claude/skills/pick-issue/profile.md` to customize:
 - Your skills and comfort areas
 - Preferred issue categories
 - Repos and labels to skip
+
+Edit `data/devs.json` to manage the team roster for `/swarm`.
 
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: make-pr
-description: Implements a fix for a GitHub issue and prepares it for PR. Give it an issue URL (e.g. https://github.com/owner/repo/issues/123) and it validates, forks, clones, explores the codebase, implements the minimal fix, shows the diff for approval, then hands off ready-to-copy commit and PR commands. The user commits and pushes manually.
+description: Implements a fix for a GitHub issue, commits it locally, and runs the review-pr agent automatically. Give it an issue URL (e.g. https://github.com/owner/repo/issues/123) and it validates, forks, clones, explores the codebase, implements the minimal fix, shows the diff for approval, auto-commits, then invokes review-pr before handing off push commands to the user.
 tools: Bash, WebFetch, WebSearch, Read, Edit, Write, Glob, Grep, Agent
 model: sonnet
 ---
@@ -12,7 +12,8 @@ You are an autonomous open source contribution agent for a Python/Django expert.
 **Defined in CLAUDE.md** (the root project file). Read the "User Profile (for contribution agents)" section there for skills, preferred categories, and exclusion lists.
 
 ## Critical Rules
-- **Do NOT commit, push, open PRs, or create branches.** The user handles all git operations manually.
+- **Do NOT push or open PRs.** The user handles push and PR creation manually.
+- **DO commit locally** after the user approves the diff in Step 4.
 - **Do NOT run the project's test suite.** Tests consume too many tokens.
 - **Do NOT add new tests** unless the issue explicitly requires them.
 - **Do NOT refactor** unrelated code. Minimal, surgical changes only.
@@ -211,17 +212,14 @@ Wait for explicit approval before proceeding to Step 5.
 
 ---
 
-### Step 5 — Hand Off to User
+### Step 5 — Commit Locally & Hand Off
 
-**Do NOT commit, push, or open the PR.**
+**DO commit. Do NOT push or open the PR.**
 
-Provide a copy-paste-ready hand-off:
-
-**1. Files changed:**
-List each modified file with one-line explanation.
-
-**2. Commit command** (respecting CONTRIBUTING.md conventions if found):
+**1. Create branch and commit:**
 ```bash
+cd /Users/awais.qureshi/Documents/devstack/forks/<repo-name>
+git checkout -b <branch-prefix>/<slug-from-issue-title>
 git add <specific files only — never git add .>
 git commit -m "<type>: <concise one-line description>
 
@@ -230,10 +228,35 @@ Closes #<issue-number>
 <1-2 lines: root cause and how this fix addresses it>"
 ```
 
-**3. Push & PR command:**
+Respect commit message conventions found in CONTRIBUTING.md.
+
+**2. Confirm commit succeeded:**
 ```bash
+git log --oneline -1
+git status
+```
+
+**3. Invoke the review-pr agent:**
+
+Spawn the `review-pr` agent with:
+> "Review the latest commit in `/Users/awais.qureshi/Documents/devstack/forks/<repo-name>`"
+
+Wait for its verdict before proceeding. If verdict is **❌ BLOCK**, fix the issue, amend the commit, and re-run the reviewer. If **⚠️ NEEDS WORK** or **✅ PASS**, proceed to Step 5 hand-off.
+
+**4. Update contribution history:**
+
+Append to `~/.claude/projects/-Users-awais-qureshi-Documents-devstack-opensource-issues/memory/MEMORY.md` under `## Contribution History`:
+```
+- https://github.com/<owner>/<repo>/issues/<number> — ✅ fix committed (<one-line description>), branch: <branch-name>
+```
+
+**4. Tell the user what to do next (push & PR):**
+
+```bash
+# Push your branch
 git push origin <branch-name>
 
+# Open a draft PR
 gh pr create --draft \
   --repo <owner/repo> \
   --title "<type>: <concise description>" \
@@ -246,17 +269,7 @@ Closes #<issue-number>
 - \`path/to/file.py\`: <what changed and why>
 
 ## Testing
-Tested manually by <describe what you verified>. CI should validate the full suite.
-
-## Notes
-<Any caveats, alternative approaches considered, or reviewer attention points.>"
-```
-
-**4. Update contribution history:**
-
-Append to `~/.claude/projects/-Users-awais-qureshi-Documents-devstack-opensource-issues/memory/MEMORY.md` under `## Contribution History`:
-```
-- https://github.com/<owner>/<repo>/issues/<number> — ✅ PR opened (<one-line description>)
+Tested manually by <describe what you verified>. CI should validate the full suite."
 ```
 
 **5. Follow-up checklist:**
