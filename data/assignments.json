@@ -1,0 +1,29 @@
+[
+  {
+    "url": "https://github.com/anthropics/skills/issues/763",
+    "repo": "anthropics/skills",
+    "number": 763,
+    "title": "skill-creator: eval workspace read mid-session by Claude when exploring project, burning tokens",
+    "assignee": "awais786",
+    "assignee_name": "Awais Qureshi",
+    "status": "assigned",
+    "assigned_at": "2026-03-26T08:49:35.103543+00:00",
+    "github_assigned": false,
+    "priority": "low",
+    "category": "ai_skills"
+  },
+  {
+    "url": "https://github.com/alirezarezvani/claude-skills/issues/241",
+    "repo": "alirezarezvani/claude-skills",
+    "number": 241,
+    "title": "Integrate skill-security-auditor as CI/CD PR check",
+    "assignee": "jawad-khan",
+    "assignee_name": "Jawad Khan",
+    "status": "assigned",
+    "assigned_at": "2026-03-26T11:43:10.988028+00:00",
+    "github_assigned": false,
+    "taiga_us_url": "https://projects.arbisoft.com/project/arbisoft-open-source-projects/us/255",
+    "priority": "critical",
+    "category": "ai_skills"
+  }
+]

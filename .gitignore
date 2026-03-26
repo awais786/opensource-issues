@@ -1,0 +1,19 @@
+# OS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+*.egg-info/
+
+# IDE
+.idea/
+.vscode/
+
+# Claude Code — local config (contains tokens)
+.claude/settings.local.json
+
+# Claude Code — auto-generated caches
+.claude/skills/pick-issue/cache/issues.json
