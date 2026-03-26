@@ -17,15 +17,16 @@ A live dashboard tracking open issues across 160+ open source projects across Dj
 .
 ├── fetch_issues.py              # GitHub API fetcher (runs as GitHub Action)
 ├── build_site.py                # Static site generator
-├── taiga.py                     # Taiga REST API client
-├── taiga_card.py                # Creates a Taiga user story (called by /assign)
+├── taiga/
+│   ├── __init__.py              # Taiga REST API client (TaigaClient)
+│   └── card.py                  # CLI: create a Taiga user story (called by /assign)
 ├── index.html                   # Generated dashboard (served by GitHub Pages)
 ├── data/
 │   ├── repos.json               # Single source of truth: all repos & categories
 │   ├── devs.json                # Team roster with skills and Taiga IDs
 │   ├── issues.json              # All fetched issues (auto-generated, 24h TTL)
 │   ├── by_category/             # Issues split by category (for agent reads)
-│   ├── assignments.json         # Local assignment history
+│   ├── assignments.json         # Assignment history (url, assignee, taiga_us_url)
 │   ├── stats.json               # Aggregate statistics (auto-generated)
 │   └── issues_by_repo.json      # Issues grouped by repo (auto-generated)
 ├── rules/
@@ -35,7 +36,9 @@ A live dashboard tracking open issues across 160+ open source projects across Dj
 │   └── deploy-pages.yml         # GitHub Pages deployment
 └── .claude/
     ├── settings.local.json      # Claude Code tool permissions + env vars
-    ├── commands/assign.md       # /assign command — agentic issue assignment
+    ├── commands/
+    │   ├── assign.md            # /assign — agentic issue assignment to a dev
+    │   └── swarm.md             # /swarm — triage issues across the whole team
     ├── skills/pick-issue/
     │   ├── SKILL.md             # Skill: find & recommend the best issue to work on
     │   └── profile.md           # Your expertise, preferences, and skip lists
@@ -188,53 +191,59 @@ open index.html
 
 ## Agentic Contribution Workflow
 
-This repo ships a full **multi-agent pipeline** for finding, analysing, and implementing open source contributions.
+This repo ships a full **agentic pipeline** for finding, assigning, and implementing open source contributions.
 
 ```
-/swarm  →  picks & assigns issues to your team  →  Make a PR for <url>  →  /pick-issue  →  commit & push
+/assign @dev  →  pick issue  →  Make a PR for <url>  →  review-pr  →  commit & push
 ```
 
 ---
 
-### `/swarm` — Team Issue Triage
+### `/assign` — Issue Assignment
 
-A 4-agent pipeline that finds the best issues across all 154 repos and assigns them to the right developer based on their skills.
+Claude reads issues from `data/by_category/`, scores and filters them for the dev's skills, presents the top 10, runs guardrails, creates a Taiga card, and saves to `data/assignments.json`.
 
 **Usage (inside Claude Code):**
 ```
-/swarm                      # triage everything
-/swarm AI                   # AI repos (litellm, llama_index, langchain…)
-/swarm django               # Django ecosystem
-/swarm python               # Python core/tools
-/swarm rest                 # REST & API
-/swarm auth                 # Auth & security
-/swarm db                   # Database & ORM
-/swarm celery               # Task queues
-/swarm awais786             # assign to one dev only
-/swarm AI awais786          # AI issues assigned to one dev
-/swarm django jawad-khan    # Django issues assigned to Jawad
-/swarm fresh                # ignore cache, re-analyse everything
+/assign @jawad-khan
+/assign @valkrypton bug
+/assign @aznszn django
+/assign @awais786 ai fresh
 ```
 
-Full category names from `data/repos.json` also work directly (e.g. `/swarm ai_skills`, `/swarm task_queues`).
+**Arguments:**
+- `@dev` — GitHub handle (required)
+- `category` — optional filter: django, python, ai, rest, auth, search, celery, orm, testing
+- `filter` — optional: bug, feature, gfi
+- `fresh` — force re-fetch even if cache is < 24h
 
-**Pipeline:**
+**Guardrails (checked before creating Taiga card):**
 
-| Stage | Model | What it does |
-|-------|-------|-------------|
-| IssueFinder | Haiku | Filters 500+ issues down to top 8 candidates |
-| ComplexityAnalyzer | Haiku | Estimates effort in days per issue |
-| FixSuggester | Haiku | Drafts fix approach and skills needed |
-| DevAssigner | Opus | Matches issues to developers, outputs assignments |
-
-**Smart caching:**
-- `data/issues.json` auto-refreshes from GitHub Pages every 24 hours
-- Complexity + fix analysis is cached in `data/swarm_cache.json` — re-runs skip Claude calls for already-analysed issues
-- Already-worked issues from `MEMORY.md` are automatically skipped
-
-**Output:** markdown assignment table + a ready-to-run `Make a PR for <url>` command for the top pick.
+| Rule | Action |
+|------|--------|
+| Dev not available | BLOCK |
+| Dev has ≥ 5 open assignments | BLOCK |
+| Issue in dev's avoid list | BLOCK |
+| Zero skill overlap | BLOCK |
+| Only 1 skill matched | WARN |
+| Issue has > 10 comments | WARN |
+| Issue not updated in > 30 days | WARN |
 
 **Team roster:** Edit `data/devs.json` to add/update developers and their skills.
+
+---
+
+### `/swarm` — Bulk Team Triage
+
+Assigns the best available issues across the whole team in one pass.
+
+**Usage:**
+```
+/swarm                      # triage all devs
+/swarm django               # Django ecosystem only
+/swarm AI                   # AI repos only
+/swarm awais786             # one dev only
+```
 
 ---
 
@@ -280,11 +289,13 @@ Make a PR for https://github.com/owner/repo/issues/123
 
 ### Contribution Memory
 
-All tools share a persistent memory file that tracks worked issues, team notes, and workflow rules. The `pick-issue` skill and `/swarm` automatically skip already-worked issues.
+All tools share a persistent memory file that tracks worked issues, team notes, and workflow rules. Already-worked issues are automatically skipped when finding new ones.
 
 ```
-~/.claude/projects/.../memory/MEMORY.md
+~/.claude/projects/<project-hash>/memory/MEMORY.md
 ```
+
+Assignments are also tracked in `data/assignments.json` — used by `/assign` to prevent duplicate assignments.
 
 ### Personalizing Your Profile
 
