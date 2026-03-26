@@ -17,21 +17,25 @@ A live dashboard tracking open issues across 160+ open source projects across Dj
 .
 ├── fetch_issues.py              # GitHub API fetcher (runs as GitHub Action)
 ├── build_site.py                # Static site generator
-├── swarm.py                     # Multi-agent issue triage swarm
+├── taiga.py                     # Taiga REST API client
+├── taiga_card.py                # Creates a Taiga user story (called by /assign)
 ├── index.html                   # Generated dashboard (served by GitHub Pages)
 ├── data/
 │   ├── repos.json               # Single source of truth: all repos & categories
-│   ├── devs.json                # Team roster with skills (used by swarm)
+│   ├── devs.json                # Team roster with skills and Taiga IDs
 │   ├── issues.json              # All fetched issues (auto-generated, 24h TTL)
-│   ├── swarm_cache.json         # Cached complexity + fix analysis (auto-generated)
+│   ├── by_category/             # Issues split by category (for agent reads)
+│   ├── assignments.json         # Local assignment history
 │   ├── stats.json               # Aggregate statistics (auto-generated)
 │   └── issues_by_repo.json      # Issues grouped by repo (auto-generated)
+├── rules/
+│   └── contribution.md          # PR & commit standards for agents
 ├── .github/workflows/
 │   ├── fetch-issues.yml         # Daily automation workflow
 │   └── deploy-pages.yml         # GitHub Pages deployment
 └── .claude/
-    ├── settings.local.json      # Claude Code tool permissions
-    ├── commands/swarm.md        # /swarm command
+    ├── settings.local.json      # Claude Code tool permissions + env vars
+    ├── commands/assign.md       # /assign command — agentic issue assignment
     ├── skills/pick-issue/
     │   ├── SKILL.md             # Skill: find & recommend the best issue to work on
     │   └── profile.md           # Your expertise, preferences, and skip lists
@@ -53,6 +57,50 @@ This fetches issues from all repos, generates `index.html`, and commits everythi
 
 ### 4. (Optional) Customize the repo list
 Edit `data/repos.json` — the single source of truth for all tracked repos.
+
+### 5. (Optional) Enable GitHub MCP for Claude Code
+
+If you use **Claude Code**, you can connect the GitHub MCP server so Claude can read issues, create PRs, and interact with GitHub directly from the CLI.
+
+**Requires:** GitHub Copilot (Free tier is enough — available at github.com/features/copilot)
+
+Add this to `~/.claude/settings.json`:
+
+```json
+{
+  "mcpServers": {
+    "github": {
+      "type": "http",
+      "url": "https://api.githubcopilot.com/mcp/",
+      "headers": {
+        "Authorization": "Bearer ${GITHUB_PERSONAL_ACCESS_TOKEN}"
+      }
+    }
+  },
+  "env": {
+    "GITHUB_PERSONAL_ACCESS_TOKEN": "your_github_pat_here"
+  }
+}
+```
+
+**No Copilot?** Use the free local alternative instead:
+
+```json
+{
+  "mcpServers": {
+    "github": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-github"],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "your_github_pat_here"
+      }
+    }
+  }
+}
+```
+
+This gives Claude the same GitHub tools — no Copilot subscription needed.
 
 ## Raw JSON API
 

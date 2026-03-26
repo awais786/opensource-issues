@@ -60,6 +60,27 @@ When making code changes to a fork/issue fix, always follow this sequence:
 4. **Run `review-pr` agent before pushing** — get a PASS verdict before `git push`
 5. Push only after review passes (or NEEDS WORK items are resolved)
 
+## Team Management (Lead Layer)
+
+Commands for managing the open source contribution team:
+
+| Command / Skill | What it does |
+|---|---|
+| `/status` | Live snapshot — who's working on what, blockers, recent merges |
+| `/assign #<n> <org/repo> @<dev>` | Assign a GitHub issue to a team member |
+| `team-status` skill | Full team activity report |
+| `sprint-report` skill | Weekly summary of contributions |
+| `claim-ticket` skill | Dev claims and loads context for a specific issue |
+
+### Team Members
+- **awais786** (Awais) — Django, DRF, pytest, auth, Celery, LiteLLM — senior
+- **jawad-khan** (Jawad) — Django, Wagtail, LangChain, RAG — mid
+- **valkrypton** (Ali) — Rust, Django, Meilisearch — mid
+- **aznszn** (Azan) — Python, JS, Meilisearch, Wagtail — mid
+
+### Target Repos
+Defined in `config/repos.yaml` — 30+ openedx repos ordered by dependency.
+
 ## User Profile (for contribution agents)
 
 This is the single source of truth referenced by both the `pick-issue` skill and `make-pr` agent.

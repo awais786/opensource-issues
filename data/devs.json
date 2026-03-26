@@ -1,6 +1,8 @@
 [
   {
     "github": "awais786",
+    "taiga_id": 255,
+    "taiga_username": "awais.qureshi",
     "name": "Awais Qureshi",
     "company": "Arbisoft",
     "skills": [
@@ -19,6 +21,8 @@
   },
   {
     "github": "jawad-khan",
+    "taiga_id": 355,
+    "taiga_username": "hafiz.muhammad.jawad.khan",
     "name": "Jawad Khan",
     "company": "Arbisoft",
     "skills": [
@@ -36,6 +40,8 @@
   },
   {
     "github": "valkrypton",
+    "taiga_id": 945,
+    "taiga_username": "alitariq",
     "name": "Ali Tariq",
     "company": "Arbisoft",
     "skills": [
@@ -52,6 +58,8 @@
   },
   {
     "github": "aznszn",
+    "taiga_id": 970,
+    "taiga_username": "azanali",
     "name": "Azan Ali",
     "company": "Arbisoft",
     "skills": [

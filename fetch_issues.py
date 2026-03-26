@@ -337,6 +337,19 @@ def fetch_all():
         json.dump(issues_by_repo, f, indent=2, default=str)
     log.info(f"📄 Wrote data/issues_by_repo.json")
 
+    # Per-category files for agent use (small, readable without chunking)
+    by_cat_dir = DATA_DIR / "by_category"
+    by_cat_dir.mkdir(exist_ok=True)
+    by_category: dict = defaultdict(list)
+    for issue in all_issues:
+        cat = issue.get("category")
+        if cat:
+            by_category[cat].append(issue)
+    for cat, cat_issues in by_category.items():
+        with open(by_cat_dir / f"{cat}.json", "w") as f:
+            json.dump(cat_issues, f, indent=2, default=str)
+    log.info(f"📄 Wrote data/by_category/ ({len(by_category)} categories)")
+
     log.info(f"\n✅ Done! {len(all_issues)} issues from {total} repos")
     log.info(f"   🆕 New (last {LOOKBACK_DAYS_NEW}d): {stats['total_new_issues']}")
     log.info(f"   🐛 Bugs: {stats['total_bugs']}")

@@ -4,7 +4,7 @@
     "description": "Live index of open issues across 200+ open-source projects across Django, Python, React, and Rust ecosystems",
     "version": "2.0.0",
     "url": "https://github.com/YOUR_USERNAME/opensource-issue-hub",
-    "total_repos": 167
+    "total_repos": 168
   },
   "categories": {
     "django_core": {
@@ -428,7 +428,8 @@
         "VoltAgent/awesome-agent-skills",
         "yusufkaraaslan/Skill_Seekers",
         "affaan-m/everything-claude-code",
-        "hesreallyhim/awesome-claude-code"
+        "hesreallyhim/awesome-claude-code",
+        "NVIDIA/NemoClaw"
       ]
     }
   }
