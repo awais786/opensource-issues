@@ -8,11 +8,10 @@ Usage:
 """
 
 import argparse
-import os
 import sys
 
 sys.path.insert(0, str(__import__("pathlib").Path(__file__).parent.parent))
-from taiga import TaigaClient, STATUS_READY
+from taiga import client_from_env
 
 
 def main() -> None:
@@ -28,9 +27,10 @@ def main() -> None:
     parser.add_argument("--is-gfi",   action="store_true", dest="is_gfi")
     args = parser.parse_args()
 
-    token = os.environ.get("TAIGA_TOKEN", "")
-    if not token:
-        print("ERROR: TAIGA_TOKEN not set", file=sys.stderr)
+    try:
+        client = client_from_env()
+    except RuntimeError as e:
+        print(f"ERROR: {e}", file=sys.stderr)
         sys.exit(1)
 
     issue = {
@@ -45,10 +45,7 @@ def main() -> None:
         "is_feature":          False,
         "is_help_wanted":      False,
     }
-
-    client = TaigaClient(token=token)
     us = client.create_user_story(issue, args.taiga_id)
-    client.update_status(us["id"], STATUS_READY, us["version"])
     ref = us.get("ref")
     print(f"https://projects.arbisoft.com/project/arbisoft-open-source-projects/us/{ref}")
 

@@ -414,22 +414,19 @@
     "ai_skills": {
       "label": "AI Skills",
       "icon": "🤖",
-      "description": "Claude and AI agent skills repositories",
+      "description": "AI/LLM libraries and frameworks",
       "ecosystem": "ai_skills",
       "ecosystem_label": "AI Skills",
       "repos": [
+        "BerriAI/litellm",
+        "langchain-ai/langchain",
+        "run-llama/llama_index",
+        "chroma-core/chroma",
+        "modelcontextprotocol/python-sdk",
+        "anthropics/anthropic-sdk-python",
+        "openai/openai-python",
         "anthropics/skills",
-        "anthropics/claude-cookbooks",
-        "alirezarezvani/claude-skills",
-        "K-Dense-AI/claude-scientific-skills",
-        "daymade/claude-code-skills",
-        "ComposioHQ/awesome-claude-skills",
-        "travisvn/awesome-claude-skills",
-        "VoltAgent/awesome-agent-skills",
-        "yusufkaraaslan/Skill_Seekers",
-        "affaan-m/everything-claude-code",
-        "hesreallyhim/awesome-claude-code",
-        "NVIDIA/NemoClaw"
+        "anthropics/claude-cookbooks"
       ]
     }
   }

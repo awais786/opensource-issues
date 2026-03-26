@@ -84,7 +84,8 @@ class TaigaClient:
             "project":     TAIGA_PROJECT_ID,
             "subject":     subject[:255],
             "description": description,
-            "status":      STATUS_NEW,
+            "status":      STATUS_READY,
+            "swimlane":    43,  # Tickets
             "tags":        _build_tags(issue),
         }
         if assignee_taiga_id:
@@ -144,9 +145,20 @@ def _build_tags(issue: dict) -> list[list[str]]:
     return tags
 
 
+def _token_from_settings() -> str:
+    """Read TAIGA_TOKEN from .claude/settings.local.json as a fallback."""
+    import json
+    from pathlib import Path
+    settings_path = Path(__file__).resolve().parent.parent / ".claude" / "settings.local.json"
+    try:
+        return json.loads(settings_path.read_text()).get("env", {}).get("TAIGA_TOKEN", "")
+    except (FileNotFoundError, KeyError, ValueError):
+        return ""
+
+
 def client_from_env() -> TaigaClient:
-    """Create a TaigaClient from the TAIGA_TOKEN environment variable."""
-    token = os.environ.get("TAIGA_TOKEN", "")
+    """Create a TaigaClient from TAIGA_TOKEN env var or .claude/settings.local.json."""
+    token = os.environ.get("TAIGA_TOKEN", "") or _token_from_settings()
     if not token:
-        raise RuntimeError("TAIGA_TOKEN environment variable not set.")
+        raise RuntimeError("TAIGA_TOKEN not set in environment or .claude/settings.local.json")
     return TaigaClient(token=token)
