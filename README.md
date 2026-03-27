@@ -10,32 +10,38 @@ OpenSwarm is an **agentic workflow** that autonomously discovers, scores, and as
 
 ## How It Works
 
-```
-GitHub Issues (160+ repos)
-        │
-        │  daily fetch (GitHub Actions)
-        ▼
-  data/issues.json
-        │
-        │  daily 9am (GitHub Actions swarm)
-        ▼
-┌───────────────────┐
-│  swarm_assign.py  │  filter → score → assign → Taiga cards
-└────────┬──────────┘
-         │
-    ┌────┴────┐
-    ▼         ▼
- GitHub     Taiga Board
- Repo       cards created ✓
- updated
-        │
-        │  developer picks up issue
-        ▼
-  Make a PR for <url>
-        │
-        │  make-pr agent implements fix
-        ▼
-  review-pr → commit → push
+```mermaid
+flowchart TD
+    GH["GitHub Issues\n160+ repos"]
+    FETCH["fetch_issues.py\nGitHub Actions · daily 06:00 UTC"]
+    JSON["data/issues.json\n600+ issues cached"]
+    SWARM["swarm_assign.py\nGitHub Actions · daily 04:00 UTC"]
+    FILTER["swarm_filter.py\nfilter · score · match skills"]
+    CLAUDE["Claude LLM\ncomplexity · approach · assignment"]
+    TAIGA["Taiga Board\ncards created"]
+    REPO["GitHub Repo\nassignments.json updated"]
+    DEV["Developer\npicks up issue"]
+    MAKEPR["make-pr agent\nimplements fix autonomously"]
+    REVIEW["review-pr agent\nquality check"]
+    PR["Pull Request\nopened"]
+
+    GH -->|daily fetch| FETCH
+    FETCH --> JSON
+    JSON --> SWARM
+    SWARM --> FILTER
+    FILTER --> CLAUDE
+    CLAUDE -->|assigns to dev| REPO
+    CLAUDE -->|creates card| TAIGA
+    REPO -->|notifies| DEV
+    DEV -->|Make a PR for url| MAKEPR
+    MAKEPR --> REVIEW
+    REVIEW -->|PASS| PR
+
+    style CLAUDE fill:#6366f1,color:#fff
+    style MAKEPR fill:#6366f1,color:#fff
+    style REVIEW fill:#6366f1,color:#fff
+    style TAIGA fill:#22c55e,color:#fff
+    style PR fill:#22c55e,color:#fff
 ```
 
 **Agents in the system:**
