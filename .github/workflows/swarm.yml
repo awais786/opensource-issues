@@ -1,0 +1,33 @@
+name: Daily Swarm — Assign Issues & Create Taiga Cards
+
+on:
+  schedule:
+    - cron: "0 4 * * *"  # 9am Karachi (UTC+5)
+  workflow_dispatch:      # allow manual trigger from GitHub UI
+
+jobs:
+  swarm:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run swarm — filter, assign, create Taiga cards
+        env:
+          TAIGA_USERNAME: ${{ secrets.TAIGA_USERNAME }}
+          TAIGA_PASSWORD: ${{ secrets.TAIGA_PASSWORD }}
+        run: python3 swarm_assign.py --ecosystem all --top 3
+
+      - name: Commit updated assignments
+        run: |
+          git config user.name "awais qureshi"
+          git config user.email "awais.qureshi@arbisoft.com"
+          git add data/assignments.json
+          git diff --cached --quiet || git commit -m "chore: daily swarm assignments $(date +%Y-%m-%d)"
+          git push
