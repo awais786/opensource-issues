@@ -92,5 +92,18 @@
     "taiga_us_url": "https://projects.arbisoft.com/project/arbisoft-open-source-projects/us/260",
     "priority": "low",
     "category": "py_web"
+  },
+  {
+    "url": "https://github.com/astral-sh/ruff/issues/24202",
+    "repo": "astral-sh/ruff",
+    "number": 24202,
+    "title": "False positive for RUF009 when using imported NewType declarations in dataclass",
+    "assignee": "aznszn",
+    "assignee_name": "Azan Ali",
+    "status": "assigned",
+    "assigned_at": "2026-03-27T00:00:00.000000+00:00",
+    "taiga_us_url": null,
+    "priority": "low",
+    "category": "py_tools"
   }
 ]
