@@ -1,223 +1,172 @@
-# Open Source Issue Hub
+# OpenSwarm
 
-A live dashboard tracking open issues across 160+ open source projects across Django, Python, React, Rust, and AI ecosystems — updated daily via GitHub Actions and served as a static site via GitHub Pages.
+> AI-powered open source issue triage and team assignment pipeline
 
-**Live site:** `https://awais786.github.io/opensource-issues/`
+OpenSwarm is an **agentic workflow** that autonomously discovers, scores, and assigns open source issues to developers — then creates Taiga cards and implements fixes via PR, all without manual intervention.
 
-## What It Does
+**Live dashboard:** `https://awais786.github.io/opensource-issues/`
 
-- Fetches open issues from 160+ repos across 5 ecosystems
-- Classifies issues by priority, type (bug/feature/security), and contributor-friendliness
-- Generates a filterable, searchable static HTML dashboard
-- Commits data JSON files so anyone can consume the raw API
+---
+
+## How It Works
+
+```
+GitHub Issues (160+ repos)
+        │
+        │  daily fetch (GitHub Actions)
+        ▼
+  data/issues.json
+        │
+        │  daily 9am (GitHub Actions swarm)
+        ▼
+┌───────────────────┐
+│  swarm_assign.py  │  filter → score → assign → Taiga cards
+└────────┬──────────┘
+         │
+    ┌────┴────┐
+    ▼         ▼
+ GitHub     Taiga Board
+ Repo       cards created ✓
+ updated
+        │
+        │  developer picks up issue
+        ▼
+  Make a PR for <url>
+        │
+        │  make-pr agent implements fix
+        ▼
+  review-pr → commit → push
+```
+
+**Agents in the system:**
+
+| Agent | Role |
+|-------|------|
+| `swarm_filter.py` | Data agent — filters 600+ issues down to top candidates |
+| Claude LLM | Reasoning agent — complexity analysis, skill matching, fix approach |
+| `swarm_assign.py` | Action agent — creates Taiga cards, commits assignments |
+| `make-pr` agent | Implementation agent — reads code, writes the fix, opens PR |
+
+Human-in-the-loop only at the **PR review stage**.
+
+---
+
+## Agentic Pipeline
+
+### Fully Automated (GitHub Actions, daily)
+
+```bash
+# .github/workflows/swarm.yml
+python3 swarm_assign.py --ecosystem all --top 5
+```
+
+1. Scans 600+ open issues across 160+ repos
+2. Filters, scores, and matches issues to developers by skill
+3. Creates Taiga cards via REST API
+4. Commits updated `data/assignments.json` back to repo
+
+### Interactive (Claude Code CLI)
+
+```
+/swarm              # triage whole team, choose ecosystem
+/assign @dev        # assign one issue to a specific dev
+/pick-issue         # find best issue for yourself
+Make a PR for <url> # implement a fix autonomously
+```
+
+---
+
+## Setup
+
+### 1. Fork & clone
+
+```bash
+git clone https://github.com/your-handle/opensource-issues.git
+```
+
+### 2. Enable GitHub Pages
+**Settings → Pages → Source → Deploy from branch: `main`, folder: `/ (root)`**
+
+### 3. Add GitHub secrets for Taiga
+**Settings → Secrets and variables → Actions → New repository secret**
+
+| Secret | Value |
+|--------|-------|
+| `TAIGA_USERNAME` | your Taiga email |
+| `TAIGA_PASSWORD` | your Taiga password |
+
+### 4. Trigger the first run
+**Actions → Fetch Issues & Update Dashboard → Run workflow**
+
+Fetches issues, builds dashboard, commits data. Runs daily at 06:00 UTC after that.
+
+**Actions → Daily Swarm → Run workflow**
+
+Assigns issues and creates Taiga cards. Runs daily at 04:00 UTC (9am Karachi).
+
+### 5. Customize your team
+Edit `data/devs.json` — add developers with their GitHub handles, skills, Taiga IDs, and preferred categories.
+
+### 6. (Optional) Enable Claude Code
+Install [Claude Code](https://claude.ai/code) for the interactive agentic workflow (`/swarm`, `/assign`, `make-pr`).
+
+---
 
 ## Repository Structure
 
 ```
 .
-├── fetch_issues.py              # GitHub API fetcher (runs as GitHub Action)
+├── fetch_issues.py              # GitHub API fetcher
 ├── build_site.py                # Static site generator
+├── swarm_filter.py              # Issue filter + scorer (Python, token-efficient)
+├── swarm_assign.py              # Full pipeline: filter → assign → Taiga cards
 ├── taiga/
-│   ├── __init__.py              # Taiga REST API client (TaigaClient)
-│   └── card.py                  # CLI: create a Taiga user story (called by /assign)
-├── index.html                   # Generated dashboard (served by GitHub Pages)
+│   ├── __init__.py              # Taiga REST API client (dynamic token)
+│   └── card.py                  # CLI: create a Taiga user story
 ├── data/
-│   ├── repos.json               # Single source of truth: all repos & categories
+│   ├── repos.json               # All tracked repos & categories (160+)
 │   ├── devs.json                # Team roster with skills and Taiga IDs
-│   ├── issues.json              # All fetched issues (auto-generated, 24h TTL)
-│   ├── by_category/             # Issues split by category (for agent reads)
+│   ├── issues.json              # Fetched issues (auto-generated, 24h TTL)
 │   ├── assignments.json         # Assignment history (url, assignee, taiga_us_url)
-│   ├── stats.json               # Aggregate statistics (auto-generated)
-│   └── issues_by_repo.json      # Issues grouped by repo (auto-generated)
-├── rules/
-│   └── contribution.md          # PR & commit standards for agents
+│   ├── stats.json               # Aggregate statistics
+│   └── by_category/             # Issues split by category
 ├── .github/workflows/
-│   ├── fetch-issues.yml         # Daily automation workflow
+│   ├── fetch-issues.yml         # Daily issue fetch + dashboard build
+│   ├── swarm.yml                # Daily swarm: assign issues + create Taiga cards
 │   └── deploy-pages.yml         # GitHub Pages deployment
 └── .claude/
-    ├── settings.local.json      # Claude Code tool permissions + env vars
     ├── commands/
-    │   ├── assign.md            # /assign — agentic issue assignment to a dev
-    │   └── swarm.md             # /swarm — triage issues across the whole team
-    ├── skills/pick-issue/
-    │   ├── SKILL.md             # Skill: find & recommend the best issue to work on
-    │   └── profile.md           # Your expertise, preferences, and skip lists
-    └── agents/make-pr/
-        └── AGENT.md             # Agent: implement a fix and prepare a PR
-```
-
-## Setup
-
-### 1. Fork / clone this repo
-
-### 2. Enable GitHub Pages
-Go to **Settings → Pages → Source** and set it to **Deploy from branch: `main`, folder: `/ (root)`**.
-
-### 3. Trigger the first run
-Go to **Actions → Fetch Issues & Update Dashboard → Run workflow**.
-
-This fetches issues from all repos, generates `index.html`, and commits everything back. GitHub Pages picks it up automatically. After that it runs daily at 06:00 UTC.
-
-### 4. (Optional) Customize the repo list
-Edit `data/repos.json` — the single source of truth for all tracked repos.
-
-### 5. (Optional) Enable GitHub MCP for Claude Code
-
-If you use **Claude Code**, you can connect the GitHub MCP server so Claude can read issues, create PRs, and interact with GitHub directly from the CLI.
-
-**Requires:** GitHub Copilot (Free tier is enough — available at github.com/features/copilot)
-
-Add this to `~/.claude/settings.json`:
-
-```json
-{
-  "mcpServers": {
-    "github": {
-      "type": "http",
-      "url": "https://api.githubcopilot.com/mcp/",
-      "headers": {
-        "Authorization": "Bearer ${GITHUB_PERSONAL_ACCESS_TOKEN}"
-      }
-    }
-  },
-  "env": {
-    "GITHUB_PERSONAL_ACCESS_TOKEN": "your_github_pat_here"
-  }
-}
-```
-
-**No Copilot?** Use the free local alternative instead:
-
-```json
-{
-  "mcpServers": {
-    "github": {
-      "type": "stdio",
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-github"],
-      "env": {
-        "GITHUB_PERSONAL_ACCESS_TOKEN": "your_github_pat_here"
-      }
-    }
-  }
-}
-```
-
-This gives Claude the same GitHub tools — no Copilot subscription needed.
-
-## Raw JSON API
-
-| File | Description |
-|------|-------------|
-| `data/issues.json` | All issues (up to 30 per repo) |
-| `data/stats.json` | Aggregate counts by category, priority, etc. |
-| `data/issues_by_repo.json` | Issues grouped by repository |
-| `data/repos.json` | Repo list with category metadata |
-
-## Local Development
-
-```bash
-# Fetch fresh data (requires GITHUB_TOKEN env var)
-GITHUB_TOKEN=your_token python fetch_issues.py
-
-# Build the static site from cached data
-python build_site.py
-
-# Open in browser
-open index.html
-```
-
-## Ecosystems & Categories
-
-28 categories across 5 ecosystems:
-
-### Django
-| Category | Examples |
-|----------|---------|
-| Django Core | django/django, django/channels |
-| REST & API | encode/django-rest-framework, tfranzel/drf-spectacular |
-| GraphQL | graphql-python/graphene-django, strawberry-graphql/strawberry-django |
-| CMS & Content | wagtail/wagtail, django-cms/django-cms |
-| Open edX | openedx/edx-platform, openedx/credentials |
-| Task Queues | celery/celery, rq/django-rq |
-| Auth & Security | pennersr/django-allauth, jazzband/django-oauth-toolkit |
-| Database & ORM | django-mptt/django-mptt, carltongibson/django-filter |
-| Admin & UI | jazzband/django-debug-toolbar, farridav/django-jazzmin |
-| Forms & Frontend | django-crispy-forms/django-crispy-forms, adamchainz/django-htmx |
-| E-Commerce | django-oscar/django-oscar, saleor/saleor |
-| Storage & Files | jschneier/django-storages |
-| Config & DevOps | joke2k/django-environ, cookiecutter/cookiecutter-django |
-| Testing | FactoryBoy/factory_boy, pytest-dev/pytest-django |
-| Search | django-haystack/django-haystack |
-| i18n & Geo | django-parler/django-parler, GeoNode/geonode |
-| Logging & Monitoring | jazzband/django-silk |
-
-### Python
-| Category | Examples |
-|----------|---------|
-| Python Core | python/cpython, python/mypy |
-| Packaging & Build | pypa/pip, pypa/hatch |
-| Python Web | pallets/flask, tiangolo/fastapi |
-| Dev Tools | astral-sh/ruff, astral-sh/uv |
-
-### React
-| Category | Examples |
-|----------|---------|
-| React Core | facebook/react, remix-run/react-router |
-| Meta Frameworks | vercel/next.js, remix-run/remix |
-| State Management | reduxjs/redux-toolkit, pmndrs/zustand |
-| Build & Tooling | vitejs/vite, evanw/esbuild |
-
-### Rust
-| Category | Examples |
-|----------|---------|
-| Rust Core | rust-lang/rust, rust-lang/cargo |
-| Async & Web | tokio-rs/tokio, tokio-rs/axum |
-| CLI & Tooling | clap-rs/clap, BurntSushi/ripgrep |
-| Serialization | serde-rs/serde |
-
-### AI Skills
-| Repo | Description |
-|------|-------------|
-| anthropics/skills | Official Claude skills repository |
-| anthropics/claude-cookbooks | Official Anthropic cookbooks & examples |
-| BerriAI/litellm | LLM proxy & unified API |
-| run-llama/llama_index | LlamaIndex RAG framework |
-| chroma-core/chroma | Open-source embedding database |
-| langchain-ai/langchain | LangChain framework |
-| modelcontextprotocol/python-sdk | MCP Python SDK |
-
----
-
-## Agentic Contribution Workflow
-
-This repo ships a full **agentic pipeline** for finding, assigning, and implementing open source contributions.
-
-```
-/assign @dev  →  pick issue  →  Make a PR for <url>  →  review-pr  →  commit & push
+    │   ├── assign.md            # /assign — assign one issue to a dev
+    │   └── swarm.md             # /swarm — bulk triage across the team
+    └── skills/pick-issue/       # Skill: find the best issue for you personally
 ```
 
 ---
 
-### `/assign` — Issue Assignment
+## Commands (Claude Code)
 
-Claude reads issues from `data/by_category/`, scores and filters them for the dev's skills, presents the top 10, runs guardrails, creates a Taiga card, and saves to `data/assignments.json`.
+### `/swarm` — Bulk Team Triage
 
-**Usage (inside Claude Code):**
+Assigns the best issues across the whole team in one pass. Presents assignments, creates Taiga cards, then prompts for PR implementation.
+
+```
+/swarm              # all ecosystems, whole team
+/swarm django       # Django ecosystem only
+/swarm AI           # AI repos only
+/swarm awais786     # one dev only
+```
+
+### `/assign` — Single Dev Assignment
+
+Scores and filters issues for one developer, runs guardrails, creates Taiga card.
+
 ```
 /assign @jawad-khan
 /assign @valkrypton bug
-/assign @aznszn django
 /assign @awais786 ai fresh
 ```
 
-**Arguments:**
-- `@dev` — GitHub handle (required)
-- `category` — optional filter: django, python, ai, rest, auth, search, celery, orm, testing
-- `filter` — optional: bug, feature, gfi
-- `fresh` — force re-fetch even if cache is < 24h
-
-**Guardrails (checked before creating Taiga card):**
+**Guardrails:**
 
 | Rule | Action |
 |------|--------|
@@ -229,88 +178,76 @@ Claude reads issues from `data/by_category/`, scores and filters them for the de
 | Issue has > 10 comments | WARN |
 | Issue not updated in > 30 days | WARN |
 
-**Team roster:** Edit `data/devs.json` to add/update developers and their skills.
+### `/pick-issue` — Personal Issue Finder
 
----
+Finds clean, unassigned issues tailored to your profile. Verifies each issue is open and has no in-progress PR.
 
-### `/swarm` — Bulk Team Triage
-
-Assigns the best available issues across the whole team in one pass.
-
-**Usage:**
 ```
-/swarm                      # triage all devs
-/swarm django               # Django ecosystem only
-/swarm AI                   # AI repos only
-/swarm awais786             # one dev only
-```
-
----
-
-### `/pick-issue` Skill
-
-Finds clean, unassigned issues tailored to a single developer's profile.
-
-**Usage:**
-```
-/pick-issue           # Django ecosystem (default)
+/pick-issue           # default ecosystem
 /pick-issue django    # Django/Python repos
-/pick-issue AI        # AI repos (litellm, llama_index, chroma, langchain)
-/pick-issue AI MCP    # AI repos with MCP preference
+/pick-issue AI        # LiteLLM, LangChain, LlamaIndex, Chroma, MCP
 ```
 
-**What it does:**
-1. Fetches issues from hub or GitHub API depending on ecosystem
-2. Filters based on your profile (`skills/pick-issue/profile.md`)
-3. Scores issues by freshness, comment count, labels
-4. Verifies top 15 via live GitHub API — discards assigned, closed, or in-progress
-5. Presents top 5 guaranteed clean issues + top recommendation
+### `make-pr` — Autonomous PR Implementation
 
----
+Give it an issue URL — it reads the codebase, implements the fix, and hands off push commands.
 
-### `make-pr` Agent
-
-Give it an issue URL and it implements the fix autonomously, then hands off for you to commit.
-
-**Usage:**
 ```
 Make a PR for https://github.com/owner/repo/issues/123
 ```
 
-**What it does:**
-1. Validates issue is open, unassigned, no duplicate PRs
-2. Checks if fork exists, clones repo, syncs with upstream
-3. Reads CONTRIBUTING.md, installs deps, studies recent merged PRs
-4. Explores codebase, creates feature branch, implements minimal fix
-5. Shows diff and asks for approval
-6. Commits locally and runs `review-pr` before handing off push commands
+1. Validates issue is open and unassigned
+2. Forks/clones repo, creates feature branch
+3. Explores codebase, implements minimal fix
+4. Runs `review-pr` agent for quality check
+5. Commits and hands off `git push` to you
 
 ---
 
-### Contribution Memory
+## Raw JSON API
 
-All tools share a persistent memory file that tracks worked issues, team notes, and workflow rules. Already-worked issues are automatically skipped when finding new ones.
+All data files are publicly accessible via GitHub Pages:
 
+| File | URL |
+|------|-----|
+| All issues | `/data/issues.json` |
+| Stats | `/data/stats.json` |
+| By repo | `/data/issues_by_repo.json` |
+| Repo list | `/data/repos.json` |
+| Assignments | `/data/assignments.json` |
+
+---
+
+## Ecosystems Tracked
+
+28 categories across 5 ecosystems: **Django · Python · React · Rust · AI**
+
+160+ repos including Django, CPython, Mypy, FastAPI, Ruff, uv, React, Next.js, Rust, Tokio, LiteLLM, LangChain, LlamaIndex, Chroma, and more.
+
+---
+
+## Local Development
+
+```bash
+# Fetch fresh issue data
+GITHUB_TOKEN=your_token python3 fetch_issues.py
+
+# Build static site from cached data
+python3 build_site.py
+
+# Run swarm locally (filter + assign + Taiga cards)
+python3 swarm_assign.py --ecosystem all --top 5
+
+# Open dashboard
+open index.html
 ```
-~/.claude/projects/<project-hash>/memory/MEMORY.md
-```
-
-Assignments are also tracked in `data/assignments.json` — used by `/assign` to prevent duplicate assignments.
-
-### Personalizing Your Profile
-
-Edit `.claude/skills/pick-issue/profile.md` to customize:
-- Your skills and comfort areas
-- Preferred issue categories
-- Repos and labels to skip
-
-Edit `data/devs.json` to manage the team roster for `/swarm`.
 
 ---
 
 ## Contributing
 
-PRs welcome to:
+PRs welcome:
 - Add repos to `data/repos.json`
+- Improve scoring logic in `swarm_filter.py`
 - Improve the dashboard (`build_site.py`)
-- Improve the fetch/classification logic (`fetch_issues.py`)
+- Add new Claude Code commands in `.claude/commands/`
