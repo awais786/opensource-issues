@@ -106,4 +106,18 @@
     "priority": "low",
     "category": "py_tools"
   }
+,
+  {
+    "url": "https://github.com/anthropics/skills/issues/760",
+    "repo": "anthropics/skills",
+    "number": 760,
+    "title": "init_skill.py in scripts is empty",
+    "assignee": "awais786",
+    "assignee_name": "Awais Qureshi",
+    "status": "assigned",
+    "assigned_at": "2026-03-26T12:30:00.000000+00:00",
+    "taiga_us_url": "https://projects.arbisoft.com/project/arbisoft-open-source-projects/us/262",
+    "priority": "low",
+    "category": "ai_skills"
+  }
 ]

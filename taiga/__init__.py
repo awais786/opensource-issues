@@ -145,20 +145,50 @@ def _build_tags(issue: dict) -> list[list[str]]:
     return tags
 
 
-def _token_from_settings() -> str:
-    """Read TAIGA_TOKEN from .claude/settings.local.json as a fallback."""
+def _settings() -> dict:
+    """Read .claude/settings.local.json, return {} on any error."""
     import json
     from pathlib import Path
     settings_path = Path(__file__).resolve().parent.parent / ".claude" / "settings.local.json"
     try:
-        return json.loads(settings_path.read_text()).get("env", {}).get("TAIGA_TOKEN", "")
+        return json.loads(settings_path.read_text()).get("env", {})
     except (FileNotFoundError, KeyError, ValueError):
-        return ""
+        return {}
+
+
+def _fetch_token(username: str, password: str) -> str:
+    """Fetch a fresh Taiga auth token using username/password."""
+    import json
+    payload = json.dumps({"type": "normal", "username": username, "password": password}).encode()
+    req = urllib.request.Request(
+        f"{TAIGA_BASE}/auth",
+        data=payload,
+        headers={"Content-Type": "application/json"},
+        method="POST",
+    )
+    ssl_ctx = ssl.create_default_context()
+    ssl_ctx.check_hostname = False
+    ssl_ctx.verify_mode = ssl.CERT_NONE
+    try:
+        with urllib.request.urlopen(req, context=ssl_ctx, timeout=30) as resp:
+            return json.loads(resp.read().decode()).get("auth_token", "")
+    except Exception as e:
+        raise RuntimeError(f"Taiga auth failed: {e}") from e
 
 
 def client_from_env() -> TaigaClient:
-    """Create a TaigaClient from TAIGA_TOKEN env var or .claude/settings.local.json."""
-    token = os.environ.get("TAIGA_TOKEN", "") or _token_from_settings()
+    """Create a TaigaClient, fetching a fresh token from credentials if available."""
+    env = _settings()
+    username = os.environ.get("TAIGA_USERNAME") or env.get("TAIGA_USERNAME", "")
+    password = os.environ.get("TAIGA_PASSWORD") or env.get("TAIGA_PASSWORD", "")
+
+    if username and password:
+        token = _fetch_token(username, password)
+    else:
+        token = os.environ.get("TAIGA_TOKEN") or env.get("TAIGA_TOKEN", "")
+
     if not token:
-        raise RuntimeError("TAIGA_TOKEN not set in environment or .claude/settings.local.json")
+        raise RuntimeError(
+            "Set TAIGA_USERNAME+TAIGA_PASSWORD or TAIGA_TOKEN in environment or .claude/settings.local.json"
+        )
     return TaigaClient(token=token)
