@@ -10,53 +10,35 @@ OpenSwarm is an **agentic workflow** that autonomously discovers, scores, and as
 
 ## How It Works
 
-```mermaid
-flowchart TD
-    GH["GitHub Issues\n160+ repos"]
-    FETCH["fetch_issues.py\nGitHub Actions · daily 06:00 UTC"]
-    JSON["data/issues.json\n600+ issues cached"]
-
-    subgraph CLAUDEAI ["claude.ai · daily 04:00 UTC (9am Karachi)"]
-        FILTER["swarm_filter.py\nfilter · score · match skills"]
-        CLAUDE["Claude LLM\ncomplexity · approach · assignment"]
-        COMMIT["commit assignments.json\ntaiga_us_url: null · git push"]
-    end
-
-    subgraph GHACTIONS ["GitHub Actions · on push to assignments.json"]
-        SYNC["taiga_sync.py\ndetects null taiga_us_url entries"]
-        TAIGAAPI["POST /api/v1/auth\nfresh token · no expiry"]
-        UPDATE["update assignments.json\nwith Taiga URLs · git push"]
-    end
-
-    TAIGA["Taiga Board\ncards created ✓"]
-    REPO["GitHub Repo\nassignments.json synced"]
-    DEV["Developer\npicks up issue"]
-    MAKEPR["make-pr agent\nimplements fix autonomously"]
-    REVIEW["review-pr agent\nquality check"]
-    PR["Pull Request\nopened ✓"]
-
-    GH -->|daily fetch| FETCH
-    FETCH --> JSON
-    JSON --> FILTER
-    FILTER --> CLAUDE
-    CLAUDE --> COMMIT
-    COMMIT -->|push triggers workflow| SYNC
-    SYNC --> TAIGAAPI
-    TAIGAAPI --> TAIGA
-    TAIGAAPI --> UPDATE
-    UPDATE --> REPO
-    REPO --> DEV
-    DEV -->|Make a PR for url| MAKEPR
-    MAKEPR --> REVIEW
-    REVIEW -->|PASS| PR
-
-    style CLAUDE fill:#6366f1,color:#fff
-    style MAKEPR fill:#6366f1,color:#fff
-    style REVIEW fill:#6366f1,color:#fff
-    style TAIGA fill:#22c55e,color:#fff
-    style PR fill:#22c55e,color:#fff
-    style CLAUDEAI fill:#eef2ff,stroke:#6366f1
-    style GHACTIONS fill:#f0fdf4,stroke:#22c55e
+```
+GitHub Actions (daily 06:00 UTC)
+    │  fetch_issues.py — pulls 600+ issues across 160+ repos
+    │  writes data/issues.json
+    │
+    ▼
+claude.ai trigger (daily 9am Karachi)
+    │  swarm_filter.py — filter, score, match skills (Python, no tokens wasted)
+    │  Claude LLM — complexity analysis, fix approach, dev assignment
+    │  commits assignments.json  taiga_us_url: null
+    │  git push
+    │
+    └──► GitHub Actions (on push to assignments.json)
+              │  taiga_sync.py — detects null taiga_us_url entries
+              │  fetches fresh Taiga token via secrets
+              │  creates Taiga cards (one per assignment)
+              │  fills in taiga_us_url for each entry
+              │  commits assignments.json back
+              │
+              └──► Taiga Board ✓
+                        │
+                        │  developer picks up issue
+                        ▼
+                   make-pr agent
+                        │  explores codebase
+                        │  implements fix
+                        │  runs review-pr
+                        ▼
+                   Pull Request ✓
 ```
 
 **Agents in the system:**
