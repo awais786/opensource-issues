@@ -1,5 +1,32 @@
 [
   {
+    "id": 4154977073,
+    "repo": "django-treebeard/django-treebeard",
+    "ecosystem": "django",
+    "ecosystem_label": "Django",
+    "category": "database_orm",
+    "category_label": "Database & ORM",
+    "number": 381,
+    "title": "Implement a signal that fires when path is bulk-updated",
+    "url": "https://github.com/django-treebeard/django-treebeard/issues/381",
+    "author": "gasman",
+    "author_avatar": "https://avatars.githubusercontent.com/u/85097?v=4",
+    "created_at": "2026-03-27T18:21:14Z",
+    "updated_at": "2026-03-27T18:21:14Z",
+    "comments": 0,
+    "labels": [
+      "feature request"
+    ],
+    "body_preview": "In Wagtail (or specifically the [django-modelsearch](https://github.com/wagtail/django-modelsearch) package spun out of it), we support Elasticsearch and OpenSearch as search backends by maintaining an external data store that mirrors the data in the database. This is kept in sync with the database through `post_save`/`post_delete` signals on the models being tracked.  To allow this data store to...",
+    "is_new": true,
+    "priority": "medium",
+    "is_bug": false,
+    "is_feature": true,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 3921120642,
     "repo": "jazzband/django-polymorphic",
     "ecosystem": "django",
@@ -167,9 +194,11 @@
     "author": "jaimeres",
     "author_avatar": "https://avatars.githubusercontent.com/u/19354871?v=4",
     "created_at": "2026-03-26T01:33:55Z",
-    "updated_at": "2026-03-26T01:33:55Z",
-    "comments": 0,
-    "labels": [],
+    "updated_at": "2026-03-27T07:37:23Z",
+    "comments": 1,
+    "labels": [
+      "needs-information"
+    ],
     "body_preview": "Hi,  I'm trying to sort a resource by a field from a related model using the ?sort= Current behavior: When I send ?sort=responsible_level.level, the API returns:  `{   \"errors\": [{     \"detail\": \"invalid sort parameter: responsible_level.level\",     \"status\": \"400\",     \"code\": \"invalid\"   }] }`  Expected behavior: Be able to sort by a field on a related model, e.g. ?sort=responsible_level.level m...",
     "is_new": true,
     "priority": "low",
