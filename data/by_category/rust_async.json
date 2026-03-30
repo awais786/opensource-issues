@@ -415,7 +415,7 @@
     "comments": 2,
     "labels": [],
     "body_preview": "- [x] I have looked for existing issues (including closed) about this  ## Feature Request  I have the following handler to return multiple accounts based on query strings:  ```rust async fn list(State(cx): State<Arc<Api>>, Query(params): Query<Vec<List>>) -> Result<Json<Vec<Account>>, Error> {     let mut res = Vec::new();      for q in params {         let a = match q {             List::Id(v) =>...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

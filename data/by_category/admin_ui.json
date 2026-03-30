@@ -329,7 +329,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "## Description                                                                                                                                                                                                     The fix in 3.0.3 for #651 addressed the missing Bootswatch .map files and added bootstrap.min.js.map, but missed bootstrap.bundle.min.js.map. This means collectstatic still fails for any pr...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
