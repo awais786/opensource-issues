@@ -341,7 +341,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "As far as I can tell, using a custom formatter requires interfacing with `Serializer`, which means any crate doing this needs the direct `serde_core` dependency:  ```rust use serde_core::Serialize; use serde_json::{Serializer, json, ser::PrettyFormatter};  fn main() {     let j = json! {{\"a\": [1, 2, 3], \"b\": {}}};     let p = PrettyFormatter::with_indent(b\"    \");     let mut v = Vec::new();     l...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

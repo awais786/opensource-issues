@@ -116,7 +116,7 @@
     "author": "avolant",
     "author_avatar": "https://avatars.githubusercontent.com/u/179523452?v=4",
     "created_at": "2026-02-26T08:53:54Z",
-    "updated_at": "2026-02-26T08:53:54Z",
+    "updated_at": "2026-03-30T11:15:19Z",
     "comments": 0,
     "labels": [],
     "body_preview": "## Problem  Some deployments need per-connection authentication against the result database (e.g. AWS RDS IAM auth, HashiCorp Vault short-lived tokens, JWT injection). SQLAlchemy supports this via `do_connect` event listeners, but there is currently no hook to register them on the engine Celery creates.  ## Proposed solution  Add an `engine_callback` parameter to `SessionManager` and a `database_e...",

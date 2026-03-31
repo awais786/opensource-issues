@@ -193,7 +193,7 @@
       "bug"
     ],
     "body_preview": "### Bug Description  When `django-pictures` generates AVIF variants from CMYK source images, it can preserve the original embedded CMYK ICC profile even though the pixel data is converted to RGB during save. This produces AVIF files with RGB image data but a CMYK color profile, which some browsers reject.  ### Observed behavior  - Source image: CMYK JPEG with embedded ICC profile - Generated varia...",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,
