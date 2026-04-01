@@ -16,7 +16,7 @@
     "comments": 1,
     "labels": [],
     "body_preview": "The installation section currently lists ASGI servers inline:  > You'll also want to install an ASGI server, such as uvicorn, daphne, or hypercorn.  This list is incomplete and will go stale. The ASGI spec maintains a canonical, up-to-date list of server implementations at https://asgi.readthedocs.io/en/latest/implementations.html#servers.  I've added a PR to add anycorn to the list https://github...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

@@ -80,33 +80,6 @@
     "is_help_wanted": false
   },
   {
-    "id": 3774199924,
-    "repo": "jazzband/django-polymorphic",
-    "ecosystem": "django",
-    "ecosystem_label": "Django",
-    "category": "database_orm",
-    "category_label": "Database & ORM",
-    "number": 780,
-    "title": "Performance Monitoring",
-    "url": "https://github.com/jazzband/django-polymorphic/issues/780",
-    "author": "bckohan",
-    "author_avatar": "https://avatars.githubusercontent.com/u/26320749?v=4",
-    "created_at": "2026-01-01T06:28:36Z",
-    "updated_at": "2026-01-02T04:09:51Z",
-    "comments": 5,
-    "labels": [
-      "testing"
-    ],
-    "body_preview": "We need to track performance along several axes to catch performance regressions before they get shipped.  Principally interested in:  1. Number of queries issued 2. Speed of polymorphic model iteration  Would like to be able to point the tests to a version on pypi, a PR or a commit hash.  Related #781",
-    "is_new": false,
-    "priority": "low",
-    "is_bug": false,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
     "id": 4079016167,
     "repo": "carltongibson/django-filter",
     "ecosystem": "django",

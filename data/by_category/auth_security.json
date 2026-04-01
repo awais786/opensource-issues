@@ -1,32 +1,5 @@
 [
   {
-    "id": 4132111490,
-    "repo": "jazzband/django-oauth-toolkit",
-    "ecosystem": "django",
-    "ecosystem_label": "Django",
-    "category": "auth_security",
-    "category_label": "Auth & Security",
-    "number": 1674,
-    "title": "`RefreshTokenAdmin` changelist triggers unbounded `select_related`, causing `Too many columns` on MySQL",
-    "url": "https://github.com/django-oauth/django-oauth-toolkit/issues/1674",
-    "author": "IrishPrime",
-    "author_avatar": "https://avatars.githubusercontent.com/u/124202?v=4",
-    "created_at": "2026-03-25T03:25:22Z",
-    "updated_at": "2026-03-25T03:29:46Z",
-    "comments": 0,
-    "labels": [
-      "bug"
-    ],
-    "body_preview": "**Describe the bug**  When viewing the `RefreshToken` page in the Django admin, Django generates a SQL query with an unbounded `SELECT` that `JOIN`s every related table reachable by following foreign keys from `RefreshToken`. On MySQL this eventually exceeds the server's maximum column limit and raises a `Too many columns` error.  The root cause is that `RefreshTokenAdmin` does not set `list_selec...",
-    "is_new": true,
-    "priority": "high",
-    "is_bug": true,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
     "id": 4027049807,
     "repo": "jazzband/django-oauth-toolkit",
     "ecosystem": "django",
@@ -211,33 +184,6 @@
     "priority": "medium",
     "is_bug": false,
     "is_feature": true,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
-    "id": 3809398832,
-    "repo": "jazzband/django-oauth-toolkit",
-    "ecosystem": "django",
-    "ecosystem_label": "Django",
-    "category": "auth_security",
-    "category_label": "Auth & Security",
-    "number": 1639,
-    "title": "client_secret in OAuth2Validator fails authentication when it contains '+' character",
-    "url": "https://github.com/django-oauth/django-oauth-toolkit/issues/1639",
-    "author": "chadj2",
-    "author_avatar": "https://avatars.githubusercontent.com/u/3045965?v=4",
-    "created_at": "2026-01-13T15:33:01Z",
-    "updated_at": "2026-01-13T17:08:57Z",
-    "comments": 0,
-    "labels": [
-      "bug"
-    ],
-    "body_preview": "**Describe the bug** Attempting to authenticate with a client secret using `OAuth2Validator` fails when the secret contains a '+' character.  **To Reproduce** See above.  **Expected behavior** See above.  **Version** latest  <!-- Have you tested with the latest version and/or master branch? --> <!-- Replace '[ ]' with '[x]' to indicate that. --> - [x] I have tested with the latest published releas...",
-    "is_new": false,
-    "priority": "high",
-    "is_bug": true,
-    "is_feature": false,
     "is_security": false,
     "is_good_first_issue": false,
     "is_help_wanted": false

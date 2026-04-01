@@ -385,6 +385,36 @@
     "is_help_wanted": false
   },
   {
+    "id": 4178266583,
+    "repo": "getsentry/sentry-python",
+    "ecosystem": "django",
+    "ecosystem_label": "Django",
+    "category": "config_devops",
+    "category_label": "Config & DevOps",
+    "number": 5922,
+    "title": "Profiling does not work when using OpenTelemetry for tracing (instrumenter=\"otel\" or OTLPIntegration)",
+    "url": "https://github.com/getsentry/sentry-python/issues/5922",
+    "author": "d-Ivanovs",
+    "author_avatar": "https://avatars.githubusercontent.com/u/150345071?v=4",
+    "created_at": "2026-03-31T11:17:28Z",
+    "updated_at": "2026-03-31T11:25:24Z",
+    "comments": 1,
+    "labels": [
+      "Waiting for: Product Owner",
+      "Python",
+      "Bug",
+      "Profiles"
+    ],
+    "body_preview": "**Problem**  When using OpenTelemetry for distributed tracing (either via `OTLPIntegration` with `traces_sample_rate=0` or via `instrumenter=\"otel\"` + `SentrySpanProcessor`), Sentry's legacy profiling (`profiles_sample_rate`) stops working. Profiles are created but contain 0 samples and are discarded by `Profile.valid()`.  **Presumed root cause**  The profiler lifecycle (`Profile.start()` / `Profi...",
+    "is_new": true,
+    "priority": "high",
+    "is_bug": true,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 4168857312,
     "repo": "getsentry/sentry-python",
     "ecosystem": "django",
@@ -467,35 +497,6 @@
     "is_help_wanted": false
   },
   {
-    "id": 4146924156,
-    "repo": "getsentry/sentry-python",
-    "ecosystem": "django",
-    "ecosystem_label": "Django",
-    "category": "config_devops",
-    "category_label": "Config & DevOps",
-    "number": 5890,
-    "title": "OpenAIIntegration breaks litellm streaming \u2014 LegacyAPIResponse wraps Stream objects",
-    "url": "https://github.com/getsentry/sentry-python/issues/5890",
-    "author": "iRbouh",
-    "author_avatar": "https://avatars.githubusercontent.com/u/16250393?v=4",
-    "created_at": "2026-03-26T19:50:42Z",
-    "updated_at": "2026-03-30T14:38:19Z",
-    "comments": 3,
-    "labels": [
-      "Waiting for: Product Owner",
-      "Python",
-      "Bug"
-    ],
-    "body_preview": "## How do you use Sentry? Sentry SaaS (sentry.io)  ## Version sentry-sdk 2.56.0  ## Steps to Reproduce  ```python import sentry_sdk import litellm  sentry_sdk.init(dsn=\"...\")  # OpenAIIntegration auto-enables  # This fails: response = litellm.completion(     model=\"gpt-4.1-nano\",     messages=[{\"role\": \"user\", \"content\": \"hello\"}],     stream=True, ) for chunk in response:     print(chunk) ```  **...",
-    "is_new": true,
-    "priority": "high",
-    "is_bug": true,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
     "id": 4127063425,
     "repo": "getsentry/sentry-python",
     "ecosystem": "django",
@@ -517,7 +518,7 @@
       "Spans"
     ],
     "body_preview": "HuggingFace exposes `InferenceClient.chat.completions.create()` as an OpenAI-compatible alias. This bypasses the patched `chat_completion` method, so calls through this path go uninstrumented.",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
@@ -547,7 +548,7 @@
       "Spans"
     ],
     "body_preview": "`InferenceClient.feature_extraction()` is the HuggingFace equivalent of embeddings. The SDK has `OP.GEN_AI_EMBEDDINGS` defined and both OpenAI and Cohere instrument their embedding methods. This is a meaningful gap for users who use HF for embeddings. Should cover both sync `InferenceClient` and async `AsyncInferenceClient`.",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
@@ -577,7 +578,7 @@
       "Spans"
     ],
     "body_preview": "The integration only wraps sync `InferenceClient.text_generation` and `InferenceClient.chat_completion`. The `AsyncInferenceClient` has identical methods as async coroutines and is completely uninstrumented. Every other major AI integration (OpenAI, Anthropic, LangChain) instruments both sync and async variants.",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
@@ -606,7 +607,7 @@
       "Spans"
     ],
     "body_preview": "No `AsyncClient` methods are wrapped. Both the OpenAI and Anthropic integrations wrap async variants (`AsyncCompletions.create`, `AsyncMessages.create`, etc.). The Cohere async client's `chat`, `chat_stream`, and `embed` methods should be instrumented to match.  **Acceptance criteria:**  * Async `chat`, `chat_stream`, and `embed` methods emit spans * Behavior mirrors the sync wrappers (token usage...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
@@ -635,7 +636,7 @@
       "Spans"
     ],
     "body_preview": "The Cohere V2 client (`cohere.ClientV2`) exists but its methods are not patched. The current integration only patches `BaseCohere` and `Client`. If `ClientV2` doesn't inherit from `BaseCohere`, calls through the V2 client go completely unmonitored.  Need to verify the inheritance chain and patch accordingly.  **Acceptance criteria:**  * `ClientV2.chat`, `embed`, and other relevant methods emit spa...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
@@ -664,7 +665,7 @@
       "Spans"
     ],
     "body_preview": "The Cohere SDK's `classify` method (text classification using examples) is not instrumented. This is an AI inference call that should emit spans with model, token usage, and input/output data.  **Acceptance criteria:**  * `classify` calls emit spans with model, token usage, and input/output data * Follows `gen_ai.*` attribute conventions (not deprecated `ai.*`) * Sets `gen_ai.system = \"cohere\"`",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
@@ -693,7 +694,7 @@
       "Spans"
     ],
     "body_preview": "The Cohere SDK's `rerank` method (ranks documents by relevance to a query) is not instrumented. This is a significant AI operation with token costs that should be tracked.  Needs a new span operation \u2014 no existing `gen_ai.*` OP constant covers reranking.  **Acceptance criteria:**  * `rerank` calls emit spans with model, token usage, and input/output data * Follows `gen_ai.*` attribute conventions...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
@@ -722,7 +723,7 @@
       "Spans"
     ],
     "body_preview": "`Agent.run_sync()` is not directly patched but likely works transitively since it calls `Agent.run()` internally. This should be verified with a test.  `pydantic_ai.direct.model_request()` is a standalone LLM call API that bypasses Agent entirely. The `Model.request` patch in `patches/model_request.py` may catch the underlying call, but this also needs verification.  Both should have explicit test...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
@@ -751,7 +752,7 @@
       "Spans"
     ],
     "body_preview": "`Embedder.embed()`, `embed_query()`, and `embed_documents()` (and their sync variants) make model calls with no spans today.  OTel defines `gen_ai.embeddings` as a valid `gen_ai.operation.name` and we already have `OP.GEN_AI_EMBEDDINGS` defined in `sentry_sdk/consts.py`. Should create `gen_ai.embeddings` spans with model name, system, and token usage attributes.",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
@@ -780,7 +781,7 @@
       "Spans"
     ],
     "body_preview": "`Agent.iter()` is a public API for step-by-step agent iteration that does NOT call `Agent.run()`, so currently no `invoke_agent` span is created. Inner model calls still get `gen_ai.chat` spans via the `ModelRequestNode` patch, but without the parent agent span.  This should be patched similarly to `Agent.run_stream()` \u2014 wrapping the async context manager to create an `invoke_agent` span and push/...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
@@ -809,7 +810,7 @@
       "Spans"
     ],
     "body_preview": "Extract `tool_call_id` from pydantic-ai's `ToolCallPart` and set it in two places:  1. On `gen_ai.execute_tool` spans in `sentry_sdk/integrations/pydantic_ai/spans/execute_tool.py` 2. In chat message serialization (tool call messages) in `sentry_sdk/integrations/pydantic_ai/spans/ai_client.py`  This helps correlate tool calls with their returns in multi-tool scenarios. The attribute is recommended...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
@@ -838,7 +839,7 @@
       "Spans"
     ],
     "body_preview": "Extract `response_id` from pydantic-ai's `ModelResponse` and set it as `gen_ai.response.id` in `update_ai_client_span()` in `sentry_sdk/integrations/pydantic_ai/spans/ai_client.py`.  This is a recommended OTel attribute, useful for correlating spans with provider dashboards/logs. We already have `SPANDATA.GEN_AI_RESPONSE_ID` defined in `consts.py`.",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
@@ -867,7 +868,36 @@
       "Spans"
     ],
     "body_preview": "Add `top_k` \u2192 `SPANDATA.GEN_AI_REQUEST_TOP_K` to `settings_map` in `sentry_sdk/integrations/pydantic_ai/utils.py:148`.  This is a recommended OTel attribute that we already have defined in `consts.py` but is not mapped from pydantic-ai's `ModelSettings`.",
-    "is_new": true,
+    "is_new": false,
+    "priority": "low",
+    "is_bug": false,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
+    "id": 4126977333,
+    "repo": "getsentry/sentry-python",
+    "ecosystem": "django",
+    "ecosystem_label": "Django",
+    "category": "config_devops",
+    "category_label": "Config & DevOps",
+    "number": 5831,
+    "title": "Add `gen_ai.request.seed` to model settings mapping",
+    "url": "https://github.com/getsentry/sentry-python/issues/5831",
+    "author": "ericapisani",
+    "author_avatar": "https://avatars.githubusercontent.com/u/5655473?v=4",
+    "created_at": "2026-03-24T10:56:33Z",
+    "updated_at": "2026-03-24T12:16:44Z",
+    "comments": 1,
+    "labels": [
+      "Python",
+      "Improvement",
+      "Spans"
+    ],
+    "body_preview": "Add `seed` \u2192 `SPANDATA.GEN_AI_REQUEST_SEED` to `settings_map` in `sentry_sdk/integrations/pydantic_ai/utils.py:148`.  This is a recommended OTel attribute that we already have defined in `consts.py` but is not mapped from pydantic-ai's `ModelSettings`.",
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
