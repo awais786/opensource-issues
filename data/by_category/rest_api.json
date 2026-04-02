@@ -91,7 +91,7 @@
     "comments": 1,
     "labels": [],
     "body_preview": "**Describe the bug**  Generate an OpenAPI schema using Python 3.14. At runtime:  ``` DeprecationWarning: '_UnionGenericAlias' is deprecated and slated for removal in Python 3.17 ```  ``` .nox/test/lib/python3.14/site-packages/drf_spectacular/views.py:84: in get     return self._get_schema_response(request)            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ .nox/test/lib/python3.14/site-packages/drf_spe...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

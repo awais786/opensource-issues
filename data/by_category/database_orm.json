@@ -173,7 +173,7 @@
       "needs-information"
     ],
     "body_preview": "Hi,  I'm trying to sort a resource by a field from a related model using the ?sort= Current behavior: When I send ?sort=responsible_level.level, the API returns:  `{   \"errors\": [{     \"detail\": \"invalid sort parameter: responsible_level.level\",     \"status\": \"400\",     \"code\": \"invalid\"   }] }`  Expected behavior: Be able to sort by a field on a related model, e.g. ?sort=responsible_level.level m...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
