@@ -1,5 +1,32 @@
 [
   {
+    "id": 4195527884,
+    "repo": "jazzband/django-debug-toolbar",
+    "ecosystem": "django",
+    "ecosystem_label": "Django",
+    "category": "admin_ui",
+    "category_label": "Admin & UI",
+    "number": 2338,
+    "title": "Using CacheStore with DatabaseCache backend shows BEGIN sql queries",
+    "url": "https://github.com/django-commons/django-debug-toolbar/issues/2338",
+    "author": "tim-schilling",
+    "author_avatar": "https://avatars.githubusercontent.com/u/1281215?v=4",
+    "created_at": "2026-04-02T15:59:05Z",
+    "updated_at": "2026-04-02T16:03:44Z",
+    "comments": 1,
+    "labels": [
+      "Bug"
+    ],
+    "body_preview": "With the following settings:  ``` CACHES = {     \"default\": {\"BACKEND\": \"django.core.cache.backends.locmem.LocMemCache\"},     \"debug-toolbar\": {         \"BACKEND\": \"django.core.cache.backends.db.DatabaseCache\",         \"LOCATION\": \"my_cache_table\",     }, } DEBUG_TOOLBAR_CONFIG = {     \"TOOLBAR_STORE_CLASS\": \"debug_toolbar.store.CacheStore\",     \"CACHE_BACKEND\": \"debug-toolbar\", } ```  Using the e...",
+    "is_new": true,
+    "priority": "high",
+    "is_bug": true,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 4095269635,
     "repo": "jazzband/django-debug-toolbar",
     "ecosystem": "django",
