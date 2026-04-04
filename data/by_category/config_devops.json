@@ -100,6 +100,33 @@
     "is_help_wanted": false
   },
   {
+    "id": 4199204392,
+    "repo": "cookiecutter/cookiecutter-django",
+    "ecosystem": "django",
+    "ecosystem_label": "Django",
+    "category": "config_devops",
+    "category_label": "Config & DevOps",
+    "number": 6486,
+    "title": "Consider adding `django-modern-rest` as an API option",
+    "url": "https://github.com/cookiecutter/cookiecutter-django/issues/6486",
+    "author": "sobolevn",
+    "author_avatar": "https://avatars.githubusercontent.com/u/4660275?v=4",
+    "created_at": "2026-04-03T08:26:44Z",
+    "updated_at": "2026-04-03T14:00:56Z",
+    "comments": 2,
+    "labels": [
+      "enhancement"
+    ],
+    "body_preview": "Hi \ud83d\udc4b   I am the author of both `django-stubs` and `django-modern-rest`: https://github.com/wemake-services/django-modern-rest  I saw that API layer is now configurable: https://github.com/cookiecutter/cookiecutter-django/pull/6088  I would love to contribute DMR as an API target. Here's how it looks in `wemake-django-template`: https://github.com/wemake-services/wemake-django-template/blob/master/...",
+    "is_new": true,
+    "priority": "medium",
+    "is_bug": false,
+    "is_feature": true,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 4194438942,
     "repo": "cookiecutter/cookiecutter-django",
     "ecosystem": "django",
@@ -597,7 +624,7 @@
       "Bug"
     ],
     "body_preview": "## Description  The async gRPC server interceptor (`sentry_sdk/integrations/grpc/aio/server.py`) does not create an `isolation_scope()` per request, unlike its sync counterpart and every other request-handling integration.  This causes scope state (attachments, tags, breadcrumbs, extras) to leak between requests.  ## Sync vs Async  The **sync** interceptor correctly isolates each request:  https:/...",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,

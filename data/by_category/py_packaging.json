@@ -75,7 +75,7 @@
       "state: awaiting PR"
     ],
     "body_preview": "### Description  **Security-ish but not deemed worth keeping private**: _This came in as a security report to PSRT on February 25 via Andrew Lacambra titled \"Arbitrary File Deletion via RECORD Path Traversal on Uninstall\".  Recently I was independently having Claude, Anthropic's AI assistant, conduct a security analysis of pip and it flagged the same problem.  Per Damien Shaw & `pip` maintainers a...",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,
@@ -373,8 +373,8 @@
     "author": "Andrej730",
     "author_avatar": "https://avatars.githubusercontent.com/u/9417531?v=4",
     "created_at": "2026-04-01T08:32:05Z",
-    "updated_at": "2026-04-01T11:41:03Z",
-    "comments": 2,
+    "updated_at": "2026-04-03T07:58:19Z",
+    "comments": 3,
     "labels": [
       "Needs Discussion"
     ],
@@ -672,7 +672,7 @@
       "needs investigation"
     ],
     "body_preview": "Hello hatch team.  If I include an  `env-include` pattern in one of my environments hatch is unable to create the default env (or any other I think) on Windows. On Linux it creates the environment fine.  ---  ## Steps to reproduce:  - `hatch new test-env` - Add env-include to an environment: ``` [tool.hatch.envs.default] env-include = [\"TEST_ENV_*\"] ``` - `hatch env create` ```   error: subprocess...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
@@ -818,16 +818,19 @@
     "author": "ssiccha",
     "author_avatar": "https://avatars.githubusercontent.com/u/11617763?v=4",
     "created_at": "2026-03-02T10:37:55Z",
-    "updated_at": "2026-03-02T10:43:23Z",
+    "updated_at": "2026-04-03T15:29:37Z",
     "comments": 0,
-    "labels": [],
+    "labels": [
+      "good first issue",
+      "docs"
+    ],
     "body_preview": "When using hatch test, the environment comes with [hard-coded default dependencies](https://github.com/pypa/hatch/blob/master/src/hatch/env/internal/test.py) (pytest, coverage, pytest-rerunfailures, etc.). This can lead to confusing errors when a user adds a conflicting version via extra-dependencies:  ```toml [tool.hatch.envs.hatch-test] extra-dependencies = [     \"pytest-rerunfailures==15.0\", ]...",
     "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
     "is_security": false,
-    "is_good_first_issue": false,
+    "is_good_first_issue": true,
     "is_help_wanted": false
   },
   {

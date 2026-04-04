@@ -19,7 +19,7 @@
       "pr-welcome"
     ],
     "body_preview": "In Wagtail (or specifically the [django-modelsearch](https://github.com/wagtail/django-modelsearch) package spun out of it), we support Elasticsearch and OpenSearch as search backends by maintaining an external data store that mirrors the data in the database. This is kept in sync with the database through `post_save`/`post_delete` signals on the models being tracked.  To allow this data store to...",
-    "is_new": true,
+    "is_new": false,
     "priority": "medium",
     "is_bug": false,
     "is_feature": true,

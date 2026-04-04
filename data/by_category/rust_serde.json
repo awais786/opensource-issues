@@ -16,7 +16,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "Add optional methods to `serde::Serializer` and `serde::Deserializer` for bulk serialization/deserialization of contiguous numeric slices. This enables binary formats to memcpy typed arrays in a single operation instead of processing elements one at a time.  The lack of this support is causing Rust binary format encode/decode to perform around 10X slower than C++ libraries like Glaze when handling...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

@@ -16,7 +16,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "### Description  The `django-silk` profiling and inspection UI is unauthenticated and unauthorized by default (`SILKY_AUTHENTICATION` and `SILKY_AUTHORISATION` are `False`). This means that if `django-silk` is deployed to a production environment without explicitly configuring these settings, anyone with network access to the `/silk/` URL can view sensitive application data, including request/resp...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
