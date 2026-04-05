@@ -957,30 +957,5 @@
     "is_security": false,
     "is_good_first_issue": false,
     "is_help_wanted": false
-  },
-  {
-    "id": 3837785900,
-    "repo": "pypa/hatch",
-    "ecosystem": "python",
-    "ecosystem_label": "Python",
-    "category": "py_packaging",
-    "category_label": "Packaging & Build",
-    "number": 2166,
-    "title": "Extra features with underscores in their names are not found when installing the test environment",
-    "url": "https://github.com/pypa/hatch/issues/2166",
-    "author": "jeberger",
-    "author_avatar": "https://avatars.githubusercontent.com/u/930717?v=4",
-    "created_at": "2026-01-21T11:21:52Z",
-    "updated_at": "2026-03-19T12:20:37Z",
-    "comments": 1,
-    "labels": [],
-    "body_preview": "Given the following in my `pyproject.toml`:  ```toml [project.optional-dependencies] foo_bar = [ \"foo\" ]  [tool.hatch.envs.hatch-test] features = [     \"foo_bar\", ] ```  Running `hatch test` causes the following error:  ```lang-none ValueError: Feature `foo-bar` of field `tool.hatch.envs.hatch-test.py3.11.features` is not defined in the dynamic field `project.optional-dependencies` ```  Replacing...",
-    "is_new": false,
-    "priority": "low",
-    "is_bug": false,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
   }
 ]

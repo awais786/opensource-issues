@@ -79,33 +79,6 @@
     "is_help_wanted": false
   },
   {
-    "id": 3937135287,
-    "repo": "celery/celery",
-    "ecosystem": "django",
-    "ecosystem_label": "Django",
-    "category": "task_queues",
-    "category_label": "Task Queues & Async",
-    "number": 10119,
-    "title": "Support configuring additional connection errors for Redis backend (e.g., ReadOnlyError)",
-    "url": "https://github.com/celery/celery/issues/10119",
-    "author": "piotrszyma",
-    "author_avatar": "https://avatars.githubusercontent.com/u/17964357?v=4",
-    "created_at": "2026-02-13T13:13:17Z",
-    "updated_at": "2026-03-01T12:05:35Z",
-    "comments": 3,
-    "labels": [
-      "Issue Type: Feature Request"
-    ],
-    "body_preview": "<!-- Please fill this template entirely and do not erase parts of it. We reserve the right to close without a response feature requests which are incomplete. --> # Checklist <!-- To check an item on the list replace [ ] with [x]. -->  - [x] I have checked the [issues list](https://github.com/celery/celery/issues?utf8=%E2%9C%93&q=is%3Aissue+label%3A%22Issue+Type%3A+Feature+Request%22+)   for simila...",
-    "is_new": false,
-    "priority": "medium",
-    "is_bug": false,
-    "is_feature": true,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
     "id": 3978472061,
     "repo": "celery/django-celery-beat",
     "ecosystem": "django",
