@@ -230,7 +230,7 @@
       "FC"
     ],
     "body_preview": "",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
@@ -257,7 +257,7 @@
       "code health"
     ],
     "body_preview": "Remove https://github.com/openedx/openedx-platform/blob/master/cms/djangoapps/contentstore/management/commands/replace_v1_lib_refs_with_v2_in_courses.py and all associated celery tasks and supporting code.  See https://github.com/openedx/openedx-platform/issues/38230#issuecomment-4156252867 for context",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

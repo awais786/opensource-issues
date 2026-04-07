@@ -16,7 +16,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "`FloatConverter` uses scientific notation (`1e-05`) when building URLs with values smaller than 0.0001. This leads to URLs, that can not be resolved, as `FloatConverter` does not handle values containing letters (regex: `\\d+\\.\\d+`).  The following listing illustrates the issue:  ```python from werkzeug.routing import Map, Rule from werkzeug.routing.converters import FloatConverter import typing as...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

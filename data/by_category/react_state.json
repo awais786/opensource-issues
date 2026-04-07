@@ -620,7 +620,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "### Describe the bug  TypeScript v6 came out recently, but cannot be used right now in projects with eslint-plugin-query, since only TypeScript v5 is supported.  ### Steps to reproduce  Add `\"@tanstack/eslint-plugin-query\": \"^5.95.2\"` to package.json in a project which has `\"typescript\": \"^6.0.2\"`  ### Expected behavior  It supports TS v6  ### Platform  All  ### TanStack Query version  v5.95.2  ##...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
