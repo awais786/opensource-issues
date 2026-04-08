@@ -1,5 +1,59 @@
 [
   {
+    "id": 4220456877,
+    "repo": "facebook/react",
+    "ecosystem": "react",
+    "ecosystem_label": "React",
+    "category": "react_core",
+    "category_label": "React Core",
+    "number": 36229,
+    "title": "Bug: React 19 significant performance regression with many <input> elements",
+    "url": "https://github.com/facebook/react/issues/36229",
+    "author": "elakov",
+    "author_avatar": "https://avatars.githubusercontent.com/u/24565969?v=4",
+    "created_at": "2026-04-07T20:36:29Z",
+    "updated_at": "2026-04-07T20:37:22Z",
+    "comments": 0,
+    "labels": [
+      "Status: Unconfirmed"
+    ],
+    "body_preview": "After upgrading to React 19, I observed a significant performance regression during the commit phase. The slowdown occurs specifically when a render touches \\<input\\> elements.  The new updateInput logic in React 19 does not check whether the DOM actually needs to be updated. Instead of skipping unchanged inputs, it unconditionally applies property writes on every commit \u2014 even when the values hav...",
+    "is_new": true,
+    "priority": "low",
+    "is_bug": false,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
+    "id": 4217726179,
+    "repo": "facebook/react",
+    "ecosystem": "react",
+    "ecosystem_label": "React",
+    "category": "react_core",
+    "category_label": "React Core",
+    "number": 36226,
+    "title": "nevidimka,qwe",
+    "url": "https://github.com/facebook/react/issues/36226",
+    "author": "teslukviktor75-del",
+    "author_avatar": "https://avatars.githubusercontent.com/u/223762567?v=4",
+    "created_at": "2026-04-07T12:43:16Z",
+    "updated_at": "2026-04-07T12:43:16Z",
+    "comments": 0,
+    "labels": [
+      "Status: Unconfirmed"
+    ],
+    "body_preview": "<!--   Please provide a clear and concise description of what the bug is. Include   screenshots if needed. Please test using the latest version of the relevant   React packages to make sure your issue has not already been fixed. -->  React version:  ## Steps To Reproduce  1. 2.  <!--   Your bug will get fixed much faster if we can run your code and it doesn't   have dependencies other than React....",
+    "is_new": true,
+    "priority": "low",
+    "is_bug": false,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 4207742931,
     "repo": "facebook/react",
     "ecosystem": "react",
@@ -83,33 +137,6 @@
     "is_help_wanted": false
   },
   {
-    "id": 4201151977,
-    "repo": "facebook/react",
-    "ecosystem": "react",
-    "ecosystem_label": "React",
-    "category": "react_core",
-    "category_label": "React Core",
-    "number": 36207,
-    "title": "Bug: petrosaich@gmail.com",
-    "url": "https://github.com/facebook/react/issues/36207",
-    "author": "Petrossa582",
-    "author_avatar": "https://avatars.githubusercontent.com/u/183880822?v=4",
-    "created_at": "2026-04-03T15:55:47Z",
-    "updated_at": "2026-04-06T11:00:08Z",
-    "comments": 1,
-    "labels": [
-      "Status: Unconfirmed"
-    ],
-    "body_preview": "petrosaich@gmail.com",
-    "is_new": true,
-    "priority": "low",
-    "is_bug": false,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
     "id": 4201109494,
     "repo": "facebook/react",
     "ecosystem": "react",
@@ -176,8 +203,8 @@
     "author": "jerr3n",
     "author_avatar": "https://avatars.githubusercontent.com/u/143530713?v=4",
     "created_at": "2026-04-02T21:54:34Z",
-    "updated_at": "2026-04-02T21:54:34Z",
-    "comments": 0,
+    "updated_at": "2026-04-07T10:36:15Z",
+    "comments": 1,
     "labels": [
       "Status: Unconfirmed"
     ],

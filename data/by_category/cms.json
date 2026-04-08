@@ -1,5 +1,33 @@
 [
   {
+    "id": 4219292429,
+    "repo": "wagtail/wagtail",
+    "ecosystem": "django",
+    "ecosystem_label": "Django",
+    "category": "cms",
+    "category_label": "CMS & Content",
+    "number": 14114,
+    "title": "Namespace Wagtail CSS class names?",
+    "url": "https://github.com/wagtail/wagtail/issues/14114",
+    "author": "anselmbradford",
+    "author_avatar": "https://avatars.githubusercontent.com/u/704760?v=4",
+    "created_at": "2026-04-07T16:56:29Z",
+    "updated_at": "2026-04-07T16:56:29Z",
+    "comments": 0,
+    "labels": [
+      "type:Enhancement",
+      "status:Needs Review"
+    ],
+    "body_preview": "### Problem statement  At [this line](https://github.com/wagtail/wagtail/blob/145baf8f31115d3ef90dfea4862a7c62bbede92c/wagtail/blocks/stream_block.py#L394), Wagtail adds `<div class=\"block-{1}\">{0}</div>` to wrap blocks. `block-` is a pretty generic CSS class name. For example, in the project I work on we have a separate `block` class in the project, so we end up with a mix of `block` and `block-`...",
+    "is_new": true,
+    "priority": "medium",
+    "is_bug": false,
+    "is_feature": true,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 4211138438,
     "repo": "wagtail/wagtail",
     "ecosystem": "django",
@@ -12,11 +40,15 @@
     "author": "danmanix",
     "author_avatar": "https://avatars.githubusercontent.com/u/7165044?v=4",
     "created_at": "2026-04-06T10:40:19Z",
-    "updated_at": "2026-04-06T10:41:12Z",
-    "comments": 0,
+    "updated_at": "2026-04-07T13:17:23Z",
+    "comments": 2,
     "labels": [
       "type:Enhancement",
-      "status:Needs Review"
+      "status:Needs Review",
+      "component:Page",
+      "component:Audit logging",
+      "component:Revisions",
+      "UX"
     ],
     "body_preview": "### Problem statement  After running purge_revisions, the history view still includes the full Page/ModelLogEntry records associated with those revisions, leaving users able to navigate to a 404 through preview/ review/ compare options menu.  ### Proposed solution  Two changes would remove this issue:  1. Have the history view verify existence of the revision referred to and not show the ellipsis...",
     "is_new": true,
@@ -40,11 +72,13 @@
     "author": "coredumperror",
     "author_avatar": "https://avatars.githubusercontent.com/u/413571?v=4",
     "created_at": "2026-04-03T21:39:28Z",
-    "updated_at": "2026-04-06T18:57:48Z",
-    "comments": 2,
+    "updated_at": "2026-04-07T13:17:25Z",
+    "comments": 3,
     "labels": [
       "type:Enhancement",
-      "status:Needs Review"
+      "status:Needs Review",
+      "component:Search",
+      "Compatibility"
     ],
     "body_preview": "### Problem statement  Right now, when you call `Page.objects.public()`, it calls `PageQuerySet.private_q()`, which adds a filter that _individually_ excludes every single private page in the **entire database**. On larger servers with many Sites, this can be hundreds or thousands of individual filters.   This isn't a big problem for SQL, but it *is* a massive problem for Lucene-based backends lik...",
     "is_new": true,
@@ -68,8 +102,8 @@
     "author": "thibaudcolas",
     "author_avatar": "https://avatars.githubusercontent.com/u/877585?v=4",
     "created_at": "2026-04-03T09:53:38Z",
-    "updated_at": "2026-04-05T10:50:10Z",
-    "comments": 1,
+    "updated_at": "2026-04-07T13:17:27Z",
+    "comments": 2,
     "labels": [
       "type:Enhancement",
       "status:Needs Review",
@@ -99,8 +133,8 @@
     "author": "MaciekBaron",
     "author_avatar": "https://avatars.githubusercontent.com/u/1668712?v=4",
     "created_at": "2026-04-01T10:11:30Z",
-    "updated_at": "2026-04-01T10:11:30Z",
-    "comments": 0,
+    "updated_at": "2026-04-07T13:17:29Z",
+    "comments": 1,
     "labels": [
       "type:Enhancement",
       "status:Needs Review"
@@ -154,12 +188,13 @@
     "author": "thibaudcolas",
     "author_avatar": "https://avatars.githubusercontent.com/u/877585?v=4",
     "created_at": "2026-04-01T09:42:14Z",
-    "updated_at": "2026-04-05T19:53:49Z",
+    "updated_at": "2026-04-07T13:18:00Z",
     "comments": 1,
     "labels": [
       "type:Enhancement",
       "component:Security",
-      "component:User Management"
+      "component:User Management",
+      "status:Ready"
     ],
     "body_preview": "### Problem statement  Originally from PR #11469. Currently, Wagtail\u2019s permissions make it possible for users with user management features to create/edit themselves  accounts with admin privileges. We expect users trusted with those permissions to use them wisely, but could use stronger enforcement.  ### Proposed solution  Per #11469, modify the permission checking logic to ensure that only users...",
     "is_new": true,
@@ -183,7 +218,7 @@
     "author": "sheepman4267",
     "author_avatar": "https://avatars.githubusercontent.com/u/75755727?v=4",
     "created_at": "2026-03-27T15:08:34Z",
-    "updated_at": "2026-03-30T13:07:54Z",
+    "updated_at": "2026-04-07T13:17:34Z",
     "comments": 4,
     "labels": [
       "type:Enhancement",
@@ -270,7 +305,7 @@
     "author": "weber-s",
     "author_avatar": "https://avatars.githubusercontent.com/u/25247745?v=4",
     "created_at": "2026-03-27T10:25:17Z",
-    "updated_at": "2026-03-31T07:27:11Z",
+    "updated_at": "2026-04-07T13:17:36Z",
     "comments": 5,
     "labels": [
       "type:Enhancement",
@@ -328,10 +363,11 @@
     "author": "joeyjurjens",
     "author_avatar": "https://avatars.githubusercontent.com/u/7702200?v=4",
     "created_at": "2026-03-18T18:49:17Z",
-    "updated_at": "2026-04-03T09:33:34Z",
+    "updated_at": "2026-04-07T13:17:38Z",
     "comments": 9,
     "labels": [
       "type:Enhancement",
+      "status:Needs Review",
       "component:Streamfield",
       "status:Needs UI Design",
       "DX",
@@ -359,7 +395,7 @@
     "author": "Mr0grog",
     "author_avatar": "https://avatars.githubusercontent.com/u/74178?v=4",
     "created_at": "2026-03-17T20:51:52Z",
-    "updated_at": "2026-03-30T10:07:02Z",
+    "updated_at": "2026-04-07T13:17:40Z",
     "comments": 0,
     "labels": [
       "type:Enhancement",
@@ -562,8 +598,8 @@
     "author": "fsbraun",
     "author_avatar": "https://avatars.githubusercontent.com/u/16904477?v=4",
     "created_at": "2026-03-13T10:56:44Z",
-    "updated_at": "2026-04-01T21:26:07Z",
-    "comments": 0,
+    "updated_at": "2026-04-08T04:11:00Z",
+    "comments": 1,
     "labels": [],
     "body_preview": "**Description**  The management command `manage.py cms delete-orphaned-plugins` does not remove plugins that belong to placeholders which themselves are not attached to any content object.  Since **django CMS 4**, the `Placeholder` model contains a `source` field implemented as a `GenericForeignKey`. Because this relation does not enforce strict database integrity, it is possible for placeholders...",
     "is_new": false,
