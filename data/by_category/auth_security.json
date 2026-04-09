@@ -72,7 +72,7 @@
       "bug"
     ],
     "body_preview": "Currently muiltidb tests are failing, we need to fix them and add them back as a success blocker.",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,

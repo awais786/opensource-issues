@@ -25,34 +25,6 @@
     "is_help_wanted": false
   },
   {
-    "id": 4186002560,
-    "repo": "pallets/click",
-    "ecosystem": "python",
-    "ecosystem_label": "Python",
-    "category": "py_web",
-    "category_label": "Python Web",
-    "number": 3298,
-    "title": "semver.Version as default causing an error",
-    "url": "https://github.com/pallets/click/issues/3298",
-    "author": "Linux13524",
-    "author_avatar": "https://avatars.githubusercontent.com/u/18721420?v=4",
-    "created_at": "2026-04-01T10:56:20Z",
-    "updated_at": "2026-04-01T17:01:08Z",
-    "comments": 2,
-    "labels": [
-      "bug",
-      "typing"
-    ],
-    "body_preview": "Any instance of `semver.Version` set as `default` in an option will lead to an error when Click tries to show it in the help text. The problem seems to be that `Version` allows comparison to strings, and Click, when building the help text, tries to check the default value against an empty string `\"\"`, which cannot be parsed by `semver.Version`:  ```   File \".venv/lib/python3.12/site-packages/click...",
-    "is_new": true,
-    "priority": "high",
-    "is_bug": true,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
     "id": 4106174423,
     "repo": "pallets/click",
     "ecosystem": "python",

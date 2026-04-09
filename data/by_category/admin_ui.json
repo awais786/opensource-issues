@@ -513,30 +513,5 @@
     "is_security": false,
     "is_good_first_issue": false,
     "is_help_wanted": false
-  },
-  {
-    "id": 3794052612,
-    "repo": "farridav/django-jazzmin",
-    "ecosystem": "django",
-    "ecosystem_label": "Django",
-    "category": "admin_ui",
-    "category_label": "Admin & UI",
-    "number": 658,
-    "title": "Project status / maintenance question",
-    "url": "https://github.com/farridav/django-jazzmin/issues/658",
-    "author": "cesarbenjamindotnet",
-    "author_avatar": "https://avatars.githubusercontent.com/u/6070970?v=4",
-    "created_at": "2026-01-08T19:07:54Z",
-    "updated_at": "2026-01-22T16:27:13Z",
-    "comments": 2,
-    "labels": [],
-    "body_preview": "Hi \ud83d\udc4b,  First of all, thanks for making this project available \u2014 it looks useful and well thought out.  I wanted to ask about the current status of the project. From the outside, it seems that there hasn\u2019t been recent activity in terms of commits, issues, or releases, so I wasn\u2019t sure whether:  the project is still actively maintained,  it is considered stable and mostly \u201cfinished\u201d, or  it has been...",
-    "is_new": false,
-    "priority": "low",
-    "is_bug": false,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
   }
 ]
