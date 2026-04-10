@@ -25,33 +25,6 @@
     "is_help_wanted": false
   },
   {
-    "id": 4033661505,
-    "repo": "celery/celery",
-    "ecosystem": "django",
-    "ecosystem_label": "Django",
-    "category": "task_queues",
-    "category_label": "Task Queues & Async",
-    "number": 10180,
-    "title": "Warm shutdown does not cancel prefetched tasks when using thread-pool concurrency",
-    "url": "https://github.com/celery/celery/issues/10180",
-    "author": "owenmjones",
-    "author_avatar": "https://avatars.githubusercontent.com/u/131781446?v=4",
-    "created_at": "2026-03-06T11:18:51Z",
-    "updated_at": "2026-03-12T11:34:54Z",
-    "comments": 4,
-    "labels": [
-      "Issue Type: Bug Report"
-    ],
-    "body_preview": "<!-- Please fill this template entirely and do not erase parts of it. We reserve the right to close without a response bug reports which are incomplete. --> # Checklist <!-- To check an item on the list replace [ ] with [x]. --> - [x] I have verified that the issue exists against the `main` branch of Celery. - [ ] This has already been asked to the [discussions forum](https://github.com/celery/cel...",
-    "is_new": false,
-    "priority": "high",
-    "is_bug": true,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
     "id": 4022093566,
     "repo": "celery/celery",
     "ecosystem": "django",
