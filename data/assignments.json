@@ -374,7 +374,7 @@
     "assignee_name": "Awais Qureshi",
     "status": "assigned",
     "assigned_at": "2026-04-10T06:00:00.000000+00:00",
-    "taiga_us_url": null,
+    "taiga_us_url": "https://projects.arbisoft.com/project/arbisoft-open-source-projects/us/342",
     "priority": "low",
     "category": "py_tools"
   },
@@ -387,7 +387,7 @@
     "assignee_name": "Awais Qureshi",
     "status": "assigned",
     "assigned_at": "2026-04-10T06:00:00.000000+00:00",
-    "taiga_us_url": null,
+    "taiga_us_url": "https://projects.arbisoft.com/project/arbisoft-open-source-projects/us/343",
     "priority": "high",
     "category": "py_core"
   },
@@ -400,7 +400,7 @@
     "assignee_name": "Jawad Khan",
     "status": "assigned",
     "assigned_at": "2026-04-10T06:00:00.000000+00:00",
-    "taiga_us_url": null,
+    "taiga_us_url": "https://projects.arbisoft.com/project/arbisoft-open-source-projects/us/344",
     "priority": "high",
     "category": "py_tools"
   },
@@ -413,7 +413,7 @@
     "assignee_name": "Jawad Khan",
     "status": "assigned",
     "assigned_at": "2026-04-10T06:00:00.000000+00:00",
-    "taiga_us_url": null,
+    "taiga_us_url": "https://projects.arbisoft.com/project/arbisoft-open-source-projects/us/345",
     "priority": "high",
     "category": "ai_skills"
   },
@@ -426,7 +426,7 @@
     "assignee_name": "Ali Tariq",
     "status": "assigned",
     "assigned_at": "2026-04-10T06:00:00.000000+00:00",
-    "taiga_us_url": null,
+    "taiga_us_url": "https://projects.arbisoft.com/project/arbisoft-open-source-projects/us/346",
     "priority": "high",
     "category": "py_core"
   },
@@ -439,7 +439,7 @@
     "assignee_name": "Ali Tariq",
     "status": "assigned",
     "assigned_at": "2026-04-10T06:00:00.000000+00:00",
-    "taiga_us_url": null,
+    "taiga_us_url": "https://projects.arbisoft.com/project/arbisoft-open-source-projects/us/347",
     "priority": "high",
     "category": "py_core"
   },
@@ -452,7 +452,7 @@
     "assignee_name": "Azan Ali",
     "status": "assigned",
     "assigned_at": "2026-04-10T06:00:00.000000+00:00",
-    "taiga_us_url": null,
+    "taiga_us_url": "https://projects.arbisoft.com/project/arbisoft-open-source-projects/us/348",
     "priority": "low",
     "category": "py_tools"
   },
@@ -465,7 +465,7 @@
     "assignee_name": "Azan Ali",
     "status": "assigned",
     "assigned_at": "2026-04-10T06:00:00.000000+00:00",
-    "taiga_us_url": null,
+    "taiga_us_url": "https://projects.arbisoft.com/project/arbisoft-open-source-projects/us/349",
     "priority": "low",
     "category": "py_tools"
   }
