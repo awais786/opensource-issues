@@ -1,5 +1,59 @@
 [
   {
+    "id": 4239150029,
+    "repo": "facebook/react",
+    "ecosystem": "react",
+    "ecosystem_label": "React",
+    "category": "react_core",
+    "category_label": "React Core",
+    "number": 36248,
+    "title": "Bug: Improvements to the memorize rules are needed.",
+    "url": "https://github.com/facebook/react/issues/36248",
+    "author": "lunaticscode",
+    "author_avatar": "https://avatars.githubusercontent.com/u/42178661?v=4",
+    "created_at": "2026-04-10T12:30:02Z",
+    "updated_at": "2026-04-10T12:30:02Z",
+    "comments": 0,
+    "labels": [
+      "Status: Unconfirmed"
+    ],
+    "body_preview": "# optimize-memorize-rule  ## Feature Request: Structural (deep) comparison option for `useMemo` / `React.memo` dependencies  ### Summary  Current `useMemo`, `useCallback`, and `React.memo` rely on **referential equality (`Object.is`)** to determine whether dependencies have changed. This means that even when an object or array has the exact same content, a new reference triggers an unnecessary re-...",
+    "is_new": true,
+    "priority": "low",
+    "is_bug": false,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
+    "id": 4238399362,
+    "repo": "facebook/react",
+    "ecosystem": "react",
+    "ecosystem_label": "React",
+    "category": "react_core",
+    "category_label": "React Core",
+    "number": 36247,
+    "title": "Bug: eslint-plugin-react-hooks package.json says 7.0.0, but 7.0.1 is released on npmjs.",
+    "url": "https://github.com/facebook/react/issues/36247",
+    "author": "runephilosof-abtion",
+    "author_avatar": "https://avatars.githubusercontent.com/u/57357936?v=4",
+    "created_at": "2026-04-10T10:13:30Z",
+    "updated_at": "2026-04-10T10:50:51Z",
+    "comments": 2,
+    "labels": [
+      "Status: Unconfirmed"
+    ],
+    "body_preview": "Main: https://github.com/facebook/react/blob/main/packages/eslint-plugin-react-hooks/package.json#L4  Currently: https://github.com/facebook/react/blob/705268dcd16779b1f51f234cebaa588d761202ce/packages/eslint-plugin-react-hooks/package.json#L4  Since https://www.npmjs.com/package/eslint-plugin-react-hooks has version 7.0.1, it should also be 7.0.1 in the source code.  I assume this is the commit p...",
+    "is_new": true,
+    "priority": "low",
+    "is_bug": false,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 4233665927,
     "repo": "facebook/react",
     "ecosystem": "react",
@@ -12,8 +66,8 @@
     "author": "famameilin",
     "author_avatar": "https://avatars.githubusercontent.com/u/80460962?v=4",
     "created_at": "2026-04-09T16:41:20Z",
-    "updated_at": "2026-04-09T17:44:54Z",
-    "comments": 1,
+    "updated_at": "2026-04-10T11:50:11Z",
+    "comments": 4,
     "labels": [],
     "body_preview": "## Bug Description  When using the `A && B && C && <JSX>` conditional rendering pattern, if the first operand `A` is falsy (e.g., `0`), React Compiler renders the falsy value as a text node instead of rendering nothing.  ## Reproduction  **Repro repo:** https://github.com/famameilin/repro-react-compiler-0-bug  **Environment:** - React 19.2.4 - react-dom 19.2.4 - babel-plugin-react-compiler 1.0.0 -...",
     "is_new": true,
@@ -64,8 +118,8 @@
     "author": "Pantkartik",
     "author_avatar": "https://avatars.githubusercontent.com/u/181591353?v=4",
     "created_at": "2026-04-09T12:35:43Z",
-    "updated_at": "2026-04-09T16:05:40Z",
-    "comments": 4,
+    "updated_at": "2026-04-10T11:52:00Z",
+    "comments": 5,
     "labels": [
       "Status: Unconfirmed"
     ],
@@ -118,8 +172,8 @@
     "author": "resistdesign",
     "author_avatar": "https://avatars.githubusercontent.com/u/356375?v=4",
     "created_at": "2026-04-08T18:54:14Z",
-    "updated_at": "2026-04-09T15:26:13Z",
-    "comments": 7,
+    "updated_at": "2026-04-10T11:55:27Z",
+    "comments": 10,
     "labels": [
       "Status: Unconfirmed"
     ],
@@ -145,8 +199,8 @@
     "author": "elakov",
     "author_avatar": "https://avatars.githubusercontent.com/u/24565969?v=4",
     "created_at": "2026-04-07T20:36:29Z",
-    "updated_at": "2026-04-07T20:37:22Z",
-    "comments": 0,
+    "updated_at": "2026-04-10T10:54:39Z",
+    "comments": 1,
     "labels": [
       "Status: Unconfirmed"
     ],
@@ -216,33 +270,6 @@
     "is_help_wanted": false
   },
   {
-    "id": 4197173277,
-    "repo": "facebook/react",
-    "ecosystem": "react",
-    "ecosystem_label": "React",
-    "category": "react_core",
-    "category_label": "React Core",
-    "number": 36201,
-    "title": "Rename `DO_NOT_USE_OR_YOU_WILL_BE_FIRED_EXPERIMENTAL_IMG_SRC_TYPES` used for `<img>` to something meaningful.",
-    "url": "https://github.com/facebook/react/issues/36201",
-    "author": "jerr3n",
-    "author_avatar": "https://avatars.githubusercontent.com/u/143530713?v=4",
-    "created_at": "2026-04-02T21:54:34Z",
-    "updated_at": "2026-04-08T10:18:16Z",
-    "comments": 2,
-    "labels": [
-      "Status: Unconfirmed"
-    ],
-    "body_preview": "React version: 19.2.3  1. Look in `index.d.ts` at ln 3613  `DO_NOT_USE_OR_YOU_WILL_BE_FIRED_EXPERIMENTAL_IMG_SRC_TYPES` could be renamed to something like `ImgSrcTypes`.",
-    "is_new": false,
-    "priority": "low",
-    "is_bug": false,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
     "id": 4224013290,
     "repo": "remix-run/react-router",
     "ecosystem": "react",
@@ -255,8 +282,8 @@
     "author": "MonstraG",
     "author_avatar": "https://avatars.githubusercontent.com/u/17963791?v=4",
     "created_at": "2026-04-08T11:02:08Z",
-    "updated_at": "2026-04-09T20:57:57Z",
-    "comments": 4,
+    "updated_at": "2026-04-10T10:46:31Z",
+    "comments": 6,
     "labels": [
       "bug",
       "pkg:@react-router/dev",
@@ -344,7 +371,7 @@
       "bug"
     ],
     "body_preview": "### Reproduction  ### Minimal Reproduction  ```bash # 1. Scaffold bunx create-react-router@latest repro --template remix-run/react-router-templates/minimal --yes cd repro  # 2. Upgrade to Vite 8 bun add -d vite@^8.0.3  # 3. Enable bundledDev in vite.config.ts cat > vite.config.ts << 'EOF' import { reactRouter } from \"@react-router/dev/vite\"; import { defineConfig } from \"vite\";  export default def...",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,
