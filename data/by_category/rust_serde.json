@@ -162,7 +162,7 @@
     "author": "nabijaczleweli",
     "author_avatar": "https://avatars.githubusercontent.com/u/6709544?v=4",
     "created_at": "2026-03-05T17:47:14Z",
-    "updated_at": "2026-03-05T17:47:14Z",
+    "updated_at": "2026-04-11T10:43:54Z",
     "comments": 0,
     "labels": [],
     "body_preview": "My objects look like this: ```json {   \"id\": \"84d49241-5051-46ef-a7e4-3894f18d301d\",   \"configuration\": {     \"ip_address\": \"0.0.0.0\"   },   \"enabled\": true,   \"type\": \"modbus\" } ```  ```json {   \"id\": \"42f35fc7-ea66-4485-9781-c2a8a9e3f874\",   \"configuration\": {     \"remote\": \"http://example.com\"   },   \"enabled\": true,   \"type\": \"http\" } ```  and I'm parsing them like this:  ```toml [package] nam...",
