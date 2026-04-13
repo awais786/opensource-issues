@@ -1,5 +1,32 @@
 [
   {
+    "id": 4252327385,
+    "repo": "jazzband/django-oauth-toolkit",
+    "ecosystem": "django",
+    "ecosystem_label": "Django",
+    "category": "auth_security",
+    "category_label": "Auth & Security",
+    "number": 1687,
+    "title": "AttributeError: 'NoneType' object has no attribute 'token' (race condition)",
+    "url": "https://github.com/django-oauth/django-oauth-toolkit/issues/1687",
+    "author": "Timvde",
+    "author_avatar": "https://avatars.githubusercontent.com/u/2463710?v=4",
+    "created_at": "2026-04-13T07:39:47Z",
+    "updated_at": "2026-04-13T07:39:47Z",
+    "comments": 0,
+    "labels": [
+      "bug"
+    ],
+    "body_preview": "**Describe the bug** In `_save_bearer_token`  ([source](https://github.com/django-oauth/django-oauth-toolkit/blob/d422eeab79052c04a91d124f938ddc22c841c38c/oauth2_provider/oauth2_validators.py#L610)) in the `OAuth2Validator`, there is a race condition when `REFRESH_TOKEN_GRACE_PERIOD_SECONDS` is set.  **To Reproduce** Have a misbehaving client that sends many refresh requests in (very) short succes...",
+    "is_new": true,
+    "priority": "high",
+    "is_bug": true,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 4207676555,
     "repo": "jazzband/django-oauth-toolkit",
     "ecosystem": "django",
@@ -18,7 +45,7 @@
       "enhancement"
     ],
     "body_preview": "**Is your feature request related to a problem? Please describe.** <!-- A clear and concise description of what the problem is. Ex. I'm always frustrated when [...] --> I wanted to start using this package in my project, which uses mypy for type checking, but saw that this package isn't typed... searched the issues and didn't find an issue regarding this topic so opened up my own :)  **Describe th...",
-    "is_new": true,
+    "is_new": false,
     "priority": "medium",
     "is_bug": false,
     "is_feature": true,
@@ -45,7 +72,7 @@
       "bug"
     ],
     "body_preview": "**Describe the bug** When `OAUTH2_PROVIDER_DEVICE_GRANT_MODEL` points to a swapped `DeviceGrant` model, django-oauth-toolkit 3.2 device-code support is only partially compatible with that swap. Some code paths correctly use `get_device_grant_model()`, but important runtime paths still use the concrete `oauth2_provider.DeviceGrant` class directly.  This breaks the device flow because creation, look...",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,

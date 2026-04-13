@@ -12,8 +12,8 @@
     "author": "jannateysafeya-oss",
     "author_avatar": "https://avatars.githubusercontent.com/u/275312448?v=4",
     "created_at": "2026-04-11T14:48:13Z",
-    "updated_at": "2026-04-11T14:48:13Z",
-    "comments": 0,
+    "updated_at": "2026-04-12T19:27:12Z",
+    "comments": 1,
     "labels": [
       "Status: Unconfirmed"
     ],
@@ -93,8 +93,8 @@
     "author": "famameilin",
     "author_avatar": "https://avatars.githubusercontent.com/u/80460962?v=4",
     "created_at": "2026-04-09T16:41:20Z",
-    "updated_at": "2026-04-10T11:50:11Z",
-    "comments": 4,
+    "updated_at": "2026-04-12T21:24:34Z",
+    "comments": 5,
     "labels": [],
     "body_preview": "## Bug Description  When using the `A && B && C && <JSX>` conditional rendering pattern, if the first operand `A` is falsy (e.g., `0`), React Compiler renders the falsy value as a text node instead of rendering nothing.  ## Reproduction  **Repro repo:** https://github.com/famameilin/repro-react-compiler-0-bug  **Environment:** - React 19.2.4 - react-dom 19.2.4 - babel-plugin-react-compiler 1.0.0 -...",
     "is_new": true,

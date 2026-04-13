@@ -308,32 +308,5 @@
     "is_security": false,
     "is_good_first_issue": false,
     "is_help_wanted": false
-  },
-  {
-    "id": 4106340729,
-    "repo": "GeoNode/geonode",
-    "ecosystem": "django",
-    "ecosystem_label": "Django",
-    "category": "i18n_geo",
-    "category_label": "i18n & Geo",
-    "number": 14070,
-    "title": "Change the default layer format",
-    "url": "https://github.com/GeoNode/geonode/issues/14070",
-    "author": "dsuren1",
-    "author_avatar": "https://avatars.githubusercontent.com/u/26929983?v=4",
-    "created_at": "2026-03-20T07:36:44Z",
-    "updated_at": "2026-03-20T07:36:44Z",
-    "comments": 0,
-    "labels": [
-      "master"
-    ],
-    "body_preview": "### Description As part of improving the performance, the default layer format needs to be changed from `image/png` to `image/vnd.jpeg-png`",
-    "is_new": false,
-    "priority": "low",
-    "is_bug": false,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
   }
 ]
