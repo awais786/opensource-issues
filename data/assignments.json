@@ -572,5 +572,83 @@
     "taiga_us_url": "https://projects.arbisoft.com/project/arbisoft-open-source-projects/us/357",
     "priority": "low",
     "category": "py_web"
+  },
+  {
+    "url": "https://github.com/dj-stripe/dj-stripe/issues/2221",
+    "repo": "dj-stripe/dj-stripe",
+    "number": 2221,
+    "title": "AttributeError when saving api key for new account",
+    "assignee": "awais786",
+    "assignee_name": "Awais Qureshi",
+    "status": "assigned",
+    "assigned_at": "2026-04-13T06:00:00.000000+00:00",
+    "taiga_us_url": null,
+    "priority": "high",
+    "category": "ecommerce"
+  },
+  {
+    "url": "https://github.com/BerriAI/litellm/issues/25567",
+    "repo": "BerriAI/litellm",
+    "number": 25567,
+    "title": "[Bug]: Ollama get_model_info constructs redundant path .../api/chat/api/show, causing 404s on remote instances",
+    "assignee": "jawad-khan",
+    "assignee_name": "Jawad Khan",
+    "status": "assigned",
+    "assigned_at": "2026-04-13T06:00:00.000000+00:00",
+    "taiga_us_url": null,
+    "priority": "high",
+    "category": "ai_skills"
+  },
+  {
+    "url": "https://github.com/BerriAI/litellm/issues/25595",
+    "repo": "BerriAI/litellm",
+    "number": 25595,
+    "title": "[Bug]: Groq rejects `provider_specific_fields` in assistant messages during multi-turn tool calling",
+    "assignee": "jawad-khan",
+    "assignee_name": "Jawad Khan",
+    "status": "assigned",
+    "assigned_at": "2026-04-13T06:00:00.000000+00:00",
+    "taiga_us_url": null,
+    "priority": "high",
+    "category": "ai_skills"
+  },
+  {
+    "url": "https://github.com/python/cpython/issues/148418",
+    "repo": "python/cpython",
+    "number": 148418,
+    "title": "marshal.c: 8 refs leaked on corrupt TYPE_CODE marshal stream",
+    "assignee": "valkrypton",
+    "assignee_name": "Ali Tariq",
+    "status": "assigned",
+    "assigned_at": "2026-04-13T06:00:00.000000+00:00",
+    "taiga_us_url": null,
+    "priority": "high",
+    "category": "py_core"
+  },
+  {
+    "url": "https://github.com/python/cpython/issues/148393",
+    "repo": "python/cpython",
+    "number": 148393,
+    "title": "`PyDict_Watch` and `PyDict_Unwatch` should use atomic operations in the free threading build",
+    "assignee": "valkrypton",
+    "assignee_name": "Ali Tariq",
+    "status": "assigned",
+    "assigned_at": "2026-04-13T06:00:00.000000+00:00",
+    "taiga_us_url": null,
+    "priority": "high",
+    "category": "py_core"
+  },
+  {
+    "url": "https://github.com/astral-sh/ruff/issues/24563",
+    "repo": "astral-sh/ruff",
+    "number": 24563,
+    "title": "PLC2701 false positive for a private name import used in a type parameter list",
+    "assignee": "aznszn",
+    "assignee_name": "Azan Ali",
+    "status": "assigned",
+    "assigned_at": "2026-04-13T06:00:00.000000+00:00",
+    "taiga_us_url": null,
+    "priority": "low",
+    "category": "py_tools"
   }
 ]
