@@ -473,30 +473,5 @@
     "is_security": false,
     "is_good_first_issue": false,
     "is_help_wanted": false
-  },
-  {
-    "id": 3811327015,
-    "repo": "serde-rs/json",
-    "ecosystem": "rust",
-    "ecosystem_label": "Rust",
-    "category": "rust_serde",
-    "category_label": "Serialization",
-    "number": 1309,
-    "title": "Is switching ryu -> zmij for float formatting considered a breaking change?",
-    "url": "https://github.com/serde-rs/json/issues/1309",
-    "author": "ysaito1001",
-    "author_avatar": "https://avatars.githubusercontent.com/u/15333866?v=4",
-    "created_at": "2026-01-14T03:04:48Z",
-    "updated_at": "2026-01-26T21:05:10Z",
-    "comments": 1,
-    "labels": [],
-    "body_preview": "The `aws-smithy-json` crate has a `Number` type that internally uses `ryu` for formatting. Since `serde_json` 1.0.147, [our property tests](https://github.com/smithy-lang/smithy-rs/blob/f2e9994ee419f5c496f1e52d0b8a438a12d83d39/rust-runtime/aws-smithy-json/src/serialize.rs#L447-L452) have been failing due to formatting differences between `ryu` and `zmij` ([related issue](https://github.com/smithy-...",
-    "is_new": false,
-    "priority": "low",
-    "is_bug": false,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
   }
 ]
