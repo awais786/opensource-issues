@@ -63,12 +63,12 @@
     "category": "react_core",
     "category_label": "React Core",
     "number": 36248,
-    "title": "Bug: Improvements to the memorize rules are needed.",
+    "title": "[Feature Request] Improvements to the memorize rules are needed.",
     "url": "https://github.com/facebook/react/issues/36248",
     "author": "lunaticscode",
     "author_avatar": "https://avatars.githubusercontent.com/u/42178661?v=4",
     "created_at": "2026-04-10T12:30:02Z",
-    "updated_at": "2026-04-10T12:30:02Z",
+    "updated_at": "2026-04-14T08:54:32Z",
     "comments": 0,
     "labels": [
       "Status: Unconfirmed"
@@ -147,8 +147,8 @@
     "author": "Pantkartik",
     "author_avatar": "https://avatars.githubusercontent.com/u/181591353?v=4",
     "created_at": "2026-04-09T12:39:33Z",
-    "updated_at": "2026-04-09T12:39:33Z",
-    "comments": 0,
+    "updated_at": "2026-04-14T16:17:06Z",
+    "comments": 7,
     "labels": [
       "Status: Unconfirmed"
     ],
@@ -243,24 +243,24 @@
     "is_help_wanted": false
   },
   {
-    "id": 4220456877,
-    "repo": "facebook/react",
+    "id": 4265274851,
+    "repo": "remix-run/react-router",
     "ecosystem": "react",
     "ecosystem_label": "React",
     "category": "react_core",
     "category_label": "React Core",
-    "number": 36229,
-    "title": "Bug: React 19 significant performance regression with many <input> elements",
-    "url": "https://github.com/facebook/react/issues/36229",
-    "author": "elakov",
-    "author_avatar": "https://avatars.githubusercontent.com/u/24565969?v=4",
-    "created_at": "2026-04-07T20:36:29Z",
-    "updated_at": "2026-04-10T10:54:39Z",
-    "comments": 1,
+    "number": 14979,
+    "title": "[Docs]: add info on _getting_ HTTP headers",
+    "url": "https://github.com/remix-run/react-router/issues/14979",
+    "author": "fatmalama",
+    "author_avatar": "https://avatars.githubusercontent.com/u/4985438?v=4",
+    "created_at": "2026-04-14T23:19:29Z",
+    "updated_at": "2026-04-14T23:19:29Z",
+    "comments": 0,
     "labels": [
-      "Status: Unconfirmed"
+      "docs"
     ],
-    "body_preview": "After upgrading to React 19, I observed a significant performance regression during the commit phase. The slowdown occurs specifically when a render touches \\<input\\> elements.  The new updateInput logic in React 19 does not check whether the DOM actually needs to be updated. Instead of skipping unchanged inputs, it unconditionally applies property writes on every commit \u2014 even when the values hav...",
+    "body_preview": "### Describe what's incorrect/missing in the documentation  https://reactrouter.com/how-to/headers details how to set headers but not how to get them.  It might not be obvious to everyone that you can get these from request on the loader, and searching the documentation only brings up that headers page that talks exclusively about setting headers. It would be good to add info about getting request...",
     "is_new": true,
     "priority": "low",
     "is_bug": false,
@@ -311,10 +311,12 @@
     "author": "cprecioso",
     "author_avatar": "https://avatars.githubusercontent.com/u/511681?v=4",
     "created_at": "2026-04-08T10:18:22Z",
-    "updated_at": "2026-04-08T10:29:14Z",
+    "updated_at": "2026-04-14T14:39:03Z",
     "comments": 1,
     "labels": [
-      "bug"
+      "bug",
+      "pkg:react-router",
+      "feat:hydration"
     ],
     "body_preview": "### Reproduction  https://stackblitz.com/~/github.com/cprecioso/react-router-lazy-fallback-repro  ### System Info  ```shell System:     OS: macOS 26.4     CPU: (12) arm64 Apple M4 Pro     Memory: 4.15 GB / 48.00 GB     Shell: 5.9 - /bin/zsh   Binaries:     Node: 24.14.1 - /Users/carlos/.local/share/mise/installs/node/24.14.1/bin/node     Yarn: 1.22.22 - /Users/carlos/.local/share/mise/installs/npm...",
     "is_new": true,
@@ -338,10 +340,13 @@
     "author": "juncha9",
     "author_avatar": "https://avatars.githubusercontent.com/u/26733514?v=4",
     "created_at": "2026-04-07T04:48:19Z",
-    "updated_at": "2026-04-07T05:08:43Z",
+    "updated_at": "2026-04-14T14:38:54Z",
     "comments": 1,
     "labels": [
-      "bug"
+      "bug",
+      "pkg:@react-router/dev",
+      "pkg:@react-router/serve",
+      "feat:windows"
     ],
     "body_preview": "### Reproduction  1. Run `react-router build` on **Windows** 2. Copy the `build/` output to a **Linux** server 3. Run `react-router-serve ./build/server/index.js` on Linux 4. Open the app in a browser  ### System Info  ```shell System:     OS: Windows 11 10.0.22631     CPU: (16) x64 13th Gen Intel(R) Core(TM) i5-13400     Memory: 25.26 GB / 63.78 GB   Binaries:     Node: 24.14.1 - C:\\nvm4w\\nodejs\\...",
     "is_new": false,
@@ -365,10 +370,12 @@
     "author": "heiwen",
     "author_avatar": "https://avatars.githubusercontent.com/u/3409733?v=4",
     "created_at": "2026-04-03T08:54:39Z",
-    "updated_at": "2026-04-03T08:55:15Z",
+    "updated_at": "2026-04-14T14:39:29Z",
     "comments": 0,
     "labels": [
-      "bug"
+      "bug",
+      "pkg:@react-router/dev",
+      "feat:vite"
     ],
     "body_preview": "### Reproduction  ### Minimal Reproduction  ```bash # 1. Scaffold bunx create-react-router@latest repro --template remix-run/react-router-templates/minimal --yes cd repro  # 2. Upgrade to Vite 8 bun add -d vite@^8.0.3  # 3. Enable bundledDev in vite.config.ts cat > vite.config.ts << 'EOF' import { reactRouter } from \"@react-router/dev/vite\"; import { defineConfig } from \"vite\";  export default def...",
     "is_new": false,
@@ -392,10 +399,11 @@
     "author": "jeweells",
     "author_avatar": "https://avatars.githubusercontent.com/u/37516710?v=4",
     "created_at": "2026-03-30T11:55:34Z",
-    "updated_at": "2026-03-30T11:55:34Z",
+    "updated_at": "2026-04-14T14:38:29Z",
     "comments": 0,
     "labels": [
-      "bug"
+      "bug",
+      "pkg:react-router"
     ],
     "body_preview": "### Reproduction  Go to https://codesandbox.io/p/devbox/trusting-feynman-kzjsqr, run ```npm run dev``` and check the console (the expected log is not shown, just the default error boundary error is logged).    ### System Info  ```shell System:     OS: Linux 6.1 Debian GNU/Linux 12 (bookworm) 12 (bookworm)     CPU: (2) x64 AMD EPYC     Memory: 1.92 GB / 4.01 GB     Container: Yes     Shell: Unknown...",
     "is_new": false,
@@ -419,10 +427,12 @@
     "author": "p-dubovitsky",
     "author_avatar": "https://avatars.githubusercontent.com/u/38439220?v=4",
     "created_at": "2026-03-27T10:05:13Z",
-    "updated_at": "2026-03-27T10:07:06Z",
+    "updated_at": "2026-04-14T14:38:22Z",
     "comments": 1,
     "labels": [
-      "bug"
+      "bug",
+      "pkg:@react-router/dev",
+      "feat:vite"
     ],
     "body_preview": "### Reproduction  **Link to reproduction:** https://stackblitz.com/edit/github-ygcrztk9  **Steps to reproduce:** 1. Run `react-router build` 2. Observe the build failure: `ENOENT: no such file or directory, open '/home/projects/github-ygcrztk9/dist/.vite/manifest.json'`  ### System Info  ```shell System:     OS: macOS 26.3.1     CPU: (8) arm64 Apple M1 Pro     Memory: 133.17 MB / 16.00 GB     Shel...",
     "is_new": false,
@@ -446,9 +456,12 @@
     "author": "agcty",
     "author_avatar": "https://avatars.githubusercontent.com/u/12101091?v=4",
     "created_at": "2026-03-26T18:07:34Z",
-    "updated_at": "2026-03-26T18:07:34Z",
+    "updated_at": "2026-04-14T14:38:13Z",
     "comments": 0,
-    "labels": [],
+    "labels": [
+      "pkg:@react-router/dev",
+      "feat:rsc"
+    ],
     "body_preview": "#### Context  Known limitation of `unstable_optimizeDeps`, but the RSC case is more severe than classic mode. Filing with a reproduction and a fix path for Vite 8.  #### Problem  In RSC mode, the client `optimizeDeps` scanner prebundles server-only packages (`drizzle-orm`, `bcryptjs`, `@markdoc/markdoc`, etc.) because it scans route files as raw source, before React Router's virtual module transfo...",
     "is_new": false,
     "priority": "low",
@@ -471,10 +484,12 @@
     "author": "evaogbe",
     "author_avatar": "https://avatars.githubusercontent.com/u/1738516?v=4",
     "created_at": "2026-03-23T18:16:05Z",
-    "updated_at": "2026-03-24T21:52:34Z",
+    "updated_at": "2026-04-14T14:38:05Z",
     "comments": 1,
     "labels": [
-      "bug"
+      "bug",
+      "pkg:react-router",
+      "feat:rsc"
     ],
     "body_preview": "### Reproduction  https://stackblitz.com/edit/github-rwjirmyc?file=app%2Froutes%2Fhome.tsx  ### System Info  ```shell System:     OS: macOS 26.3.1     CPU: (8) x64 Intel(R) Core(TM) i5-1038NG7 CPU @ 2.00GHz     Memory: 30.45 MB / 16.00 GB     Shell: 5.9 - /bin/zsh   Binaries:     Node: 24.11.1 - /usr/local/bin/node     Yarn: 1.22.22 - /Users/eoogbe/.yarn/bin/yarn     npm: 11.6.2 - /usr/local/bin/n...",
     "is_new": false,
@@ -498,39 +513,13 @@
     "author": "AviVahl",
     "author_avatar": "https://avatars.githubusercontent.com/u/8952081?v=4",
     "created_at": "2026-03-22T16:09:50Z",
-    "updated_at": "2026-03-25T15:10:39Z",
+    "updated_at": "2026-04-14T14:37:57Z",
     "comments": 0,
     "labels": [
-      "bug"
+      "bug",
+      "pkg:@react-router/dev"
     ],
     "body_preview": "### Reproduction  We've had this issue in our production environment, which uses react-router as a template for new projects. We were unable to reproduce it at first... but then we found out that if we simulate a slower network locally, it reproduces quite consistently.  See attached video:  https://github.com/user-attachments/assets/6a376d1d-d7f0-4708-af51-8cd5f2d96de4  You can test the same your...",
-    "is_new": false,
-    "priority": "high",
-    "is_bug": true,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
-    "id": 4114502463,
-    "repo": "remix-run/react-router",
-    "ecosystem": "react",
-    "ecosystem_label": "React",
-    "category": "react_core",
-    "category_label": "React Core",
-    "number": 14903,
-    "title": "Middleware is not handling redirects when using with useFetcher's fetcher.load",
-    "url": "https://github.com/remix-run/react-router/issues/14903",
-    "author": "thetnaingtn",
-    "author_avatar": "https://avatars.githubusercontent.com/u/28681575?v=4",
-    "created_at": "2026-03-22T03:07:02Z",
-    "updated_at": "2026-03-22T03:25:21Z",
-    "comments": 1,
-    "labels": [
-      "bug"
-    ],
-    "body_preview": "### Reproduction  https://github.com/thetnaingtn/react-router-bug  ### System Info  ```shell System:     OS: macOS 26.2     CPU: (10) arm64 Apple M2 Pro     Memory: 779.95 MB / 32.00 GB     Shell: 5.9 - /bin/zsh   Binaries:     Node: 24.12.0 - /Users/thet_naing.t/.nvm/versions/node/v24.12.0/bin/node     Yarn: 1.22.22 - /Users/thet_naing.t/.nvm/versions/node/v24.12.0/bin/yarn     npm: 11.6.2 - /Use...",
     "is_new": false,
     "priority": "high",
     "is_bug": true,

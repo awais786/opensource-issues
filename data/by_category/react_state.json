@@ -48,7 +48,7 @@
       "Performance"
     ],
     "body_preview": "## Summary  I am seeing a `RangeError: Maximum call stack size exceeded` failure in RTK Query when a store contains a large number of RTK Query middlewares and the first query dispatch triggers middleware self-registration.  From tracing the failure, this appears to come from RTK Query's internal `middlewareRegistered` dispatch path re-entering the full middleware chain via `mwApi.dispatch` for ev...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
@@ -669,7 +669,7 @@
     "comments": 1,
     "labels": [],
     "body_preview": "### Describe the bug  After updating `@tanstack/react-query-devtools` from `5.91.3` to `5.96.2` I'm getting the following errors when running `tsc` (`typescript` is version `5.9.3`) in my project:  ``` node_modules/@tanstack/query-devtools/build/_tsup-dts-rollup.d.ts:1:26 - error TS2307: Cannot find module 'solid-js' or its corresponding type declarations.  1 import { Accessor } from 'solid-js';...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
