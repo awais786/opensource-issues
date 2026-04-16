@@ -845,5 +845,83 @@
     "taiga_us_url": null,
     "priority": "low",
     "category": "py_tools"
+  },
+  {
+    "url": "https://github.com/BerriAI/litellm/issues/25748",
+    "repo": "BerriAI/litellm",
+    "number": 25748,
+    "title": "[Bug]: Vertex AI Anthropic streaming broken when custom `api_base` is provided via `/v1/messages`",
+    "assignee": "jawad-khan",
+    "assignee_name": "Jawad Khan",
+    "status": "assigned",
+    "assigned_at": "2026-04-16T06:00:00.000000+00:00",
+    "taiga_us_url": null,
+    "priority": "high",
+    "category": "ai_skills"
+  },
+  {
+    "url": "https://github.com/BerriAI/litellm/issues/25708",
+    "repo": "BerriAI/litellm",
+    "number": 25708,
+    "title": "[Bug]: Request logs should show aggregate cost and duration",
+    "assignee": "jawad-khan",
+    "assignee_name": "Jawad Khan",
+    "status": "assigned",
+    "assigned_at": "2026-04-16T06:00:00.000000+00:00",
+    "taiga_us_url": null,
+    "priority": "high",
+    "category": "ai_skills"
+  },
+  {
+    "url": "https://github.com/python/cpython/issues/148594",
+    "repo": "python/cpython",
+    "number": 148594,
+    "title": "ssl.SSLSocket.read() / write() missing ERR_clear_error() before SSL_read_ex() / SSL_write_ex() causes spurious errors with cooperative threading",
+    "assignee": "valkrypton",
+    "assignee_name": "Ali Tariq",
+    "status": "assigned",
+    "assigned_at": "2026-04-16T06:00:00.000000+00:00",
+    "taiga_us_url": null,
+    "priority": "high",
+    "category": "py_core"
+  },
+  {
+    "url": "https://github.com/python/mypy/issues/21222",
+    "repo": "python/mypy",
+    "number": 21222,
+    "title": "Shadow file broken when using parallel type checking",
+    "assignee": "valkrypton",
+    "assignee_name": "Ali Tariq",
+    "status": "assigned",
+    "assigned_at": "2026-04-16T06:00:00.000000+00:00",
+    "taiga_us_url": null,
+    "priority": "high",
+    "category": "py_core"
+  },
+  {
+    "url": "https://github.com/astral-sh/ruff/issues/24558",
+    "repo": "astral-sh/ruff",
+    "number": 24558,
+    "title": "Stop `PLC2701` from flagging underscore-prefixed standard library C modules",
+    "assignee": "aznszn",
+    "assignee_name": "Azan Ali",
+    "status": "assigned",
+    "assigned_at": "2026-04-16T06:00:00.000000+00:00",
+    "taiga_us_url": null,
+    "priority": "low",
+    "category": "py_tools"
+  },
+  {
+    "url": "https://github.com/astral-sh/uv/issues/18996",
+    "repo": "astral-sh/uv",
+    "number": 18996,
+    "title": "Add `uv tool upgrade --with <new_pkg>` or `--add-with <new_pkg>` to add packages to an install",
+    "assignee": "aznszn",
+    "assignee_name": "Azan Ali",
+    "status": "assigned",
+    "assigned_at": "2026-04-16T06:00:00.000000+00:00",
+    "taiga_us_url": null,
+    "priority": "medium",
+    "category": "py_tools"
   }
 ]
