@@ -18,7 +18,7 @@
       "pr-welcome"
     ],
     "body_preview": "In `treebeard/ltree/fields.py`, we can read: https://github.com/django-treebeard/django-treebeard/blob/677e6713562b4dfb7a328d582136220193e8b257/treebeard/ltree/fields.py#L12 Something similar can be seen in `treebeard/models.py`: https://github.com/django-treebeard/django-treebeard/blob/677e6713562b4dfb7a328d582136220193e8b257/treebeard/models.py#L513-L515  With the original code being subject to...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
