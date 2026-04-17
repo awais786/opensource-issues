@@ -16,7 +16,7 @@
     "comments": 1,
     "labels": [],
     "body_preview": "Hi!  On malformed json sent by clients to `JsonWebsocketConsumer` or `AsyncJsonWebsocketConsumer`, a `JSONDecodeError` is raised and left unhandled.  The unhandled exception stops the django process (which will be restarted by Daphne so that's OKish).  But this looks fragile to me: a malicious user could spam malformed messages, with various effects like having the admin inbox to quickly fill if [...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
