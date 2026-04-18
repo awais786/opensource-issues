@@ -66,7 +66,7 @@
     "comments": 2,
     "labels": [],
     "body_preview": "This is sort of a proposal / feature request.  I wanted to see proper examples for those urls instead of `https://example.com` so I came up with this:  ~~~python class NestedHyperlinkedRelatedFieldExtension(OpenApiSerializerFieldExtension):     target_class = 'rest_framework_nested.relations.NestedHyperlinkedRelatedField'     priority = 1      def map_serializer_field(             self,...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

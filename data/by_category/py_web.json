@@ -62,12 +62,12 @@
     "author": "Rowlando13",
     "author_avatar": "https://avatars.githubusercontent.com/u/67291205?v=4",
     "created_at": "2026-04-16T08:32:12Z",
-    "updated_at": "2026-04-16T10:53:27Z",
+    "updated_at": "2026-04-17T22:19:20Z",
     "comments": 3,
     "labels": [
       "docs"
     ],
-    "body_preview": "[Pallets release steps](https://palletsprojects.com/contributing/release)  - [x] Decide to make a release. - [ ] Ensure the change log has entries for each user-facing non-docs change, with links to the related issue reports. - [ ] Ensure each issue and PR is in the milestone.  - [ ] Create a release-A.B.C branch. - [ ] Change \"Unreleased\" to \"Released YYYY-MM-DD\" in CHANGES.md. - [ ] Remove the \"...",
+    "body_preview": "[Pallets release steps](https://palletsprojects.com/contributing/release)  - [x] Decide to make a release. - [x] Ensure the change log has entries for each user-facing non-docs change, with links to the related issue reports. - [x] Ensure each issue and PR is in the milestone.  - [x] Create a release-A.B.C branch. - [x] Change \"Unreleased\" to \"Released YYYY-MM-DD\" in CHANGES.md. - [x] Remove the \"...",
     "is_new": true,
     "priority": "low",
     "is_bug": false,

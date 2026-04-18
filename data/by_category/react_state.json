@@ -669,7 +669,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "### Describe the bug  Hello guys, I am experiencing a weird behavior and investigating a little bit thats what I found:  **Several hooks resolve the QueryClient with:**  `const client = createMemo(() => useQueryClient(queryClient?.()))`  `useQueryClient`  (in QueryClientProvider.tsx) calls useContext(QueryClientContext) when no explicit client is passed.   In Solid, useContext is only valid when r...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
