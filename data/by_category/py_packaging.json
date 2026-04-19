@@ -40,13 +40,13 @@
     "author": "ichard26",
     "author_avatar": "https://avatars.githubusercontent.com/u/63936253?v=4",
     "created_at": "2026-04-14T22:10:23Z",
-    "updated_at": "2026-04-16T16:11:08Z",
-    "comments": 4,
+    "updated_at": "2026-04-18T16:49:51Z",
+    "comments": 5,
     "labels": [
       "project: vendored dependency",
       "type: maintenance"
     ],
-    "body_preview": "packaging 26.1 is out. This release ships with a sizable number of new features and optimizations. For pip, this means:  - Replacing the vendored `dependency_groups` with [packaging's support for dependency groups](https://packaging.pypa.io/en/stable/dependency_groups.html) - Replacing our Direct URL models with [packaging's implementations](https://packaging.pypa.io/en/stable/direct_url.html) (wh...",
+    "body_preview": "packaging 26.1 is out. This release ships with a sizable number of new features and optimizations. For pip, this means:  - [ ] Replacing the vendored `dependency_groups` with [packaging's support for dependency groups](https://packaging.pypa.io/en/stable/dependency_groups.html) - [ ] Replacing our Direct URL models with [packaging's implementations](https://packaging.pypa.io/en/stable/direct_url.h...",
     "is_new": true,
     "priority": "low",
     "is_bug": false,
@@ -268,7 +268,7 @@
       "Needs Triage"
     ],
     "body_preview": "### What's the problem this feature will solve?  Correctly implementing the `pyproject.toml` specification in a project with the help of tools such as [Tombi](https://github.com/tombi-toml/tombi).  (I am not affiliated with Tombi, but I emphatically endorse their VS Code extension.)  ### Describe the solution you'd like  Define the [pyproject.toml specification](https://packaging.python.org/en/lat...",
-    "is_new": true,
+    "is_new": false,
     "priority": "medium",
     "is_bug": false,
     "is_feature": true,
@@ -880,34 +880,6 @@
     "is_feature": false,
     "is_security": false,
     "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
-    "id": 4010530458,
-    "repo": "pypa/hatch",
-    "ecosystem": "python",
-    "ecosystem_label": "Python",
-    "category": "py_packaging",
-    "category_label": "Packaging & Build",
-    "number": 2202,
-    "title": "Docs/UX: hatch test -h should reference testing configuration and default dependencies",
-    "url": "https://github.com/pypa/hatch/issues/2202",
-    "author": "ssiccha",
-    "author_avatar": "https://avatars.githubusercontent.com/u/11617763?v=4",
-    "created_at": "2026-03-02T10:37:55Z",
-    "updated_at": "2026-04-03T15:29:37Z",
-    "comments": 0,
-    "labels": [
-      "good first issue",
-      "docs"
-    ],
-    "body_preview": "When using hatch test, the environment comes with [hard-coded default dependencies](https://github.com/pypa/hatch/blob/master/src/hatch/env/internal/test.py) (pytest, coverage, pytest-rerunfailures, etc.). This can lead to confusing errors when a user adds a conflicting version via extra-dependencies:  ```toml [tool.hatch.envs.hatch-test] extra-dependencies = [     \"pytest-rerunfailures==15.0\", ]...",
-    "is_new": false,
-    "priority": "low",
-    "is_bug": false,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": true,
     "is_help_wanted": false
   }
 ]

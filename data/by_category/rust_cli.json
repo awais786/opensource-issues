@@ -441,7 +441,7 @@
     "comments": 1,
     "labels": [],
     "body_preview": "Hi. You should be aware, there is a slopped-out website impersonating the project: https://ripgrep.org. I Googled \"ripgrep\" today and this was the third result. I would suggest filing a complaint with Google, Porkbun (the registrar), and Cloudflare (who appears to be hosting the site).  The Helix editor is currently having a similar problem. (https://helixeditor.com/, https://github.com/helix-edit...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

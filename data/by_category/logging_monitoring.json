@@ -16,7 +16,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "## Summary                                                                                                                                                                                       `silk.collector.DataCollector.finalise()` mutates each query dict by                                                                                                                          adding a `model`...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
