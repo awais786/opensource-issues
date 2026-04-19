@@ -1118,5 +1118,70 @@
     "taiga_us_url": null,
     "priority": "high",
     "category": "py_tools"
+  },
+  {
+    "url": "https://github.com/BerriAI/litellm/issues/25999",
+    "repo": "BerriAI/litellm",
+    "number": 25999,
+    "title": "[Bug]:Cloudflare Workers AI example code fails with KeyError 'response'",
+    "assignee": "jawad-khan",
+    "assignee_name": "Jawad Khan",
+    "status": "assigned",
+    "assigned_at": "2026-04-19T06:00:00.000000+00:00",
+    "taiga_us_url": null,
+    "priority": "high",
+    "category": "ai_skills"
+  },
+  {
+    "url": "https://github.com/run-llama/llama_index/issues/21385",
+    "repo": "run-llama/llama_index",
+    "number": 21385,
+    "title": "[Bug]: falsy metadata values stored as None in Azure AI Search index",
+    "assignee": "jawad-khan",
+    "assignee_name": "Jawad Khan",
+    "status": "assigned",
+    "assigned_at": "2026-04-19T06:00:00.000000+00:00",
+    "taiga_us_url": null,
+    "priority": "high",
+    "category": "ai_skills"
+  },
+  {
+    "url": "https://github.com/python/cpython/issues/148697",
+    "repo": "python/cpython",
+    "number": 148697,
+    "title": "Handle unicode characters in bytecodes.c",
+    "assignee": "valkrypton",
+    "assignee_name": "Ali Tariq",
+    "status": "assigned",
+    "assigned_at": "2026-04-19T06:00:00.000000+00:00",
+    "taiga_us_url": null,
+    "priority": "high",
+    "category": "py_core"
+  },
+  {
+    "url": "https://github.com/python/cpython/issues/148680",
+    "repo": "python/cpython",
+    "number": 148680,
+    "title": "annotationlib - evaluating forward references in STRING format can 'leak' internal names",
+    "assignee": "valkrypton",
+    "assignee_name": "Ali Tariq",
+    "status": "assigned",
+    "assigned_at": "2026-04-19T06:00:00.000000+00:00",
+    "taiga_us_url": null,
+    "priority": "high",
+    "category": "py_core"
+  },
+  {
+    "url": "https://github.com/astral-sh/ruff/issues/24704",
+    "repo": "astral-sh/ruff",
+    "number": 24704,
+    "title": "PLW0108 false positive if callable is defined later in the module",
+    "assignee": "aznszn",
+    "assignee_name": "Azan Ali",
+    "status": "assigned",
+    "assigned_at": "2026-04-19T06:00:00.000000+00:00",
+    "taiga_us_url": null,
+    "priority": "low",
+    "category": "py_tools"
   }
 ]
