@@ -18,7 +18,7 @@
       "bug"
     ],
     "body_preview": "**Describe the bug** In `_save_bearer_token`  ([source](https://github.com/django-oauth/django-oauth-toolkit/blob/d422eeab79052c04a91d124f938ddc22c841c38c/oauth2_provider/oauth2_validators.py#L610)) in the `OAuth2Validator`, there is a race condition when `REFRESH_TOKEN_GRACE_PERIOD_SECONDS` is set.  **To Reproduce** Have a misbehaving client that sends many refresh requests in (very) short succes...",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,

@@ -122,15 +122,15 @@
     "author": "chitao1234",
     "author_avatar": "https://avatars.githubusercontent.com/u/25598632?v=4",
     "created_at": "2026-04-12T12:04:41Z",
-    "updated_at": "2026-04-16T17:23:25Z",
-    "comments": 6,
+    "updated_at": "2026-04-20T04:16:46Z",
+    "comments": 8,
     "labels": [
       "C-bug",
       "A-tokio",
       "M-process"
     ],
     "body_preview": "**Version** `tokio v1.51.1`  **Platform** `CYGWIN_NT-10.0-19045 DESKTOP-KPFSK42 3.6.7-1.x86_64 2026-03-02 20:13 UTC x86_64 Cygwin`  **Description**  On `x86_64-pc-cygwin`, `tokio::process` can stop delivering child stdout/stderr after the first chunk when stdio is piped and read asynchronously.  The child itself exits normally, but the async reader sees only the early output and then never sees th...",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,
