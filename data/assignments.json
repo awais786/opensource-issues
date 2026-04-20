@@ -1183,5 +1183,70 @@
     "taiga_us_url": null,
     "priority": "low",
     "category": "py_tools"
+  },
+  {
+    "url": "https://github.com/python/cpython/issues/148740",
+    "repo": "python/cpython",
+    "number": 148740,
+    "title": "Command line usage of `uuid` module doesn't allow to supply custom namespace UUID",
+    "assignee": "awais786",
+    "assignee_name": "Awais Qureshi",
+    "status": "assigned",
+    "assigned_at": "2026-04-20T00:00:00.000000+00:00",
+    "taiga_us_url": null,
+    "priority": "high",
+    "category": "py_core"
+  },
+  {
+    "url": "https://github.com/BerriAI/litellm/issues/26053",
+    "repo": "BerriAI/litellm",
+    "number": 26053,
+    "title": "[Bug]: Confirmed bug: ssl_verify=false not working if using streaming Text Completion API",
+    "assignee": "jawad-khan",
+    "assignee_name": "Jawad Khan",
+    "status": "assigned",
+    "assigned_at": "2026-04-20T00:00:00.000000+00:00",
+    "taiga_us_url": null,
+    "priority": "high",
+    "category": "ai_skills"
+  },
+  {
+    "url": "https://github.com/BerriAI/litellm/issues/26046",
+    "repo": "BerriAI/litellm",
+    "number": 26046,
+    "title": "[Bug]: websearch_interception does not fire on Anthropic /v1/messages with hosted_vllm + proxy alias model",
+    "assignee": "jawad-khan",
+    "assignee_name": "Jawad Khan",
+    "status": "assigned",
+    "assigned_at": "2026-04-20T00:00:00.000000+00:00",
+    "taiga_us_url": null,
+    "priority": "high",
+    "category": "ai_skills"
+  },
+  {
+    "url": "https://github.com/python/cpython/issues/148736",
+    "repo": "python/cpython",
+    "number": 148736,
+    "title": "asyncio.capture_call_graph: AttributeError walking async-generator ag_await chain",
+    "assignee": "valkrypton",
+    "assignee_name": "Ali Tariq",
+    "status": "assigned",
+    "assigned_at": "2026-04-20T00:00:00.000000+00:00",
+    "taiga_us_url": null,
+    "priority": "high",
+    "category": "py_core"
+  },
+  {
+    "url": "https://github.com/python/cpython/issues/148722",
+    "repo": "python/cpython",
+    "number": 148722,
+    "title": "Reference leak in code object with reference loop",
+    "assignee": "valkrypton",
+    "assignee_name": "Ali Tariq",
+    "status": "assigned",
+    "assigned_at": "2026-04-20T00:00:00.000000+00:00",
+    "taiga_us_url": null,
+    "priority": "high",
+    "category": "py_core"
   }
 ]
