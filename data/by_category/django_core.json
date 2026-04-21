@@ -386,5 +386,30 @@
     "is_security": false,
     "is_good_first_issue": false,
     "is_help_wanted": false
+  },
+  {
+    "id": 3912571123,
+    "repo": "django/djangoproject.com",
+    "ecosystem": "django",
+    "ecosystem_label": "Django",
+    "category": "django_core",
+    "category_label": "Django Core",
+    "number": 2500,
+    "title": "Add missing strings for translations in the header, menu, subfooter and footer",
+    "url": "https://github.com/django/djangoproject.com/issues/2500",
+    "author": "milotype",
+    "author_avatar": "https://avatars.githubusercontent.com/u/43657314?v=4",
+    "created_at": "2026-02-08T11:29:32Z",
+    "updated_at": "2026-03-06T19:59:45Z",
+    "comments": 5,
+    "labels": [],
+    "body_preview": "The header, menu, subfooter and footer strings of the [Django website](https://www.djangoproject.com/) don't exist in the translation files at [Transifex](https://app.transifex.com/django/). These strings should be added into a translation file in order for the site to appear translated in other languages.  **My suggestion** _(as a non-programmer)_: Add the missing strings into the project `django...",
+    "is_new": false,
+    "priority": "low",
+    "is_bug": false,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
   }
 ]

@@ -12,11 +12,14 @@
     "author": "Yemeni",
     "author_avatar": "https://avatars.githubusercontent.com/u/4777388?v=4",
     "created_at": "2026-04-18T10:32:17Z",
-    "updated_at": "2026-04-18T10:43:23Z",
-    "comments": 0,
+    "updated_at": "2026-04-21T06:35:40Z",
+    "comments": 2,
     "labels": [
       "type:Enhancement",
-      "status:Needs Review"
+      "status:Needs Review",
+      "status:Needs Info",
+      "component:Page",
+      "component:Audit logging"
     ],
     "body_preview": "### Problem statement  Wagtail currently exposes page history and it's soley used per page. It does not have a single consolidated timeline for all the children under the parent page. The [wagtail-unified-history](https://github.com/Yemeni/wagtail-unified-history/) prototype demonstrates that it is possible to merge page log entries, workflow events, comments, and revision-related activity into on...",
     "is_new": true,

@@ -236,33 +236,6 @@
     "is_help_wanted": false
   },
   {
-    "id": 3834565242,
-    "repo": "fabiocaccamo/django-admin-interface",
-    "ecosystem": "django",
-    "ecosystem_label": "Django",
-    "category": "admin_ui",
-    "category_label": "Admin & UI",
-    "number": 469,
-    "title": "Calendar full width on 0.32.0",
-    "url": "https://github.com/fabiocaccamo/django-admin-interface/issues/469",
-    "author": "jgillard",
-    "author_avatar": "https://avatars.githubusercontent.com/u/3770312?v=4",
-    "created_at": "2026-01-20T16:53:11Z",
-    "updated_at": "2026-01-20T16:53:11Z",
-    "comments": 0,
-    "labels": [
-      "bug"
-    ],
-    "body_preview": "**Python version** 3.14.2  **Django version** 5.2.9 (and 6.0.1)  **Package version** 0.32.0  **Current behavior (bug description)** The calendar widget is showing up full width when I upgrade from 0.31.1 to 0.32.0. There is a new higher specificity selector setting width: 100% to the module class that overrides width: 19em for calendarbox. I checked Django 6.0.x and the same issue shows.  0.31.1:...",
-    "is_new": false,
-    "priority": "high",
-    "is_bug": true,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
     "id": 4177857082,
     "repo": "farridav/django-jazzmin",
     "ecosystem": "django",
