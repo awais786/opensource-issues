@@ -1352,5 +1352,83 @@
     "taiga_us_url": null,
     "priority": "low",
     "category": "py_tools"
+  },
+  {
+    "url": "https://github.com/BerriAI/litellm/issues/26154",
+    "repo": "BerriAI/litellm",
+    "number": 26154,
+    "title": "[Bug]: Pinning exact dependency versions in `pyproject.toml` breaks downstream consumers",
+    "assignee": "jawad-khan",
+    "assignee_name": "Jawad Khan",
+    "status": "assigned",
+    "assigned_at": "2026-04-22T06:00:00.000000+00:00",
+    "taiga_us_url": null,
+    "priority": "high",
+    "category": "ai_skills"
+  },
+  {
+    "url": "https://github.com/BerriAI/litellm/issues/26153",
+    "repo": "BerriAI/litellm",
+    "number": 26153,
+    "title": "[Bug]: `completion_cost()` raises `AttributeError` on streaming Anthropic responses with web_search in v1.83.10",
+    "assignee": "jawad-khan",
+    "assignee_name": "Jawad Khan",
+    "status": "assigned",
+    "assigned_at": "2026-04-22T06:00:00.000000+00:00",
+    "taiga_us_url": null,
+    "priority": "high",
+    "category": "ai_skills"
+  },
+  {
+    "url": "https://github.com/python/mypy/issues/21271",
+    "repo": "python/mypy",
+    "number": 21271,
+    "title": "`not isinstance(x, cls)` inside classmethod does not narrow type",
+    "assignee": "valkrypton",
+    "assignee_name": "Ali Tariq",
+    "status": "assigned",
+    "assigned_at": "2026-04-22T06:00:00.000000+00:00",
+    "taiga_us_url": null,
+    "priority": "high",
+    "category": "py_core"
+  },
+  {
+    "url": "https://github.com/python/cpython/issues/148817",
+    "repo": "python/cpython",
+    "number": 148817,
+    "title": "sets with >30 elements not constant-folded in `in`/`not in` and `for` loops",
+    "assignee": "valkrypton",
+    "assignee_name": "Ali Tariq",
+    "status": "assigned",
+    "assigned_at": "2026-04-22T06:00:00.000000+00:00",
+    "taiga_us_url": null,
+    "priority": "high",
+    "category": "py_core"
+  },
+  {
+    "url": "https://github.com/astral-sh/ruff/issues/24713",
+    "repo": "astral-sh/ruff",
+    "number": 24713,
+    "title": "PLR6301 doesn't detect @override from TYPE_CHECKING",
+    "assignee": "aznszn",
+    "assignee_name": "Azan Ali",
+    "status": "assigned",
+    "assigned_at": "2026-04-22T06:00:00.000000+00:00",
+    "taiga_us_url": null,
+    "priority": "high",
+    "category": "py_tools"
+  },
+  {
+    "url": "https://github.com/astral-sh/uv/issues/19079",
+    "repo": "astral-sh/uv",
+    "number": 19079,
+    "title": "uvx silently ignores requires-python, fails with confusing build error",
+    "assignee": "aznszn",
+    "assignee_name": "Azan Ali",
+    "status": "assigned",
+    "assigned_at": "2026-04-22T06:00:00.000000+00:00",
+    "taiga_us_url": null,
+    "priority": "low",
+    "category": "py_tools"
   }
 ]
