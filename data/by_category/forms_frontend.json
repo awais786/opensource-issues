@@ -73,32 +73,5 @@
     "is_security": false,
     "is_good_first_issue": false,
     "is_help_wanted": false
-  },
-  {
-    "id": 3838494395,
-    "repo": "jrief/django-formset",
-    "ecosystem": "django",
-    "ecosystem_label": "Django",
-    "category": "forms_frontend",
-    "category_label": "Forms & Frontend",
-    "number": 261,
-    "title": "Suggestion for selectize widget: blur after selecting a value",
-    "url": "https://github.com/jrief/django-formset/issues/261",
-    "author": "gerhard-moser",
-    "author_avatar": "https://avatars.githubusercontent.com/u/85677517?v=4",
-    "created_at": "2026-01-21T14:21:22Z",
-    "updated_at": "2026-02-12T03:00:45Z",
-    "comments": 2,
-    "labels": [
-      "enhancement"
-    ],
-    "body_preview": "When you select a value in a Selectize widget, the focus stays on the widget.  This causes issues when you switch tabs (e.g., to copy some text) and return to the form. The focus is still on the Selectize widget, so pasting the copied text into the next form field doesn\u2019t work.",
-    "is_new": false,
-    "priority": "medium",
-    "is_bug": false,
-    "is_feature": true,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
   }
 ]
