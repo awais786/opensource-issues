@@ -174,7 +174,7 @@
       "webhook / sync issues"
     ],
     "body_preview": "## Description  `Customer.purge()` assigns directly to `self.deleted` (line 892) and `self.default_source` (line 904) in `djstripe/models/core.py`, but both were refactored from model fields to `@property` descriptors that read from `self.stripe_data`:  ```python # core.py:497-502 @property def default_source(self):     return self.stripe_data.get(\"default_source\")  @property def deleted(self):...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

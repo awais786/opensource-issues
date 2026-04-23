@@ -16,7 +16,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "Hello everyone,  I have a PostgreSQL database with millions of records that I need to reindex frequently. In my case, this was prohibitively slow because Django was using a server-side cursor in a way that led PostgreSQL to use `WITH HOLD`, which in turn generated a large amount of temporary I/O.  The fix was to make sure the queryset is consumed inside an explicit transaction, so that autocommit...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
