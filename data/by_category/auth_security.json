@@ -368,7 +368,7 @@
       "help request"
     ],
     "body_preview": "It is necessary to clarify the improvements made to the project using AI and establish the relevant guidelines.",
-    "is_new": true,
+    "is_new": false,
     "priority": "medium",
     "is_bug": false,
     "is_feature": true,

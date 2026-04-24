@@ -120,7 +120,7 @@
       "good first issue"
     ],
     "body_preview": "### Problem  When performing regression testing in storefronts, it's handy to be able to simulate a deleted checkout (e.g., the checkout stored in cookies is no longer valid). But unfortunately Saleor doesn't provide a way to manually delete checkouts which means users must run Python scripts/commands which requires privileged access to the systems (developers and testers usually do not have such...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

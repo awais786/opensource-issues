@@ -1,5 +1,33 @@
 [
   {
+    "id": 4317016676,
+    "repo": "facebook/react",
+    "ecosystem": "react",
+    "ecosystem_label": "React",
+    "category": "react_core",
+    "category_label": "React Core",
+    "number": 36331,
+    "title": "[Compiler Bug]: incorrect memoization of Tanstack table methods in extracted components",
+    "url": "https://github.com/facebook/react/issues/36331",
+    "author": "DerTimonius",
+    "author_avatar": "https://avatars.githubusercontent.com/u/103483059?v=4",
+    "created_at": "2026-04-23T15:20:16Z",
+    "updated_at": "2026-04-23T15:20:16Z",
+    "comments": 0,
+    "labels": [
+      "Type: Bug",
+      "Status: Unconfirmed"
+    ],
+    "body_preview": "### What kind of issue is this?  - [x] React Compiler core (the JS output is incorrect, or your app works incorrectly after optimization) - [ ] babel-plugin-react-compiler (build issue installing or using the Babel plugin) - [ ] eslint-plugin-react-hooks (build issue installing or using the eslint plugin) - [ ] react-compiler-healthcheck (build issue installing or using the healthcheck script)  ##...",
+    "is_new": true,
+    "priority": "high",
+    "is_bug": true,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 4307232347,
     "repo": "facebook/react",
     "ecosystem": "react",
@@ -40,8 +68,8 @@
     "author": "maxwoolfdev",
     "author_avatar": "https://avatars.githubusercontent.com/u/261187822?v=4",
     "created_at": "2026-04-20T21:38:32Z",
-    "updated_at": "2026-04-20T21:40:06Z",
-    "comments": 0,
+    "updated_at": "2026-04-23T18:54:06Z",
+    "comments": 2,
     "labels": [
       "Status: Unconfirmed"
     ],
@@ -105,33 +133,6 @@
     "is_new": true,
     "priority": "high",
     "is_bug": true,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
-    "id": 4279655985,
-    "repo": "facebook/react",
-    "ecosystem": "react",
-    "ecosystem_label": "React",
-    "category": "react_core",
-    "category_label": "React Core",
-    "number": 36298,
-    "title": "Bug:",
-    "url": "https://github.com/facebook/react/issues/36298",
-    "author": "antoniomac931-del",
-    "author_avatar": "https://avatars.githubusercontent.com/u/276265486?v=4",
-    "created_at": "2026-04-17T02:03:53Z",
-    "updated_at": "2026-04-18T05:46:41Z",
-    "comments": 1,
-    "labels": [
-      "Status: Unconfirmed"
-    ],
-    "body_preview": "<!--   Please provide a clear and concise description of what the bug is. Include   screenshots if needed. Please test using the latest version of the relevant   React packages to make sure your issue has not already been fixed. -->  React version:  ## Steps To Reproduce  1. 2.  <!--   Your bug will get fixed much faster if we can run your code and it doesn't   have dependencies other than React....",
-    "is_new": true,
-    "priority": "low",
-    "is_bug": false,
     "is_feature": false,
     "is_security": false,
     "is_good_first_issue": false,

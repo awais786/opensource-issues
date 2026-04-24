@@ -435,6 +435,34 @@
     "is_help_wanted": false
   },
   {
+    "id": 4317869230,
+    "repo": "getsentry/sentry-python",
+    "ecosystem": "django",
+    "ecosystem_label": "Django",
+    "category": "config_devops",
+    "category_label": "Config & DevOps",
+    "number": 6130,
+    "title": "Address missing test coverage within the event processor in the starlette integration",
+    "url": "https://github.com/getsentry/sentry-python/issues/6130",
+    "author": "ericapisani",
+    "author_avatar": "https://avatars.githubusercontent.com/u/5655473?v=4",
+    "created_at": "2026-04-23T18:01:35Z",
+    "updated_at": "2026-04-23T18:01:36Z",
+    "comments": 1,
+    "labels": [
+      "Python",
+      "Tests"
+    ],
+    "body_preview": "This came up in the [context](<https://github.com/getsentry/sentry-python/pull/6123#discussion_r3122209592>) of updating the starlette integration to support span streaming.  Related to [PY-2362](https://linear.app/getsentry/issue/PY-2362/migrate-starlette-to-span-first)",
+    "is_new": true,
+    "priority": "low",
+    "is_bug": false,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 4309594770,
     "repo": "getsentry/sentry-python",
     "ecosystem": "django",
@@ -654,7 +682,7 @@
       "Bug"
     ],
     "body_preview": "### How do you use Sentry?  Sentry Saas (sentry.io)  ### Version  2.58.0  ### Steps to Reproduce  On Python 3.14.4, `asyncio.iscoroutinefunction` is deprecated in favour of `inspect.iscoroutinefunction`.  https://github.com/python/cpython/blob/2fdccb3f88603cb72d311ca304ab7fcf9df12d00/Lib/asyncio/coroutines.py#L20-L27  This raises a warning when using FastAPI's integration, in both `sentry_sdk/inte...",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,
