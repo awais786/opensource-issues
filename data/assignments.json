@@ -1534,5 +1534,83 @@
     "taiga_us_url": null,
     "priority": "low",
     "category": "py_web"
+  },
+  {
+    "url": "https://github.com/django-oauth/django-oauth-toolkit/issues/1689",
+    "repo": "jazzband/django-oauth-toolkit",
+    "number": 1689,
+    "title": "JWKS endpoint emits malformed Cache-Control header (header name duplicated in value)",
+    "assignee": "awais786",
+    "assignee_name": "Awais Qureshi",
+    "status": "assigned",
+    "assigned_at": "2026-04-24T06:00:00.000000+00:00",
+    "taiga_us_url": null,
+    "priority": "high",
+    "category": "auth_security"
+  },
+  {
+    "url": "https://github.com/astral-sh/ruff/issues/24786",
+    "repo": "astral-sh/ruff",
+    "number": 24786,
+    "title": "Cache files have restrictive permissions",
+    "assignee": "awais786",
+    "assignee_name": "Awais Qureshi",
+    "status": "assigned",
+    "assigned_at": "2026-04-24T06:00:00.000000+00:00",
+    "taiga_us_url": null,
+    "priority": "low",
+    "category": "py_tools"
+  },
+  {
+    "url": "https://github.com/python-poetry/poetry/issues/10856",
+    "repo": "python-poetry/poetry",
+    "number": 10856,
+    "title": "poetry help env not working",
+    "assignee": "jawad-khan",
+    "assignee_name": "Jawad Khan",
+    "status": "assigned",
+    "assigned_at": "2026-04-24T06:00:00.000000+00:00",
+    "taiga_us_url": null,
+    "priority": "high",
+    "category": "py_tools"
+  },
+  {
+    "url": "https://github.com/BerriAI/litellm/issues/26309",
+    "repo": "BerriAI/litellm",
+    "number": 26309,
+    "title": "[Bug]:  `chatgpt/gpt-5.4` throw exception when stream is `false`",
+    "assignee": "jawad-khan",
+    "assignee_name": "Jawad Khan",
+    "status": "assigned",
+    "assigned_at": "2026-04-24T06:00:00.000000+00:00",
+    "taiga_us_url": null,
+    "priority": "high",
+    "category": "ai_skills"
+  },
+  {
+    "url": "https://github.com/python/cpython/issues/148874",
+    "repo": "python/cpython",
+    "number": 148874,
+    "title": "`with lock`: can skip `__exit__` when a signal handler raises right after `__enter__`",
+    "assignee": "valkrypton",
+    "assignee_name": "Ali Tariq",
+    "status": "assigned",
+    "assigned_at": "2026-04-24T06:00:00.000000+00:00",
+    "taiga_us_url": null,
+    "priority": "high",
+    "category": "py_core"
+  },
+  {
+    "url": "https://github.com/pallets/click/issues/3362",
+    "repo": "pallets/click",
+    "number": 3362,
+    "title": "`HelpFormatter.write_usage` breaks options at a hyphen",
+    "assignee": "aznszn",
+    "assignee_name": "Azan Ali",
+    "status": "assigned",
+    "assigned_at": "2026-04-24T06:00:00.000000+00:00",
+    "taiga_us_url": null,
+    "priority": "low",
+    "category": "py_web"
   }
 ]
