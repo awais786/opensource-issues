@@ -1612,5 +1612,70 @@
     "taiga_us_url": null,
     "priority": "low",
     "category": "py_web"
+  },
+  {
+    "url": "https://github.com/python/cpython/issues/148950",
+    "repo": "python/cpython",
+    "number": 148950,
+    "title": "Endless polling EOF socket",
+    "assignee": "awais786",
+    "assignee_name": "Awais Qureshi",
+    "status": "assigned",
+    "assigned_at": "2026-04-25T06:00:00.000000+00:00",
+    "taiga_us_url": null,
+    "priority": "high",
+    "category": "py_core"
+  },
+  {
+    "url": "https://github.com/BerriAI/litellm/issues/26396",
+    "repo": "BerriAI/litellm",
+    "number": 26396,
+    "title": "[Bug]: verbose_logger level not set when LITELLM_LOG=INFO, causing INFO logs to be suppressed",
+    "assignee": "jawad-khan",
+    "assignee_name": "Jawad Khan",
+    "status": "assigned",
+    "assigned_at": "2026-04-25T06:00:00.000000+00:00",
+    "taiga_us_url": null,
+    "priority": "high",
+    "category": "ai_skills"
+  },
+  {
+    "url": "https://github.com/BerriAI/litellm/issues/26389",
+    "repo": "BerriAI/litellm",
+    "number": 26389,
+    "title": "[Bug]: WebSearch Interception follow-up request ignores custom `api_base` / `api_key`, causing 401 and deployment cooldown cascade",
+    "assignee": "jawad-khan",
+    "assignee_name": "Jawad Khan",
+    "status": "assigned",
+    "assigned_at": "2026-04-25T06:00:00.000000+00:00",
+    "taiga_us_url": null,
+    "priority": "high",
+    "category": "ai_skills"
+  },
+  {
+    "url": "https://github.com/python/cpython/issues/148947",
+    "repo": "python/cpython",
+    "number": 148947,
+    "title": "dataclass(slots=True) crashes if method has an empty `__class__` cell",
+    "assignee": "valkrypton",
+    "assignee_name": "Ali Tariq",
+    "status": "assigned",
+    "assigned_at": "2026-04-25T06:00:00.000000+00:00",
+    "taiga_us_url": null,
+    "priority": "high",
+    "category": "py_core"
+  },
+  {
+    "url": "https://github.com/python/cpython/issues/148919",
+    "repo": "python/cpython",
+    "number": 148919,
+    "title": "test_urllib2.HandlerTests.test_redirect_no_path fails when proxy environment variables are set",
+    "assignee": "valkrypton",
+    "assignee_name": "Ali Tariq",
+    "status": "assigned",
+    "assigned_at": "2026-04-25T06:00:00.000000+00:00",
+    "taiga_us_url": null,
+    "priority": "high",
+    "category": "py_core"
   }
 ]
