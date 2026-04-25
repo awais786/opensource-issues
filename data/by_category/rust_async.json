@@ -1,5 +1,33 @@
 [
   {
+    "id": 4327046967,
+    "repo": "tokio-rs/tokio",
+    "ecosystem": "rust",
+    "ecosystem_label": "Rust",
+    "category": "rust_async",
+    "category_label": "Async & Web",
+    "number": 8085,
+    "title": "Improved experience using Tokio for both CPU-bound work and I/O work on the same machine",
+    "url": "https://github.com/tokio-rs/tokio/issues/8085",
+    "author": "alamb",
+    "author_avatar": "https://avatars.githubusercontent.com/u/490673?v=4",
+    "created_at": "2026-04-25T04:22:13Z",
+    "updated_at": "2026-04-25T04:37:18Z",
+    "comments": 2,
+    "labels": [
+      "A-tokio",
+      "C-feature-request"
+    ],
+    "body_preview": "**Is your feature request related to a problem? Please describe.**  ## Thanks First of all, Tokio is awesome, and shout out to my peeps @carllerche and @Darksonn for their amazing work on this crate. We use it for all the network and CPU work in several databases and the DataFusion ecosystem.  ## TL;DR I think it would be useful to consider more built-in support for task prioritization so we can a...",
+    "is_new": true,
+    "priority": "medium",
+    "is_bug": false,
+    "is_feature": true,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 4312241222,
     "repo": "tokio-rs/tokio",
     "ecosystem": "rust",
@@ -130,7 +158,7 @@
       "I-slow"
     ],
     "body_preview": "## Summary  Since Tokio `1.51.0` ([#7431](https://github.com/tokio-rs/tokio/pull/7431), \"runtime: steal tasks from the LIFO slot\"), `schedule_local` on the multi-thread scheduler unconditionally calls `notify_parked_local()` whenever a parked worker exists, even when the task was just placed into the current worker's own empty LIFO slot. In `1.50.0` that case was a silent fast path: the worker kep...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

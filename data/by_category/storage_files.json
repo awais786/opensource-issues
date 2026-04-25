@@ -16,7 +16,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "Hi, before investing time in an implementation I wanted to check whether this direction aligns with the project's goals.  ## Problem  When running `collectstatic` with `S3Storage`, every file is re-uploaded on each run regardless of whether its content has changed. For projects with a non-trivial number of static assets, this adds 2\u20133+ minutes to every deployment.  I verified this by reading throu...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
@@ -118,7 +118,7 @@
       "bug"
     ],
     "body_preview": "### Bug Description  `get_image_dimensions` is EXIF rotation unaware, which means the width/height field will be populated wrong.  Based on the source, all browsers will rotate images based on their exif information.  ### Expected Behavior  Since we rotate all source sets, we should store the dimension correctly based on how the image will be displayed.  ### Version  1.7.4  ### Stack trace  _No re...",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,

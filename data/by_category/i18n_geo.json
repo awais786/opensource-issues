@@ -139,8 +139,8 @@
     "author": "gdwicorsariezaldy-hue",
     "author_avatar": "https://avatars.githubusercontent.com/u/278899928?v=4",
     "created_at": "2026-04-24T06:47:24Z",
-    "updated_at": "2026-04-24T07:09:38Z",
-    "comments": 0,
+    "updated_at": "2026-04-24T15:50:30Z",
+    "comments": 1,
     "labels": [],
     "body_preview": "## Expected Behavior  GeoNode Docker login always returns \"session expired\"  Environment: - Windows + Docker Desktop - GeoNode image: geonode/geonode:4.2.2 (and latest) - PostGIS + GeoServer container setup  What I tried: - Set SECRET_KEY (verified inside container) - Changed SESSION_ENGINE (db & signed_cookies) - Fixed ALLOWED_HOSTS & CSRF - Disabled secure cookies - Tried Gunicorn preload - Trie...",
     "is_new": true,
@@ -243,8 +243,8 @@
     "author": "giohappy",
     "author_avatar": "https://avatars.githubusercontent.com/u/571129?v=4",
     "created_at": "2026-04-20T10:57:10Z",
-    "updated_at": "2026-04-20T12:30:39Z",
-    "comments": 0,
+    "updated_at": "2026-04-24T23:04:23Z",
+    "comments": 1,
     "labels": [
       "master"
     ],
