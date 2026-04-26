@@ -12,11 +12,13 @@
     "author": "alamb",
     "author_avatar": "https://avatars.githubusercontent.com/u/490673?v=4",
     "created_at": "2026-04-25T04:22:13Z",
-    "updated_at": "2026-04-25T04:37:18Z",
-    "comments": 2,
+    "updated_at": "2026-04-25T14:15:41Z",
+    "comments": 3,
     "labels": [
       "A-tokio",
-      "C-feature-request"
+      "M-runtime",
+      "C-feature-request",
+      "M-blocking"
     ],
     "body_preview": "**Is your feature request related to a problem? Please describe.**  ## Thanks First of all, Tokio is awesome, and shout out to my peeps @carllerche and @Darksonn for their amazing work on this crate. We use it for all the network and CPU work in several databases and the DataFusion ecosystem.  ## TL;DR I think it would be useful to consider more built-in support for task prioritization so we can a...",
     "is_new": true,
@@ -129,7 +131,7 @@
       "M-blocking"
     ],
     "body_preview": "https://github.com/tokio-rs/tokio/pull/7757 landed a sharded spawn blocking queue to improve scalability, however this was reverted due to causing hangs (see: https://github.com/tokio-rs/tokio/issues/8056).  I'm pretty sure the bug that caused this was due to handling of idle threads and whether a thread could be woken vs. needed to be spawned.  In any event, my proposed path to re-landing is:  -...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

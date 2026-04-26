@@ -230,34 +230,6 @@
     "is_help_wanted": false
   },
   {
-    "id": 4057761063,
-    "repo": "django/djangoproject.com",
-    "ecosystem": "django",
-    "ecosystem_label": "Django",
-    "category": "django_core",
-    "category_label": "Django Core",
-    "number": 2557,
-    "title": "Low color contrast on focus indicator for Django logo in dark mode",
-    "url": "https://github.com/django/djangoproject.com/issues/2557",
-    "author": "erosselli",
-    "author_avatar": "https://avatars.githubusercontent.com/u/67162025?v=4",
-    "created_at": "2026-03-11T11:49:48Z",
-    "updated_at": "2026-04-10T19:22:15Z",
-    "comments": 6,
-    "labels": [
-      "accessibility",
-      "Djangonaut Space \ud83d\ude80"
-    ],
-    "body_preview": "The focus indicator for the Django logo in dark mode is hard to see, it's black on a green background. It should be white to match other focus indicators on the page.  <img width=\"240\" height=\"87\" alt=\"Django logo with black focus indicator\" src=\"https://github.com/user-attachments/assets/9bba938e-66a5-44b2-904b-467ae038e811\" />  We will work on this issue as part of Djangonaut Space Session 6.",
-    "is_new": false,
-    "priority": "low",
-    "is_bug": false,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
     "id": 4048777331,
     "repo": "django/djangoproject.com",
     "ecosystem": "django",
