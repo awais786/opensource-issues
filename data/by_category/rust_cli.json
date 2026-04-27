@@ -439,7 +439,7 @@
     "comments": 1,
     "labels": [],
     "body_preview": "### Please tick this box to confirm you have reviewed the above.  - [x] I have a different issue.  ### What version of ripgrep are you using?  ripgrep 15.1.0  ### How did you install ripgrep?  cargo install  ### What operating system are you using ripgrep on?  windows 11, 25H2  ### Describe your bug.  ripgrep panics    ### What are the steps to reproduce the behavior?  Windows 11, cmd.exe. Doesn't...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

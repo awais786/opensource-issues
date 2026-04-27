@@ -532,9 +532,10 @@
     "author": "ericapisani",
     "author_avatar": "https://avatars.githubusercontent.com/u/5655473?v=4",
     "created_at": "2026-04-21T16:42:31Z",
-    "updated_at": "2026-04-21T16:43:32Z",
-    "comments": 1,
+    "updated_at": "2026-04-26T13:28:21Z",
+    "comments": 2,
     "labels": [
+      "Waiting for: Product Owner",
       "Python",
       "Refactoring",
       "good first issue"
@@ -598,34 +599,6 @@
       "Profiles"
     ],
     "body_preview": "## How do you use Sentry? Sentry SaaS (sentry.io)  ## Version 2.58.0 (also reproduced on 2.17.0)  ## Steps to Reproduce 1. Run a FastAPI app under `uvicorn` on Python 3.11, containerised (Linux, x86_64), with many concurrent HTTP requests. 2. Each request performs synchronous outbound I/O (e.g. `google-cloud-storage` `blob.download_as_bytes`, arbitrary `requests.Session.post` / `get`) from an `any...",
-    "is_new": true,
-    "priority": "high",
-    "is_bug": true,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
-    "id": 4290558695,
-    "repo": "getsentry/sentry-python",
-    "ecosystem": "django",
-    "ecosystem_label": "Django",
-    "category": "config_devops",
-    "category_label": "Config & DevOps",
-    "number": 6094,
-    "title": "Memory leak: DedupeIntegration pins exception tracebacks in asyncio apps",
-    "url": "https://github.com/getsentry/sentry-python/issues/6094",
-    "author": "G000D1ESS",
-    "author_avatar": "https://avatars.githubusercontent.com/u/62620930?v=4",
-    "created_at": "2026-04-19T10:14:47Z",
-    "updated_at": "2026-04-20T16:46:34Z",
-    "comments": 2,
-    "labels": [
-      "Python",
-      "Bug"
-    ],
-    "body_preview": "### How do you use Sentry?  Self-hosted/on-premise  ### Version  2.56.0 (Python 3.12.6)  ### Steps to Reproduce  1. `sentry_sdk.init` with only `LoggingIntegration` + `DedupeIntegration` enabled. 2. In a long-lived asyncio task: build a local variable of ~1 MB so the frame carries that    much data, raise `ValueError`, log with `logger.exception(...)`, keep the task running. 3. The exception, its...",
     "is_new": true,
     "priority": "high",
     "is_bug": true,
