@@ -251,7 +251,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "Related to https://github.com/celery/kombu/pull/2507. When using a `StreamingCredentialProvider` with the Redis transport, the periodic re-auth tokens emitted by the provider never result in an AUTH command being sent on the two long-lived connections that the transport holds: the BRPOP connection and the pubsub/LISTEN connection. This causes credential-expiry disconnects on brokers that enforce s...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

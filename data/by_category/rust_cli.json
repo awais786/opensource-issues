@@ -19,7 +19,7 @@
       "S-triage"
     ],
     "body_preview": "### Please complete the following tasks  - [x] I have searched the [discussions](https://github.com/clap-rs/clap/discussions) - [x] I have searched the [open](https://github.com/clap-rs/clap/issues) and [rejected](https://github.com/clap-rs/clap/issues?q=is%3Aissue+label%3AS-wont-fix+is%3Aclosed) issues  ### Clap Version  4.5  ### Describe your use case  Add support for generating AsciiDoc (`.adoc...",
-    "is_new": true,
+    "is_new": false,
     "priority": "medium",
     "is_bug": false,
     "is_feature": true,
@@ -254,35 +254,6 @@
     "is_feature": true,
     "is_security": false,
     "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
-    "id": 3996081973,
-    "repo": "clap-rs/clap",
-    "ecosystem": "rust",
-    "ecosystem_label": "Rust",
-    "category": "rust_cli",
-    "category_label": "CLI & Tooling",
-    "number": 6284,
-    "title": "(clap_complete): Aditional context for Arguments with multiple args [\"unstable-dynamic\"]",
-    "url": "https://github.com/clap-rs/clap/issues/6284",
-    "author": "feraxhp",
-    "author_avatar": "https://avatars.githubusercontent.com/u/116177764?v=4",
-    "created_at": "2026-02-26T15:05:00Z",
-    "updated_at": "2026-02-26T17:15:01Z",
-    "comments": 2,
-    "labels": [
-      "C-enhancement",
-      "A-completion",
-      "E-easy"
-    ],
-    "body_preview": "### Please complete the following tasks  - [x] I have searched the [discussions](https://github.com/clap-rs/clap/discussions) - [x] I have searched the [open](https://github.com/clap-rs/clap/issues) and [rejected](https://github.com/clap-rs/clap/issues?q=is%3Aissue+label%3AS-wont-fix+is%3Aclosed) issues  ### Clap Version  clap complete = \"4.5.66\"  ### Describe your use case  Lets say you have an a...",
-    "is_new": false,
-    "priority": "medium",
-    "is_bug": false,
-    "is_feature": true,
-    "is_security": false,
-    "is_good_first_issue": true,
     "is_help_wanted": false
   },
   {
@@ -548,36 +519,6 @@
     "is_help_wanted": false
   },
   {
-    "id": 4323498955,
-    "repo": "sharkdp/bat",
-    "ecosystem": "rust",
-    "ecosystem_label": "Rust",
-    "category": "rust_cli",
-    "category_label": "CLI & Tooling",
-    "number": 3698,
-    "title": "Better Kotlin syntax",
-    "url": "https://github.com/sharkdp/bat/issues/3698",
-    "author": "guille",
-    "author_avatar": "https://avatars.githubusercontent.com/u/1296511?v=4",
-    "created_at": "2026-04-24T14:12:24Z",
-    "updated_at": "2026-04-24T18:50:51Z",
-    "comments": 2,
-    "labels": [
-      "feature-request",
-      "syntax-request",
-      "syntax-highlighting",
-      "syntax-request-approved"
-    ],
-    "body_preview": "The syntax currently bundled with bat is not great. Any non-trivial Kotlin file has subpar highlighting and in some cases there are scopes that get leaked and the whole file is a mess.  Example: try to use bat on this file: https://github.com/guille/sublime-kotlin/blob/master/examples/test.kt  I was annoyed with this in both Sublime Text and bat so I had GPT-5.4 write one. It has tests and does a...",
-    "is_new": true,
-    "priority": "medium",
-    "is_bug": false,
-    "is_feature": true,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
     "id": 4319091656,
     "repo": "sharkdp/bat",
     "ecosystem": "rust",
@@ -590,8 +531,8 @@
     "author": "DeflateAwning",
     "author_avatar": "https://avatars.githubusercontent.com/u/11021263?v=4",
     "created_at": "2026-04-23T21:49:28Z",
-    "updated_at": "2026-04-23T21:55:21Z",
-    "comments": 0,
+    "updated_at": "2026-04-27T19:31:58Z",
+    "comments": 1,
     "labels": [
       "feature-request"
     ],
@@ -652,7 +593,7 @@
       "upstream-error"
     ],
     "body_preview": "**What steps will reproduce the bug?**  Try to highlight the following Haskell code:  ```hs infix 6 --> ```  **What happens?**  <img width=\"617\" height=\"242\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/1de34830-f2f3-4339-a101-51e5f0d6d2f7\" />  **What did you expect to happen instead?**  `-->` should be highlighted as an operator, not as a comment.  **How did you install `bat`?**  p...",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,
@@ -824,6 +765,33 @@
     "priority": "medium",
     "is_bug": false,
     "is_feature": true,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
+    "id": 3916615646,
+    "repo": "sharkdp/bat",
+    "ecosystem": "rust",
+    "ecosystem_label": "Rust",
+    "category": "rust_cli",
+    "category_label": "CLI & Tooling",
+    "number": 3582,
+    "title": "Dependency bincode is unmaintained and flagged by RUSTSEC-2025-0141",
+    "url": "https://github.com/sharkdp/bat/issues/3582",
+    "author": "taladar",
+    "author_avatar": "https://avatars.githubusercontent.com/u/21060?v=4",
+    "created_at": "2026-02-09T14:14:16Z",
+    "updated_at": "2026-02-09T14:14:16Z",
+    "comments": 0,
+    "labels": [
+      "bug"
+    ],
+    "body_preview": "The dependency bincode 1.3.3 used in bat is unmaintained  https://rustsec.org/advisories/RUSTSEC-2025-0141  which means any projects using bat will get a security alert if they use tools like cargo audit or cargo deny check advisories.",
+    "is_new": false,
+    "priority": "high",
+    "is_bug": true,
+    "is_feature": false,
     "is_security": false,
     "is_good_first_issue": false,
     "is_help_wanted": false
