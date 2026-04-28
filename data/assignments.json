@@ -1872,5 +1872,44 @@
     "taiga_us_url": null,
     "priority": "low",
     "category": "py_tools"
+  },
+  {
+    "url": "https://github.com/BerriAI/litellm/issues/26555",
+    "repo": "BerriAI/litellm",
+    "number": 26555,
+    "title": "[Bug]: /key/update rejects non-admin users editing models when key has allowed_routes set via key_type",
+    "assignee": "awais786",
+    "assignee_name": "Awais Qureshi",
+    "status": "assigned",
+    "assigned_at": "2026-04-28T00:00:00.000000+00:00",
+    "taiga_us_url": null,
+    "priority": "high",
+    "category": "ai_skills"
+  },
+  {
+    "url": "https://github.com/astral-sh/uv/issues/19181",
+    "repo": "astral-sh/uv",
+    "number": 19181,
+    "title": "Unable to activate the venv in /bin/csh shell created using uv venv command with --relocatable flag.",
+    "assignee": "jawad-khan",
+    "assignee_name": "Jawad Khan",
+    "status": "assigned",
+    "assigned_at": "2026-04-28T00:00:00.000000+00:00",
+    "taiga_us_url": null,
+    "priority": "high",
+    "category": "py_tools"
+  },
+  {
+    "url": "https://github.com/axnsan12/drf-yasg/issues/962",
+    "repo": "axnsan12/drf-yasg",
+    "number": 962,
+    "title": "Try it out button for providing input payload is not working like before",
+    "assignee": "aznszn",
+    "assignee_name": "Azan Ali",
+    "status": "assigned",
+    "assigned_at": "2026-04-28T00:00:00.000000+00:00",
+    "taiga_us_url": null,
+    "priority": "low",
+    "category": "rest_api"
   }
 ]
