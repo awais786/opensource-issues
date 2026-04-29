@@ -1911,5 +1911,70 @@
     "taiga_us_url": null,
     "priority": "low",
     "category": "rest_api"
+  },
+  {
+    "url": "https://github.com/python/cpython/issues/149078",
+    "repo": "python/cpython",
+    "number": 149078,
+    "title": "test_socket tests fail with kernel lacking support for IPPROTO_UDPLITE",
+    "assignee": "awais786",
+    "assignee_name": "Awais Qureshi",
+    "status": "assigned",
+    "assigned_at": "2026-04-29T00:00:00.000000+00:00",
+    "taiga_us_url": null,
+    "priority": "high",
+    "category": "py_core"
+  },
+  {
+    "url": "https://github.com/astral-sh/uv/issues/19196",
+    "repo": "astral-sh/uv",
+    "number": 19196,
+    "title": "Configuration merging produces unusable uv.lock files",
+    "assignee": "jawad-khan",
+    "assignee_name": "Jawad Khan",
+    "status": "assigned",
+    "assigned_at": "2026-04-29T00:00:00.000000+00:00",
+    "taiga_us_url": null,
+    "priority": "high",
+    "category": "py_tools"
+  },
+  {
+    "url": "https://github.com/python/mypy/issues/21353",
+    "repo": "python/mypy",
+    "number": 21353,
+    "title": "Overlapping overloads false positive",
+    "assignee": "valkrypton",
+    "assignee_name": "Ali Tariq",
+    "status": "assigned",
+    "assigned_at": "2026-04-29T00:00:00.000000+00:00",
+    "taiga_us_url": null,
+    "priority": "high",
+    "category": "py_core"
+  },
+  {
+    "url": "https://github.com/pallets/werkzeug/issues/3165",
+    "repo": "pallets/werkzeug",
+    "number": 3165,
+    "title": "Cache lowercase header names in Headers",
+    "assignee": "aznszn",
+    "assignee_name": "Azan Ali",
+    "status": "assigned",
+    "assigned_at": "2026-04-29T00:00:00.000000+00:00",
+    "taiga_us_url": null,
+    "priority": "low",
+    "category": "py_web"
+  },
+  {
+    "url": "https://github.com/pallets/click/issues/3384",
+    "repo": "pallets/click",
+    "number": 3384,
+    "title": "Click 8.3.3 breaks `pytest` when stream `fd` is duplicated",
+    "assignee": "aznszn",
+    "assignee_name": "Azan Ali",
+    "status": "assigned",
+    "assigned_at": "2026-04-29T00:00:00.000000+00:00",
+    "taiga_us_url": null,
+    "priority": "high",
+    "category": "py_web"
   }
 ]
