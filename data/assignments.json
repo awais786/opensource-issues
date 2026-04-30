@@ -1976,5 +1976,57 @@
     "taiga_us_url": null,
     "priority": "high",
     "category": "py_web"
+  },
+  {
+    "url": "https://github.com/python/cpython/issues/149136",
+    "repo": "python/cpython",
+    "number": 149136,
+    "title": "Standardize Windows proxy bypass (ProxyOverride) parsing to support wildcards and CIDR",
+    "assignee": "awais786",
+    "assignee_name": "Awais Qureshi",
+    "status": "assigned",
+    "assigned_at": "2026-04-30T00:00:00.000000+00:00",
+    "taiga_us_url": null,
+    "priority": "high",
+    "category": "py_core"
+  },
+  {
+    "url": "https://github.com/python/cpython/issues/149117",
+    "repo": "python/cpython",
+    "number": 149117,
+    "title": "`runpy.run_module` for a non-existent module raises an `ImportError` without `name` set to `None`",
+    "assignee": "valkrypton",
+    "assignee_name": "Ali Tariq",
+    "status": "assigned",
+    "assigned_at": "2026-04-30T00:00:00.000000+00:00",
+    "taiga_us_url": null,
+    "priority": "high",
+    "category": "py_core"
+  },
+  {
+    "url": "https://github.com/python/cpython/issues/149095",
+    "repo": "python/cpython",
+    "number": 149095,
+    "title": "Builtin help function unwarrantedly assumes comment in first line can always be used as summary of module",
+    "assignee": "valkrypton",
+    "assignee_name": "Ali Tariq",
+    "status": "assigned",
+    "assigned_at": "2026-04-30T00:00:00.000000+00:00",
+    "taiga_us_url": null,
+    "priority": "high",
+    "category": "py_core"
+  },
+  {
+    "url": "https://github.com/tfranzel/drf-spectacular/issues/1500",
+    "repo": "tfranzel/drf-spectacular",
+    "number": 1500,
+    "title": "`append_meta` mutates schemas passed in by client code",
+    "assignee": "aznszn",
+    "assignee_name": "Azan Ali",
+    "status": "assigned",
+    "assigned_at": "2026-04-30T00:00:00.000000+00:00",
+    "taiga_us_url": null,
+    "priority": "low",
+    "category": "rest_api"
   }
 ]
