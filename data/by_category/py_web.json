@@ -1,30 +1,5 @@
 [
   {
-    "id": 4347329743,
-    "repo": "tiangolo/fastapi",
-    "ecosystem": "python",
-    "ecosystem_label": "Python",
-    "category": "py_web",
-    "category_label": "Python Web",
-    "number": 15448,
-    "title": "Malformed Links in Documentation Home",
-    "url": "https://github.com/fastapi/fastapi/issues/15448",
-    "author": "mrmurilo75",
-    "author_avatar": "https://avatars.githubusercontent.com/u/67339072?v=4",
-    "created_at": "2026-04-29T01:47:27Z",
-    "updated_at": "2026-04-29T06:23:32Z",
-    "comments": 1,
-    "labels": [],
-    "body_preview": "### Privileged issue  - [x] I'm @tiangolo or he asked me directly to create an issue here.  ### Issue Content  Hi,   I just accessed the documentation home page and saw that the links on the Opinitions sections was malformed:   <img width=\"1742\" height=\"1220\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/b40f29ae-4472-4157-9ec7-a5eb1afdb85c\" />  I though about correcting it to start...",
-    "is_new": true,
-    "priority": "low",
-    "is_bug": false,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
     "id": 4305867513,
     "repo": "tiangolo/fastapi",
     "ecosystem": "python",
@@ -87,8 +62,8 @@
     "author": "ryanking13",
     "author_avatar": "https://avatars.githubusercontent.com/u/24893111?v=4",
     "created_at": "2026-04-27T09:41:45Z",
-    "updated_at": "2026-04-29T10:29:10Z",
-    "comments": 4,
+    "updated_at": "2026-04-30T10:51:41Z",
+    "comments": 6,
     "labels": [
       "bug",
       "f:test runner"

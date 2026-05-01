@@ -36,7 +36,7 @@
     "category_label": "Database & ORM",
     "number": 863,
     "title": "PolymorphicChildModelAdmin redirects to the root model list view instead of the first PolymorphicParentModelAdmin",
-    "url": "https://github.com/jazzband/django-polymorphic/issues/863",
+    "url": "https://github.com/django-commons/django-polymorphic/issues/863",
     "author": "olivierdalang",
     "author_avatar": "https://avatars.githubusercontent.com/u/1894106?v=4",
     "created_at": "2026-02-10T12:14:20Z",
