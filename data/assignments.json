@@ -2119,5 +2119,83 @@
     "taiga_us_url": null,
     "priority": "low",
     "category": "py_tools"
+  },
+  {
+    "url": "https://github.com/python/cpython/issues/149183",
+    "repo": "python/cpython",
+    "number": 149183,
+    "title": "t-string tokeniser reports `MemoryError` on invalid input",
+    "assignee": "awais786",
+    "assignee_name": "Awais Qureshi",
+    "status": "assigned",
+    "assigned_at": "2026-05-02T06:00:00+00:00",
+    "taiga_us_url": null,
+    "priority": "high",
+    "category": "py_core"
+  },
+  {
+    "url": "https://github.com/BerriAI/litellm/issues/26965",
+    "repo": "BerriAI/litellm",
+    "number": 26965,
+    "title": "[Bug]: Vertex AI Gemini fails to resolve tool calls when history contains text-only assistant messages",
+    "assignee": "jawad-khan",
+    "assignee_name": "Jawad Khan",
+    "status": "assigned",
+    "assigned_at": "2026-05-02T06:00:00+00:00",
+    "taiga_us_url": null,
+    "priority": "high",
+    "category": "ai_skills"
+  },
+  {
+    "url": "https://github.com/python/cpython/issues/149189",
+    "repo": "python/cpython",
+    "number": 149189,
+    "title": "Modern defaults for `pprint`",
+    "assignee": "valkrypton",
+    "assignee_name": "Ali Tariq",
+    "status": "assigned",
+    "assigned_at": "2026-05-02T06:00:00+00:00",
+    "taiga_us_url": null,
+    "priority": "medium",
+    "category": "py_core"
+  },
+  {
+    "url": "https://github.com/python/cpython/issues/149208",
+    "repo": "python/cpython",
+    "number": 149208,
+    "title": "Metaclasses with type annotated attributes do not add `__annotations__ = {}` to derived classes.",
+    "assignee": "valkrypton",
+    "assignee_name": "Ali Tariq",
+    "status": "assigned",
+    "assigned_at": "2026-05-02T06:00:00+00:00",
+    "taiga_us_url": null,
+    "priority": "high",
+    "category": "py_core"
+  },
+  {
+    "url": "https://github.com/astral-sh/ruff/issues/24948",
+    "repo": "astral-sh/ruff",
+    "number": 24948,
+    "title": "Add NPY rule: prefer np.allclose(a, b) over np.all(np.isclose(a, b))",
+    "assignee": "aznszn",
+    "assignee_name": "Azan Ali",
+    "status": "assigned",
+    "assigned_at": "2026-05-02T06:00:00+00:00",
+    "taiga_us_url": null,
+    "priority": "low",
+    "category": "py_tools"
+  },
+  {
+    "url": "https://github.com/astral-sh/ruff/issues/24880",
+    "repo": "astral-sh/ruff",
+    "number": 24880,
+    "title": "Upgrade to mimalloc v3",
+    "assignee": "aznszn",
+    "assignee_name": "Azan Ali",
+    "status": "assigned",
+    "assigned_at": "2026-05-02T06:00:00+00:00",
+    "taiga_us_url": null,
+    "priority": "low",
+    "category": "py_tools"
   }
 ]
