@@ -323,30 +323,5 @@
     "is_security": false,
     "is_good_first_issue": false,
     "is_help_wanted": false
-  },
-  {
-    "id": 3883636664,
-    "repo": "serde-rs/json",
-    "ecosystem": "rust",
-    "ecosystem_label": "Rust",
-    "category": "rust_serde",
-    "category_label": "Serialization",
-    "number": 1310,
-    "title": "Construct RawValue from str slice",
-    "url": "https://github.com/serde-rs/json/issues/1310",
-    "author": "95th",
-    "author_avatar": "https://avatars.githubusercontent.com/u/22871609?v=4",
-    "created_at": "2026-02-02T02:45:52Z",
-    "updated_at": "2026-02-02T02:58:07Z",
-    "comments": 0,
-    "labels": [],
-    "body_preview": "I have a use case to create a `RawValue` reference from str slice. I see that there is a private [`from_borrowed`](https://github.com/serde-rs/json/blob/4f6dbfac79647d032b0997b5ab73022340c6dab7/src/raw.rs#L122) method which does exactly that. I could probably transmute a `&str` to `&RawValue` myself, but it felt more brittle. Is it possible to expose an unsafe version like `from_borrowed_unchecked...",
-    "is_new": false,
-    "priority": "low",
-    "is_bug": false,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
   }
 ]
