@@ -2288,5 +2288,83 @@
     "taiga_us_url": null,
     "priority": "low",
     "category": "py_tools"
+  },
+  {
+    "url": "https://github.com/python/typeshed/issues/15693",
+    "repo": "python/typeshed",
+    "number": 15693,
+    "title": "Daily tests failed on Sun May 03 2026",
+    "assignee": "awais786",
+    "assignee_name": "Awais",
+    "status": "assigned",
+    "assigned_at": "2026-05-04T06:00:00Z",
+    "taiga_us_url": null,
+    "priority": "low",
+    "category": "py_core"
+  },
+  {
+    "url": "https://github.com/python/cpython/issues/149309",
+    "repo": "python/cpython",
+    "number": 149309,
+    "title": "quitting a debugger based on the bdb module does not always stop code execution",
+    "assignee": "awais786",
+    "assignee_name": "Awais",
+    "status": "assigned",
+    "assigned_at": "2026-05-04T06:00:00Z",
+    "taiga_us_url": null,
+    "priority": "high",
+    "category": "py_core"
+  },
+  {
+    "url": "https://github.com/BerriAI/litellm/issues/27072",
+    "repo": "BerriAI/litellm",
+    "number": 27072,
+    "title": "[Bug]: misleading documentation: Trying to use Llm GuardYou must be a LiteLLM Enterprise user to use this feature.",
+    "assignee": "jawad-khan",
+    "assignee_name": "Jawad",
+    "status": "assigned",
+    "assigned_at": "2026-05-04T06:00:00Z",
+    "taiga_us_url": null,
+    "priority": "high",
+    "category": "ai_skills"
+  },
+  {
+    "url": "https://github.com/python/cpython/issues/149306",
+    "repo": "python/cpython",
+    "number": 149306,
+    "title": "Improve wave module error messages to include the offending value",
+    "assignee": "valkrypton",
+    "assignee_name": "Ali",
+    "status": "assigned",
+    "assigned_at": "2026-05-04T06:00:00Z",
+    "taiga_us_url": null,
+    "priority": "low",
+    "category": "py_core"
+  },
+  {
+    "url": "https://github.com/python/cpython/issues/149277",
+    "repo": "python/cpython",
+    "number": 149277,
+    "title": "Error display for invalid literal is incorrect",
+    "assignee": "valkrypton",
+    "assignee_name": "Ali",
+    "status": "assigned",
+    "assigned_at": "2026-05-04T06:00:00Z",
+    "taiga_us_url": null,
+    "priority": "high",
+    "category": "py_core"
+  },
+  {
+    "url": "https://github.com/astral-sh/ruff/issues/24979",
+    "repo": "astral-sh/ruff",
+    "number": 24979,
+    "title": "Introduce a CONFLICT lint ruleset",
+    "assignee": "aznszn",
+    "assignee_name": "Azan",
+    "status": "assigned",
+    "assigned_at": "2026-05-04T06:00:00Z",
+    "taiga_us_url": null,
+    "priority": "low",
+    "category": "py_tools"
   }
 ]
