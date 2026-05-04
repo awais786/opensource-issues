@@ -41,7 +41,7 @@
     "comments": 1,
     "labels": [],
     "body_preview": "# Bug Report  ## Description User has to click twice on \"try it out\" button to provide the payload for POST and PUT requests   ## Is this a regression?  <!-- Did this behavior use to work in the previous version? --> <!-- edit: --> Yes, since drf-yasg==1.21.12 the regression has introduced  ## Minimal Reproduction  ```code  ```  ## Stack trace / Error message  ```code  ```  <!-- If the issue is ac...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
