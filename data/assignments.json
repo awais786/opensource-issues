@@ -2470,5 +2470,83 @@
     "taiga_us_url": null,
     "priority": "low",
     "category": "py_tools"
+  },
+  {
+    "url": "https://github.com/python/mypy/issues/21412",
+    "repo": "python/mypy",
+    "number": 21412,
+    "title": "Provide better error for wrong ast_serialize version with parallel checking",
+    "assignee": "awais786",
+    "assignee_name": "Awais Qureshi",
+    "status": "assigned",
+    "assigned_at": "2026-05-06T04:08:54Z",
+    "taiga_us_url": null,
+    "priority": "high",
+    "category": "py_core"
+  },
+  {
+    "url": "https://github.com/psf/black/issues/5122",
+    "repo": "psf/black",
+    "number": 5122,
+    "title": "Fail to parse multiline `case` statement with `# fmt: skip`",
+    "assignee": "jawad-khan",
+    "assignee_name": "Jawad Khan",
+    "status": "assigned",
+    "assigned_at": "2026-05-06T04:08:54Z",
+    "taiga_us_url": null,
+    "priority": "high",
+    "category": "py_tools"
+  },
+  {
+    "url": "https://github.com/python/cpython/issues/149394",
+    "repo": "python/cpython",
+    "number": 149394,
+    "title": "`atexit` functions are not called when `os.exec*()` is called",
+    "assignee": "valkrypton",
+    "assignee_name": "Ali Tariq",
+    "status": "assigned",
+    "assigned_at": "2026-05-06T04:08:54Z",
+    "taiga_us_url": null,
+    "priority": "low",
+    "category": "py_core"
+  },
+  {
+    "url": "https://github.com/python/cpython/issues/149392",
+    "repo": "python/cpython",
+    "number": 149392,
+    "title": "Add 'Open Input in Editor' support to PyREPL",
+    "assignee": "valkrypton",
+    "assignee_name": "Ali Tariq",
+    "status": "assigned",
+    "assigned_at": "2026-05-06T04:08:54Z",
+    "taiga_us_url": null,
+    "priority": "medium",
+    "category": "py_core"
+  },
+  {
+    "url": "https://github.com/pallets/click/issues/3406",
+    "repo": "pallets/click",
+    "number": 3406,
+    "title": "Migrate sentinels to use Python 3.15's PEP 661 `sentinel` built-in with typing_extensions backport",
+    "assignee": "aznszn",
+    "assignee_name": "Azan Ali",
+    "status": "assigned",
+    "assigned_at": "2026-05-06T04:08:54Z",
+    "taiga_us_url": null,
+    "priority": "low",
+    "category": "py_web"
+  },
+  {
+    "url": "https://github.com/astral-sh/ruff/issues/25001",
+    "repo": "astral-sh/ruff",
+    "number": 25001,
+    "title": "Pylint C0302",
+    "assignee": "aznszn",
+    "assignee_name": "Azan Ali",
+    "status": "assigned",
+    "assigned_at": "2026-05-06T04:08:54Z",
+    "taiga_us_url": null,
+    "priority": "low",
+    "category": "py_tools"
   }
 ]
