@@ -66,7 +66,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "Code in [append_meta](https://github.com/tfranzel/drf-spectacular/blob/ef99f6d4da10cb9c331eb9424e3d3fd226f1aa7b/drf_spectacular/plumbing.py#L545-L574) went from making deep copies to making shallow copies: `schema = copy.deepcopy(schema)` -> `schema = copy.deepcopy(schema)` [in this commit](https://github.com/tfranzel/drf-spectacular/commit/58039cb)  `append_meta` then proceeds to mutate the schem...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
