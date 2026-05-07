@@ -2548,5 +2548,83 @@
     "taiga_us_url": null,
     "priority": "low",
     "category": "py_tools"
+  },
+  {
+    "url": "https://github.com/python/cpython/issues/149430",
+    "repo": "python/cpython",
+    "number": 149430,
+    "title": "`profiling.sampling` visualisation outputs have edge-case failures",
+    "assignee": "awais786",
+    "assignee_name": "Awais Qureshi",
+    "status": "assigned",
+    "assigned_at": "2026-05-07T04:12:08Z",
+    "taiga_us_url": null,
+    "priority": "high",
+    "category": "py_core"
+  },
+  {
+    "url": "https://github.com/django/djangoproject.com/issues/2610",
+    "repo": "django/djangoproject.com",
+    "number": 2610,
+    "title": "Integration of content currently held in Github community repos.",
+    "assignee": "jawad-khan",
+    "assignee_name": "Jawad Khan",
+    "status": "assigned",
+    "assigned_at": "2026-05-07T04:12:08Z",
+    "taiga_us_url": null,
+    "priority": "low",
+    "category": "django_core"
+  },
+  {
+    "url": "https://github.com/python/cpython/issues/149436",
+    "repo": "python/cpython",
+    "number": 149436,
+    "title": "Speed up `inspect.getattr_static` for the common-metaclass case",
+    "assignee": "valkrypton",
+    "assignee_name": "Ali Tariq",
+    "status": "assigned",
+    "assigned_at": "2026-05-07T04:12:08Z",
+    "taiga_us_url": null,
+    "priority": "medium",
+    "category": "py_core"
+  },
+  {
+    "url": "https://github.com/python/cpython/issues/149400",
+    "repo": "python/cpython",
+    "number": 149400,
+    "title": "Expose `Barrier` in the `multiprocessing.synchronize` module.",
+    "assignee": "valkrypton",
+    "assignee_name": "Ali Tariq",
+    "status": "assigned",
+    "assigned_at": "2026-05-07T04:12:08Z",
+    "taiga_us_url": null,
+    "priority": "medium",
+    "category": "py_core"
+  },
+  {
+    "url": "https://github.com/astral-sh/ruff/issues/24985",
+    "repo": "astral-sh/ruff",
+    "number": 24985,
+    "title": "Standardize error formats of `PLR0917` and `PLR0914`",
+    "assignee": "aznszn",
+    "assignee_name": "Azan Ali",
+    "status": "assigned",
+    "assigned_at": "2026-05-07T04:12:08Z",
+    "taiga_us_url": null,
+    "priority": "low",
+    "category": "py_tools"
+  },
+  {
+    "url": "https://github.com/astral-sh/uv/issues/19298",
+    "repo": "astral-sh/uv",
+    "number": 19298,
+    "title": "Regression in 0.11.9: `Failed to deserialize cache entry: invalid ID` for IDs written by older uv versions",
+    "assignee": "aznszn",
+    "assignee_name": "Azan Ali",
+    "status": "assigned",
+    "assigned_at": "2026-05-07T04:12:08Z",
+    "taiga_us_url": null,
+    "priority": "low",
+    "category": "py_tools"
   }
 ]
