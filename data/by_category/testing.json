@@ -37,7 +37,7 @@
     "author": "ento",
     "author_avatar": "https://avatars.githubusercontent.com/u/21108?v=4",
     "created_at": "2026-05-06T02:38:07Z",
-    "updated_at": "2026-05-06T02:52:50Z",
+    "updated_at": "2026-05-06T23:25:59Z",
     "comments": 0,
     "labels": [],
     "body_preview": "**Describe the issue** Cannot make a recipe that uses `related` to populate the reverse side of a M2M relation.  https://github.com/model-bakers/model_bakery/commit/2164e9d79b43af95a991829294eaa693041a3627 last touched the line that raises `AttributeError`.  **To Reproduce** See test case in this branch: https://github.com/model-bakers/model_bakery/compare/6519ce2538785ca1c5615456ffa06f6f4505866b....",

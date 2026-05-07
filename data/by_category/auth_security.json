@@ -311,7 +311,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "After upgrading from older `django-guardian` versions to newer 3.x releases, we observed a performance regression in object permission queries using generic permission models.  In high-cardinality datasets, permission lookups generate SQL patterns that cast `object_pk` (stored as string) to numeric types in subqueries (e.g. `CAST(object_pk AS bigint)`), which can lead to expensive query plans and...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
