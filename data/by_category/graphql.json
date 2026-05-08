@@ -102,32 +102,5 @@
     "is_security": false,
     "is_good_first_issue": false,
     "is_help_wanted": false
-  },
-  {
-    "id": 3907523853,
-    "repo": "graphql-python/graphene",
-    "ecosystem": "django",
-    "ecosystem_label": "Django",
-    "category": "graphql",
-    "category_label": "GraphQL",
-    "number": 1600,
-    "title": "Support lazy type references everywhere",
-    "url": "https://github.com/graphql-python/graphene/issues/1600",
-    "author": "TomasBayer",
-    "author_avatar": "https://avatars.githubusercontent.com/u/1663478?v=4",
-    "created_at": "2026-02-06T16:32:59Z",
-    "updated_at": "2026-02-06T16:32:59Z",
-    "comments": 0,
-    "labels": [
-      "\u2728 enhancement"
-    ],
-    "body_preview": "**Is your feature request related to a problem? Please describe.**  Currently, Graphene supports lazy type references (a string or a callable) in fields, input fields, and arguments. But there are other places where types are coupled that don't support it. From what I can tell, it's these cases:  - Node types of a `relay.Connection` - Member types of a `Union` - Interfaces of an `ObjectType` or an...",
-    "is_new": false,
-    "priority": "medium",
-    "is_bug": false,
-    "is_feature": true,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
   }
 ]

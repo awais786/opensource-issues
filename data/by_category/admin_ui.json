@@ -172,7 +172,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "When using a changelist action and clicking on \"Select all ...\" it currently shows both list elements \"X of Y selected\" AND \"All Y selected\", but it should only show the latter.",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
