@@ -200,30 +200,5 @@
     "is_security": false,
     "is_good_first_issue": false,
     "is_help_wanted": false
-  },
-  {
-    "id": 3909884281,
-    "repo": "tfranzel/drf-spectacular",
-    "ecosystem": "django",
-    "ecosystem_label": "Django",
-    "category": "rest_api",
-    "category_label": "REST & API",
-    "number": 1484,
-    "title": "Can't get dark mode to work with Swagger",
-    "url": "https://github.com/tfranzel/drf-spectacular/issues/1484",
-    "author": "ian-twilightcoder",
-    "author_avatar": "https://avatars.githubusercontent.com/u/14132058?v=4",
-    "created_at": "2026-02-07T09:36:25Z",
-    "updated_at": "2026-02-07T09:36:25Z",
-    "comments": 0,
-    "labels": [],
-    "body_preview": "I'm using the latest drf-spectacular-sidecar which has Swagger 5.31 with dark mode support. However, I can't figure out how to get the dark mode toggle on my API page. I tried using the standalone preset: ``` SPECTACULAR_SETTINGS = {     'SWAGGER_UI_SETTINGS': {         'presets': ['SwaggerUI.presets.ApisPreset', 'SwaggerUIStandalonePreset'],     }, } ``` But that just made my page not render at a...",
-    "is_new": false,
-    "priority": "low",
-    "is_bug": false,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
   }
 ]

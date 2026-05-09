@@ -98,8 +98,8 @@
     "author": "alamb",
     "author_avatar": "https://avatars.githubusercontent.com/u/490673?v=4",
     "created_at": "2026-04-25T04:22:13Z",
-    "updated_at": "2026-05-08T06:25:03Z",
-    "comments": 12,
+    "updated_at": "2026-05-08T19:19:04Z",
+    "comments": 17,
     "labels": [
       "A-tokio",
       "M-runtime",
@@ -301,7 +301,7 @@
       "A-axum"
     ],
     "body_preview": "## Bug Report  Axum responds to HEAD requests with `content-length: 0`, which (in almost all cases) violates HTTP semantics. Refer to [RFC 9110, Sec. 9.3.2, Paragraph 2](https://datatracker.ietf.org/doc/html/rfc9110#section-9.3.2-2).  If the value for the `content-length` header that would be produced in response to a GET request is not known at the time of responding to a HEAD request, then it sh...",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,

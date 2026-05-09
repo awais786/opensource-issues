@@ -27,33 +27,6 @@
     "is_help_wanted": false
   },
   {
-    "id": 4307404606,
-    "repo": "jazzband/django-oauth-toolkit",
-    "ecosystem": "django",
-    "ecosystem_label": "Django",
-    "category": "auth_security",
-    "category_label": "Auth & Security",
-    "number": 1689,
-    "title": "JWKS endpoint emits malformed Cache-Control header (header name duplicated in value)",
-    "url": "https://github.com/django-oauth/django-oauth-toolkit/issues/1689",
-    "author": "cubricmms",
-    "author_avatar": "https://avatars.githubusercontent.com/u/45586182?v=4",
-    "created_at": "2026-04-22T07:27:41Z",
-    "updated_at": "2026-04-22T07:27:41Z",
-    "comments": 0,
-    "labels": [
-      "bug"
-    ],
-    "body_preview": "**Describe the bug**  `JwksInfoView` in `oauth2_provider/views/oidc.py` sets the `Cache-Control` response header with the header name literally included as a prefix inside the value. The response sent on the wire contains:  ``` Cache-Control: Cache-Control: public, max-age=86400, stale-while-revalidate=86400, stale-if-error=86400 ```  instead of the intended:  ``` Cache-Control: public, max-age=86...",
-    "is_new": false,
-    "priority": "high",
-    "is_bug": true,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
     "id": 4252327385,
     "repo": "jazzband/django-oauth-toolkit",
     "ecosystem": "django",
@@ -103,33 +76,6 @@
     "priority": "medium",
     "is_bug": false,
     "is_feature": true,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
-    "id": 4207641490,
-    "repo": "jazzband/django-oauth-toolkit",
-    "ecosystem": "django",
-    "ecosystem_label": "Django",
-    "category": "auth_security",
-    "category_label": "Auth & Security",
-    "number": 1683,
-    "title": "Device-code flow still uses concrete DeviceGrant when OAUTH2_PROVIDER_DEVICE_GRANT_MODEL is swapped",
-    "url": "https://github.com/django-oauth/django-oauth-toolkit/issues/1683",
-    "author": "diegopasqualin-beyond",
-    "author_avatar": "https://avatars.githubusercontent.com/u/247042249?v=4",
-    "created_at": "2026-04-05T14:06:03Z",
-    "updated_at": "2026-04-20T19:38:55Z",
-    "comments": 1,
-    "labels": [
-      "bug"
-    ],
-    "body_preview": "**Describe the bug** When `OAUTH2_PROVIDER_DEVICE_GRANT_MODEL` points to a swapped `DeviceGrant` model, django-oauth-toolkit 3.2 device-code support is only partially compatible with that swap. Some code paths correctly use `get_device_grant_model()`, but important runtime paths still use the concrete `oauth2_provider.DeviceGrant` class directly.  This breaks the device flow because creation, look...",
-    "is_new": false,
-    "priority": "high",
-    "is_bug": true,
-    "is_feature": false,
     "is_security": false,
     "is_good_first_issue": false,
     "is_help_wanted": false
