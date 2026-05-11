@@ -12,7 +12,7 @@
     "author": "tikal",
     "author_avatar": "https://avatars.githubusercontent.com/u/592746?v=4",
     "created_at": "2026-04-21T23:35:56Z",
-    "updated_at": "2026-05-10T04:02:45Z",
+    "updated_at": "2026-05-11T08:24:07Z",
     "comments": 5,
     "labels": [],
     "body_preview": "### Summary  When an SSE route (`response_class=EventSourceResponse` + `AsyncIterator[Frame]` return annotation) is defined on an `APIRouter` and then merged onto a `FastAPI` app via `include_router`, the resulting merged route loses its `stream_item_type`. As a consequence, the OpenAPI `text/event-stream` response schema omits the `data.contentSchema`, so tooling like `datamodel-codegen` cannot g...",
@@ -96,7 +96,7 @@
       "f:parameters"
     ],
     "body_preview": "In click 8.2.1, defining a boolean option with both a \"enable\" and \"disable\" flag option works with the following logic: ``` import click  @click.command(\"foo\") @click.option(\"--without-xyz\", \"enable_xyz\", flag_value=False) @click.option(\"--with-xyz\", \"enable_xyz\", flag_value=True, default=True) def foo(enable_xyz):     print(f\"enable_xyz = {enable_xyz}\")  foo() ```  With this code, using click 8....",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,

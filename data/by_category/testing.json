@@ -16,7 +16,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "I wanted to know a little about the status of the project, since I have not seen much activity during the last year, because I see many issues and PRs without being attended to for the type of project",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

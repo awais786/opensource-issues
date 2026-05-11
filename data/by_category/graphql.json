@@ -75,32 +75,5 @@
     "is_security": false,
     "is_good_first_issue": false,
     "is_help_wanted": false
-  },
-  {
-    "id": 3919557581,
-    "repo": "graphql-python/graphene",
-    "ecosystem": "django",
-    "ecosystem_label": "Django",
-    "category": "graphql",
-    "category_label": "GraphQL",
-    "number": 1601,
-    "title": "Python 3.14 support",
-    "url": "https://github.com/graphql-python/graphene/issues/1601",
-    "author": "MichalVasut",
-    "author_avatar": "https://avatars.githubusercontent.com/u/20949562?v=4",
-    "created_at": "2026-02-10T05:42:41Z",
-    "updated_at": "2026-03-20T19:15:16Z",
-    "comments": 2,
-    "labels": [
-      "\u2728 enhancement"
-    ],
-    "body_preview": "Hello, do you plan to include Python 3.14 support (or other future releases or is the project dead? - last commit in 2024)  The latest supported version (as per setup.py, resp pypi) is 3.13 https://github.com/graphql-python/graphene/blob/82903263080b3b7f22c2ad84319584d7a3b1a1f6/setup.py#L83",
-    "is_new": false,
-    "priority": "medium",
-    "is_bug": false,
-    "is_feature": true,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
   }
 ]
