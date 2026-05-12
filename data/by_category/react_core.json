@@ -12,8 +12,8 @@
     "author": "afurm",
     "author_avatar": "https://avatars.githubusercontent.com/u/6375192?v=4",
     "created_at": "2026-05-09T18:34:48Z",
-    "updated_at": "2026-05-10T08:17:28Z",
-    "comments": 1,
+    "updated_at": "2026-05-12T04:02:52Z",
+    "comments": 4,
     "labels": [],
     "body_preview": "React version: current `main` (`d5736f098edee62c44f27b053e6e48f5fa443803` locally)  ## Steps To Reproduce  1. Render a component on the server with two `ReactDOM.preloadModule()` calls that use the same non-default `as` value:  ```js function App() {   ReactDOM.preloadModule('worker-a', {as: 'serviceworker'});   ReactDOM.preloadModule('worker-b', {as: 'serviceworker'});   return <div>hello</div>;...",
     "is_new": true,
@@ -94,7 +94,7 @@
     "author": "Rasvom",
     "author_avatar": "https://avatars.githubusercontent.com/u/117905472?v=4",
     "created_at": "2026-05-07T08:55:51Z",
-    "updated_at": "2026-05-07T08:55:51Z",
+    "updated_at": "2026-05-11T16:40:04Z",
     "comments": 0,
     "labels": [
       "Status: Unconfirmed"
@@ -258,10 +258,13 @@
     "author": "jbojcic1",
     "author_avatar": "https://avatars.githubusercontent.com/u/10374826?v=4",
     "created_at": "2026-05-08T16:33:31Z",
-    "updated_at": "2026-05-08T16:34:05Z",
+    "updated_at": "2026-05-11T14:23:18Z",
     "comments": 1,
     "labels": [
-      "bug"
+      "bug",
+      "pkg:react-router",
+      "feat:prerender",
+      "feat:streaming"
     ],
     "body_preview": "### Reproduction  Minimal repro: https://github.com/ditto-agent/react-router-prerender-suspense-flash    ```bash   git clone https://github.com/ditto-agent/react-router-prerender-suspense-flash   cd react-router-prerender-suspense-flash   bun install   bunx react-router build   grep -c \"SUSPENSE FALLBACK\" build/client/index.html   # => 2  (one in the shell as the deferred fallback, one in the bund...",
     "is_new": true,
