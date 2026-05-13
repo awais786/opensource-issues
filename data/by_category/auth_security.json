@@ -216,33 +216,6 @@
     "is_help_wanted": false
   },
   {
-    "id": 3925791437,
-    "repo": "jazzband/django-oauth-toolkit",
-    "ecosystem": "django",
-    "ecosystem_label": "Django",
-    "category": "auth_security",
-    "category_label": "Auth & Security",
-    "number": 1651,
-    "title": "3.2.0 : relation \"users_user\" does not exist",
-    "url": "https://github.com/django-oauth/django-oauth-toolkit/issues/1651",
-    "author": "petitminion",
-    "author_avatar": "https://avatars.githubusercontent.com/u/50751126?v=4",
-    "created_at": "2026-02-11T10:26:45Z",
-    "updated_at": "2026-02-11T10:26:45Z",
-    "comments": 0,
-    "labels": [
-      "question"
-    ],
-    "body_preview": "``` self = <django.db.backends.utils.CursorWrapper object at 0x71fdb6c9da50> sql = 'ALTER TABLE \"oauth2_provider_devicegrant\" ADD CONSTRAINT \"oauth2_provider_devicegrant_user_id_1cec5156_fk_users_user_id\" FOREIGN KEY (\"user_id\") REFERENCES \"users_user\" (\"id\") DEFERRABLE INITIALLY DEFERRED', params = None ignored_wrapper_args = (False, {'connection': <DatabaseWrapper vendor='postgresql' alias='defa...",
-    "is_new": false,
-    "priority": "low",
-    "is_bug": false,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
     "id": 3995670933,
     "repo": "jazzband/django-two-factor-auth",
     "ecosystem": "django",

@@ -12,8 +12,8 @@
     "author": "glk0",
     "author_avatar": "https://avatars.githubusercontent.com/u/83467320?v=4",
     "created_at": "2026-05-10T02:39:31Z",
-    "updated_at": "2026-05-12T02:08:49Z",
-    "comments": 2,
+    "updated_at": "2026-05-12T23:23:50Z",
+    "comments": 4,
     "labels": [
       "C-bug",
       "A-completion",
@@ -654,7 +654,7 @@
       "bug"
     ],
     "body_preview": "Using `MANPAGER=\"bat -pl man\"` to colourise man pages. Tested with a few different pagers with `BAT_PAGER` and they all show unwanted output for this code.  - `BAT_PAGER=\"less\" MANPAGER=\"bat -pl man\" man uname`  (with `BAT_PAGER=\"ov\"` we get the same output)   <img width=\"800\" height=\"80\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/0687299f-a506-4cd2-93e5-93f948996261\" />   - `B...",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,

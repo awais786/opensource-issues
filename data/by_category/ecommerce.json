@@ -199,12 +199,12 @@
     "author": "eligrubbs",
     "author_avatar": "https://avatars.githubusercontent.com/u/37743499?v=4",
     "created_at": "2026-05-12T00:43:09Z",
-    "updated_at": "2026-05-12T00:43:09Z",
+    "updated_at": "2026-05-12T15:30:50Z",
     "comments": 0,
     "labels": [
       "api change"
     ],
-    "body_preview": "**Changelog Link** This a change in the Stripe python SDK API, not the stripe.com product API.  Scroll to the bottom of. https://github.com/stripe/stripe-python/releases/tag/v15.0.0  Specifically: https://github.com/stripe/stripe-python/pull/1762  **Describe the Change**  StripeObject no longer inherits from dict, so any dict methods will no longer exist, including .get(), .update(), and notably,...",
+    "body_preview": "The implemented fix for issue #2221 is not currently in place, which is currently causing all new users of the package to download incompatible stripe dependencies.  Steps to reproduce. Add dj-stripe to your project and add it to your app:  ```pyproject.toml # ... dependencies = [     # ...     \"dj-stripe>=2.10.3\",     \"stripe==15.1.0\", ] ```  ```settings.py INSTALLED_APPS = [     # ...     \"djstr...",
     "is_new": true,
     "priority": "low",
     "is_bug": false,
