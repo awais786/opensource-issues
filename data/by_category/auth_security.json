@@ -18,7 +18,7 @@
       "bug"
     ],
     "body_preview": "**Describe the bug** 64 chars could be too small for scopes.   Reviewing the broader auth ecosystem I see the following limits - okta - 1024  - google - 2048 - WSO2 - 767  so 64 feels insuffient.    While Text is potentially larger than webserver header limits (8/16K) and browser url limits (2048), it shift the resposbility for ensuring acceptable scope lengths from DOT to the implementer without...",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,

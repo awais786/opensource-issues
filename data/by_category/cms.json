@@ -1,5 +1,33 @@
 [
   {
+    "id": 4448101615,
+    "repo": "wagtail/wagtail",
+    "ecosystem": "django",
+    "ecosystem_label": "Django",
+    "category": "cms",
+    "category_label": "CMS & Content",
+    "number": 14227,
+    "title": "Missing file on wagtaildocs",
+    "url": "https://github.com/wagtail/wagtail/issues/14227",
+    "author": "Morefra",
+    "author_avatar": "https://avatars.githubusercontent.com/u/143010000?v=4",
+    "created_at": "2026-05-14T17:55:05Z",
+    "updated_at": "2026-05-15T04:03:55Z",
+    "comments": 2,
+    "labels": [
+      "type:Bug",
+      "component:Documents"
+    ],
+    "body_preview": "### Issue summary  When trying to upload a document through the \"Add a document\" link in the Documents page in the Admin panel, we get a 500 error and this error shows in the logs `ValueError: Missing staticfiles manifest entry for 'wagtailadmin/js/vendor/jquery.fileupload-validate.js` (Full trace attached)  [document_upload_trace_error.txt](https://github.com/user-attachments/files/27771114/docum...",
+    "is_new": true,
+    "priority": "high",
+    "is_bug": true,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 4441133612,
     "repo": "wagtail/wagtail",
     "ecosystem": "django",
@@ -39,7 +67,7 @@
     "author": "tomkins",
     "author_avatar": "https://avatars.githubusercontent.com/u/177332?v=4",
     "created_at": "2026-05-13T20:24:10Z",
-    "updated_at": "2026-05-13T20:36:22Z",
+    "updated_at": "2026-05-14T19:51:53Z",
     "comments": 0,
     "labels": [
       "type:Enhancement",

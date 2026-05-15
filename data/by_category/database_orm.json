@@ -69,7 +69,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "I've used django-model-utils for decades now, and was hoping to include it in a new project.  But it appears that the last release was in 2024 and is compatible only up to Django 5.1.  There have clearly been a fair number of commits since then, but no releases.  So two questions:  1. Will the current version run with Django 5.2 or 6.0? 2. Is there any plan for Django 5.2 LTS or 6.x-compatible rel...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

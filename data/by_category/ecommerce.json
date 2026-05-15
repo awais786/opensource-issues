@@ -89,8 +89,8 @@
     "author": "tranthanhsongitrepo",
     "author_avatar": "https://avatars.githubusercontent.com/u/53934142?v=4",
     "created_at": "2026-05-12T08:00:18Z",
-    "updated_at": "2026-05-12T08:01:00Z",
-    "comments": 0,
+    "updated_at": "2026-05-14T15:12:28Z",
+    "comments": 1,
     "labels": [
       "bug",
       "triage"
@@ -117,11 +117,10 @@
     "author": "gavanfantom",
     "author_avatar": "https://avatars.githubusercontent.com/u/8654928?v=4",
     "created_at": "2026-05-11T23:09:49Z",
-    "updated_at": "2026-05-11T23:09:49Z",
-    "comments": 0,
+    "updated_at": "2026-05-14T15:22:59Z",
+    "comments": 1,
     "labels": [
-      "bug",
-      "triage"
+      "bug"
     ],
     "body_preview": "### What are you trying to achieve?  Saleor 3.23 introduced SEND_USAGE_TELEMETRY, which is supposed to be optional. However, disabling it causes the API server to fail to start up, with an error from Django. This is because the lifespan protocol is enabled in uvicorn, but the wrapper that understand lifespan events is not installed, and thus Django is left to handle the lifespan protocol in its AS...",
     "is_new": true,
