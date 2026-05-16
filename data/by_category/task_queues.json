@@ -1,5 +1,32 @@
 [
   {
+    "id": 4452787124,
+    "repo": "celery/celery",
+    "ecosystem": "django",
+    "ecosystem_label": "Django",
+    "category": "task_queues",
+    "category_label": "Task Queues & Async",
+    "number": 10312,
+    "title": "redis_backend_use_ssl raises ValueError with redis:// scheme, but broker_use_ssl works fine \u2014 inconsistent SSL handling between broker and backend",
+    "url": "https://github.com/celery/celery/issues/10312",
+    "author": "anquegi",
+    "author_avatar": "https://avatars.githubusercontent.com/u/2518346?v=4",
+    "created_at": "2026-05-15T09:21:46Z",
+    "updated_at": "2026-05-15T09:21:46Z",
+    "comments": 0,
+    "labels": [
+      "Issue Type: Bug Report"
+    ],
+    "body_preview": "# Checklist   - [x] I have verified that the issue exists against the `main` branch of Celery.   - [x] This has already been asked to the discussions forum first.   - [x] I have read the relevant section in the contribution guide on reporting bugs.   - [x] I have checked the issues list for similar or identical bug reports.   - [x] I have checked the pull requests list for existing proposed fixes....",
+    "is_new": true,
+    "priority": "high",
+    "is_bug": true,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 4443413943,
     "repo": "celery/celery",
     "ecosystem": "django",
