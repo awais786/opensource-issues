@@ -1,5 +1,32 @@
 [
   {
+    "id": 4460663295,
+    "repo": "vitejs/vite",
+    "ecosystem": "react",
+    "ecosystem_label": "React",
+    "category": "react_build",
+    "category_label": "Build & Tooling",
+    "number": 22463,
+    "title": "Vite 8 breaks importing a WASM file",
+    "url": "https://github.com/vitejs/vite/issues/22463",
+    "author": "fflaten",
+    "author_avatar": "https://avatars.githubusercontent.com/u/3436158?v=4",
+    "created_at": "2026-05-16T16:59:55Z",
+    "updated_at": "2026-05-16T16:59:55Z",
+    "comments": 0,
+    "labels": [
+      "pending triage"
+    ],
+    "body_preview": "### Describe the bug  I'm using a vite plugin to base64-import files in a project. Using Vite 8 this consistently fails for WASM files regardless of file extension. Works fine in Vite 7.  ### Reproduction  https://github.com/fflaten/vite8-wasm-repro  ### Steps to reproduce  Run `npm run build`. See commented imports in `main.ts`. Only the WASM file imports fail regardless of file extension (plugin...",
+    "is_new": true,
+    "priority": "low",
+    "is_bug": false,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 4458528421,
     "repo": "vitejs/vite",
     "ecosystem": "react",
@@ -64,8 +91,8 @@
     "author": "hybrist",
     "author_avatar": "https://avatars.githubusercontent.com/u/567540?v=4",
     "created_at": "2026-05-15T20:24:18Z",
-    "updated_at": "2026-05-15T20:24:18Z",
-    "comments": 0,
+    "updated_at": "2026-05-16T08:21:02Z",
+    "comments": 1,
     "labels": [
       "pending triage"
     ],
@@ -91,8 +118,8 @@
     "author": "yunom-io",
     "author_avatar": "https://avatars.githubusercontent.com/u/56586221?v=4",
     "created_at": "2026-05-15T13:27:11Z",
-    "updated_at": "2026-05-15T13:33:12Z",
-    "comments": 0,
+    "updated_at": "2026-05-16T10:04:07Z",
+    "comments": 1,
     "labels": [
       "documentation"
     ],
@@ -391,8 +418,8 @@
     "author": "markboyall",
     "author_avatar": "https://avatars.githubusercontent.com/u/17589164?v=4",
     "created_at": "2026-04-27T13:39:25Z",
-    "updated_at": "2026-04-27T15:28:21Z",
-    "comments": 2,
+    "updated_at": "2026-05-16T11:04:31Z",
+    "comments": 3,
     "labels": [],
     "body_preview": "To cut a long story short, we have a C# project also containing Typescript. We invoke ESBuild through MSBuild. The actual build process works as expected, but when warnings/errors are emitted by ESBuild, Visual Studio doesn't integrate with them correctly; the display is a bit wrong and VS won't go to location when you click the locations.  2>  \u00d4\u00fb\u2593 [WARNING] Duplicate key \"requestAnimationFrame\" i...",
     "is_new": false,

@@ -221,6 +221,62 @@
     "is_help_wanted": false
   },
   {
+    "id": 4460712251,
+    "repo": "astral-sh/uv",
+    "ecosystem": "python",
+    "ecosystem_label": "Python",
+    "category": "py_tools",
+    "category_label": "Dev Tools",
+    "number": 19429,
+    "title": "`tempfile` crate is used directly from async code",
+    "url": "https://github.com/astral-sh/uv/issues/19429",
+    "author": "EliteTK",
+    "author_avatar": "https://avatars.githubusercontent.com/u/4272014?v=4",
+    "created_at": "2026-05-16T17:18:19Z",
+    "updated_at": "2026-05-16T17:18:32Z",
+    "comments": 0,
+    "labels": [
+      "bug",
+      "internal"
+    ],
+    "body_preview": "### Summary  Opening a file can block, and I noticed that we use the `tempfile` crate in quite a few places where we do not expect blocking.  The reason this isn't too impactful is because open normally doesn't noticeably block on local filesystems but I think it's worth investigating fixing this anyway.  The first attempt looks like this:  ```rust /// Return a [`NamedTempFile`] in the specified d...",
+    "is_new": true,
+    "priority": "high",
+    "is_bug": true,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
+    "id": 4460627503,
+    "repo": "astral-sh/uv",
+    "ecosystem": "python",
+    "ecosystem_label": "Python",
+    "category": "py_tools",
+    "category_label": "Dev Tools",
+    "number": 19428,
+    "title": "Support a `--fix` type flag for `audit` to allow automatic fixing of vulnerabilities according to semantic versioning",
+    "url": "https://github.com/astral-sh/uv/issues/19428",
+    "author": "crispyricepc",
+    "author_avatar": "https://avatars.githubusercontent.com/u/16229426?v=4",
+    "created_at": "2026-05-16T16:47:53Z",
+    "updated_at": "2026-05-16T21:33:41Z",
+    "comments": 3,
+    "labels": [
+      "enhancement",
+      "uv audit"
+    ],
+    "body_preview": "### Summary  I propose a `--fix` flag (or command) that would automatically fix vulnerabilities caught by the new `audit` command.  Where I currently work, I wrote a script that uses a combination of the [uv-secure](https://github.com/owenlamont/uv-secure) tool's JSON output alongside `jq` and `uv lock --upgrade-package` to achieve this, however it is finnicky and doesn't work perfectly.  The `aud...",
+    "is_new": true,
+    "priority": "medium",
+    "is_bug": false,
+    "is_feature": true,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 4458946771,
     "repo": "astral-sh/uv",
     "ecosystem": "python",
@@ -658,34 +714,6 @@
     "is_help_wanted": false
   },
   {
-    "id": 4417658199,
-    "repo": "astral-sh/uv",
-    "ecosystem": "python",
-    "ecosystem_label": "Python",
-    "category": "py_tools",
-    "category_label": "Dev Tools",
-    "number": 19355,
-    "title": "Add macOS walltime benchmarks",
-    "url": "https://github.com/astral-sh/uv/issues/19355",
-    "author": "zanieb",
-    "author_avatar": "https://avatars.githubusercontent.com/u/2586601?v=4",
-    "created_at": "2026-05-11T02:28:55Z",
-    "updated_at": "2026-05-11T18:20:09Z",
-    "comments": 1,
-    "labels": [
-      "performance",
-      "internal"
-    ],
-    "body_preview": "Following https://github.com/astral-sh/uv/pull/19350 this is supported.  I'm not sure we need it, but it might be nice.",
-    "is_new": true,
-    "priority": "low",
-    "is_bug": false,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
     "id": 4364753464,
     "repo": "psf/black",
     "ecosystem": "python",
@@ -750,8 +778,8 @@
     "author": "jgosmann",
     "author_avatar": "https://avatars.githubusercontent.com/u/850157?v=4",
     "created_at": "2026-05-15T15:58:55Z",
-    "updated_at": "2026-05-15T16:00:45Z",
-    "comments": 1,
+    "updated_at": "2026-05-16T16:59:39Z",
+    "comments": 2,
     "labels": [
       "kind/bug",
       "status/triage"
