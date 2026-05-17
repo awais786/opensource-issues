@@ -3120,5 +3120,57 @@
     "taiga_us_url": null,
     "priority": "low",
     "category": "py_tools"
+  },
+  {
+    "url": "https://github.com/celery/celery/issues/10312",
+    "repo": "celery/celery",
+    "number": 10312,
+    "title": "redis_backend_use_ssl raises ValueError with redis:// scheme, but broker_use_ssl works fine \u2014 inconsistent SSL handling between broker and backend",
+    "assignee": "awais786",
+    "assignee_name": "Awais Qureshi",
+    "status": "assigned",
+    "assigned_at": "2026-05-17T06:00:00Z",
+    "taiga_us_url": null,
+    "priority": "high",
+    "category": "task_queues"
+  },
+  {
+    "url": "https://github.com/python/cpython/issues/149874",
+    "repo": "python/cpython",
+    "number": 149874,
+    "title": "docs: Fix broken links in documentation",
+    "assignee": "jawad-khan",
+    "assignee_name": "Jawad Khan",
+    "status": "assigned",
+    "assigned_at": "2026-05-17T06:00:00Z",
+    "taiga_us_url": null,
+    "priority": "low",
+    "category": "py_core"
+  },
+  {
+    "url": "https://github.com/python/cpython/issues/149891",
+    "repo": "python/cpython",
+    "number": 149891,
+    "title": "Update encodings.aliases",
+    "assignee": "jawad-khan",
+    "assignee_name": "Jawad Khan",
+    "status": "assigned",
+    "assigned_at": "2026-05-17T06:00:00Z",
+    "taiga_us_url": null,
+    "priority": "high",
+    "category": "py_core"
+  },
+  {
+    "url": "https://github.com/fastapi/fastapi/issues/15538",
+    "repo": "tiangolo/fastapi",
+    "number": 15538,
+    "title": "Ensure pydantic_extra_types Color encoder path is covered in tests",
+    "assignee": "aznszn",
+    "assignee_name": "Azan Ali",
+    "status": "assigned",
+    "assigned_at": "2026-05-17T06:00:00Z",
+    "taiga_us_url": null,
+    "priority": "low",
+    "category": "py_web"
   }
 ]
