@@ -16,7 +16,7 @@
     "comments": 1,
     "labels": [],
     "body_preview": "With elasticsearch 9.3 indexing works like a charm.  With elasticsearch 9.4 indexing is not working anymore, no fields were created:  <img width=\"2241\" height=\"705\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/a85e236e-96ff-4b64-9a72-11074e54cdd6\" />",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

@@ -250,7 +250,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "# RTL Sidebar Toggle Issue in Arabic Interface (Jazzmin 3.0.4)  ## Description  I'm using `Jazzmin 3.0.4` with Django admin in a multilingual project (French + Arabic).  The sidebar toggle button works correctly in the French interface (LTR), but it does not behave properly in the Arabic interface (RTL).  ## Expected Behavior  When clicking the sidebar toggle button in RTL mode:  * the sidebar sho...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
