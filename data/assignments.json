@@ -3172,5 +3172,83 @@
     "taiga_us_url": null,
     "priority": "low",
     "category": "py_web"
+  },
+  {
+    "url": "https://github.com/python/cpython/issues/149931",
+    "repo": "python/cpython",
+    "number": 149931,
+    "title": "Possible memory leaks when realloc fails",
+    "assignee": "awais786",
+    "assignee_name": "Awais Qureshi",
+    "status": "assigned",
+    "assigned_at": "2026-05-18T00:00:00Z",
+    "taiga_us_url": null,
+    "priority": "high",
+    "category": "py_core"
+  },
+  {
+    "url": "https://github.com/python/cpython/issues/149921",
+    "repo": "python/cpython",
+    "number": 149921,
+    "title": "Missing `decref` on the error path in `_interpqueuesmodule` and `_interpchannelsmodule` modules",
+    "assignee": "awais786",
+    "assignee_name": "Awais Qureshi",
+    "status": "assigned",
+    "assigned_at": "2026-05-18T00:00:00Z",
+    "taiga_us_url": null,
+    "priority": "high",
+    "category": "py_core"
+  },
+  {
+    "url": "https://github.com/astral-sh/ruff/issues/25182",
+    "repo": "astral-sh/ruff",
+    "number": 25182,
+    "title": "Additional false positives in `PLR1733` and `PLR1736`",
+    "assignee": "jawad-khan",
+    "assignee_name": "Jawad Khan",
+    "status": "assigned",
+    "assigned_at": "2026-05-18T00:00:00Z",
+    "taiga_us_url": null,
+    "priority": "high",
+    "category": "py_tools"
+  },
+  {
+    "url": "https://github.com/astral-sh/uv/issues/19419",
+    "repo": "astral-sh/uv",
+    "number": 19419,
+    "title": "Git credentials in workspace member `[tool.uv.sources]` not applied under `uv sync --frozen`",
+    "assignee": "jawad-khan",
+    "assignee_name": "Jawad Khan",
+    "status": "assigned",
+    "assigned_at": "2026-05-18T00:00:00Z",
+    "taiga_us_url": null,
+    "priority": "high",
+    "category": "py_tools"
+  },
+  {
+    "url": "https://github.com/astral-sh/uv/issues/19360",
+    "repo": "astral-sh/uv",
+    "number": 19360,
+    "title": "`--config-settings-package PACKAGE:editable_mode=compat` does not work for some packages",
+    "assignee": "valkrypton",
+    "assignee_name": "Ali Tariq",
+    "status": "assigned",
+    "assigned_at": "2026-05-18T00:00:00Z",
+    "taiga_us_url": null,
+    "priority": "high",
+    "category": "py_tools"
+  },
+  {
+    "url": "https://github.com/astral-sh/ruff/issues/25170",
+    "repo": "astral-sh/ruff",
+    "number": 25170,
+    "title": "Support `__lazy_modules__` in lazy import rules",
+    "assignee": "aznszn",
+    "assignee_name": "Azan Ali",
+    "status": "assigned",
+    "assigned_at": "2026-05-18T00:00:00Z",
+    "taiga_us_url": null,
+    "priority": "low",
+    "category": "py_tools"
   }
 ]
