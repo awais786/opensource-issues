@@ -89,8 +89,8 @@
     "author": "gurumurugan123",
     "author_avatar": "https://avatars.githubusercontent.com/u/94512110?v=4",
     "created_at": "2026-05-18T08:58:33Z",
-    "updated_at": "2026-05-18T08:58:33Z",
-    "comments": 0,
+    "updated_at": "2026-05-18T12:53:10Z",
+    "comments": 1,
     "labels": [
       "bug",
       "triage"
@@ -180,7 +180,7 @@
       "triage"
     ],
     "body_preview": "### What are you trying to achieve?  Load balancers append the client's IP address to the right of `X-Forwarded-For`, `get_client_ip` iterates `X-Forwarded-For` left-to-right and returns the first valid IP. The leftmost value is client-controlled, an attacker can inject any IP by setting `X-Forwarded-For: <fake-ip>` in the request, causing the function to return the spoofed value instead of the re...",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,
@@ -207,7 +207,7 @@
       "bug"
     ],
     "body_preview": "### What are you trying to achieve?  Saleor 3.23 introduced SEND_USAGE_TELEMETRY, which is supposed to be optional. However, disabling it causes the API server to fail to start up, with an error from Django. This is because the lifespan protocol is enabled in uvicorn, but the wrapper that understand lifespan events is not installed, and thus Django is left to handle the lifespan protocol in its AS...",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,
@@ -261,7 +261,7 @@
       "api change"
     ],
     "body_preview": "The implemented fix for issue #2221 is not currently in place, which is currently causing all new users of the package to download incompatible stripe dependencies.  Steps to reproduce. Add dj-stripe to your project and add it to your app:  ```pyproject.toml # ... dependencies = [     # ...     \"dj-stripe>=2.10.3\",     \"stripe==15.1.0\", ] ```  ```settings.py INSTALLED_APPS = [     # ...     \"djstr...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

@@ -50,30 +50,5 @@
     "is_security": false,
     "is_good_first_issue": false,
     "is_help_wanted": false
-  },
-  {
-    "id": 3956233607,
-    "repo": "strawberry-graphql/strawberry-django",
-    "ecosystem": "django",
-    "ecosystem_label": "Django",
-    "category": "graphql",
-    "category_label": "GraphQL",
-    "number": 863,
-    "title": "Redundant resolver with unused arguments when filtering with prefetch",
-    "url": "https://github.com/strawberry-graphql/strawberry-django/issues/863",
-    "author": "rcybulski1122012",
-    "author_avatar": "https://avatars.githubusercontent.com/u/68512922?v=4",
-    "created_at": "2026-02-18T06:35:29Z",
-    "updated_at": "2026-03-04T20:44:58Z",
-    "comments": 5,
-    "labels": [],
-    "body_preview": "<!--- Provide a general summary of the changes you want in the title above. -->  There are cases, where I need to implement a resolver that returns related objects filtered based on user input. Currently all the filtering logic is implemented \"inside\" `prefetch_related` and the resolver only returns the prefetched fields, but it has to define arguments, which are unused by resolver.  Example:  ```...",
-    "is_new": false,
-    "priority": "low",
-    "is_bug": false,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
   }
 ]
