@@ -1,5 +1,32 @@
 [
   {
+    "id": 4479536961,
+    "repo": "facebook/react",
+    "ecosystem": "react",
+    "ecosystem_label": "React",
+    "category": "react_core",
+    "category_label": "React Core",
+    "number": 36491,
+    "title": "Bug:",
+    "url": "https://github.com/facebook/react/issues/36491",
+    "author": "chiddekel",
+    "author_avatar": "https://avatars.githubusercontent.com/u/11840160?v=4",
+    "created_at": "2026-05-19T17:24:47Z",
+    "updated_at": "2026-05-19T19:42:44Z",
+    "comments": 2,
+    "labels": [
+      "Status: Unconfirmed"
+    ],
+    "body_preview": "Desired state of component MIX of client/server RSC.  ``` // MAIN FILE (Runs on the server by default) import db from '@/lib/db'; // You import a pure, old JS chart library (non-React!) import { LegacyCanvasChart } from 'old-school-charts';   export default async function Dashboard() {   // You fetch data from the database (just like in PHP)   const dane = await db.query('SELECT * FROM sales');...",
+    "is_new": true,
+    "priority": "low",
+    "is_bug": false,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 4463756174,
     "repo": "facebook/react",
     "ecosystem": "react",
@@ -12,8 +39,8 @@
     "author": "manucian-official",
     "author_avatar": "https://avatars.githubusercontent.com/u/195640846?v=4",
     "created_at": "2026-05-17T14:15:54Z",
-    "updated_at": "2026-05-17T14:15:54Z",
-    "comments": 0,
+    "updated_at": "2026-05-20T03:35:18Z",
+    "comments": 2,
     "labels": [
       "Status: Unconfirmed"
     ],
@@ -96,11 +123,11 @@
     "author": "kimjune01",
     "author_avatar": "https://avatars.githubusercontent.com/u/6355623?v=4",
     "created_at": "2026-05-13T07:54:39Z",
-    "updated_at": "2026-05-14T16:28:00Z",
-    "comments": 3,
+    "updated_at": "2026-05-19T12:41:43Z",
+    "comments": 4,
     "labels": [],
     "body_preview": "6 of 62 PRs in the last 2 weeks would have been auto-closed before review (e.g. #36402 Create heymit.txt, #36401 Add eduardo.txt with introduction text).  Install a GitHub Action:  - [PR Quality Gate](https://github.com/kimjune01/sweep/blob/master/action.yml), judges PR quality not authorship, lets competent bots through, blocks lazy humans - [anti-slop](https://github.com/peakoss/anti-slop), 34 c...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
@@ -128,7 +155,7 @@
       "Status: Unconfirmed"
     ],
     "body_preview": "### What kind of issue is this?  - [ ] React Compiler core (the JS output is incorrect, or your app works incorrectly after optimization) - [x] babel-plugin-react-compiler (build issue installing or using the Babel plugin) - [ ] eslint-plugin-react-hooks (build issue installing or using the eslint plugin) - [ ] react-compiler-healthcheck (build issue installing or using the healthcheck script)  ##...",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,
@@ -157,7 +184,7 @@
       "Component: Developer Tools"
     ],
     "body_preview": "### Website or app  WhatsApp   ### Repro steps  Est\u00e1 vinculado   ### How often does this bug happen?  Every time  ### DevTools package (automated)  _No response_  ### DevTools version (automated)  _No response_  ### Error message (automated)  _No response_  ### Error call stack (automated)  ```text  ```  ### Error component stack (automated)  ```text  ```  ### GitHub query string (automated)  ```t...",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,

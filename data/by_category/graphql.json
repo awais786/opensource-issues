@@ -27,6 +27,33 @@
     "is_help_wanted": false
   },
   {
+    "id": 4478220226,
+    "repo": "strawberry-graphql/strawberry-django",
+    "ecosystem": "django",
+    "ecosystem_label": "Django",
+    "category": "graphql",
+    "category_label": "GraphQL",
+    "number": 907,
+    "title": "DatetimeFilterLookup is missing type",
+    "url": "https://github.com/strawberry-graphql/strawberry-django/issues/907",
+    "author": "kimbilida",
+    "author_avatar": "https://avatars.githubusercontent.com/u/10610724?v=4",
+    "created_at": "2026-05-19T14:27:01Z",
+    "updated_at": "2026-05-19T14:27:01Z",
+    "comments": 0,
+    "labels": [
+      "bug"
+    ],
+    "body_preview": "## Describe the Bug   When using `DatetimeFilterLookup`. Now I get the the following error:  > Expected type arguments for generic class \"DatetimeFilterLookup\"  Solution: Using `DatetimeFilterLookup[datetime]` solved the issue.  ## System Information   - Operating system:  - Python version:  - Strawberry version (if applicable): 0.82.1  ## Additional Context  Pretty much a dupe of https://github....",
+    "is_new": true,
+    "priority": "high",
+    "is_bug": true,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 4038327533,
     "repo": "strawberry-graphql/strawberry-django",
     "ecosystem": "django",
