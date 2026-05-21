@@ -113,34 +113,6 @@
     "is_help_wanted": false
   },
   {
-    "id": 4311995092,
-    "repo": "tokio-rs/tokio",
-    "ecosystem": "rust",
-    "ecosystem_label": "Rust",
-    "category": "rust_async",
-    "category_label": "Async & Web",
-    "number": 8082,
-    "title": "UDP receive errors aren't communicated through `try_*` methods",
-    "url": "https://github.com/tokio-rs/tokio/issues/8082",
-    "author": "alexcrichton",
-    "author_avatar": "https://avatars.githubusercontent.com/u/64996?v=4",
-    "created_at": "2026-04-22T21:38:11Z",
-    "updated_at": "2026-04-24T06:45:24Z",
-    "comments": 1,
-    "labels": [
-      "A-tokio",
-      "M-io"
-    ],
-    "body_preview": "Locally I was in the process of testing the wasip2 and wasip3 targets to ensure that the Tokio test suite passes. I found, however, that the test added in https://github.com/tokio-rs/tokio/pull/8001, ignored on WASI targets, does not pass on wasip2 with all wasi-libc/wasmtime fixes in place. I debugged this to how the change in #8001 added the `ERROR` interest to `async` read-style methods, but it...",
-    "is_new": false,
-    "priority": "low",
-    "is_bug": false,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
     "id": 4429557542,
     "repo": "tokio-rs/axum",
     "ecosystem": "rust",

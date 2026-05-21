@@ -269,6 +269,34 @@
     "is_help_wanted": false
   },
   {
+    "id": 4331628209,
+    "repo": "pypa/pip",
+    "ecosystem": "python",
+    "ecosystem_label": "Python",
+    "category": "py_packaging",
+    "category_label": "Packaging & Build",
+    "number": 13953,
+    "title": "What's next for `pip lock` ?",
+    "url": "https://github.com/pypa/pip/issues/13953",
+    "author": "sbidoul",
+    "author_avatar": "https://avatars.githubusercontent.com/u/692075?v=4",
+    "created_at": "2026-04-26T18:24:02Z",
+    "updated_at": "2026-05-14T13:47:30Z",
+    "comments": 9,
+    "labels": [
+      "state: needs discussion",
+      "C: lockfile"
+    ],
+    "body_preview": "The `pip lock` command is available in experimental status since pip 25.1.  It's two main limitations I know of are that  - it can't emit `extras` and `dependency-groups` information in the lock file, mostly because pip has no notion of a top level project - it emits a single platform lock file, pip not being capable of doing multi-platform resolutions  Are there other known limitations or problem...",
+    "is_new": false,
+    "priority": "low",
+    "is_bug": false,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 4426912736,
     "repo": "pypa/setuptools",
     "ecosystem": "python",
@@ -576,8 +604,8 @@
     "author": "jorng",
     "author_avatar": "https://avatars.githubusercontent.com/u/7497391?v=4",
     "created_at": "2026-04-14T23:44:06Z",
-    "updated_at": "2026-04-18T01:14:58Z",
-    "comments": 0,
+    "updated_at": "2026-05-20T17:10:19Z",
+    "comments": 2,
     "labels": [
       "enhancement"
     ],
