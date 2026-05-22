@@ -189,33 +189,6 @@
     "is_help_wanted": false
   },
   {
-    "id": 4424931774,
-    "repo": "saleor/saleor",
-    "ecosystem": "django",
-    "ecosystem_label": "Django",
-    "category": "ecommerce",
-    "category_label": "E-Commerce",
-    "number": 19202,
-    "title": "Bug: SEND_USAGE_TELEMETRY=false causes crash at startup",
-    "url": "https://github.com/saleor/saleor/issues/19202",
-    "author": "gavanfantom",
-    "author_avatar": "https://avatars.githubusercontent.com/u/8654928?v=4",
-    "created_at": "2026-05-11T23:09:49Z",
-    "updated_at": "2026-05-20T14:32:44Z",
-    "comments": 2,
-    "labels": [
-      "bug"
-    ],
-    "body_preview": "### What are you trying to achieve?  Saleor 3.23 introduced SEND_USAGE_TELEMETRY, which is supposed to be optional. However, disabling it causes the API server to fail to start up, with an error from Django. This is because the lifespan protocol is enabled in uvicorn, but the wrapper that understand lifespan events is not installed, and thus Django is left to handle the lifespan protocol in its AS...",
-    "is_new": false,
-    "priority": "high",
-    "is_bug": true,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
     "id": 4351931673,
     "repo": "saleor/saleor",
     "ecosystem": "django",

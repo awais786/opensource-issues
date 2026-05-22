@@ -162,33 +162,6 @@
     "is_help_wanted": false
   },
   {
-    "id": 3995694976,
-    "repo": "jazzband/django-oauth-toolkit",
-    "ecosystem": "django",
-    "ecosystem_label": "Django",
-    "category": "auth_security",
-    "category_label": "Auth & Security",
-    "number": 1657,
-    "title": "Pre-fill user_code by making use of verification_uri_complete",
-    "url": "https://github.com/django-oauth/django-oauth-toolkit/issues/1657",
-    "author": "magicbrothers",
-    "author_avatar": "https://avatars.githubusercontent.com/u/47381891?v=4",
-    "created_at": "2026-02-26T13:48:44Z",
-    "updated_at": "2026-02-26T13:48:44Z",
-    "comments": 0,
-    "labels": [
-      "enhancement"
-    ],
-    "body_preview": "",
-    "is_new": false,
-    "priority": "medium",
-    "is_bug": false,
-    "is_feature": true,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
     "id": 3983271760,
     "repo": "jazzband/django-oauth-toolkit",
     "ecosystem": "django",
