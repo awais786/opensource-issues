@@ -25,6 +25,34 @@
     "is_help_wanted": false
   },
   {
+    "id": 4502385604,
+    "repo": "pallets/click",
+    "ecosystem": "python",
+    "ecosystem_label": "Python",
+    "category": "py_web",
+    "category_label": "Python Web",
+    "number": 3501,
+    "title": "`isolated_filesystem()` is not thread safe",
+    "url": "https://github.com/pallets/click/issues/3501",
+    "author": "kdeldycke",
+    "author_avatar": "https://avatars.githubusercontent.com/u/159718?v=4",
+    "created_at": "2026-05-22T11:53:56Z",
+    "updated_at": "2026-05-23T06:02:51Z",
+    "comments": 3,
+    "labels": [
+      "bug",
+      "f:test runner"
+    ],
+    "body_preview": "This is a follow-up on https://github.com/pallets/click/issues/2899, to cover for @Rowlando13's concerns that `isolated_filesystem()` is not thread safe: https://github.com/pallets/click/issues/2899#issuecomment-2870786207",
+    "is_new": true,
+    "priority": "high",
+    "is_bug": true,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 4490878812,
     "repo": "pallets/click",
     "ecosystem": "python",
@@ -37,7 +65,7 @@
     "author": "hernanr2205",
     "author_avatar": "https://avatars.githubusercontent.com/u/176437033?v=4",
     "created_at": "2026-05-21T00:57:05Z",
-    "updated_at": "2026-05-21T16:03:43Z",
+    "updated_at": "2026-05-22T13:15:13Z",
     "comments": 1,
     "labels": [
       "docs"
@@ -64,10 +92,13 @@
     "author": "Rowlando13",
     "author_avatar": "https://avatars.githubusercontent.com/u/67291205?v=4",
     "created_at": "2026-05-19T19:05:29Z",
-    "updated_at": "2026-05-19T19:42:07Z",
-    "comments": 1,
-    "labels": [],
-    "body_preview": "Python2-centric utilities:   - `getchar` - `get_binary_stream` - `get_text_stream`  Little used Utilities:   - `wrap_text`  In the interest of making more time to focus on core click details, these utilities are planned to be deprecated in the next feature release, and removed from the public api in one after. If any of these are critical to your uses, please explain below, and we may consider oth...",
+    "updated_at": "2026-05-23T05:51:11Z",
+    "comments": 7,
+    "labels": [
+      "f:prompt",
+      "f:help"
+    ],
+    "body_preview": "Python2-centric utilities:   - `get_binary_stream` - `get_text_stream`  Little used Utilities:   - `wrap_text` - `getchar`  In the interest of making more time to focus on core click details, these utilities are planned to be deprecated in the next feature release, and removed from the public api in one after. If any of these are critical to your uses, please explain below, and we may consider oth...",
     "is_new": true,
     "priority": "low",
     "is_bug": false,
