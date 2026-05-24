@@ -20,7 +20,7 @@
       "Needs info"
     ],
     "body_preview": "I already verified the toolbar middleware comes after the gzip middleware, but any view that uses the `@gzip_page` decorator cannot use the toolbar.  Apparently `is_processable_html_response()` is returning `False` because the `Content-Encoding` shows up as `gzip`, but I thought the order of the middleware was supposed to solve that?",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,
@@ -178,33 +178,6 @@
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
-    "id": 3975733592,
-    "repo": "jazzband/django-debug-toolbar",
-    "ecosystem": "django",
-    "ecosystem_label": "Django",
-    "category": "admin_ui",
-    "category_label": "Admin & UI",
-    "number": 2315,
-    "title": "Surface Duplicate/Similar SQL Queries in the toolbar's sidebar",
-    "url": "https://github.com/django-commons/django-debug-toolbar/issues/2315",
-    "author": "miketheman",
-    "author_avatar": "https://avatars.githubusercontent.com/u/529516?v=4",
-    "created_at": "2026-02-23T00:05:04Z",
-    "updated_at": "2026-03-19T14:18:37Z",
-    "comments": 0,
-    "labels": [
-      "Feature"
-    ],
-    "body_preview": "Very cool feature to surface duplicate and similar SQL queries - however it's only when I click into the SQL panel do I see them.  A nice enhancement might be to add an indicator on the sidebar's panel that there are \"some\" duplicate queries that would prompt the developer to click into the panel.  I'd be happy to try and contribute this if there's interest, especially if there's any existing guid...",
-    "is_new": false,
-    "priority": "medium",
-    "is_bug": false,
-    "is_feature": true,
     "is_security": false,
     "is_good_first_issue": false,
     "is_help_wanted": false

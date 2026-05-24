@@ -148,7 +148,7 @@
     "author": "themavik",
     "author_avatar": "https://avatars.githubusercontent.com/u/179817126?v=4",
     "created_at": "2026-03-19T12:29:31Z",
-    "updated_at": "2026-03-23T12:31:01Z",
+    "updated_at": "2026-05-23T08:15:40Z",
     "comments": 1,
     "labels": [],
     "body_preview": "## Bug Description `chain(group([task1, task2]), group(), group())()` throws `AttributeError: 'NoneType' object has no attribute 'parent'` because empty groups in the chain produce None results.  ## Expected Behavior Empty groups should be silently skipped in chain processing.  Related to #9772.",

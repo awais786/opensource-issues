@@ -12,8 +12,8 @@
     "author": "krzemyczek",
     "author_avatar": "https://avatars.githubusercontent.com/u/81762967?v=4",
     "created_at": "2026-05-19T11:26:39Z",
-    "updated_at": "2026-05-21T19:37:01Z",
-    "comments": 2,
+    "updated_at": "2026-05-23T19:08:45Z",
+    "comments": 5,
     "labels": [
       "C-bug",
       "A-completion",
@@ -461,35 +461,6 @@
     "is_help_wanted": false
   },
   {
-    "id": 3975443796,
-    "repo": "clap-rs/clap",
-    "ecosystem": "rust",
-    "ecosystem_label": "Rust",
-    "category": "rust_cli",
-    "category_label": "CLI & Tooling",
-    "number": 6280,
-    "title": "Bash complete unstable-dynamic add **COMP_WORDBREAKS**",
-    "url": "https://github.com/clap-rs/clap/issues/6280",
-    "author": "feraxhp",
-    "author_avatar": "https://avatars.githubusercontent.com/u/116177764?v=4",
-    "created_at": "2026-02-22T21:13:37Z",
-    "updated_at": "2026-05-06T20:20:37Z",
-    "comments": 11,
-    "labels": [
-      "C-enhancement",
-      "A-completion",
-      "S-triage"
-    ],
-    "body_preview": "### Please complete the following tasks  - [x] I have searched the [discussions](https://github.com/clap-rs/clap/discussions) - [x] I have searched the [open](https://github.com/clap-rs/clap/issues) and [rejected](https://github.com/clap-rs/clap/issues?q=is%3Aissue+label%3AS-wont-fix+is%3Aclosed) issues  ### Clap Version  clap complete = \"4.5.66\"  ### Describe your use case  well i am writing a cl...",
-    "is_new": false,
-    "priority": "medium",
-    "is_bug": false,
-    "is_feature": true,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
     "id": 4404719033,
     "repo": "BurntSushi/ripgrep",
     "ecosystem": "rust",
@@ -658,7 +629,7 @@
       "feature-request"
     ],
     "body_preview": "Once https://github.com/sharkdp/bat/issues/3710 is fixed, `--style=auto` will essentially be an alias for `--decorations=auto` (which is the default). I suggest that `--style=auto` be deprecated so the role of each option is clear.  `--style` should control how the output is formatted, and `--decorations` should control when that formatting is applied. Right now, `--style` tries to do both, which...",
-    "is_new": true,
+    "is_new": false,
     "priority": "medium",
     "is_bug": false,
     "is_feature": true,

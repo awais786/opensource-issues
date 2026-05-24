@@ -12,8 +12,8 @@
     "author": "bhavanivyshnavi23-hub",
     "author_avatar": "https://avatars.githubusercontent.com/u/286587912?v=4",
     "created_at": "2026-05-22T05:09:04Z",
-    "updated_at": "2026-05-23T05:41:26Z",
-    "comments": 2,
+    "updated_at": "2026-05-23T09:39:04Z",
+    "comments": 4,
     "labels": [
       "resolution: no action",
       "resolution: not a bug"
@@ -40,14 +40,14 @@
     "author": "notatallshaw",
     "author_avatar": "https://avatars.githubusercontent.com/u/8070352?v=4",
     "created_at": "2026-05-16T16:01:11Z",
-    "updated_at": "2026-05-17T16:39:53Z",
-    "comments": 2,
+    "updated_at": "2026-05-23T13:28:15Z",
+    "comments": 5,
     "labels": [
       "project: vendored dependency",
       "state: needs discussion"
     ],
     "body_preview": "Yesterday at the packaging summit I just announced a project I've been working on called nab: https://github.com/notatallshaw/nab  `nab` is a tool that can generate lock files (pylock.toml and requirements with or without hashes) and download all dependencies.  It is supported by some libraries, including `nab-resolve`, a new generic dependency resolver built on top of the PubGrub algorithm but wi...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
@@ -225,8 +225,8 @@
     "author": "sbidoul",
     "author_avatar": "https://avatars.githubusercontent.com/u/692075?v=4",
     "created_at": "2026-04-29T17:31:09Z",
-    "updated_at": "2026-04-30T23:09:02Z",
-    "comments": 2,
+    "updated_at": "2026-05-23T08:50:27Z",
+    "comments": 3,
     "labels": [
       "state: needs discussion",
       "C: lockfile"
