@@ -86,6 +86,36 @@
     "is_help_wanted": false
   },
   {
+    "id": 4327046967,
+    "repo": "tokio-rs/tokio",
+    "ecosystem": "rust",
+    "ecosystem_label": "Rust",
+    "category": "rust_async",
+    "category_label": "Async & Web",
+    "number": 8085,
+    "title": "Improved experience using Tokio for both CPU-bound work and I/O work on the same machine",
+    "url": "https://github.com/tokio-rs/tokio/issues/8085",
+    "author": "alamb",
+    "author_avatar": "https://avatars.githubusercontent.com/u/490673?v=4",
+    "created_at": "2026-04-25T04:22:13Z",
+    "updated_at": "2026-05-17T18:34:38Z",
+    "comments": 23,
+    "labels": [
+      "A-tokio",
+      "M-runtime",
+      "C-feature-request",
+      "M-blocking"
+    ],
+    "body_preview": "**Is your feature request related to a problem? Please describe.**  ## Thanks First of all, Tokio is awesome, and shout out to my peeps @carllerche and @Darksonn for their amazing work on this crate. We use it for all the network and CPU work in several databases and the DataFusion ecosystem.  ## TL;DR I think it would be useful to consider more built-in support for task prioritization so we can a...",
+    "is_new": false,
+    "priority": "medium",
+    "is_bug": false,
+    "is_feature": true,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 4506121846,
     "repo": "tokio-rs/axum",
     "ecosystem": "rust",

@@ -663,32 +663,5 @@
     "is_security": false,
     "is_good_first_issue": false,
     "is_help_wanted": false
-  },
-  {
-    "id": 4385144116,
-    "repo": "sharkdp/bat",
-    "ecosystem": "rust",
-    "ecosystem_label": "Rust",
-    "category": "rust_cli",
-    "category_label": "CLI & Tooling",
-    "number": 3724,
-    "title": "Man pages displaying bold reset code 22m",
-    "url": "https://github.com/sharkdp/bat/issues/3724",
-    "author": "Anntoin",
-    "author_avatar": "https://avatars.githubusercontent.com/u/3289027?v=4",
-    "created_at": "2026-05-05T15:12:42Z",
-    "updated_at": "2026-05-06T17:49:55Z",
-    "comments": 3,
-    "labels": [
-      "bug"
-    ],
-    "body_preview": "Using `MANPAGER=\"bat -pl man\"` to colourise man pages. Tested with a few different pagers with `BAT_PAGER` and they all show unwanted output for this code.  - `BAT_PAGER=\"less\" MANPAGER=\"bat -pl man\" man uname`  (with `BAT_PAGER=\"ov\"` we get the same output)   <img width=\"800\" height=\"80\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/0687299f-a506-4cd2-93e5-93f948996261\" />   - `B...",
-    "is_new": false,
-    "priority": "high",
-    "is_bug": true,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
   }
 ]
