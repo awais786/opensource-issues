@@ -1,5 +1,30 @@
 [
   {
+    "id": 4523222003,
+    "repo": "tiangolo/fastapi",
+    "ecosystem": "python",
+    "ecosystem_label": "Python",
+    "category": "py_web",
+    "category_label": "Python Web",
+    "number": 15612,
+    "title": "OSV advisory MAL-2026-4750 appears to be a false positive for fastapi/fastapi",
+    "url": "https://github.com/fastapi/fastapi/issues/15612",
+    "author": "kiran-sec",
+    "author_avatar": "https://avatars.githubusercontent.com/u/234657725?v=4",
+    "created_at": "2026-05-26T09:52:08Z",
+    "updated_at": "2026-05-26T14:01:28Z",
+    "comments": 6,
+    "labels": [],
+    "body_preview": "### Privileged issue  - [ ] I'm @tiangolo or he asked me directly to create an issue here.  ### Issue Content  There is an OSV advisory MAL-2026-4750 that currently lists the FastAPI GitHub repository as affected: https://osv.dev/vulnerability/MAL-2026-4750  After investigating, we believe this is a false positive and that the FastAPI project itself is not affected by the described issue.  If you...",
+    "is_new": true,
+    "priority": "low",
+    "is_bug": false,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 4230427998,
     "repo": "pallets/werkzeug",
     "ecosystem": "python",
@@ -53,33 +78,6 @@
     "is_help_wanted": false
   },
   {
-    "id": 4490878812,
-    "repo": "pallets/click",
-    "ecosystem": "python",
-    "ecosystem_label": "Python",
-    "category": "py_web",
-    "category_label": "Python Web",
-    "number": 3489,
-    "title": "Advanced Patterns example uses Python 2 `urllib.urlopen`",
-    "url": "https://github.com/pallets/click/issues/3489",
-    "author": "hernanr2205",
-    "author_avatar": "https://avatars.githubusercontent.com/u/176437033?v=4",
-    "created_at": "2026-05-21T00:57:05Z",
-    "updated_at": "2026-05-22T13:15:13Z",
-    "comments": 1,
-    "labels": [
-      "docs"
-    ],
-    "body_preview": "The examples in the **\"Parameter Modifications\"** section of the *Advanced Patterns* guide (`docs/advanced.md`) use `urllib.urlopen(...)`, which is a Python 2 API. It was removed in Python 3, where the function lives at `urllib.request.urlopen`.  ### Where  Page: https://click.palletsprojects.com/en/stable/advanced/#parameter-modifications Source: `docs/advanced.md`, \"Parameter Modifications\" sect...",
-    "is_new": true,
-    "priority": "low",
-    "is_bug": false,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
     "id": 4480227505,
     "repo": "pallets/click",
     "ecosystem": "python",
@@ -99,7 +97,7 @@
       "f:help"
     ],
     "body_preview": "Python2-centric utilities:   - `get_binary_stream` - `get_text_stream`  Little used Utilities:   - `wrap_text` - `getchar`  In the interest of making more time to focus on core click details, these utilities are planned to be deprecated in the next feature release, and removed from the public api in one after. If any of these are critical to your uses, please explain below, and we may consider oth...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
