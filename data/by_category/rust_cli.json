@@ -12,11 +12,13 @@
     "author": "FintanH",
     "author_avatar": "https://avatars.githubusercontent.com/u/3503528?v=4",
     "created_at": "2026-05-26T20:22:32Z",
-    "updated_at": "2026-05-26T20:22:32Z",
+    "updated_at": "2026-05-27T15:01:00Z",
     "comments": 0,
     "labels": [
       "C-enhancement",
-      "S-triage"
+      "A-derive",
+      "S-triage",
+      "A-man"
     ],
     "body_preview": "### Please complete the following tasks  - [x] I have searched the [discussions](https://github.com/clap-rs/clap/discussions) - [x] I have searched the [open](https://github.com/clap-rs/clap/issues) and [rejected](https://github.com/clap-rs/clap/issues?q=is%3Aissue+label%3AS-wont-fix+is%3Aclosed) issues  ### Clap Version  master  ### Describe your use case  The roff language has the ability to hav...",
     "is_new": true,

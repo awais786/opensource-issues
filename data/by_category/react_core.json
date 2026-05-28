@@ -1,5 +1,32 @@
 [
   {
+    "id": 4532101726,
+    "repo": "facebook/react",
+    "ecosystem": "react",
+    "ecosystem_label": "React",
+    "category": "react_core",
+    "category_label": "React Core",
+    "number": 36549,
+    "title": "Doc: Update stale README docs",
+    "url": "https://github.com/facebook/react/issues/36549",
+    "author": "doehyunbaek",
+    "author_avatar": "https://avatars.githubusercontent.com/u/70570804?v=4",
+    "created_at": "2026-05-27T11:55:14Z",
+    "updated_at": "2026-05-27T11:55:14Z",
+    "comments": 0,
+    "labels": [
+      "Status: Unconfirmed"
+    ],
+    "body_preview": "I found three documentation inconsistencies.  #### 1. `react-server` README examples are missing newer `createRequest` / `createPrerenderRequest` arguments  The README examples call `createRequest` and `createPrerenderRequest` with arguments ending at `filterStackFrame`:  https://github.com/facebook/react/blob/c0cd4d5d30f3ad56380c14ac53c6f50d96e38814/packages/react-server/README.md#L41-L49 https:/...",
+    "is_new": true,
+    "priority": "low",
+    "is_bug": false,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 4529301501,
     "repo": "facebook/react",
     "ecosystem": "react",
@@ -155,7 +182,7 @@
       "Status: Unconfirmed"
     ],
     "body_preview": "<!--   Please provide a clear and concise description of what the bug is. Include   screenshots if needed. Please test using the latest version of the relevant   React packages to make sure your issue has not already been fixed. -->  React version:  ## Steps To Reproduce  1. 2.  <!--   Your bug will get fixed much faster if we can run your code and it doesn't   have dependencies other than React....",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
@@ -191,33 +218,6 @@
     "is_help_wanted": false
   },
   {
-    "id": 4463756174,
-    "repo": "facebook/react",
-    "ecosystem": "react",
-    "ecosystem_label": "React",
-    "category": "react_core",
-    "category_label": "React Core",
-    "number": 36484,
-    "title": "[Bug]: CodeQL analyze run on GitHub Actions is slow (25s+)",
-    "url": "https://github.com/facebook/react/issues/36484",
-    "author": "manucian-official",
-    "author_avatar": "https://avatars.githubusercontent.com/u/195640846?v=4",
-    "created_at": "2026-05-17T14:15:54Z",
-    "updated_at": "2026-05-20T03:35:18Z",
-    "comments": 2,
-    "labels": [
-      "Status: Unconfirmed"
-    ],
-    "body_preview": "## Description  While running `github/codeql-action/analyze@v4` as part of the GitHub Actions workflow, the job log shows that the analysis is taking a long time (25 seconds or more). The slow step seems to be during or after CodeQL queries on GitHub Actions files, with notable delays in post-processing and SARIF file handling:  - While resolving threads, detected 4 CPUs in `/sys/fs/cgroup/cpuset....",
-    "is_new": false,
-    "priority": "low",
-    "is_bug": false,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
     "id": 4491555926,
     "repo": "remix-run/react-router",
     "ecosystem": "react",
@@ -236,7 +236,7 @@
       "docs"
     ],
     "body_preview": "### Describe what's incorrect/missing in the documentation  The instrumentation API here appears to formalize a third routing representation that neither aligns with the route definition graph nor the runtime match graph, and I\u2019m struggling to understand how this can be made coherent long\u2011term.  Today, React Router already maintains two distinct but related structures:  the declarative route tree...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
