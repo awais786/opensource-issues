@@ -27,6 +27,33 @@
     "is_help_wanted": false
   },
   {
+    "id": 4551406878,
+    "repo": "strawberry-graphql/strawberry-django",
+    "ecosystem": "django",
+    "ecosystem_label": "Django",
+    "category": "graphql",
+    "category_label": "GraphQL",
+    "number": 912,
+    "title": "OffsetPaginated applies the filter pipeline twice",
+    "url": "https://github.com/strawberry-graphql/strawberry-django/issues/912",
+    "author": "aprams",
+    "author_avatar": "https://avatars.githubusercontent.com/u/7011772?v=4",
+    "created_at": "2026-05-29T20:25:33Z",
+    "updated_at": "2026-05-29T20:56:26Z",
+    "comments": 1,
+    "labels": [
+      "bug"
+    ],
+    "body_preview": "<!-- Provide a general summary of the bug in the title above. -->  OffsetPaginated applies the filter pipeline twice \u2192 duplicate JOINs for multivalued-relation filters  <!--- This template is entirely optional and can be removed, but is here to help both you and us. --> <!--- Anything on lines wrapped in comments like these will not show up in the final text. -->  ## Describe the Bug  <!-- A clear...",
+    "is_new": true,
+    "priority": "high",
+    "is_bug": true,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 4038327533,
     "repo": "strawberry-graphql/strawberry-django",
     "ecosystem": "django",

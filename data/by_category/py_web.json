@@ -25,34 +25,6 @@
     "is_help_wanted": false
   },
   {
-    "id": 4502385604,
-    "repo": "pallets/click",
-    "ecosystem": "python",
-    "ecosystem_label": "Python",
-    "category": "py_web",
-    "category_label": "Python Web",
-    "number": 3501,
-    "title": "`isolated_filesystem()` is not thread safe",
-    "url": "https://github.com/pallets/click/issues/3501",
-    "author": "kdeldycke",
-    "author_avatar": "https://avatars.githubusercontent.com/u/159718?v=4",
-    "created_at": "2026-05-22T11:53:56Z",
-    "updated_at": "2026-05-29T06:24:10Z",
-    "comments": 7,
-    "labels": [
-      "bug",
-      "f:test runner"
-    ],
-    "body_preview": "This is a follow-up on https://github.com/pallets/click/issues/2899, to cover for @Rowlando13's concerns that `isolated_filesystem()` is not thread safe: https://github.com/pallets/click/issues/2899#issuecomment-2870786207",
-    "is_new": true,
-    "priority": "high",
-    "is_bug": true,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
     "id": 4480227505,
     "repo": "pallets/click",
     "ecosystem": "python",
@@ -165,13 +137,13 @@
     "category": "py_web",
     "category_label": "Python Web",
     "number": 3242,
-    "title": "Flush stdin after writing to a pager",
+    "title": "Flush `stdin` after writing to a pager",
     "url": "https://github.com/pallets/click/issues/3242",
     "author": "tucked",
     "author_avatar": "https://avatars.githubusercontent.com/u/48501491?v=4",
     "created_at": "2026-03-03T23:26:44Z",
-    "updated_at": "2026-05-18T23:01:32Z",
-    "comments": 1,
+    "updated_at": "2026-05-29T14:52:26Z",
+    "comments": 2,
     "labels": [
       "bug"
     ],
