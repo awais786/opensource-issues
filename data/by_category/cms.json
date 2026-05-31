@@ -97,8 +97,8 @@
     "author": "tomkins",
     "author_avatar": "https://avatars.githubusercontent.com/u/177332?v=4",
     "created_at": "2026-05-13T20:24:10Z",
-    "updated_at": "2026-05-15T12:06:50Z",
-    "comments": 0,
+    "updated_at": "2026-05-30T18:53:12Z",
+    "comments": 1,
     "labels": [
       "type:Enhancement",
       "status:Needs Review"
@@ -227,37 +227,6 @@
     "is_bug": true,
     "is_feature": false,
     "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
-    "id": 4342171290,
-    "repo": "wagtail/wagtail",
-    "ecosystem": "django",
-    "ecosystem_label": "Django",
-    "category": "cms",
-    "category_label": "CMS & Content",
-    "number": 14180,
-    "title": "Add how-to Authentication docs",
-    "url": "https://github.com/wagtail/wagtail/issues/14180",
-    "author": "thibaudcolas",
-    "author_avatar": "https://avatars.githubusercontent.com/u/877585?v=4",
-    "created_at": "2026-04-28T09:52:41Z",
-    "updated_at": "2026-04-30T16:37:56Z",
-    "comments": 1,
-    "labels": [
-      "Documentation",
-      "component:Security",
-      "component:User Management",
-      "status:Needs Community Feedback",
-      "status:Needs Maintainer Feedback"
-    ],
-    "body_preview": "### Details  Part of [Independent security audit - report highlights #14173](https://github.com/wagtail/wagtail/discussions/14173). Wagtail has a number of settings, extension points, and integration patterns for authentication, but no narrative documentation page that ties them together. This would help us document how site implementers should approach hardening against brute force attacks, and a...",
-    "is_new": false,
-    "priority": "critical",
-    "is_bug": false,
-    "is_feature": false,
-    "is_security": true,
     "is_good_first_issue": false,
     "is_help_wanted": false
   },

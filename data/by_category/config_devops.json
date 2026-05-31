@@ -222,7 +222,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "### Description  I have a usecase where i need to extend the middleware and use request.path  `class CustomCorsMiddleware(CorsMiddleware):     def origin_found_in_white_lists(self, origin: str, url: SplitResult) -> bool:         request = self.request          if \"/sdk/\" in request.path:             return True          return super().origin_found_in_white_lists(origin, url) `  but in the main met...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
