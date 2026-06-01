@@ -150,7 +150,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "Several tests started failing with Celery 5.6.3:  ``` FAILED t/unit/backends/test_database.py::test_DatabaseBackend::test_backend__pickle_serialization__dict_result__protocol_1 - AttributeError: 'str' object has no attribute 'ignore_result' FAILED t/unit/backends/test_database.py::test_DatabaseBackend::test_backend__pickle_serialization__str_result__protocol_1 - AttributeError: 'str' object has no...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
