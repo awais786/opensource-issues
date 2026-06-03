@@ -135,33 +135,6 @@
     "is_help_wanted": false
   },
   {
-    "id": 4027049807,
-    "repo": "jazzband/django-oauth-toolkit",
-    "ecosystem": "django",
-    "ecosystem_label": "Django",
-    "category": "auth_security",
-    "category_label": "Auth & Security",
-    "number": 1668,
-    "title": "Creating refresh token for user object",
-    "url": "https://github.com/django-oauth/django-oauth-toolkit/issues/1668",
-    "author": "ibukun-brain",
-    "author_avatar": "https://avatars.githubusercontent.com/u/78442733?v=4",
-    "created_at": "2026-03-05T09:36:25Z",
-    "updated_at": "2026-03-05T09:36:25Z",
-    "comments": 0,
-    "labels": [
-      "question"
-    ],
-    "body_preview": "<!-- What is your question? --> Hi there, is there a way I can create a refresh token with the user object just like drf_simple_jwt. In my project I'm authenticating users with social auth using google, once the user has been created, I would like to create a refresh token and access token for the user, how do I go about this",
-    "is_new": false,
-    "priority": "low",
-    "is_bug": false,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
     "id": 4531588798,
     "repo": "django-guardian/django-guardian",
     "ecosystem": "django",
@@ -178,7 +151,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "**Describe the bug**  Calling get_objects_for_user raises ValueError when the passed queryset has existing joins or annotations.  ``` ValueError: The QuerySet value for the 'in' lookup must have 1 selected fields (received 22) ```  The `handle_pk_field is not None` branch transforms `objects` using `.values(_pk=Cast(...))`. When the queryset already has joins from related field lookups, `.values()...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
