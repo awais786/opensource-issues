@@ -44,7 +44,7 @@
       "S-triage"
     ],
     "body_preview": "### Please complete the following tasks  - [x] I have searched the [discussions](https://github.com/clap-rs/clap/discussions) - [x] I have searched the [open](https://github.com/clap-rs/clap/issues) and [rejected](https://github.com/clap-rs/clap/issues?q=is%3Aissue+label%3AS-wont-fix+is%3Aclosed) issues  ### Rust Version  rustc 1.96.0 (ac68faa20 2026-05-25)  ### Clap Version  4.6.1  ### Minimal re...",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,
@@ -498,7 +498,7 @@
     "comments": 1,
     "labels": [],
     "body_preview": "Unsure whether to tag this is a bug or a feature request or a bit of both.  ## Exposition Running Arch Linux fully up to date, everything is tested using bash --norc ```bash zephyr@archlinux ~ $ bash --norc bash-5.3$ bash --version GNU bash, version 5.3.9(1)-release (x86_64-pc-linux-gnu) Copyright (C) 2025 Free Software Foundation, Inc. License GPLv3+: GNU GPL version 3 or later <http://gnu.org/li...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

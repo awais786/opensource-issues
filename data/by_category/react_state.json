@@ -373,7 +373,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "### Describe the bug  Passing `styleNonce` to e.g. `<ReactQueryDevtools>` no longer prevents CSP violations. The `<style id=\"_goober\">` element injected by the devtools ends up with an empty nonce, causing the browser to reject it.  Inspecting the element in Chrome DevTools and checking its properties shows `nonce=\"undefined\"`.  ### Your minimal, reproducible example  https://stackblitz.com/edit/t...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
