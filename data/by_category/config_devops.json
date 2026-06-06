@@ -350,10 +350,11 @@
     "author": "dingsdax",
     "author_avatar": "https://avatars.githubusercontent.com/u/114897?v=4",
     "created_at": "2026-06-01T11:47:22Z",
-    "updated_at": "2026-06-01T11:51:56Z",
+    "updated_at": "2026-06-05T13:52:39Z",
     "comments": 1,
     "labels": [
-      "Python"
+      "Python",
+      "Task"
     ],
     "body_preview": "Acknowledge and review the dependency pinning audit request for [sentry-python](<https://github.com/getsentry/sentry-python>).  Use the parent issue for the audit checklist and expectations: [SDK-1314](https://linear.app/getsentry/issue/SDK-1314/dependency-pinning-audit-across-sdk-repositories).  This sub-issue is only for acknowledgement and completion tracking.  If gaps are found, open a follow-...",
     "is_new": true,
@@ -377,10 +378,11 @@
     "author": "sentrivana",
     "author_avatar": "https://avatars.githubusercontent.com/u/131587164?v=4",
     "created_at": "2026-06-01T11:28:29Z",
-    "updated_at": "2026-06-01T14:53:21Z",
+    "updated_at": "2026-06-05T13:52:40Z",
     "comments": 1,
     "labels": [
       "Python",
+      "Task",
       "Span first dogfooding"
     ],
     "body_preview": "We're seeing a lot of drops due to `sampling_rate` even though all SDK `init`s in Seer have `traces_sample_rate=1.0`. Figure out what's going on.<br><br>Current theories:  * misattributed backpressure drops: [https://github.com/getsentry/sentry-python/issues/6466](<https://github.com/getsentry/sentry-python/issues/6466>)   * we'll also try disabling backpressure handling in Seer to see if this get...",
@@ -405,13 +407,14 @@
     "author": "sentrivana",
     "author_avatar": "https://avatars.githubusercontent.com/u/131587164?v=4",
     "created_at": "2026-06-01T11:15:15Z",
-    "updated_at": "2026-06-02T06:06:15Z",
+    "updated_at": "2026-06-05T13:52:39Z",
     "comments": 1,
     "labels": [
       "Python",
+      "Task",
       "Span first dogfooding"
     ],
-    "body_preview": "After seer, look into dogfooding further",
+    "body_preview": "After seer, look into dogfooding further  Prerequisite: get rid of multiplex transport",
     "is_new": true,
     "priority": "low",
     "is_bug": false,
@@ -433,15 +436,16 @@
     "author": "alexander-alderman-webb",
     "author_avatar": "https://avatars.githubusercontent.com/u/224035503?v=4",
     "created_at": "2026-05-29T07:00:07Z",
-    "updated_at": "2026-06-01T15:04:19Z",
+    "updated_at": "2026-06-05T13:52:38Z",
     "comments": 1,
     "labels": [
-      "Python"
+      "Python",
+      "Bug"
     ],
     "body_preview": "Using a fallback leads to wrong data  https://github.com/getsentry/sentry-python/blob/b4e036730e7988f7a21b93b2024ee5c554510d7f/sentry_sdk/integrations/litellm.py#L90-L97",
     "is_new": false,
-    "priority": "low",
-    "is_bug": false,
+    "priority": "high",
+    "is_bug": true,
     "is_feature": false,
     "is_security": false,
     "is_good_first_issue": false,
@@ -489,10 +493,11 @@
     "author": "sl0thentr0py",
     "author_avatar": "https://avatars.githubusercontent.com/u/6536764?v=4",
     "created_at": "2026-05-26T20:18:46Z",
-    "updated_at": "2026-06-01T15:04:19Z",
+    "updated_at": "2026-06-05T13:52:38Z",
     "comments": 1,
     "labels": [
-      "Python"
+      "Python",
+      "Task"
     ],
     "body_preview": "## Background  The package metadata still lives in `setup.py` (name, version, dependencies, extras, entry points, classifiers, etc.). `pyproject.toml` currently only carries tool configuration (coverage, pytest, mypy, ruff).  With the tox/uv migration landing (see #6325, #6327, #6367, and the rest of the `chore/migrate-to-tox-uv` work), the distribution itself is the last piece still using legacy...",
     "is_new": false,
@@ -516,15 +521,16 @@
     "author": "alexander-alderman-webb",
     "author_avatar": "https://avatars.githubusercontent.com/u/224035503?v=4",
     "created_at": "2026-05-26T16:01:38Z",
-    "updated_at": "2026-06-01T15:04:19Z",
+    "updated_at": "2026-06-05T13:52:38Z",
     "comments": 1,
     "labels": [
-      "Python"
+      "Python",
+      "Bug"
     ],
     "body_preview": "`openai-agents` can also call the responses API, for example: https://github.com/getsentry/sentry-python/blob/53188b322fc96dab0c4b064945b62e773fada63c/sentry_sdk/integrations/openai_agents/spans/ai_client.py#L37",
     "is_new": false,
-    "priority": "low",
-    "is_bug": false,
+    "priority": "high",
+    "is_bug": true,
     "is_feature": false,
     "is_security": false,
     "is_good_first_issue": false,
@@ -543,10 +549,11 @@
     "author": "alexander-alderman-webb",
     "author_avatar": "https://avatars.githubusercontent.com/u/224035503?v=4",
     "created_at": "2026-05-26T15:34:53Z",
-    "updated_at": "2026-06-01T15:04:19Z",
+    "updated_at": "2026-06-05T13:52:38Z",
     "comments": 1,
     "labels": [
-      "Python"
+      "Python",
+      "Task"
     ],
     "body_preview": "https://github.com/getsentry/sentry-python/pull/6404#discussion_r3304429118",
     "is_new": false,
@@ -570,10 +577,11 @@
     "author": "alexander-alderman-webb",
     "author_avatar": "https://avatars.githubusercontent.com/u/224035503?v=4",
     "created_at": "2026-05-26T15:31:43Z",
-    "updated_at": "2026-06-01T15:04:19Z",
+    "updated_at": "2026-06-05T13:53:06Z",
     "comments": 1,
     "labels": [
-      "Python"
+      "Python",
+      "Task"
     ],
     "body_preview": "Remove duplication between  https://github.com/getsentry/sentry-python/blob/53188b322fc96dab0c4b064945b62e773fada63c/sentry_sdk/integrations/openai_agents/spans/ai_client.py#L26-L29  and  https://github.com/getsentry/sentry-python/blob/53188b322fc96dab0c4b064945b62e773fada63c/sentry_sdk/integrations/openai_agents/utils.py#L59-L62",
     "is_new": false,
@@ -597,15 +605,45 @@
     "author": "sl0thentr0py",
     "author_avatar": "https://avatars.githubusercontent.com/u/6536764?v=4",
     "created_at": "2026-05-26T13:08:32Z",
-    "updated_at": "2026-06-01T15:04:19Z",
+    "updated_at": "2026-06-05T13:52:39Z",
     "comments": 1,
     "labels": [
-      "Python"
+      "Python",
+      "Tests"
     ],
     "body_preview": "## Background  The Django integration test suite uses `@pytest.mark.forked` (via `pytest-forked`) on 52 tests across 5 files to isolate global state. This dates back to #522 (\"Less boxed testing\") and was a pragmatic substitute for proper teardown.  ## Problem  `pytest-forked` is actively harmful in some scenarios:  - **Python 3.12 + asyncio + GitHub Actions:** Forking a multi-threaded process and...",
     "is_new": false,
     "priority": "low",
     "is_bug": false,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
+    "id": 4521402534,
+    "repo": "getsentry/sentry-python",
+    "ecosystem": "django",
+    "ecosystem_label": "Django",
+    "category": "config_devops",
+    "category_label": "Config & DevOps",
+    "number": 6402,
+    "title": "Django cache.add operations do not emit cache spans",
+    "url": "https://github.com/getsentry/sentry-python/issues/6402",
+    "author": "immanuwell",
+    "author_avatar": "https://avatars.githubusercontent.com/u/122638311?v=4",
+    "created_at": "2026-05-26T04:38:11Z",
+    "updated_at": "2026-05-26T15:47:43Z",
+    "comments": 1,
+    "labels": [
+      "Python",
+      "Bug",
+      "Spans"
+    ],
+    "body_preview": "### Problem  `DjangoIntegration(cache_spans=True)` traces `cache.set()` and `cache.get()`, but `cache.add()` emits no cache span.  `cache.add()` is a normal Django cache write API, so this shows up in practice for apps that use add-on-miss / write-if-absent flows.  ### Repro  ```py from django.core.cache import cache import sentry_sdk from sentry_sdk.integrations.django import DjangoIntegration  s...",
+    "is_new": false,
+    "priority": "high",
+    "is_bug": true,
     "is_feature": false,
     "is_security": false,
     "is_good_first_issue": false,

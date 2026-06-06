@@ -12,8 +12,8 @@
     "author": "guybedford",
     "author_avatar": "https://avatars.githubusercontent.com/u/598730?v=4",
     "created_at": "2026-06-05T00:42:05Z",
-    "updated_at": "2026-06-05T00:42:05Z",
-    "comments": 0,
+    "updated_at": "2026-06-05T16:43:57Z",
+    "comments": 3,
     "labels": [
       "A-tokio",
       "C-feature-request"
@@ -101,7 +101,7 @@
       "A-tokio"
     ],
     "body_preview": "## Summary  While porting a Rust-based runtime safety kernel (Kirra) to QNX SDP 8.0  targeting aarch64-unknown-nto-qnx800 with qcc 12.2.0, tokio fails to  compile because LOCAL_PEEREID and SO_PEERCRED are not present in  QNX SDP 8.0 headers.  ## Environment  - QNX SDP 8.0 (qcc 12.2.0) - Target: aarch64-unknown-nto-qnx800 - Host: Ubuntu 24.04 x86_64  ## Finding  grep -rn \"LOCAL_PEEREID\\|SO_PEERCRED...",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,
@@ -134,6 +134,36 @@
     "priority": "high",
     "is_bug": true,
     "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
+    "id": 4545566184,
+    "repo": "tokio-rs/tokio",
+    "ecosystem": "rust",
+    "ecosystem_label": "Rust",
+    "category": "rust_async",
+    "category_label": "Async & Web",
+    "number": 8174,
+    "title": "Use io_uring_poll as a full replacement for epoll",
+    "url": "https://github.com/tokio-rs/tokio/issues/8174",
+    "author": "sxwork001",
+    "author_avatar": "https://avatars.githubusercontent.com/u/245510808?v=4",
+    "created_at": "2026-05-29T04:01:34Z",
+    "updated_at": "2026-06-06T03:16:25Z",
+    "comments": 1,
+    "labels": [
+      "A-tokio",
+      "M-io",
+      "C-feature-request",
+      "T-io-uring"
+    ],
+    "body_preview": "Can we use io_uring_poll to fully replace epoll? At minimum, io_uring_prep_accept_multishot can gain benefits, and adapt to file systems as well.",
+    "is_new": false,
+    "priority": "medium",
+    "is_bug": false,
+    "is_feature": true,
     "is_security": false,
     "is_good_first_issue": false,
     "is_help_wanted": false
@@ -243,36 +273,6 @@
     "is_security": false,
     "is_good_first_issue": false,
     "is_help_wanted": false
-  },
-  {
-    "id": 4038766908,
-    "repo": "tokio-rs/axum",
-    "ecosystem": "rust",
-    "ecosystem_label": "Rust",
-    "category": "rust_async",
-    "category_label": "Async & Web",
-    "number": 3681,
-    "title": "The TypedPath derive macro breaks for segments with a prefix or suffix",
-    "url": "https://github.com/tokio-rs/axum/issues/3681",
-    "author": "AMNatty",
-    "author_avatar": "https://avatars.githubusercontent.com/u/31473117?v=4",
-    "created_at": "2026-03-07T15:54:17Z",
-    "updated_at": "2026-05-16T20:22:09Z",
-    "comments": 0,
-    "labels": [
-      "C-feature-request",
-      "E-help-wanted",
-      "E-medium",
-      "A-axum-macros"
-    ],
-    "body_preview": "- [X] I have looked for existing issues (including closed) about this  ## Bug Report  ### Version  axum v0.8.8 axum-extra v0.12.5  ### Crates  axum-extra  ### Description  Currently, the `typed_path` attribute macro does not support paths like `#[typed_path(\"/@{username}\")]` and requires a manual trait implementation.",
-    "is_new": false,
-    "priority": "medium",
-    "is_bug": false,
-    "is_feature": true,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": true
   },
   {
     "id": 4396973874,

@@ -45,7 +45,7 @@
       "bug"
     ],
     "body_preview": "**Describe the bug** expiration is strictly defined as utc in specification. there is no known major IDP that alters this timezone. We shouldn't either.   marked deprecated in 3.3.1, to be removed in 4.0  **Expected behavior** exp claims are always utc.    **Version** 3.3.0",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,
@@ -201,8 +201,8 @@
     "author": "rgaiacs",
     "author_avatar": "https://avatars.githubusercontent.com/u/1506457?v=4",
     "created_at": "2026-04-20T14:19:38Z",
-    "updated_at": "2026-06-04T17:22:24Z",
-    "comments": 4,
+    "updated_at": "2026-06-05T12:26:46Z",
+    "comments": 5,
     "labels": [
       "proposal",
       "enhancement",
