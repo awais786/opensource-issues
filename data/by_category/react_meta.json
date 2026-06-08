@@ -1,5 +1,33 @@
 [
   {
+    "id": 4610558999,
+    "repo": "vercel/next.js",
+    "ecosystem": "react",
+    "ecosystem_label": "React",
+    "category": "react_meta",
+    "category_label": "Meta Frameworks",
+    "number": 94541,
+    "title": "Next.js logs BAILOUT_TO_CLIENT_SIDE_RENDERING on the not-found render, despite a Suspense boundary",
+    "url": "https://github.com/vercel/next.js/issues/94541",
+    "author": "arjenblokzijl",
+    "author_avatar": "https://avatars.githubusercontent.com/u/2040307?v=4",
+    "created_at": "2026-06-08T06:33:31Z",
+    "updated_at": "2026-06-08T06:33:49Z",
+    "comments": 0,
+    "labels": [
+      "Error Handling",
+      "Not Found"
+    ],
+    "body_preview": "### Link to the code that reproduces this issue  https://github.com/arjenblokzijl/next-notfound-bailout-repro  ### To Reproduce  1. npm install 2. npm run build 3. npm start  `curl -i http://localhost:3000/some-missing-page`   Watch the npm start server console. The first request for a given missing URL prints the Bail out to client-side rendering: useSearchParams() error. (Requests are also logge...",
+    "is_new": true,
+    "priority": "high",
+    "is_bug": true,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 4606439890,
     "repo": "vercel/next.js",
     "ecosystem": "react",
@@ -19,33 +47,6 @@
       "Parallel & Intercepting Routes"
     ],
     "body_preview": "### Link to the code that reproduces this issue  https://github.com/cshiraga/next-interception-repro  ### To Reproduce  1. Clone the repo and run `npm install` 2. Run `npm run build && npm start` 3. Open http://localhost:3000 4. Click \"Login (router.push)\" \u2192 modal appears (interception works) 5. Navigate to http://localhost:3000/login directly via browser URL bar \u2192 full page (correct) 6. Click \"Ot...",
-    "is_new": true,
-    "priority": "low",
-    "is_bug": false,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
-    "id": 4601863708,
-    "repo": "vercel/next.js",
-    "ecosystem": "react",
-    "ecosystem_label": "React",
-    "category": "react_meta",
-    "category_label": "Meta Frameworks",
-    "number": 94499,
-    "title": "Instrumentation.onRequestError error parameter type does not match the docs",
-    "url": "https://github.com/vercel/next.js/issues/94499",
-    "author": "sculli-net",
-    "author_avatar": "https://avatars.githubusercontent.com/u/102782086?v=4",
-    "created_at": "2026-06-06T04:16:46Z",
-    "updated_at": "2026-06-07T08:01:21Z",
-    "comments": 7,
-    "labels": [
-      "Instrumentation"
-    ],
-    "body_preview": "### Link to the code that reproduces this issue  https://github.com/sculli-net/instrumentation-types-reproduction  ### To Reproduce  1. Clone repo 2. Install packages `pnpm i` 3. Open [instrumentation.ts](/instrumentation.ts)   ### Current vs. Expected behavior  The code within `instrumentation.ts` is an exact copy of the sample within the [next.js docs](https://nextjs.org/docs/app/api-reference/f...",
     "is_new": true,
     "priority": "low",
     "is_bug": false,
