@@ -268,7 +268,7 @@
     "comments": 1,
     "labels": [],
     "body_preview": "- A recent Issue/PR improved the docs with some new index pages for app-level docs, but they were dropped into the toctree at the top-level:   - https://github.com/openedx/openedx-platform/pull/38656 - This brought attention to some other toctree issues.  The requirements are human driven, but this plan and PR are AI generated: - https://github.com/openedx/openedx-platform/pull/38692 - https://git...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
