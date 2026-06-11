@@ -18,7 +18,7 @@
       "Issue Type: Bug Report"
     ],
     "body_preview": "<!-- Please fill this template entirely and do not erase parts of it. We reserve the right to close without a response bug reports which are incomplete. --> # Checklist <!-- To check an item on the list replace [ ] with [x]. --> - [x] I have verified that the issue exists against the `main` branch of Celery. - [ ] This has already been asked to the [discussions forum](https://github.com/celery/cel...",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,
@@ -250,7 +250,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "Jobs and Results are stored separately in Redis, with the Job ID being the link between them. When clearing failed Jobs, the code iterates one-by-one over these Jobs and calls the delete() method on them. This correctly removes the Job keys from Redis, but it effectively orphans the Result keys, which then never get cleaned up and end up just holding memory space.  Expectation: deleting a failed J...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

@@ -37,7 +37,7 @@
     "author": "alasdairnicol",
     "author_avatar": "https://avatars.githubusercontent.com/u/646970?v=4",
     "created_at": "2026-06-08T14:41:37Z",
-    "updated_at": "2026-06-08T14:41:37Z",
+    "updated_at": "2026-06-10T16:33:22Z",
     "comments": 0,
     "labels": [],
     "body_preview": "<!-- This issue tracker is a tool to address bugs in Click itself. Please use GitHub Discussions or the Pallets Discord for questions about your own code.  Replace this comment with a clear outline of what the bug is. --> I had failing unit tests after upgrading to click 8.4.1. I was able to address some  by using `runner.invoke(cmd, color=False)`, but that didn't help for commands that use `click...",
