@@ -123,30 +123,5 @@
     "is_security": false,
     "is_good_first_issue": false,
     "is_help_wanted": false
-  },
-  {
-    "id": 4070633930,
-    "repo": "serde-rs/json",
-    "ecosystem": "rust",
-    "ecosystem_label": "Rust",
-    "category": "rust_serde",
-    "category_label": "Serialization",
-    "number": 1318,
-    "title": "deserialize_map/seq: support partial deserialization",
-    "url": "https://github.com/serde-rs/json/issues/1318",
-    "author": "utkarshgupta137",
-    "author_avatar": "https://avatars.githubusercontent.com/u/5155100?v=4",
-    "created_at": "2026-03-13T11:51:54Z",
-    "updated_at": "2026-03-13T11:53:08Z",
-    "comments": 0,
-    "labels": [],
-    "body_preview": "I'm using serde_json for extracting specific fields from nested JSONs (like a json pointer) & I'm trying to optimize my implementation.  Since the field I want is know ahead of time, I'm using the DeserializeSeed/Visitor API to drive the deserializer. The issue is that once I have found the field that I want, I still have to finish iterating over the rest of the JSON (basically skipping it all wit...",
-    "is_new": false,
-    "priority": "low",
-    "is_bug": false,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
   }
 ]
