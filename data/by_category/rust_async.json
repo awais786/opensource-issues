@@ -1,5 +1,33 @@
 [
   {
+    "id": 4648278658,
+    "repo": "tokio-rs/tokio",
+    "ecosystem": "rust",
+    "ecosystem_label": "Rust",
+    "category": "rust_async",
+    "category_label": "Async & Web",
+    "number": 8209,
+    "title": "Add `poll_to_block` to `tokio_test::task::Spawn` to advance futures as far as possible",
+    "url": "https://github.com/tokio-rs/tokio/issues/8209",
+    "author": "wojciech-graj",
+    "author_avatar": "https://avatars.githubusercontent.com/u/71249593?v=4",
+    "created_at": "2026-06-12T10:04:27Z",
+    "updated_at": "2026-06-12T10:04:27Z",
+    "comments": 0,
+    "labels": [
+      "A-tokio",
+      "C-feature-request"
+    ],
+    "body_preview": "**Is your feature request related to a problem? Please describe.** My most common use-case for tokio-test's `Spawn` is to test futures in a synchronous context. In most cases, I don't care about the outcome to this specific call to `poll`, but about the outcome of polling the future once it has advanced as far as possible.  I believe that in most testing scenarios, you want something like the foll...",
+    "is_new": true,
+    "priority": "medium",
+    "is_bug": false,
+    "is_feature": true,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 4643046686,
     "repo": "tokio-rs/tokio",
     "ecosystem": "rust",
