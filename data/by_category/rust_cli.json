@@ -12,11 +12,12 @@
     "author": "heaths",
     "author_avatar": "https://avatars.githubusercontent.com/u/1532486?v=4",
     "created_at": "2026-06-12T06:02:25Z",
-    "updated_at": "2026-06-12T06:02:25Z",
+    "updated_at": "2026-06-14T01:15:36Z",
     "comments": 0,
     "labels": [
       "C-bug",
-      "S-triage"
+      "A-completion",
+      "E-easy"
     ],
     "body_preview": "### Please complete the following tasks  - [x] I have searched the [discussions](https://github.com/clap-rs/clap/discussions) - [x] I have searched the [open](https://github.com/clap-rs/clap/issues) and [rejected](https://github.com/clap-rs/clap/issues?q=is%3Aissue+label%3AS-wont-fix+is%3Aclosed) issues  ### Rust Version  rustc 1.98.0-nightly (beae78130 2026-06-09)  ### Clap Version  4.6.1  ### Mi...",
     "is_new": true,
@@ -24,7 +25,7 @@
     "is_bug": true,
     "is_feature": false,
     "is_security": false,
-    "is_good_first_issue": false,
+    "is_good_first_issue": true,
     "is_help_wanted": false
   },
   {
@@ -505,7 +506,7 @@
       "question"
     ],
     "body_preview": "### Please tick this box to confirm you have reviewed the above.  - [x] I have a different issue.  ### What version of ripgrep are you using?  ripgrep 14.1.1  ### How did you install ripgrep?  dnf  ### What operating system are you using ripgrep on?   Fedora Linux 43 (Workstation Edition)  ### Describe your bug.  `\\K` when combined with `--json` does not emit submatches. This was needed for <https...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

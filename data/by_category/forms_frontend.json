@@ -23,30 +23,5 @@
     "is_security": false,
     "is_good_first_issue": false,
     "is_help_wanted": false
-  },
-  {
-    "id": 4078071732,
-    "repo": "jrief/django-formset",
-    "ecosystem": "django",
-    "ecosystem_label": "Django",
-    "category": "forms_frontend",
-    "category_label": "Forms & Frontend",
-    "number": 265,
-    "title": "Richtext Extension doesn't initialize correctly",
-    "url": "https://github.com/jrief/django-formset/issues/265",
-    "author": "amikphoto",
-    "author_avatar": "https://avatars.githubusercontent.com/u/36606543?v=4",
-    "created_at": "2026-03-15T10:02:23Z",
-    "updated_at": "2026-03-16T20:45:33Z",
-    "comments": 1,
-    "labels": [],
-    "body_preview": "When I open form with Richtext Extension field in bootstarp tab but I don't show this tab in the moment of rendering form (I show another tab in the moment) I get wrong js and css of this extension. Look at the picture.  <img width=\"935\" height=\"686\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/29100961-a1a1-4b58-9d06-0ddb5712a351\" />  but If I open form in active tab - it's normaly...",
-    "is_new": false,
-    "priority": "low",
-    "is_bug": false,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
   }
 ]
