@@ -1,5 +1,30 @@
 [
   {
+    "id": 4661641947,
+    "repo": "vercel/next.js",
+    "ecosystem": "react",
+    "ecosystem_label": "React",
+    "category": "react_meta",
+    "category_label": "Meta Frameworks",
+    "number": 94807,
+    "title": "Docs: `cms-wordpress` blog demo is missing images",
+    "url": "https://github.com/vercel/next.js/issues/94807",
+    "author": "AMDphreak",
+    "author_avatar": "https://avatars.githubusercontent.com/u/1058978?v=4",
+    "created_at": "2026-06-15T02:49:26Z",
+    "updated_at": "2026-06-15T08:28:04Z",
+    "comments": 0,
+    "labels": [],
+    "body_preview": "### What is the documentation issue?  https://next-blog-wordpress.vercel.app/  <img width=\"1429\" height=\"1354\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/7f59beec-b60b-49bd-8cbc-90c5c908ddd1\" />  https://github.com/vercel/next.js/tree/canary/examples/cms-wordpress#a-feature-rich-app-router-wordpress-example  ### Is there any context that might help us understand?  Demo.  ### Does...",
+    "is_new": true,
+    "priority": "low",
+    "is_bug": false,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 4658329604,
     "repo": "vercel/next.js",
     "ecosystem": "react",
@@ -12,8 +37,8 @@
     "author": "cassio707",
     "author_avatar": "https://avatars.githubusercontent.com/u/37963631?v=4",
     "created_at": "2026-06-14T07:42:21Z",
-    "updated_at": "2026-06-14T07:42:37Z",
-    "comments": 0,
+    "updated_at": "2026-06-15T11:36:22Z",
+    "comments": 2,
     "labels": [
       "Route Handlers"
     ],

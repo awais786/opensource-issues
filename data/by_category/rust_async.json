@@ -12,11 +12,13 @@
     "author": "asder8215",
     "author_avatar": "https://avatars.githubusercontent.com/u/65004219?v=4",
     "created_at": "2026-06-14T02:36:53Z",
-    "updated_at": "2026-06-14T02:36:53Z",
-    "comments": 0,
+    "updated_at": "2026-06-15T10:41:39Z",
+    "comments": 1,
     "labels": [
       "A-tokio",
-      "C-feature-request"
+      "M-fs",
+      "C-feature-request",
+      "T-io-uring"
     ],
     "body_preview": "This issue is mostly for future reference.  **Is your feature request related to a problem? Please describe.** Currently, tokio returns Rust std library [`Metadata`](https://doc.rust-lang.org/std/fs/struct.Metadata.html#impl-MetadataExt-for-Metadata) for its filesystem methods (e.g. [`tokio::fs::metadata`](https://docs.rs/tokio/latest/tokio/fs/fn.metadata.html) and [`tokio::fs::symlink_metadata`](...",
     "is_new": true,
@@ -40,10 +42,11 @@
     "author": "wojciech-graj",
     "author_avatar": "https://avatars.githubusercontent.com/u/71249593?v=4",
     "created_at": "2026-06-12T10:04:27Z",
-    "updated_at": "2026-06-12T10:04:27Z",
-    "comments": 0,
+    "updated_at": "2026-06-15T06:12:35Z",
+    "comments": 1,
     "labels": [
-      "A-tokio",
+      "A-tokio-test",
+      "M-task",
       "C-feature-request"
     ],
     "body_preview": "**Is your feature request related to a problem? Please describe.** My most common use-case for tokio-test's `Spawn` is to test futures in a synchronous context. In most cases, I don't care about the outcome to this specific call to `poll`, but about the outcome of polling the future once it has advanced as far as possible.  I believe that in most testing scenarios, you want something like the foll...",
@@ -128,7 +131,7 @@
       "M-macros"
     ],
     "body_preview": "**Is your feature request related to a problem? Please describe.** A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]  Sometimes we have a never-returning future `Future<Output = !>`, or `Future<Output = std::convert::Infallible>` in stable Rust. Like `sync_a2b`: ```rust tokio::select! {     () = sync_a2b => unreachable!(),     () = sync_b2a => unreachable...",
-    "is_new": true,
+    "is_new": false,
     "priority": "medium",
     "is_bug": false,
     "is_feature": true,
@@ -157,7 +160,7 @@
       "M-time"
     ],
     "body_preview": "**Version** 1.49.0 and above (since the alternative timer was added)  **Platform** N/A  **Description** The alt timer does not retain the previous waker in `Sleep::reset`. When _sharing_ `Sleep` and `DelayQueue` between tasks (e.g. `Arc<Mutex<Pin<Box<Sleep>>>>`), a task may lose its waker if another task calls `reset`. Waker retention was added in https://github.com/tokio-rs/tokio/pull/2217 and ht...",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,
@@ -317,8 +320,8 @@
     "author": "spellsaif",
     "author_avatar": "https://avatars.githubusercontent.com/u/71248588?v=4",
     "created_at": "2026-06-11T17:49:51Z",
-    "updated_at": "2026-06-11T17:50:09Z",
-    "comments": 1,
+    "updated_at": "2026-06-14T18:49:57Z",
+    "comments": 2,
     "labels": [],
     "body_preview": "## Summary  `MultipartForm` documents that a multipart boundary should not occur in the data, but the implementation generates one boundary and serializes all parts without checking for collisions.  ## Affected code  - `axum-extra/src/response/multiple.rs:36` generates the boundary. - `axum-extra/src/response/multiple.rs:52` serializes the parts. - `axum-extra/src/response/multiple.rs:212` documen...",
     "is_new": true,
