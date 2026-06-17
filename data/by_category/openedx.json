@@ -77,33 +77,6 @@
     "is_help_wanted": false
   },
   {
-    "id": 4617564596,
-    "repo": "openedx/edx-platform",
-    "ecosystem": "django",
-    "ecosystem_label": "Django",
-    "category": "openedx",
-    "category_label": "Open edX",
-    "number": 38727,
-    "title": "[DEPR]: marketing_enabled field in course settings API and CoursePromotionCard in frontend-app-authoring",
-    "url": "https://github.com/openedx/openedx-platform/issues/38727",
-    "author": "feanil",
-    "author_avatar": "https://avatars.githubusercontent.com/u/781561?v=4",
-    "created_at": "2026-06-09T00:07:14Z",
-    "updated_at": "2026-06-09T00:07:14Z",
-    "comments": 0,
-    "labels": [
-      "depr"
-    ],
-    "body_preview": "## RFC Start Date  N/A -- Already Accepted  ## Target Plan Accepted Date  N/A -- Already Accepted  ## Target Transition Unblocked Date  Immediately -- Transition Already Unblocked. The `PageBannerSlot` README (added in openedx/frontend-app-authoring#3088) documents how to configure `CoursePromotionCard` to restore the legacy enrollment card UI. Operators can make that change in the Xylon release....",
-    "is_new": false,
-    "priority": "low",
-    "is_bug": false,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
     "id": 4493836936,
     "repo": "openedx/frontend-app-learning",
     "ecosystem": "django",
@@ -359,33 +332,6 @@
       "a11y"
     ],
     "body_preview": "## Description  The Course navigation and breadcrumb regions should not be nested under the main region of the page.   People who use screen readers often use regions to skip navigation elements on the page to easily reach the primary content. Nesting navigation under main defeats this purpose. This does not apply to the `<nav>` region containing the course top bar because this information belongs...",
-    "is_new": false,
-    "priority": "low",
-    "is_bug": false,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
-    "id": 4100449790,
-    "repo": "openedx/frontend-app-learning",
-    "ecosystem": "django",
-    "ecosystem_label": "Django",
-    "category": "openedx",
-    "category_label": "Open edX",
-    "number": 1876,
-    "title": "[a11y]: Missing heading markup in Course Overview accordions impacts screen reader usability",
-    "url": "https://github.com/openedx/frontend-app-learning/issues/1876",
-    "author": "peterkulko",
-    "author_avatar": "https://avatars.githubusercontent.com/u/93188219?v=4",
-    "created_at": "2026-03-19T09:30:10Z",
-    "updated_at": "2026-03-19T13:56:29Z",
-    "comments": 0,
-    "labels": [
-      "a11y"
-    ],
-    "body_preview": "## Description  The show/hide accordions on the Course Overview screen lack markup which can significantly enhance the user experience for students who use a screen reader.  Specifically, accordions are not marked up as headings to enable quick navigation. Adding heading markup to the accordion labels enables a person who uses a screen reader to jump to a specific accordion using heading navigatio...",
     "is_new": false,
     "priority": "low",
     "is_bug": false,

@@ -66,8 +66,8 @@
     "author": "dirkluijk",
     "author_avatar": "https://avatars.githubusercontent.com/u/2102973?v=4",
     "created_at": "2026-06-15T14:24:26Z",
-    "updated_at": "2026-06-15T14:24:45Z",
-    "comments": 0,
+    "updated_at": "2026-06-16T17:05:49Z",
+    "comments": 2,
     "labels": [
       "pending triage"
     ],
@@ -135,33 +135,6 @@
     "is_help_wanted": false
   },
   {
-    "id": 4644982601,
-    "repo": "vitejs/vite",
-    "ecosystem": "react",
-    "ecosystem_label": "React",
-    "category": "react_build",
-    "category_label": "Build & Tooling",
-    "number": 22669,
-    "title": "Vite 8 regression for published CJS library that bundles `lodash`",
-    "url": "https://github.com/vitejs/vite/issues/22669",
-    "author": "smeng9",
-    "author_avatar": "https://avatars.githubusercontent.com/u/38666763?v=4",
-    "created_at": "2026-06-11T23:36:17Z",
-    "updated_at": "2026-06-12T07:53:10Z",
-    "comments": 3,
-    "labels": [
-      "pending triage"
-    ],
-    "body_preview": "### Describe the bug  I am a library author and I am migrating from vite 7 to vite 8 to publish my library. My library is published as a CJS package and user can load them as a script. I noticed as long as my library uses \"lodash\" which is a popular utility, it will crash when it gets loaded. The same build script was used for vite 7 which works very well.   ### Reproduction  https://stackblitz.co...",
-    "is_new": true,
-    "priority": "low",
-    "is_bug": false,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
     "id": 4640073014,
     "repo": "vitejs/vite",
     "ecosystem": "react",
@@ -208,7 +181,7 @@
       "feat: preview"
     ],
     "body_preview": "### Describe the bug  `vite preview` unconditionally registers `@polka/compression` ahead of every response (`packages/vite/src/node/preview.ts:239 \u2014 app.use(compression())`). When a request has `Accept-Encoding: gzip`, polka wraps `res.writeHead`/`write`/`end`/`on` and defers `writeHead` to its `start()` function \u2014 even when the response is `text/event-stream` and won't actually be compressed (ch...",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,
@@ -236,7 +209,7 @@
       "feat: bundled-dev"
     ],
     "body_preview": "### Describe the bug  In Vite's experimental full-bundle dev mode (`experimental.bundledDev: true`), importing a `.css` file in a project that also uses PostCSS causes a **hard build-time crash**. The dev server starts, but as soon as the CSS module is pulled in through Rolldown's lazy bundling, the build fails and never recovers. The browser is stuck on the bundledDev \"Bundling in progress\" scree...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
@@ -311,8 +284,8 @@
     "author": "alcastic",
     "author_avatar": "https://avatars.githubusercontent.com/u/98887867?v=4",
     "created_at": "2026-06-15T21:03:53Z",
-    "updated_at": "2026-06-16T03:46:54Z",
-    "comments": 1,
+    "updated_at": "2026-06-16T14:45:49Z",
+    "comments": 2,
     "labels": [],
     "body_preview": "The integrity checks introduced in [v0.28.1](https://github.com/evanw/esbuild/releases/tag/v0.28.1) to address [GHSA-gv7w-rqvm-qjhr](https://github.com/evanw/esbuild/security/advisories/GHSA-gv7w-rqvm-qjhr) **are not** available in the v0.27.x line. Downstream packages pinned `esbuild` to ^0.27.0 - such as Vite (currently requiring esbuild ^0.27.0 as of v7.3) - cannot adopt the fix without a major...",
     "is_new": true,

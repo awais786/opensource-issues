@@ -201,7 +201,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "### Environment - **Celery version**: 5.6.3 - **Kombu version**: 5.6.2 - **Python version**: 3.12 - **Broker & version**: RabbitMQ (with Quorum Queues enabled)  ### Summary When using RabbitMQ Quorum Queues, the Native Delayed Delivery mechanism automatically prepends a 28-bit binary prefix to the routing key. During sequential `self.retry(countdown=...)` calls, this prefix accumulates. Once the t...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
