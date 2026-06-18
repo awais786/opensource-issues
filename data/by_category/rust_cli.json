@@ -1,5 +1,34 @@
 [
   {
+    "id": 4684311328,
+    "repo": "clap-rs/clap",
+    "ecosystem": "rust",
+    "ecosystem_label": "Rust",
+    "category": "rust_cli",
+    "category_label": "CLI & Tooling",
+    "number": 6412,
+    "title": "Derive attributes can't be expressions that start with a string literal without parentheses",
+    "url": "https://github.com/clap-rs/clap/issues/6412",
+    "author": "coillteoir",
+    "author_avatar": "https://avatars.githubusercontent.com/u/98290029?v=4",
+    "created_at": "2026-06-17T14:41:51Z",
+    "updated_at": "2026-06-17T20:30:58Z",
+    "comments": 8,
+    "labels": [
+      "C-bug",
+      "E-easy",
+      "A-derive"
+    ],
+    "body_preview": "### Please complete the following tasks  - [x] I have searched the [discussions](https://github.com/clap-rs/clap/discussions) - [x] I have searched the [open](https://github.com/clap-rs/clap/issues) and [rejected](https://github.com/clap-rs/clap/issues?q=is%3Aissue+label%3AS-wont-fix+is%3Aclosed) issues  ### Rust Version  1.93.0  ### Clap Version  clap = {version = \"4.6.1\",features = [\"derive\"]}...",
+    "is_new": true,
+    "priority": "high",
+    "is_bug": true,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": true,
+    "is_help_wanted": false
+  },
+  {
     "id": 4646766233,
     "repo": "clap-rs/clap",
     "ecosystem": "rust",
@@ -49,7 +78,7 @@
       "S-triage"
     ],
     "body_preview": "### Please complete the following tasks  - [x] I have searched the [discussions](https://github.com/clap-rs/clap/discussions) - [x] I have searched the [open](https://github.com/clap-rs/clap/issues) and [rejected](https://github.com/clap-rs/clap/issues?q=is%3Aissue+label%3AS-wont-fix+is%3Aclosed) issues  ### Rust Version  1.96.0  ### Clap Version  clap 4.6.1 and clap_complete 4.6.5  ### Minimal re...",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,
@@ -614,6 +643,33 @@
     "is_help_wanted": false
   },
   {
+    "id": 4685460056,
+    "repo": "sharkdp/bat",
+    "ecosystem": "rust",
+    "ecosystem_label": "Rust",
+    "category": "rust_cli",
+    "category_label": "CLI & Tooling",
+    "number": 3805,
+    "title": "Add support for Device Tree Source (dts) files",
+    "url": "https://github.com/sharkdp/bat/issues/3805",
+    "author": "thanvirdiouf",
+    "author_avatar": "https://avatars.githubusercontent.com/u/106532959?v=4",
+    "created_at": "2026-06-17T17:11:23Z",
+    "updated_at": "2026-06-17T17:11:23Z",
+    "comments": 0,
+    "labels": [
+      "feature-request"
+    ],
+    "body_preview": "The format is usually some C style header inclusion at the top of the file followed by data structures defining different hardware and memory addresses.  It will greatly help with Android and Linux kernel development.  For reference, there is a vs code extension that does this: [vscode-devicetree](https://github.com/andy9a9/vscode-devicetree.git)",
+    "is_new": true,
+    "priority": "medium",
+    "is_bug": false,
+    "is_feature": true,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 4650759939,
     "repo": "sharkdp/bat",
     "ecosystem": "rust",
@@ -659,7 +715,7 @@
       "bug"
     ],
     "body_preview": "**What steps will reproduce the bug?**  1. Run `bat --help` & read the bottom of the help output. 2. Run `bat cache --help`  **What happens?**  `bat` returns exit code `1`.  **What did you expect to happen instead?**  If the help output recommends to run `bat cache` with `--help`, I expect that `bat` shows the help text and exits with `0`. IMO it's a legitimate command and therefore should not ret...",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,
@@ -686,7 +742,7 @@
       "syntax-request"
     ],
     "body_preview": "**Syntax:**  [JSON5](https://spec.json5.org/).  **Guideline Criteria:**  Unfortunately there is no package on package control that I can find. But the popularity of this format is self-evident. On crates.io [`json5`](https://crates.io/crates/json5) has over 60 million downloads.",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

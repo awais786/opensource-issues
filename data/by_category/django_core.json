@@ -166,7 +166,7 @@
     "comments": 1,
     "labels": [],
     "body_preview": "1. On the main fundraising page, it has 2000+ near the top, which would change to 2200+ here: https://www.djangoproject.com/fundraising/  2. At the beginning of each category of sponsor on the same page https://www.djangoproject.com/fundraising/ , it also has the old prices ($2,000+, 5,000, etc) for each of the categories.  3. Here: https://www.djangoproject.com/foundation/corporate-membership/joi...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

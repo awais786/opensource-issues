@@ -1,5 +1,34 @@
 [
   {
+    "id": 4687362647,
+    "repo": "vitejs/vite",
+    "ecosystem": "react",
+    "ecosystem_label": "React",
+    "category": "react_build",
+    "category_label": "Build & Tooling",
+    "number": 22700,
+    "title": "Build: nested `import().then(() => import())` drops outer `__vitePreload` deps to `void 0`, orphaning CSS",
+    "url": "https://github.com/vitejs/vite/issues/22700",
+    "author": "charlsantony",
+    "author_avatar": "https://avatars.githubusercontent.com/u/8219582?v=4",
+    "created_at": "2026-06-17T21:59:51Z",
+    "updated_at": "2026-06-18T01:19:32Z",
+    "comments": 0,
+    "labels": [
+      "p3-minor-bug",
+      "regression",
+      "feat: build"
+    ],
+    "body_preview": "### Describe the bug  With a nested dynamic import of the form `import('./a').then(() => import('./b'))` where `./a` has any CSS side-effect dep, the **outer** dynamic import in the built entry chunk is wrapped as `__vitePreload(() => import('./a-\u2026js'), void 0)` instead of `__vitePreload(..., __vite__mapDeps([\u2026]))`. The inner import's deps array is correct.  The CSS file is emitted to disk and eve...",
+    "is_new": true,
+    "priority": "high",
+    "is_bug": true,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 4671775718,
     "repo": "vitejs/vite",
     "ecosystem": "react",
@@ -236,33 +265,6 @@
       "pending triage"
     ],
     "body_preview": "### Describe the bug  When using Vite via the `build()` function, the type definition for the result is `[OutputChunk, ...(OutputChunk | OutputAsset)[]]`. This suggests that the first element is always an `OutputChunk`.  However, in practice (specifically when processing CSS files), the first element in the output array can be an `OutputAsset`.  Note that I'm not entirely sure whether this is a Vi...",
-    "is_new": false,
-    "priority": "low",
-    "is_bug": false,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
-    "id": 4610344993,
-    "repo": "vitejs/vite",
-    "ecosystem": "react",
-    "ecosystem_label": "React",
-    "category": "react_build",
-    "category_label": "Build & Tooling",
-    "number": 22640,
-    "title": "feat(create-vite): consider adding an option to scaffold Vite DevTools integration",
-    "url": "https://github.com/vitejs/vite/issues/22640",
-    "author": "webfansplz",
-    "author_avatar": "https://avatars.githubusercontent.com/u/22515951?v=4",
-    "created_at": "2026-06-08T05:50:45Z",
-    "updated_at": "2026-06-08T07:08:58Z",
-    "comments": 0,
-    "labels": [
-      "feat: create-vite"
-    ],
-    "body_preview": "### Description  I\u2019d like to propose adding an optional prompt in `create-vite` for scaffolding Vite DevTools integration.  The idea is to let users choose during project creation whether they want DevTools enabled by default, instead of requiring them to set it up manually after scaffolding.    Possible behavior:    - keep the current minimal setup as the default   - add an opt-in prompt such as...",
     "is_new": false,
     "priority": "low",
     "is_bug": false,
