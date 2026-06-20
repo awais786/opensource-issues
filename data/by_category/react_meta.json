@@ -1,23 +1,23 @@
 [
   {
-    "id": 4694485247,
+    "id": 4703200496,
     "repo": "vercel/next.js",
     "ecosystem": "react",
     "ecosystem_label": "React",
     "category": "react_meta",
     "category_label": "Meta Frameworks",
-    "number": 94950,
-    "title": "`next typegen` fails when `experimental.turbopackRustReactCompiler` is `true`",
-    "url": "https://github.com/vercel/next.js/issues/94950",
-    "author": "nikhilsnayak",
-    "author_avatar": "https://avatars.githubusercontent.com/u/77049852?v=4",
-    "created_at": "2026-06-18T17:07:24Z",
-    "updated_at": "2026-06-18T17:07:50Z",
+    "number": 94980,
+    "title": "[Turbopack] Shared library CSS module duplicated & re-ordered after client navigation in dev, breaking cascade order",
+    "url": "https://github.com/vercel/next.js/issues/94980",
+    "author": "ilchenkoArtem",
+    "author_avatar": "https://avatars.githubusercontent.com/u/33321841?v=4",
+    "created_at": "2026-06-19T19:50:23Z",
+    "updated_at": "2026-06-19T19:50:36Z",
     "comments": 0,
     "labels": [
-      "TypeScript"
+      "Turbopack"
     ],
-    "body_preview": "### Link to the code that reproduces this issue  https://github.com/nikhilsnayak/turbopack-rust-react-compiler-next-typegen-bug  ### To Reproduce  1. Run `npm run type-check`  ### Current vs. Expected behavior  `next typegen` throws following error:  > Error: `experimental.turbopackRustReactCompiler` is only supported with Turbopack. Please remove the option or run Next.js with Turbopack in next.c...",
+    "body_preview": "### Link to the code that reproduces this issue  https://github.com/ilchenkoArtem/turbopack-css-order-repro  ### To Reproduce  1. `npm install` 2. `npm run dev` (runs `nx serve web` \u2192 `next dev --turbopack`, App Router) 3. Open the home page. The \"Show more\" button is **transparent** (white border, white text) \u2014 correct. 4. Click the button \u2192 client navigation to `/catalog`. 5. Press the browser *...",
     "is_new": true,
     "priority": "low",
     "is_bug": false,

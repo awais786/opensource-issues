@@ -655,12 +655,12 @@
     "author": "thanvirdiouf",
     "author_avatar": "https://avatars.githubusercontent.com/u/106532959?v=4",
     "created_at": "2026-06-17T17:11:23Z",
-    "updated_at": "2026-06-17T17:11:23Z",
+    "updated_at": "2026-06-19T14:59:49Z",
     "comments": 0,
     "labels": [
       "feature-request"
     ],
-    "body_preview": "The format is usually some C style header inclusion at the top of the file followed by data structures defining different hardware and memory addresses.  It will greatly help with Android and Linux kernel development.  For reference, there is a vs code extension that does this: [vscode-devicetree](https://github.com/andy9a9/vscode-devicetree.git)",
+    "body_preview": "",
     "is_new": true,
     "priority": "medium",
     "is_bug": false,
@@ -688,7 +688,7 @@
       "bug"
     ],
     "body_preview": "The README says that there is a `help` language, but that appears to be incorrect.  ``` \u2771  cp --help | batcat -plhelp [bat error]: unknown syntax: 'help'  \u2771  cp --help | batcat --plain --language=help [bat error]: unknown syntax: 'help'  \u2771  sudo ln -s /usr/bin/batcat /usr/bin/bat  \u2771  cp --help | bat -plhelp [bat error]: unknown syntax: 'help'  \u2771  cp --help | bat --plain --language=help [bat error]...",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,

@@ -1,5 +1,32 @@
 [
   {
+    "id": 4702614263,
+    "repo": "facebook/react",
+    "ecosystem": "react",
+    "ecosystem_label": "React",
+    "category": "react_core",
+    "category_label": "React Core",
+    "number": 36826,
+    "title": "Bug: ",
+    "url": "https://github.com/react/react/issues/36826",
+    "author": "Adam9911",
+    "author_avatar": "https://avatars.githubusercontent.com/u/78638377?v=4",
+    "created_at": "2026-06-19T17:48:27Z",
+    "updated_at": "2026-06-19T17:48:27Z",
+    "comments": 0,
+    "labels": [
+      "Status: Unconfirmed"
+    ],
+    "body_preview": "<!--   Please provide a clear and concise description of what the bug is. Include   screenshots if needed. Please test using the latest version of the relevant   React packages to make sure your issue has not already been fixed. -->  React version:  ## Steps To Reproduce  1. 2.  <!--   Your bug will get fixed much faster if we can run your code and it doesn't   have dependencies other than React....",
+    "is_new": true,
+    "priority": "low",
+    "is_bug": false,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 4691575139,
     "repo": "facebook/react",
     "ecosystem": "react",
@@ -134,64 +161,6 @@
     "is_help_wanted": false
   },
   {
-    "id": 4663908119,
-    "repo": "facebook/react",
-    "ecosystem": "react",
-    "ecosystem_label": "React",
-    "category": "react_core",
-    "category_label": "React Core",
-    "number": 36789,
-    "title": "Uncaught Error: Cannot add node \"24\" because a node with that id is already in the Store.[DevTools Bug] Cannot add node \"24\" because a node with that id is already in the Store.",
-    "url": "https://github.com/react/react/issues/36789",
-    "author": "KoushikwebDev",
-    "author_avatar": "https://avatars.githubusercontent.com/u/98579822?v=4",
-    "created_at": "2026-06-15T09:46:22Z",
-    "updated_at": "2026-06-15T09:46:22Z",
-    "comments": 0,
-    "labels": [
-      "Type: Bug",
-      "Status: Unconfirmed",
-      "Component: Developer Tools"
-    ],
-    "body_preview": "### Website or app  localhost  ### Repro steps  run next.js project with node 24  ### How often does this bug happen?  Every time  ### DevTools package (automated)  react-devtools-extensions  ### DevTools version (automated)  7.0.1-3cde211b0c  ### Error message (automated)  Cannot add node \"24\" because a node with that id is already in the Store.  ### Error call stack (automated)  ```text at chrom...",
-    "is_new": true,
-    "priority": "high",
-    "is_bug": true,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
-    "id": 4659945728,
-    "repo": "facebook/react",
-    "ecosystem": "react",
-    "ecosystem_label": "React",
-    "category": "react_core",
-    "category_label": "React Core",
-    "number": 36787,
-    "title": "[DevTools refactor]:  Combine DevTools view-highlighting code into a single canvas",
-    "url": "https://github.com/react/react/issues/36787",
-    "author": "Biki-das",
-    "author_avatar": "https://avatars.githubusercontent.com/u/72331432?v=4",
-    "created_at": "2026-06-14T17:14:32Z",
-    "updated_at": "2026-06-14T17:17:44Z",
-    "comments": 0,
-    "labels": [
-      "Type: Bug",
-      "Status: Unconfirmed",
-      "Component: Developer Tools"
-    ],
-    "body_preview": "### Website or app  N/A  ### Repro steps  DevTools manages to handle DOM related highlighting using these two sources  [backend/views/Highlighter](https://github.com/facebook/react/tree/main/packages/react-devtools-shared/src/backend/views/Highlighter): highlights the DOM for the currently selected element [backend/views/TraceUpdates](https://github.com/facebook/react/tree/main/packages/react-devt...",
-    "is_new": true,
-    "priority": "high",
-    "is_bug": true,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
     "id": 4694789045,
     "repo": "remix-run/react-router",
     "ecosystem": "react",
@@ -204,7 +173,7 @@
     "author": "mathhulk",
     "author_avatar": "https://avatars.githubusercontent.com/u/19879953?v=4",
     "created_at": "2026-06-18T17:54:32Z",
-    "updated_at": "2026-06-19T06:50:41Z",
+    "updated_at": "2026-06-20T03:50:31Z",
     "comments": 2,
     "labels": [
       "bug"
