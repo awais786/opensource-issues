@@ -551,8 +551,8 @@
     "author": "lakevilladom",
     "author_avatar": "https://avatars.githubusercontent.com/u/22128667?v=4",
     "created_at": "2026-05-27T04:08:51Z",
-    "updated_at": "2026-05-27T04:08:51Z",
-    "comments": 0,
+    "updated_at": "2026-06-22T01:09:35Z",
+    "comments": 2,
     "labels": [],
     "body_preview": "Added a prompt for completing Nushell commands\uff0clike \"rg --generate complete-nushell\"",
     "is_new": false,
@@ -655,8 +655,8 @@
     "author": "maximiliankolb",
     "author_avatar": "https://avatars.githubusercontent.com/u/12595287?v=4",
     "created_at": "2026-06-10T14:41:14Z",
-    "updated_at": "2026-06-10T14:41:14Z",
-    "comments": 0,
+    "updated_at": "2026-06-21T16:15:06Z",
+    "comments": 1,
     "labels": [
       "bug"
     ],
