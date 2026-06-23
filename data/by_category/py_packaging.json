@@ -95,7 +95,7 @@
       "type: maintenance"
     ],
     "body_preview": "I'll be the RM unless any @pypa/pip-committers objects since I have (paid!) time to put aside for this.",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
@@ -574,7 +574,7 @@
     "comments": 1,
     "labels": [],
     "body_preview": "It looks like this test has a 0.4% chance of failing, and we hit one in packaging. Claude breakdown below.  :robot: _AI text below_ :robot:  ### Summary  `tests/backend/builders/test_wheel.py::TestBuildStandard::test_default_shared_scripts` is flaky (~0.4% of runs) because it builds a shared script from `os.urandom(1024)` and the shared-scripts shebang rewriter drops leading blank lines. When the...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

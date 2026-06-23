@@ -94,7 +94,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "Goal: to simplify our codebase, operations, and deployment by combining the CMS and LMS into a single headless REST API server.  Background: [Proposal: Combined Headless LMS+CMS](https://discuss.openedx.org/t/proposal-combined-headless-lms-cms/18880)   Tentative steps (these should be converted to sub-issues): 1. Create and merge an ADR for this. 1. Either migrate our course content to `openedx-co...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
@@ -121,7 +121,7 @@
       "depr"
     ],
     "body_preview": "### RFC Start Date  N/A -- Already Accepted  ### Target Plan Accepted Date  N/A -- Already Accepted  ### Target Transition Unblocked Date  Immediately -- Transition Already Unblocked  ### Earliest Breaking Changes Unblocked Date  2026-06-29  ### Rationale  The `DCS_SESSION_COOKIE_SAMESITE` and `DCS_SESSION_COOKIE_SAMESITE_FORCE_ALL` settings exist solely as a holdover from the [`django-cookies-sam...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
