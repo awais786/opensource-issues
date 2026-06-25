@@ -18,7 +18,7 @@
       "enhancement"
     ],
     "body_preview": "**Is your feature request related to a problem?**  Follow-up to #729 and #276.  DOT stores access tokens, refresh tokens, and grants in cleartext. For credentials we only ever match against, the industry standard is to store a hash, not the secret itself, it the same reasoning that's already applied to `client_secret` in #1093 and similar to what was done with the SHA-256 `token_checksum` added in...",
-    "is_new": true,
+    "is_new": false,
     "priority": "medium",
     "is_bug": false,
     "is_feature": true,

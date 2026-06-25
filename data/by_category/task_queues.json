@@ -153,7 +153,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "Environment observed:  ```text django-celery-beat==2.9.0 celery==5.6.2 Django==6.0.6 Oracle database python-oracledb scheduler: django_celery_beat.schedulers:DatabaseScheduler ```  The database contains normal `django_celery_beat_crontabschedule` rows with wildcard crontab values, for example:  ```text minute='*/5', hour='*', day_of_week='*', day_of_month='*', month_of_year='*' minute='0', hour='*...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

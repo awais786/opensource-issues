@@ -173,7 +173,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "## Expected Behavior In GeoNode 4.4, when enabling \"Use a custom template\" for the GetFeatureInfo template in the Dataset Metadata Editor, the TinyMCE HTML editor included a \"Source Code\" button (`<>` icon) that allowed pasting raw HTML (tables, divs, custom styles, etc.) so it would be rendered as markup in the GetFeatureInfo popup.   ## Actual Behavior In GeoNode 5.0.1, the same \"Use a custom te...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

@@ -16,7 +16,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "We strongly discourage any other type than `UnknownAction` for a long time now.  This being there leads people in the wrong direction, e.g. see https://github.com/reduxjs/redux/issues/4887",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
