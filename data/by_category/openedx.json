@@ -12,8 +12,8 @@
     "author": "ormsbee",
     "author_avatar": "https://avatars.githubusercontent.com/u/41625?v=4",
     "created_at": "2026-06-24T19:47:03Z",
-    "updated_at": "2026-06-24T19:48:31Z",
-    "comments": 1,
+    "updated_at": "2026-06-25T13:24:42Z",
+    "comments": 3,
     "labels": [],
     "body_preview": "Reproduction steps:  1. Create a new course and import the following file into it: [annotatable-course.tar.gz](https://github.com/user-attachments/files/29308201/annotatable-course.tar.gz) 2. Import that new course into a library using the library's Tools -> Import -> Import Course functionality.  It will raise **AttributeError: 'super' object has no attribute 'parse_xml_new_runtime'** while proce...",
     "is_new": true,
@@ -144,7 +144,7 @@
       "release testing"
     ],
     "body_preview": "## Description  When configuring Facebook as an SSO provider, users are still sent through manual registration/sign-in steps even though Skip registration form is enabled in the OAuth2 provider configuration.  The behavior was observed with Facebook and also with Microsoft Entra ID. Google behaves differently: it redirects to the login flow, and when selecting Register, the user is redirected to t...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
@@ -165,8 +165,8 @@
     "author": "Agrendalath",
     "author_avatar": "https://avatars.githubusercontent.com/u/3189670?v=4",
     "created_at": "2026-06-24T15:36:22Z",
-    "updated_at": "2026-06-25T05:52:03Z",
-    "comments": 2,
+    "updated_at": "2026-06-26T07:09:59Z",
+    "comments": 5,
     "labels": [
       "bug"
     ],

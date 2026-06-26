@@ -23,5 +23,30 @@
     "is_security": false,
     "is_good_first_issue": false,
     "is_help_wanted": false
+  },
+  {
+    "id": 4744866749,
+    "repo": "pytest-dev/pytest-django",
+    "ecosystem": "django",
+    "ecosystem_label": "Django",
+    "category": "testing",
+    "category_label": "Testing",
+    "number": 1282,
+    "title": "Release 4.12.0 is missing from github releases and changelog",
+    "url": "https://github.com/pytest-dev/pytest-django/issues/1282",
+    "author": "mikicz",
+    "author_avatar": "https://avatars.githubusercontent.com/u/5583319?v=4",
+    "created_at": "2026-06-25T14:48:27Z",
+    "updated_at": "2026-06-25T14:48:27Z",
+    "comments": 0,
+    "labels": [],
+    "body_preview": "https://pypi.org/project/pytest-django/4.12.0/ is present on PyPI, but the changelog https://pytest-django.readthedocs.io/en/latest/changelog.html and releases https://github.com/pytest-dev/pytest-django/releases don't have it",
+    "is_new": true,
+    "priority": "low",
+    "is_bug": false,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
   }
 ]
