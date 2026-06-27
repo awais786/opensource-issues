@@ -1,5 +1,32 @@
 [
   {
+    "id": 4754391849,
+    "repo": "facebook/react",
+    "ecosystem": "react",
+    "ecosystem_label": "React",
+    "category": "react_core",
+    "category_label": "React Core",
+    "number": 36890,
+    "title": "Bug: onAllReady called after onShellError",
+    "url": "https://github.com/react/react/issues/36890",
+    "author": "SuperOleg39",
+    "author_avatar": "https://avatars.githubusercontent.com/u/15360667?v=4",
+    "created_at": "2026-06-26T18:53:23Z",
+    "updated_at": "2026-06-26T18:53:23Z",
+    "comments": 0,
+    "labels": [
+      "Status: Unconfirmed"
+    ],
+    "body_preview": "When I tried to switch to `renderToPipeableStream` from `renderToString`, I found that in case of failed SSR render (no `Suspense` wrapper), I got unexpected `onAllReady` callback call, after `onError`/`onShellError`  React version: 19.2.7  ## Steps To Reproduce  1. Clone https://github.com/SuperOleg39/render-to-stream-bug-reproduction 2. Call `npm install` 3. Call `node server.js` 4. Open/curl lo...",
+    "is_new": true,
+    "priority": "low",
+    "is_bug": false,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 4740818944,
     "repo": "facebook/react",
     "ecosystem": "react",
@@ -140,6 +167,33 @@
     "is_help_wanted": false
   },
   {
+    "id": 4755634520,
+    "repo": "remix-run/react-router",
+    "ecosystem": "react",
+    "ecosystem_label": "React",
+    "category": "react_core",
+    "category_label": "React Core",
+    "number": 15247,
+    "title": "writeReadableStreamToWritable memory leak (Promise.race)",
+    "url": "https://github.com/remix-run/react-router/issues/15247",
+    "author": "c0m1t",
+    "author_avatar": "https://avatars.githubusercontent.com/u/45701680?v=4",
+    "created_at": "2026-06-26T23:06:25Z",
+    "updated_at": "2026-06-26T23:23:13Z",
+    "comments": 0,
+    "labels": [
+      "bug"
+    ],
+    "body_preview": "### Reproduction  I think `@react-router/node` package introduced a memory leak in `writeReadableStreamToWritable`. In https://github.com/remix-run/react-router/pull/15071 the implementation of `writeReadableStreamToWritable` was changed and [this line](https://github.com/remix-run/react-router/blob/db526f08df9e7678e1265269f782b3dec62454f1/packages/react-router-node/stream.ts#L16) was added inside...",
+    "is_new": true,
+    "priority": "high",
+    "is_bug": true,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 4749833587,
     "repo": "remix-run/react-router",
     "ecosystem": "react",
@@ -179,8 +233,8 @@
     "author": "wobsoriano",
     "author_avatar": "https://avatars.githubusercontent.com/u/13049130?v=4",
     "created_at": "2026-06-23T23:44:15Z",
-    "updated_at": "2026-06-24T14:28:35Z",
-    "comments": 0,
+    "updated_at": "2026-06-26T09:46:55Z",
+    "comments": 1,
     "labels": [
       "bug",
       "pkg:@react-router/dev",

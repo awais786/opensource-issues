@@ -12,11 +12,12 @@
     "author": "yuan-y-chang",
     "author_avatar": "https://avatars.githubusercontent.com/u/171533191?v=4",
     "created_at": "2026-06-26T06:15:37Z",
-    "updated_at": "2026-06-26T06:19:45Z",
-    "comments": 0,
+    "updated_at": "2026-06-26T10:15:39Z",
+    "comments": 1,
     "labels": [
       "C-bug",
-      "A-tokio"
+      "A-tokio",
+      "M-time"
     ],
     "body_preview": "**Version** tokio 1.47.0+ stable, full feature  **Platform** Ubuntu 22.04 x86_64 Ubuntu 24.04 x86_64  **Description** After upgrading tokio from 1.46.1 to 1.47.0+ (~1.52.3), some unit tests that use `#[tokio::test(start_paused = true)]` started failing. The `timeout()` function no longer functions as expected; it seems to take less time than intended, leading to numerous timeout checks failing, su...",
     "is_new": true,

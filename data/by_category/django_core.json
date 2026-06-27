@@ -91,7 +91,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "There are a handful of problems in switch-dark-mode.js.  (Apologies for the compound bug report. These are all somewhat related, and I'm going to open a single PR covering all of them. I can split the issue report and the PR apart if that would be helpful, but it seemed like this might be easier for everyone involved.)  ### 1. Leaked global variables  The script creates `arrHost`, `prefix`, `host`...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

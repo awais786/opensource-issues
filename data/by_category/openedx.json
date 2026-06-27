@@ -12,8 +12,8 @@
     "author": "ormsbee",
     "author_avatar": "https://avatars.githubusercontent.com/u/41625?v=4",
     "created_at": "2026-06-24T19:47:03Z",
-    "updated_at": "2026-06-25T13:24:42Z",
-    "comments": 3,
+    "updated_at": "2026-06-26T16:33:30Z",
+    "comments": 4,
     "labels": [],
     "body_preview": "Reproduction steps:  1. Create a new course and import the following file into it: [annotatable-course.tar.gz](https://github.com/user-attachments/files/29308201/annotatable-course.tar.gz) 2. Import that new course into a library using the library's Tools -> Import -> Import Course functionality.  It will raise **AttributeError: 'super' object has no attribute 'parse_xml_new_runtime'** while proce...",
     "is_new": true,
@@ -165,8 +165,8 @@
     "author": "Agrendalath",
     "author_avatar": "https://avatars.githubusercontent.com/u/3189670?v=4",
     "created_at": "2026-06-24T15:36:22Z",
-    "updated_at": "2026-06-26T07:09:59Z",
-    "comments": 5,
+    "updated_at": "2026-06-26T19:54:03Z",
+    "comments": 7,
     "labels": [
       "bug"
     ],

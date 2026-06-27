@@ -12,9 +12,11 @@
     "author": "phryneas",
     "author_avatar": "https://avatars.githubusercontent.com/u/4282439?v=4",
     "created_at": "2026-06-17T19:13:15Z",
-    "updated_at": "2026-06-17T19:14:21Z",
+    "updated_at": "2026-06-27T01:59:25Z",
     "comments": 0,
-    "labels": [],
+    "labels": [
+      "TypeScript"
+    ],
     "body_preview": "We strongly discourage any other type than `UnknownAction` for a long time now.  This being there leads people in the wrong direction, e.g. see https://github.com/reduxjs/redux/issues/4887",
     "is_new": false,
     "priority": "low",

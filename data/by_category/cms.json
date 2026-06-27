@@ -1,5 +1,33 @@
 [
   {
+    "id": 4750812152,
+    "repo": "wagtail/wagtail",
+    "ecosystem": "django",
+    "ecosystem_label": "Django",
+    "category": "cms",
+    "category_label": "CMS & Content",
+    "number": 14361,
+    "title": "\"database is locked\" error on live preview with SQLite since 7.4",
+    "url": "https://github.com/wagtail/wagtail/issues/14361",
+    "author": "joeyjurjens",
+    "author_avatar": "https://avatars.githubusercontent.com/u/7702200?v=4",
+    "created_at": "2026-06-26T09:15:03Z",
+    "updated_at": "2026-06-26T09:15:32Z",
+    "comments": 0,
+    "labels": [
+      "type:Bug",
+      "status:Unconfirmed"
+    ],
+    "body_preview": "### Issue summary  I'm getting database is locked errors in local development on live previews. It seems to happen when two requests come in at / around the same time on the live preview, the update_or_create_by_instance method seems to cause the error which was introduced in #14017, as preview data is now stored in the database.   The new autosave functionality might play a role in it too, becaus...",
+    "is_new": true,
+    "priority": "high",
+    "is_bug": true,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 4741878075,
     "repo": "wagtail/wagtail",
     "ecosystem": "django",
@@ -153,13 +181,13 @@
     "author": "thibaudcolas",
     "author_avatar": "https://avatars.githubusercontent.com/u/877585?v=4",
     "created_at": "2026-06-22T08:45:32Z",
-    "updated_at": "2026-06-25T18:40:01Z",
-    "comments": 1,
+    "updated_at": "2026-06-26T14:16:45Z",
+    "comments": 3,
     "labels": [
       "type:Enhancement",
-      "status:Needs Review",
       "DX",
-      "component:Project template"
+      "component:Project template",
+      "status:Needs Community Feedback"
     ],
     "body_preview": "### Problem statement  The DX of `wagtail start` is a bit rough. There are clear opportunities to improve it as part of our [starter kit relaunch](https://github.com/wagtail/roadmap/issues/124). Here are a few ideas:  ### Proposed solution  - [ ] Support customizing the template file `extensions`, or run across all files / a wide range of extensions - [ ] Show output on command success: created fi...",
     "is_new": true,
@@ -221,7 +249,7 @@
       "status:Unconfirmed"
     ],
     "body_preview": "### Issue summary  1. Create a RichText Block with an image. 2. Delete image in \"Images\" -> Image is now broken in RichText Block 3. Copy/Paste (Ctrl-A, Ctrl-C) all content from broken Block into new empty block (maybe new page) 4. Save (new) page 5. Fatal Error when re-opening that page for editing.  ``` File \"/app/.venv/lib/python3.12/site-packages/wagtail/images/rich_text/contentstate.py\", line...",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,
@@ -251,7 +279,7 @@
       "status:Needs Community Feedback"
     ],
     "body_preview": "### Discussed in https://github.com/wagtail/wagtail/discussions/14221  <div type='discussions-op-text'>  <sup>Originally posted by **noahpatterson** May 12, 2026</sup> Our team has been using the default autosave timings since 7.3 rolled out. We are getting some clashes between users or with autosave accidentally saving peoples tests or explorations.  We are currently looking to increase the autos...",
-    "is_new": true,
+    "is_new": false,
     "priority": "medium",
     "is_bug": false,
     "is_feature": true,
@@ -279,7 +307,7 @@
       "status:Needs Review"
     ],
     "body_preview": "### Problem statement  When customising the value returned by a `StructBlock`, you have to define the value class outside the block and wire it up via `Meta.value_class`:  ```python class MyBlockValue(StructValue):     @property     def summary(self):         return self[\"title\"].upper()  class MyBlock(StructBlock):     title = CharBlock()      class Meta:         value_class = MyBlockValue ```  H...",
-    "is_new": true,
+    "is_new": false,
     "priority": "medium",
     "is_bug": false,
     "is_feature": true,
@@ -574,37 +602,6 @@
       "component:Revisions"
     ],
     "body_preview": "Part of [RFC 115](https://wagtail.org/rfc-115/), tracked in #14295.  ## Problem statement  Snippets cover \"arbitrary Django models\" in [RFC 115](https://wagtail.org/rfc-115/#goals), with capability varying by mixin (`RevisionMixin`, `DraftStateMixin`, `WorkflowMixin`, `LockableMixin`). There is no snippets API in core, and unlike pages, snippet create/edit/delete is generic-view code with inline...",
-    "is_new": false,
-    "priority": "medium",
-    "is_bug": false,
-    "is_feature": true,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
-    "id": 4673074631,
-    "repo": "wagtail/wagtail",
-    "ecosystem": "django",
-    "ecosystem_label": "Django",
-    "category": "cms",
-    "category_label": "CMS & Content",
-    "number": 14311,
-    "title": "Write API: documents endpoint",
-    "url": "https://github.com/wagtail/wagtail/issues/14311",
-    "author": "thibaudcolas",
-    "author_avatar": "https://avatars.githubusercontent.com/u/877585?v=4",
-    "created_at": "2026-06-16T09:55:02Z",
-    "updated_at": "2026-06-16T12:38:39Z",
-    "comments": 0,
-    "labels": [
-      "type:Enhancement",
-      "status:Needs Review",
-      "component:API",
-      "component:Documents",
-      "component:Collections"
-    ],
-    "body_preview": "Part of [RFC 115](https://wagtail.org/rfc-115/), tracked in #14295.  ## Problem statement  Documents mirror images but simpler \u2014 read-only v2 viewset, no action classes, swappable model. Two asymmetries with images matter for an API: documents validate extensions only (`WAGTAILDOCS_EXTENSIONS` in `Document.clean()`) with **no max-upload-size setting** (a DoS consideration for an unattended API),...",
     "is_new": false,
     "priority": "medium",
     "is_bug": false,
