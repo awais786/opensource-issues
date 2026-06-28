@@ -371,8 +371,8 @@
     "author": "Badg",
     "author_avatar": "https://avatars.githubusercontent.com/u/6155386?v=4",
     "created_at": "2026-06-23T16:05:25Z",
-    "updated_at": "2026-06-23T16:05:25Z",
-    "comments": 0,
+    "updated_at": "2026-06-27T10:54:30Z",
+    "comments": 1,
     "labels": [
       "bug"
     ],
@@ -435,34 +435,6 @@
     "priority": "medium",
     "is_bug": false,
     "is_feature": true,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
-    "id": 4723258872,
-    "repo": "astral-sh/uv",
-    "ecosystem": "python",
-    "ecosystem_label": "Python",
-    "category": "py_tools",
-    "category_label": "Dev Tools",
-    "number": 19956,
-    "title": "install.ps1 on Windows: Failed to download uv 0.11.23",
-    "url": "https://github.com/astral-sh/uv/issues/19956",
-    "author": "haferburg",
-    "author_avatar": "https://avatars.githubusercontent.com/u/4941909?v=4",
-    "created_at": "2026-06-23T06:32:39Z",
-    "updated_at": "2026-06-26T15:31:09Z",
-    "comments": 2,
-    "labels": [
-      "bug",
-      "windows"
-    ],
-    "body_preview": "### Summary      > powershell -ExecutionPolicy ByPass -c \"irm https://astral.sh/uv/install.ps1 | iex\"     downloading uv 0.11.23 (x86_64-pc-windows-msvc)     failed to download from https://releases.astral.sh/github/uv/releases/download/0.11.23     trying alternative download URL     failed to download from https://github.com/astral-sh/uv/releases/download/0.11.23     failed to download binaries...",
-    "is_new": true,
-    "priority": "high",
-    "is_bug": true,
-    "is_feature": false,
     "is_security": false,
     "is_good_first_issue": false,
     "is_help_wanted": false
