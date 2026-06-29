@@ -62,7 +62,7 @@
     "author": "Faraz32123",
     "author_avatar": "https://avatars.githubusercontent.com/u/122095701?v=4",
     "created_at": "2026-06-24T08:29:55Z",
-    "updated_at": "2026-06-24T08:29:55Z",
+    "updated_at": "2026-06-29T08:13:32Z",
     "comments": 0,
     "labels": [],
     "body_preview": "",
@@ -87,7 +87,7 @@
     "author": "Faraz32123",
     "author_avatar": "https://avatars.githubusercontent.com/u/122095701?v=4",
     "created_at": "2026-06-24T08:28:06Z",
-    "updated_at": "2026-06-24T08:28:06Z",
+    "updated_at": "2026-06-29T08:14:07Z",
     "comments": 0,
     "labels": [],
     "body_preview": "Once this PR(https://github.com/openedx/openedx-platform/pull/38738) is merged. Combine & merge all ADRs to single OEP. related Link: https://discuss.openedx.org/t/request-for-community-review-on-adrs-for-standardizing-the-open-edx-platform-api-endpoints/18717/4?u=farazm",
@@ -165,8 +165,8 @@
     "author": "Agrendalath",
     "author_avatar": "https://avatars.githubusercontent.com/u/3189670?v=4",
     "created_at": "2026-06-24T15:36:22Z",
-    "updated_at": "2026-06-26T19:54:03Z",
-    "comments": 7,
+    "updated_at": "2026-06-29T05:41:52Z",
+    "comments": 8,
     "labels": [
       "bug"
     ],

@@ -171,7 +171,7 @@
       "resolution: needs standard"
     ],
     "body_preview": "### Description  On `mips64le`, an unhandled/rare platform, `pip install` rejects a corresponding platform-specific wheel: ``` ./testenv/bin/python3 -m pip install data/pypdfium2-5.11.0-py3-none-manylinux_2_17_mips64le.manylinux2014_mips64le.whl  ERROR: pypdfium2-5.11.0-py3-none-manylinux_2_17_mips64le.manylinux2014_mips64le.whl is not a supported wheel on this platform. ```  When attempting to ov...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
