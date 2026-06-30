@@ -41,7 +41,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "Starting with version  [7.0.0 ](https://github.com/django-commons/django-debug-toolbar/releases/tag/7.0.0) of  django-debug-toolbar , the toolbar is rendered inside a Shadow DOM for better style and DOM isolation. Because of this encapsulation, global DOM lookup methods such as  document.getElementById(\"djDebug\")  and document.getElementById(\"djdt-...\")  fail to resolve and return  null.  Causing...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
