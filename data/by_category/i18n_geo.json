@@ -97,7 +97,7 @@
       "master"
     ],
     "body_preview": "Currently, Remote Service assume uniqueness on the remote service URL. This was for historical reasons, when services were considered a global resource available for everyone, and where any user could harvest resources from the service.  GeoNode is moving in a direction where a Remote Service will be considered a private resource. Every user (where enabled) can create and manage their own remote s...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

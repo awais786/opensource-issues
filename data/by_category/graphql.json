@@ -16,7 +16,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "## Describe the bug  `DEFAULT_PK_FIELD_NAME` lets a project use a field other than the Django primary key as the GraphQL identifier (e.g. a `uuid`/`slug`/external id, or a virtual id field such as `django-sqids`). **Filters honor it** (`filters.apply` resolves the configured field), but **mutations do not**.  In `strawberry_django/mutations/resolvers.py`, `_parse_pk` reads the input value under `k...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
