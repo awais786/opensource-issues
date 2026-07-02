@@ -1,33 +1,5 @@
 [
   {
-    "id": 4775761337,
-    "repo": "tokio-rs/tokio",
-    "ecosystem": "rust",
-    "ecosystem_label": "Rust",
-    "category": "rust_async",
-    "category_label": "Async & Web",
-    "number": 8241,
-    "title": "Add an Inspector trait for usage by InspectReader and InspectWriter",
-    "url": "https://github.com/tokio-rs/tokio/issues/8241",
-    "author": "griff",
-    "author_avatar": "https://avatars.githubusercontent.com/u/4368?v=4",
-    "created_at": "2026-06-30T10:09:24Z",
-    "updated_at": "2026-06-30T10:09:24Z",
-    "comments": 0,
-    "labels": [
-      "A-tokio",
-      "C-feature-request"
-    ],
-    "body_preview": "InspectReader and InspectWriter are really useful for hashing and counting and other such tasks. But the fact that they require a closure means that they are clunky and sometimes impossible to use as struct fields and type aliases.  So I would like an `Inspector` trait that is implemented on all `FnMut(&[u8])` to deal with this and keep it compatible. Kind of like this:  ``` pub trait Inspector {...",
-    "is_new": true,
-    "priority": "medium",
-    "is_bug": false,
-    "is_feature": true,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
     "id": 4773351231,
     "repo": "tokio-rs/tokio",
     "ecosystem": "rust",
@@ -40,9 +12,13 @@
     "author": "wyfo",
     "author_avatar": "https://avatars.githubusercontent.com/u/6006079?v=4",
     "created_at": "2026-06-30T03:14:21Z",
-    "updated_at": "2026-06-30T03:14:21Z",
-    "comments": 0,
-    "labels": [],
+    "updated_at": "2026-07-01T17:58:25Z",
+    "comments": 5,
+    "labels": [
+      "A-tokio",
+      "M-sync",
+      "T-performance"
+    ],
     "body_preview": "I've recently designed an alternative algorithm for `AtomicWaker` with better performance characteristics, and it might be worth integrating it into tokio, at least according to tokio's own benchmarks.  It is available here: https://crates.io/crates/spmc-waker.  The main features are: - lock-free algorithm (`AtomicWaker` is a spin-lock) - waker caching - hot path inlineable in a few instructions -...",
     "is_new": true,
     "priority": "low",
@@ -65,8 +41,8 @@
     "author": "yuan-y-chang",
     "author_avatar": "https://avatars.githubusercontent.com/u/171533191?v=4",
     "created_at": "2026-06-26T06:15:37Z",
-    "updated_at": "2026-06-30T19:13:36Z",
-    "comments": 3,
+    "updated_at": "2026-07-02T01:11:13Z",
+    "comments": 7,
     "labels": [
       "C-bug",
       "A-tokio",

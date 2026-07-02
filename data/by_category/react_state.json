@@ -433,30 +433,5 @@
     "is_security": false,
     "is_good_first_issue": false,
     "is_help_wanted": false
-  },
-  {
-    "id": 4612041528,
-    "repo": "TanStack/query",
-    "ecosystem": "react",
-    "ecosystem_label": "React",
-    "category": "react_state",
-    "category_label": "State Management",
-    "number": 10904,
-    "title": "[vue-query] useQuery rejects spreading a queryOptions() result + override since v5.98.0",
-    "url": "https://github.com/TanStack/query/issues/10904",
-    "author": "lasficw",
-    "author_avatar": "https://avatars.githubusercontent.com/u/129757293?v=4",
-    "created_at": "2026-06-08T10:24:43Z",
-    "updated_at": "2026-06-29T13:10:52Z",
-    "comments": 2,
-    "labels": [],
-    "body_preview": "### Describe the bug  Since `@tanstack/vue-query` v5.98.0, the documented pattern of spreading a `queryOptions(...)` result into `useQuery` and overriding a non-data-shaping option (e.g. `enabled`) no longer type-checks. Passing the same options object directly works; only the spread + override form fails.  This is a downstream continuation of #10525. That fix made `queryOptions({ queryKey: comput...",
-    "is_new": false,
-    "priority": "low",
-    "is_bug": false,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
   }
 ]
