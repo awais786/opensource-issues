@@ -12,8 +12,8 @@
     "author": "katzmo",
     "author_avatar": "https://avatars.githubusercontent.com/u/4126543?v=4",
     "created_at": "2026-07-01T11:18:17Z",
-    "updated_at": "2026-07-02T08:25:56Z",
-    "comments": 1,
+    "updated_at": "2026-07-02T10:47:38Z",
+    "comments": 2,
     "labels": [
       "type:Bug",
       "status:Unconfirmed"
@@ -40,8 +40,8 @@
     "author": "thibaudcolas",
     "author_avatar": "https://avatars.githubusercontent.com/u/877585?v=4",
     "created_at": "2026-06-30T09:52:17Z",
-    "updated_at": "2026-07-01T09:58:27Z",
-    "comments": 1,
+    "updated_at": "2026-07-03T08:31:10Z",
+    "comments": 2,
     "labels": [
       "type:Enhancement",
       "component:Security",
@@ -98,8 +98,8 @@
     "author": "kevinhowbrook",
     "author_avatar": "https://avatars.githubusercontent.com/u/2128707?v=4",
     "created_at": "2026-06-25T07:56:19Z",
-    "updated_at": "2026-06-25T12:44:59Z",
-    "comments": 1,
+    "updated_at": "2026-07-02T10:47:58Z",
+    "comments": 2,
     "labels": [
       "type:Bug",
       "status:Unconfirmed"
@@ -153,8 +153,8 @@
     "author": "marvsatgosh",
     "author_avatar": "https://avatars.githubusercontent.com/u/192346578?v=4",
     "created_at": "2026-06-24T09:31:28Z",
-    "updated_at": "2026-06-24T12:06:48Z",
-    "comments": 1,
+    "updated_at": "2026-07-02T14:36:12Z",
+    "comments": 2,
     "labels": [
       "type:Enhancement",
       "Documentation",
@@ -183,8 +183,8 @@
     "author": "joeyjurjens",
     "author_avatar": "https://avatars.githubusercontent.com/u/7702200?v=4",
     "created_at": "2026-06-23T15:25:29Z",
-    "updated_at": "2026-06-23T15:52:34Z",
-    "comments": 2,
+    "updated_at": "2026-07-02T10:48:34Z",
+    "comments": 3,
     "labels": [
       "type:Bug",
       "status:Unconfirmed"
@@ -269,8 +269,8 @@
     "author": "kaktus42",
     "author_avatar": "https://avatars.githubusercontent.com/u/1608815?v=4",
     "created_at": "2026-06-19T17:30:09Z",
-    "updated_at": "2026-07-01T07:10:45Z",
-    "comments": 2,
+    "updated_at": "2026-07-02T10:48:52Z",
+    "comments": 3,
     "labels": [
       "type:Bug",
       "status:Unconfirmed"
@@ -407,8 +407,8 @@
     "author": "rypptc",
     "author_avatar": "https://avatars.githubusercontent.com/u/64696674?v=4",
     "created_at": "2026-06-07T23:12:23Z",
-    "updated_at": "2026-06-07T23:14:03Z",
-    "comments": 0,
+    "updated_at": "2026-07-02T11:04:01Z",
+    "comments": 1,
     "labels": [],
     "body_preview": "### Problem statement  `TranslationSource.refresh_segments()` iterates over all segments extracted from the page. For each segment, it calls `from_value()`, which independently fires several `get_or_create` operations \u2014 one for the string, one for the context, and one for the segment record itself \u2014 resulting in roughly 10 database queries per segment.  In a page with 10 segments, `refresh_segment...",
     "is_new": false,
@@ -761,7 +761,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "During setup of project with this command   <img width=\"600\" height=\"29\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/f524331b-50cc-4246-82bd-79efb990f94a\" />  _Running `mezzanine-project` on Python 3.12+ fails with:  ModuleNotFoundError: No module named 'distutils'  <img width=\"559\" height=\"181\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/cc845ef8-0a5f-4555-a758-425...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

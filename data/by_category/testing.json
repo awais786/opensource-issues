@@ -41,7 +41,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "https://pypi.org/project/pytest-django/4.12.0/ is present on PyPI, but the changelog https://pytest-django.readthedocs.io/en/latest/changelog.html and releases https://github.com/pytest-dev/pytest-django/releases don't have it",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
