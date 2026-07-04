@@ -40,8 +40,8 @@
     "author": "thibaudcolas",
     "author_avatar": "https://avatars.githubusercontent.com/u/877585?v=4",
     "created_at": "2026-06-30T09:52:17Z",
-    "updated_at": "2026-07-03T08:31:10Z",
-    "comments": 2,
+    "updated_at": "2026-07-04T04:51:23Z",
+    "comments": 4,
     "labels": [
       "type:Enhancement",
       "component:Security",
@@ -77,7 +77,7 @@
       "status:Unconfirmed"
     ],
     "body_preview": "### Issue summary  I'm getting database is locked errors in local development on live previews. It seems to happen when two requests come in at / around the same time on the live preview, the update_or_create_by_instance method seems to cause the error which was introduced in #14017, as preview data is now stored in the database.   The new autosave functionality might play a role in it too, becaus...",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,
@@ -126,8 +126,8 @@
     "author": "marvsatgosh",
     "author_avatar": "https://avatars.githubusercontent.com/u/192346578?v=4",
     "created_at": "2026-06-24T09:42:02Z",
-    "updated_at": "2026-06-24T10:55:14Z",
-    "comments": 1,
+    "updated_at": "2026-07-03T09:56:04Z",
+    "comments": 2,
     "labels": [
       "Documentation"
     ],
@@ -153,8 +153,8 @@
     "author": "marvsatgosh",
     "author_avatar": "https://avatars.githubusercontent.com/u/192346578?v=4",
     "created_at": "2026-06-24T09:31:28Z",
-    "updated_at": "2026-07-02T14:36:12Z",
-    "comments": 2,
+    "updated_at": "2026-07-03T09:53:20Z",
+    "comments": 3,
     "labels": [
       "type:Enhancement",
       "Documentation",
@@ -306,34 +306,6 @@
       "status:Needs Community Feedback"
     ],
     "body_preview": "### Discussed in https://github.com/wagtail/wagtail/discussions/14221  <div type='discussions-op-text'>  <sup>Originally posted by **noahpatterson** May 12, 2026</sup> Our team has been using the default autosave timings since 7.3 rolled out. We are getting some clashes between users or with autosave accidentally saving peoples tests or explorations.  We are currently looking to increase the autos...",
-    "is_new": false,
-    "priority": "medium",
-    "is_bug": false,
-    "is_feature": true,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
-    "id": 4699596101,
-    "repo": "wagtail/wagtail",
-    "ecosystem": "django",
-    "ecosystem_label": "Django",
-    "category": "cms",
-    "category_label": "CMS & Content",
-    "number": 14340,
-    "title": "Support inner Value class on StructBlock as automatic value_class",
-    "url": "https://github.com/wagtail/wagtail/issues/14340",
-    "author": "joeyjurjens",
-    "author_avatar": "https://avatars.githubusercontent.com/u/7702200?v=4",
-    "created_at": "2026-06-19T09:31:49Z",
-    "updated_at": "2026-06-19T09:31:49Z",
-    "comments": 0,
-    "labels": [
-      "type:Enhancement",
-      "status:Needs Review"
-    ],
-    "body_preview": "### Problem statement  When customising the value returned by a `StructBlock`, you have to define the value class outside the block and wire it up via `Meta.value_class`:  ```python class MyBlockValue(StructValue):     @property     def summary(self):         return self[\"title\"].upper()  class MyBlock(StructBlock):     title = CharBlock()      class Meta:         value_class = MyBlockValue ```  H...",
     "is_new": false,
     "priority": "medium",
     "is_bug": false,

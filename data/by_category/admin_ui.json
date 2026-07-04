@@ -16,7 +16,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "Description  The test tests/panels/test_sql.SQLPanelTestCase.test_param_conversion fails in the py312-dj60-sqlite, py313-dj60-sqlite, and py314-dj60-sqlite CI environments.  Root cause  PR #2385 added the condition django.VERSION >= (6, 2) to expect True/False in boolean parameters for non-PostgreSQL databases. The behavior change was actually introduced in Django 6.1, not 6.2. With pip_pre = True...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
