@@ -43,7 +43,7 @@
       "RTK-Query"
     ],
     "body_preview": "## Bug Report  ### Description  `setAll` and `setMany` both claim 'set' semantics (overwrite existing entities), but they behave differently when the input contains duplicate IDs:  - **`setMany`** keeps the **last** occurrence of each duplicate ID (correct 'set' / overwrite behavior) - **`setAll`** keeps the **first** occurrence of each duplicate ID (behaves like `addMany`, not like `set`)  This i...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
