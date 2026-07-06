@@ -12,7 +12,7 @@
     "author": "dopry",
     "author_avatar": "https://avatars.githubusercontent.com/u/387640?v=4",
     "created_at": "2026-07-05T02:26:00Z",
-    "updated_at": "2026-07-05T02:26:00Z",
+    "updated_at": "2026-07-05T16:31:15Z",
     "comments": 0,
     "labels": [
       "enhancement"
@@ -124,33 +124,6 @@
       "bug"
     ],
     "body_preview": "**Describe the bug** expiration is strictly defined as utc in specification. there is no known major IDP that alters this timezone. We shouldn't either.   marked deprecated in 3.3.1, to be removed in 4.0  **Expected behavior** exp claims are always utc.    **Version** 3.3.0",
-    "is_new": false,
-    "priority": "high",
-    "is_bug": true,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
-    "id": 4399769402,
-    "repo": "jazzband/django-oauth-toolkit",
-    "ecosystem": "django",
-    "ecosystem_label": "Django",
-    "category": "auth_security",
-    "category_label": "Auth & Security",
-    "number": 1693,
-    "title": "AbstractDeviceGrant.scope is CharField(max_length=64, null=True) while the rest of the grants use scope = models.TextField(blank=True)",
-    "url": "https://github.com/django-oauth/django-oauth-toolkit/issues/1693",
-    "author": "dopry",
-    "author_avatar": "https://avatars.githubusercontent.com/u/387640?v=4",
-    "created_at": "2026-05-07T15:02:42Z",
-    "updated_at": "2026-05-30T06:41:46Z",
-    "comments": 0,
-    "labels": [
-      "bug"
-    ],
-    "body_preview": "**Describe the bug** 64 chars could be too small for scopes.   Reviewing the broader auth ecosystem I see the following limits - okta - 1024  - google - 2048 - WSO2 - 767  so 64 feels insuffient.    While Text is potentially larger than webserver header limits (8/16K) and browser url limits (2048), it shift the resposbility for ensuring acceptable scope lengths from DOT to the implementer without...",
     "is_new": false,
     "priority": "high",
     "is_bug": true,

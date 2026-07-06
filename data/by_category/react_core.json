@@ -1,5 +1,30 @@
 [
   {
+    "id": 4813820116,
+    "repo": "facebook/react",
+    "ecosystem": "react",
+    "ecosystem_label": "React",
+    "category": "react_core",
+    "category_label": "React Core",
+    "number": 36934,
+    "title": "experimental_taintUniqueValue throws RangeError for large binary values",
+    "url": "https://github.com/react/react/issues/36934",
+    "author": "HoneyTyagii",
+    "author_avatar": "https://avatars.githubusercontent.com/u/78690656?v=4",
+    "created_at": "2026-07-05T17:41:31Z",
+    "updated_at": "2026-07-05T17:41:31Z",
+    "comments": 0,
+    "labels": [],
+    "body_preview": "\ufeff### Summary `binaryToComparableString` converts a TypedArray/DataView into a string by spreading every byte as a separate function argument via `String.fromCharCode.apply`. JS engines cap the number of call arguments, so this throws `RangeError` for large buffers. This breaks the taint API both at registration time and during Flight serialization.  ### React version main (reproduced by reading so...",
+    "is_new": true,
+    "priority": "low",
+    "is_bug": false,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 4798967187,
     "repo": "facebook/react",
     "ecosystem": "react",
@@ -128,7 +153,7 @@
       "Status: Unconfirmed"
     ],
     "body_preview": "### What kind of issue is this?  - [x] React Compiler core (the JS output is incorrect, or your app works incorrectly after optimization) - [ ] babel-plugin-react-compiler (build issue installing or using the Babel plugin) - [x] eslint-plugin-react-hooks (build issue installing or using the eslint plugin) - [ ] react-compiler-healthcheck (build issue installing or using the healthcheck script)  ##...",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,
@@ -155,7 +180,7 @@
       "Status: Unconfirmed"
     ],
     "body_preview": "When using React's `ViewTransition` component in a Next.js application, shared element transitions do not work if the document or any ancestor element has `dir=\"rtl\"`.  The exact same code works correctly when `dir=\"ltr\"` is used.  As a workaround, wrapping the transition element in an ancestor with `dir=\"ltr\"` restores the expected behavior.  React version:  * react: 19.2.0 * react-dom: 19.2.0 *...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
