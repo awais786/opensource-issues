@@ -1,5 +1,32 @@
 [
   {
+    "id": 4824238673,
+    "repo": "vitejs/vite",
+    "ecosystem": "react",
+    "ecosystem_label": "React",
+    "category": "react_build",
+    "category_label": "Build & Tooling",
+    "number": 22881,
+    "title": "`resolve.tsconfigPaths` does not work with `import.meta.glob`",
+    "url": "https://github.com/vitejs/vite/issues/22881",
+    "author": "sapphi-red",
+    "author_avatar": "https://avatars.githubusercontent.com/u/49056869?v=4",
+    "created_at": "2026-07-07T00:50:29Z",
+    "updated_at": "2026-07-07T00:50:48Z",
+    "comments": 0,
+    "labels": [
+      "p3-minor-bug"
+    ],
+    "body_preview": "### Describe the bug  ```js import.meta.glob('@/assets/**/*', { eager: true }) ``` to resolve to files in `./src/assets` if the `resolve.tsconfigPaths` is enabled. This doesn't work in both dev and build.  This works when the `resolve.alias` is set.   ### Reproduction  https://stackblitz.com/edit/vitejs-vite-ymc5papb?file=vite.config.js,src%2Fmain.ts&terminal=build  ### Steps to reproduce  _No res...",
+    "is_new": true,
+    "priority": "high",
+    "is_bug": true,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 4815465392,
     "repo": "vitejs/vite",
     "ecosystem": "react",
@@ -125,39 +152,12 @@
     "author": "cprecioso",
     "author_avatar": "https://avatars.githubusercontent.com/u/511681?v=4",
     "created_at": "2026-07-02T17:03:53Z",
-    "updated_at": "2026-07-03T07:35:25Z",
-    "comments": 3,
+    "updated_at": "2026-07-07T08:46:13Z",
+    "comments": 4,
     "labels": [
       "pending triage"
     ],
     "body_preview": "### Describe the bug  When an HTML entry contains a module preload link pointing at a source module, it gets followed when doing `vite build`:  ```html <link rel=\"modulepreload\" href=\"/src/main.ts\" /> <script type=\"module\" src=\"/src/main.ts\"></script>  <!-- \u2b06\ufe0f the above is transformed to the below \u2b07\ufe0f -->  <link rel=\"modulepreload\" href=\"data:text/javascript;base64,...\" /> <script type=\"module\" src...",
-    "is_new": true,
-    "priority": "low",
-    "is_bug": false,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
-    "id": 4794982847,
-    "repo": "vitejs/vite",
-    "ecosystem": "react",
-    "ecosystem_label": "React",
-    "category": "react_build",
-    "category_label": "Build & Tooling",
-    "number": 22843,
-    "title": "Build output has ReferenceError: `defaults_default is not defined` when using element-plus (Rolldown tree-shaking regression since 8.1.0)",
-    "url": "https://github.com/vitejs/vite/issues/22843",
-    "author": "BenightedJester",
-    "author_avatar": "https://avatars.githubusercontent.com/u/26403553?v=4",
-    "created_at": "2026-07-02T13:42:55Z",
-    "updated_at": "2026-07-03T06:25:21Z",
-    "comments": 2,
-    "labels": [
-      "needs reproduction"
-    ],
-    "body_preview": "### Describe the bug  When building a project that imports `element-plus` with Vite 8.1.0+, Rolldown's tree-shaking incorrectly removes the `import defaults_default from \"./defaults.mjs\"` binding but keeps the property access code (`defaults_default.install, defaults_default.version`), causing a `ReferenceError: defaults_default is not defined` at runtime.  This is a **regression introduced in Vit...",
     "is_new": true,
     "priority": "low",
     "is_bug": false,
@@ -185,7 +185,7 @@
       "p1-chore"
     ],
     "body_preview": "See https://github.com/vitejs/vite/pull/22817",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

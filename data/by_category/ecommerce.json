@@ -50,6 +50,60 @@
     "is_help_wanted": false
   },
   {
+    "id": 4820116041,
+    "repo": "saleor/saleor",
+    "ecosystem": "django",
+    "ecosystem_label": "Django",
+    "category": "ecommerce",
+    "category_label": "E-Commerce",
+    "number": 19429,
+    "title": "Add translations for ProductMedia alt text",
+    "url": "https://github.com/saleor/saleor/issues/19429",
+    "author": "EugenBodanov",
+    "author_avatar": "https://avatars.githubusercontent.com/u/124465640?v=4",
+    "created_at": "2026-07-06T14:31:28Z",
+    "updated_at": "2026-07-06T14:31:28Z",
+    "comments": 0,
+    "labels": [
+      "triage"
+    ],
+    "body_preview": "### Problem  Saleor supports translations for many catalog fields, including product names, descriptions, SEO fields, categories, collections, attributes, attribute values, and variants.  However, ProductMedia.alt currently has only one global value and does not support translations.  This makes it difficult to build a multilingual storefront with localized image alt text. Image alt text is import...",
+    "is_new": true,
+    "priority": "low",
+    "is_bug": false,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
+    "id": 4818660017,
+    "repo": "saleor/saleor",
+    "ecosystem": "django",
+    "ecosystem_label": "Django",
+    "category": "ecommerce",
+    "category_label": "E-Commerce",
+    "number": 19423,
+    "title": "Bug: account can be reactivated using accountConfirm mutation",
+    "url": "https://github.com/saleor/saleor/issues/19423",
+    "author": "NyanKiyoshi",
+    "author_avatar": "https://avatars.githubusercontent.com/u/6186720?v=4",
+    "created_at": "2026-07-06T11:27:52Z",
+    "updated_at": "2026-07-06T11:27:52Z",
+    "comments": 0,
+    "labels": [
+      "bug"
+    ],
+    "body_preview": "Someone having a valid token for `accountConfirm()` can re-activate their account when a staff user sets it to `is_active=False`. For example, when offboarding former employees, a staff user may set `is_active=False` but can then be switched back to `is_active=True` by running `accountConfirm()`.  The mutation should be changed so it no longer flips the `is_active` flag.",
+    "is_new": true,
+    "priority": "high",
+    "is_bug": true,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 4804703801,
     "repo": "saleor/saleor",
     "ecosystem": "django",
@@ -62,8 +116,8 @@
     "author": "djkato",
     "author_avatar": "https://avatars.githubusercontent.com/u/25299243?v=4",
     "created_at": "2026-07-03T15:40:16Z",
-    "updated_at": "2026-07-06T08:26:35Z",
-    "comments": 1,
+    "updated_at": "2026-07-06T19:42:57Z",
+    "comments": 2,
     "labels": [
       "bug",
       "triage"
@@ -96,7 +150,7 @@
       "triage"
     ],
     "body_preview": "## Summary  This issue presents a plan for adding **buyer-aware base pricing** to Saleor: the ability to charge a different list price for the same variant depending on *who* is buying (e.g. VIP clients, wholesale) and *when* they're buying (e.g. a time-limited window price).  The feature is **opt-in and additive**. A store that never creates a tag or a scoped price row behaves exactly as it does...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
