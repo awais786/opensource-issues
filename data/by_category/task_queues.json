@@ -16,7 +16,7 @@
     "comments": 1,
     "labels": [],
     "body_preview": "### Summary  Several worker-related numeric environment variables are parsed with direct `int()` / `float()` calls at module import time. If one of these variables is malformed, Celery can fail before worker initialization with a raw Python traceback instead of a Celery configuration error.  ### Reproduction  ```bash CELERY_WORKER_REVOKES_MAX=abc python - <<'PY' import celery.worker.state PY ```...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
@@ -43,7 +43,7 @@
       "Issue Type: Feature Request"
     ],
     "body_preview": "<!-- Please fill this template entirely and do not erase parts of it. We reserve the right to close without a response feature requests which are incomplete. --> # Checklist <!-- To check an item on the list replace [ ] with [x]. -->  - [ ] I have checked the [issues list](https://github.com/celery/celery/issues?utf8=%E2%9C%93&q=is%3Aissue+label%3A%22Issue+Type%3A+Feature+Request%22+)   for simila...",
-    "is_new": true,
+    "is_new": false,
     "priority": "medium",
     "is_bug": false,
     "is_feature": true,

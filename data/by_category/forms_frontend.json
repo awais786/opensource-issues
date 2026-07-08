@@ -16,7 +16,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "### Description  I know HTMX 4 is beta but curious if you're considering making the HTMX version selectable in django_htmx?",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
