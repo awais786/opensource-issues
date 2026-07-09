@@ -66,7 +66,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "When trying to see if the \"new look\" of our app's admin console is as expected, I noticed that the test app mentioned in the docs is still on Jazzmin 3.0.1:  Demo[\u00b6](https://django-jazzmin.readthedocs.io/#demo) Live demo https://django-jazzmin.herokuapp.com/admin  Username: test@test.com  Password: test  Note: Data resets nightly  Is it possible to update this to the latest jazzmin version?  Many...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

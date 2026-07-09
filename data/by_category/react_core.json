@@ -82,35 +82,6 @@
     "is_help_wanted": false
   },
   {
-    "id": 4792423579,
-    "repo": "remix-run/react-router",
-    "ecosystem": "react",
-    "ecosystem_label": "React",
-    "category": "react_core",
-    "category_label": "React Core",
-    "number": 15275,
-    "title": "RSC SSR stream can crash with TransformStreamDefaultController.enqueue after aborted request",
-    "url": "https://github.com/remix-run/react-router/issues/15275",
-    "author": "klaemo",
-    "author_avatar": "https://avatars.githubusercontent.com/u/778624?v=4",
-    "created_at": "2026-07-02T07:55:38Z",
-    "updated_at": "2026-07-02T13:31:41Z",
-    "comments": 0,
-    "labels": [
-      "pkg:react-router",
-      "feat:streaming",
-      "feat:rsc"
-    ],
-    "body_preview": "### Summary  In React Router RSC Framework Mode, an aborted/canceled document request can crash the production server with:  ``` TypeError: Invalid state: Unable to enqueue     at transformStreamDefaultControllerEnqueue (node:internal/webstreams/transformstream:499:11)     at TransformStreamDefaultController.enqueue (node:internal/webstreams/transformstream:317:5)     at flushBufferedChunks (.../b...",
-    "is_new": true,
-    "priority": "low",
-    "is_bug": false,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
     "id": 4771865055,
     "repo": "remix-run/react-router",
     "ecosystem": "react",
@@ -208,8 +179,8 @@
     "author": "wobsoriano",
     "author_avatar": "https://avatars.githubusercontent.com/u/13049130?v=4",
     "created_at": "2026-06-23T23:44:15Z",
-    "updated_at": "2026-06-30T07:15:32Z",
-    "comments": 2,
+    "updated_at": "2026-07-08T17:14:03Z",
+    "comments": 3,
     "labels": [
       "bug",
       "pkg:@react-router/dev",
