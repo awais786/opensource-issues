@@ -12,7 +12,7 @@
     "author": "hrnciar",
     "author_avatar": "https://avatars.githubusercontent.com/u/13086088?v=4",
     "created_at": "2026-07-02T07:37:53Z",
-    "updated_at": "2026-07-07T18:21:18Z",
+    "updated_at": "2026-07-09T22:47:03Z",
     "comments": 3,
     "labels": [],
     "body_preview": "Flask's test suite imports the private notset sentinel from _pytest.monkeypatch in both tests/conftest.py and tests/test_cli.py. pytest 9.1 removed this attribute, moving it to _pytest.compat.NOTSET. This causes a collection-time crash \u2014 no tests can run at all.  ### Reproducing ``` pip install -e . pytest==9.1.1 pytest tests/ tests/test_cli.py:14: in <module>     from _pytest.monkeypatch import n...",

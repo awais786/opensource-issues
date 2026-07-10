@@ -41,7 +41,7 @@
     "comments": 2,
     "labels": [],
     "body_preview": "The current pattern for initializing the GeoServer data directory relies on a legacy Docker pattern: a dedicated, data-only container (`data-dir-conf`) that executes a dummy command (`/bin/true`) and exits, relying on Docker's implicit daemon behavior to copy image data into an empty named volume.   This approach spreads volume initialization logic across a standalone `Dockerfile`, a `download.sh`...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
@@ -70,7 +70,7 @@
       "backport 5.1.x"
     ],
     "body_preview": "We should introduce a new setting for the trusted URLs that should pass the URL validation.",
-    "is_new": true,
+    "is_new": false,
     "priority": "medium",
     "is_bug": false,
     "is_feature": true,
