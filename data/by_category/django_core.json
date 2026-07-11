@@ -68,7 +68,7 @@
       "bug"
     ],
     "body_preview": "`update_docs`'s translation-build step runs a shell command built via `%`-string-formatting into `subprocess.check_call(..., shell=True)`:  `docs/management/commands/update_docs.py`: ```python subprocess.check_call(     \"cd %s && make translations\" % trans_dir, shell=True, **extra_kwargs ) ```  `trans_dir` is derived from `release.version`, and `Release.version` is a plain `CharField` with no form...",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,
