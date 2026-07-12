@@ -401,7 +401,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "The cause of type checking failures is upstream, due to [a change in the signature](https://github.com/rq/rq/pull/2420) of rq's `CronScheduler.register` method.",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
