@@ -41,7 +41,7 @@
     "comments": 1,
     "labels": [],
     "body_preview": "## Summary  RTK Query infinite queries currently support two refetch behaviors via `refetchCachedPages`:  - `refetchCachedPages: true` or omitted: refetch all cached pages. - `refetchCachedPages: false`: refetch the first cached page only, and shrink the cache from N pages to 1 page.  I\u2019d like to propose an explicit third mode:  - refetch the first page, and preserve cached pages 2..N.  In other w...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
