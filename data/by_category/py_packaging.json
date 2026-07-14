@@ -491,7 +491,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "I want to convert existing directory to a project, so I use `hatch` to create `pyproject.toml` and other files.  ``` (aa) c:\\temp\\myproject>hatch new --help Usage: hatch new [OPTIONS] [NAME] [LOCATION]    Create or initialize a project.  Options:   -i, --interactive  Interactively choose details about the project   --cli              Give the project a command line interface   --init             I...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
