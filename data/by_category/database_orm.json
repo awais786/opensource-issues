@@ -18,7 +18,7 @@
       "bug"
     ],
     "body_preview": "When you combine PolymorphicModel with for example LifecycleModel from django-lifecycle this breaks passing parameters through save.   For example   ```py class MyModel(PolyMorphicModel, LifecycleModel):     ...  MyModel.save(skip_hooks=True)  # sending `skip_hooks=True` does not work ```  It is common to pass `**kwargs` along to the super so that combining custom save methods from different packa...",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,
