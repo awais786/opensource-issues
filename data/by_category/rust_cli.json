@@ -643,7 +643,7 @@
       "bug"
     ],
     "body_preview": "Latest winget package, in paging mode colors don't work. I use https://github.com/jftuga/less-Windows Built-in pager also same issue.",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,
