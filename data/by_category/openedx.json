@@ -41,7 +41,7 @@
     "comments": 1,
     "labels": [],
     "body_preview": "",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
