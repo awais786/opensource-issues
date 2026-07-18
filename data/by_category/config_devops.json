@@ -68,7 +68,7 @@
       "bug"
     ],
     "body_preview": "When creating an AWS S3 bucket, the following is selected by default in AWS.    ` ACLs disabled (recommended) All objects in this bucket are owned by this account. Access to this bucket and its objects is specified using only policies. `  Notice \"ACLs disabled\".  Then when launching a project with cookiecutter-django, the web server crashes:  ` django-1        | botocore.exceptions.ClientError: An...",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,
@@ -359,33 +359,6 @@
     "is_help_wanted": false
   },
   {
-    "id": 4874655011,
-    "repo": "getsentry/sentry-python",
-    "ecosystem": "django",
-    "ecosystem_label": "Django",
-    "category": "config_devops",
-    "category_label": "Config & DevOps",
-    "number": 6818,
-    "title": "Update `queryParams` to `urlQueryParams`",
-    "url": "https://github.com/getsentry/sentry-python/issues/6818",
-    "author": "ericapisani",
-    "author_avatar": "https://avatars.githubusercontent.com/u/5655473?v=4",
-    "created_at": "2026-07-13T14:34:01Z",
-    "updated_at": "2026-07-16T12:51:19Z",
-    "comments": 1,
-    "labels": [
-      "Python"
-    ],
-    "body_preview": "To be done after getsentry/sentry-docs#18703 is merged",
-    "is_new": true,
-    "priority": "low",
-    "is_bug": false,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
     "id": 4857927736,
     "repo": "getsentry/sentry-python",
     "ecosystem": "django",
@@ -407,7 +380,7 @@
       "Integration: Langgraph"
     ],
     "body_preview": "The Langchain and Langgraph integrations only record `input_tokens`, `output_tokens`, and `total_tokens` on spans. They don't populate `gen_ai.usage.input_tokens.cached` or `gen_ai.usage.output_tokens.reasoning`, even though `SPANDATA` already defines both and the OpenAI, OpenAI Agents, and Google GenAI integrations already set them from equivalent provider fields (e.g. `prompt_tokens_details.cach...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
@@ -434,7 +407,7 @@
       "Python"
     ],
     "body_preview": "When migrating data, tags, etc. to span attributes, the old names should be added to Sentry conventions as deprecated so that old dashboards etc. work correctly.<br><br>Do a review of the migrated attributes and see which are missing from conventions.",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
