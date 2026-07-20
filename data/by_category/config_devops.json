@@ -331,34 +331,6 @@
     "is_help_wanted": false
   },
   {
-    "id": 4874715741,
-    "repo": "getsentry/sentry-python",
-    "ecosystem": "django",
-    "ecosystem_label": "Django",
-    "category": "config_devops",
-    "category_label": "Config & DevOps",
-    "number": 6819,
-    "title": "Don't create segments where we were creating child spans",
-    "url": "https://github.com/getsentry/sentry-python/issues/6819",
-    "author": "sentrivana",
-    "author_avatar": "https://avatars.githubusercontent.com/u/131587164?v=4",
-    "created_at": "2026-07-13T14:41:28Z",
-    "updated_at": "2026-07-14T19:48:41Z",
-    "comments": 3,
-    "labels": [
-      "Waiting for: Product Owner",
-      "Python"
-    ],
-    "body_preview": "Currently, only a handful of integrations create transactions. Most integrations just create spans via `sentry_sdk.start_span`. In that case, the spans only get created if there's a running transaction.  <br>  <br>In span streaming, `sentry_sdk.traces.start_span` will always create a span. If there is no active span, it'll be a segment (root-level) span. This is not what we want in most integratio...",
-    "is_new": true,
-    "priority": "low",
-    "is_bug": false,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
     "id": 4857927736,
     "repo": "getsentry/sentry-python",
     "ecosystem": "django",
