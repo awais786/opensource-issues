@@ -216,7 +216,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "`admin/base.html` `does data-theme-base=\"{% static 'vendor/bootswatch' %}\"`, passing a directory (not a file) to `{% static %}`. Under manifest-based storages (ManifestStaticFilesStorage, whitenoise), this isn't in staticfiles.json, so it raises `ValueError: Missing staticfiles manifest entry for 'vendor/bootswatch'` on every admin page load.  DEBUG=False \u2192 every `{% static %}` call is now manifes...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

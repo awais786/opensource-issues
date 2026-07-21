@@ -1,23 +1,23 @@
 [
   {
-    "id": 4921544883,
+    "id": 4933688938,
     "repo": "vitejs/vite",
     "ecosystem": "react",
     "ecosystem_label": "React",
     "category": "react_build",
     "category_label": "Build & Tooling",
-    "number": 22982,
-    "title": "Vite 8's dev SSR transform fails with `Failed to convert rust String into napi string`",
-    "url": "https://github.com/vitejs/vite/issues/22982",
-    "author": "ocavue",
-    "author_avatar": "https://avatars.githubusercontent.com/u/24715727?v=4",
-    "created_at": "2026-07-19T06:02:16Z",
-    "updated_at": "2026-07-19T06:39:46Z",
-    "comments": 1,
+    "number": 22991,
+    "title": "bundledDev: server-side API to map module id to served URL (needed for SSR modulepreload/hydration hints)",
+    "url": "https://github.com/vitejs/vite/issues/22991",
+    "author": "ryansolid",
+    "author_avatar": "https://avatars.githubusercontent.com/u/2768267?v=4",
+    "created_at": "2026-07-20T22:49:46Z",
+    "updated_at": "2026-07-21T06:27:27Z",
+    "comments": 2,
     "labels": [
-      "pending triage"
+      "feat: bundled-dev"
     ],
-    "body_preview": "### Describe the bug  Vite 8's dev SSR transform fails on large generated modules with `` Failed to convert rust `String` into napi `string` ``, while Vite 7 handles the same module fine.     ### Reproduction  https://github.com/issueset/vite-napi-string-limit-repro.git  ### Steps to reproduce  ``` $ pnpm install   $ pnpm run repro:vite7:5mb vite 7.3.6: SSR-loading a 5.0MB virtual module (205923 e...",
+    "body_preview": "### Description  SSR frameworks that stream HTML serialize **per-module URLs into the document itself**, ahead of any client code:  - `<link rel=\"modulepreload\" href=\"...\">` hints, so the browser fetches lazy route chunks in parallel with the entry bundle during HTML parse, and - a hydration module map (e.g. `_$HY.r[\"\u2026_assets\"] = { hydrationKey: url }`) written by inline `<script>` chunks in the s...",
     "is_new": true,
     "priority": "low",
     "is_bug": false,
@@ -39,10 +39,10 @@
     "author": "RajX-dev",
     "author_avatar": "https://avatars.githubusercontent.com/u/214604759?v=4",
     "created_at": "2026-07-19T04:33:26Z",
-    "updated_at": "2026-07-19T04:33:26Z",
+    "updated_at": "2026-07-21T05:28:52Z",
     "comments": 0,
     "labels": [
-      "pending triage"
+      "p2-to-be-discussed"
     ],
     "body_preview": "### Description  ## Description  When Vite's error overlay shows a build/transform error, there's currently  no quick way to copy the full error details (plugin name, message, file  location, code frame, stack trace) as plain text.  This makes it slower to: - Paste errors into AI coding assistants for debugging help - File clear bug reports (for Vite itself or upstream plugins) - Share the exact e...",
     "is_new": true,
@@ -66,9 +66,11 @@
     "author": "cxa",
     "author_avatar": "https://avatars.githubusercontent.com/u/32127?v=4",
     "created_at": "2026-07-18T08:58:07Z",
-    "updated_at": "2026-07-18T08:58:07Z",
+    "updated_at": "2026-07-21T05:26:45Z",
     "comments": 0,
-    "labels": [],
+    "labels": [
+      "documentation"
+    ],
     "body_preview": "### Description  Inline code in the Vite documentation uses KH Teka Mono at `0.875em`. Its perceived x-height and stroke weight do not align well with the surrounding KH Teka body text, which is especially noticeable in examples such as `vite.new/{template}` on the Getting Started page.  ### Expected behavior  Inline code should retain the compact code size while having an x-height that is visuall...",
     "is_new": true,
     "priority": "low",
@@ -91,10 +93,10 @@
     "author": "solonovamax",
     "author_avatar": "https://avatars.githubusercontent.com/u/46940694?v=4",
     "created_at": "2026-07-17T21:16:17Z",
-    "updated_at": "2026-07-19T00:27:25Z",
-    "comments": 2,
+    "updated_at": "2026-07-21T05:47:23Z",
+    "comments": 3,
     "labels": [
-      "pending triage"
+      "needs reproduction"
     ],
     "body_preview": "### Describe the bug  I am trying to make a plugin which transforms any images referenced in the `index.html` file based on their query params. For example, referencing `/assets/img/foo.png?w=128` would take `/assets/img/foo.png` and resize it such that the width is 128 pixels.  In order to do this, I am using the `transformIndexHtml` hook. However, I would need to be able to access the query para...",
     "is_new": true,
@@ -118,10 +120,10 @@
     "author": "schiller-manuel",
     "author_avatar": "https://avatars.githubusercontent.com/u/6340397?v=4",
     "created_at": "2026-07-17T18:36:21Z",
-    "updated_at": "2026-07-17T18:42:23Z",
-    "comments": 0,
+    "updated_at": "2026-07-21T05:44:58Z",
+    "comments": 2,
     "labels": [
-      "pending triage"
+      "feat: bundled-dev"
     ],
     "body_preview": "### Describe the bug  With bundled dev enabled, client plugins can receive two `buildStart` calls for the same initial build.  Rolldown runs the plugin lifecycle while creating the client bundle. Vite\u2019s regular client plugin container still considers itself unstarted, so the first module graph lookup starts the same plugins again.  This came up in TanStack Start while collecting CSS for an SSR res...",
     "is_new": true,
@@ -152,6 +154,35 @@
       "p2-edge-case"
     ],
     "body_preview": "### Describe the bug  When `css.modules.generateScopedName` is a **string pattern** containing `[hash]`, the hash is computed from the full module id **including the import query**.  `runPostCSS` passes `from: removeDirectQuery(id)` to postcss ([css.ts](https://github.com/vitejs/vite/blob/main/packages/vite/src/node/plugins/css.ts#L1732-L1739)) \u2014 only `?direct` is stripped, any other query stays....",
+    "is_new": true,
+    "priority": "high",
+    "is_bug": true,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
+    "id": 4893069593,
+    "repo": "vitejs/vite",
+    "ecosystem": "react",
+    "ecosystem_label": "React",
+    "category": "react_build",
+    "category_label": "Build & Tooling",
+    "number": 22943,
+    "title": "Upgrade to v8 breaks ?inline",
+    "url": "https://github.com/vitejs/vite/issues/22943",
+    "author": "jendrikw",
+    "author_avatar": "https://avatars.githubusercontent.com/u/12938023?v=4",
+    "created_at": "2026-07-15T13:46:32Z",
+    "updated_at": "2026-07-16T07:07:01Z",
+    "comments": 0,
+    "labels": [
+      "bug: upstream",
+      "p2-edge-case",
+      "inconsistency"
+    ],
+    "body_preview": "### Describe the bug  I have a project where I import assets with `?inline`.  This is the project on vite v7: https://gitlab1.ptb.de/digitaldynamicmeasurement/dccviewer-js/-/tree/1218d1660dec81abbc894946e522a8c416e95fb5/  I upgraded vite to 8.1.4. The only other thing I changed is `build.minify` from \"esbuild\" to \"oxc\".  Neither the docs nor the migration guide mention anything about `?import`, so...",
     "is_new": true,
     "priority": "high",
     "is_bug": true,
@@ -202,7 +233,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "When installing esbuild with npm 12.x I get the following warning ```bash npm warn install-scripts 6 packages had install scripts blocked because they are not covered by allowScripts: npm warn install-scripts   esbuild@0.28.1 (postinstall: node install.js) ``` This is caused be change in node and post install script are not anymore allowed by default. There is migration guidance in https://install...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
@@ -227,7 +258,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "Version: 0.28.1  Minimal repro (format: esm, platform: node, bundle: true): ```typescript // dep.mjs export const tla = await Promise.resolve(\"x\"); // a.mjs   (a <-> b form a cycle; a also depends on the TLA module) import { b } from \"./b.mjs\"; import { tla } from \"./dep.mjs\"; export function a() { return b() + tla; } // b.mjs import { a } from \"./a.mjs\"; export function b() { return typeof a; } /...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

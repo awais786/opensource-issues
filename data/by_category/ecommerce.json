@@ -93,7 +93,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "### What are you trying to achieve?  Keep the dependency between `saleor/payment` and `saleor/giftcard` one-way. #18579 (\"Gift cards as payment method\") made it two-way: the new `saleor/giftcard/gateway.py` imports `payment`, `payment.interface`, `payment.models`, and `payment.utils` at the top level (lines 18-26), while `payment/gateway.py:14` and `payment/utils.py:35` import `giftcard.const` in...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
