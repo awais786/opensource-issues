@@ -12,7 +12,7 @@
     "author": "sergivalero20",
     "author_avatar": "https://avatars.githubusercontent.com/u/73655023?v=4",
     "created_at": "2026-07-20T16:44:13Z",
-    "updated_at": "2026-07-20T16:44:13Z",
+    "updated_at": "2026-07-21T16:27:03Z",
     "comments": 0,
     "labels": [],
     "body_preview": "### Summary  The synchronous CCX coach grade report (`ccx_grades_csv` in `lms/djangoapps/ccx/views.py`) reads persisted course/subsection grades one student at a time, producing an N+1 query pattern that makes the download slow and worker-blocking for larger classes. The asynchronous course grade report (`CourseGradeReport` in `lms/djangoapps/instructor_task/tasks_helper/grades.py`) already avoids...",

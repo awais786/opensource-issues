@@ -66,7 +66,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "The problem with current `de::Error` is that is throws away the _kind_ information as by default everything boils down to `de::Error::custom` and in no way forces `de::Error` implementations to preserve this information. Having this information can help wrapper `Deserializer`s or even wrapping errors to generate more detailed error messages.  But since this information is technically lost, error m...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
