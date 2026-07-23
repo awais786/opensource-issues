@@ -12,7 +12,7 @@
     "author": "SebCorbin",
     "author_avatar": "https://avatars.githubusercontent.com/u/645207?v=4",
     "created_at": "2026-07-17T09:51:11Z",
-    "updated_at": "2026-07-18T12:05:15Z",
+    "updated_at": "2026-07-22T13:41:11Z",
     "comments": 1,
     "labels": [
       "type:Bug",
@@ -75,7 +75,7 @@
       "status:Unconfirmed"
     ],
     "body_preview": "### Issue summary  `TranslatableMixin.copy_for_translation()` does not set the target locale on nested translatable child objects beyond the first level.  When a translatable model has a child relation whose objects are themselves translatable `ClusterableModel`s with their own translatable children (parent \u2192 translatable child \u2192 translatable grandchild), `copy_for_translation()` updates the local...",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,
@@ -103,7 +103,7 @@
       "status:Unconfirmed"
     ],
     "body_preview": "### Issue summary  `Page.copy()` (via `CopyPageAction`) can cause memory usage to spike by hundreds of MB to multiple GB when copying a page that has accumulated many revisions with sizeable content (e.g. StreamField-heavy pages). In a production deployment this caused a uWSGI worker to be killed mid-request (`reload-on-rss` threshold exceeded), resulting in an intermittent 502 error on the page c...",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,

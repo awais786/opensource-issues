@@ -41,7 +41,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "As title suggests, currently generates `data did not match any variant of untagged enum <Name>` error. This doesn't really give a lot of information as to why nothing matched. I believe just reporting all encountered errors for each variant would help define why each variant was rejected and allow the user to act upon it to fix the contents.",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

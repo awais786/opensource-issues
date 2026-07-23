@@ -1,30 +1,5 @@
 [
   {
-    "id": 4943779053,
-    "repo": "jazzband/django-oauth-toolkit",
-    "ecosystem": "django",
-    "ecosystem_label": "Django",
-    "category": "auth_security",
-    "category_label": "Auth & Security",
-    "number": 1752,
-    "title": "3.2.0 Changelogs incorrectly includes RFC 8707 support",
-    "url": "https://github.com/django-oauth/django-oauth-toolkit/issues/1752",
-    "author": "gabriel-tan",
-    "author_avatar": "https://avatars.githubusercontent.com/u/100653812?v=4",
-    "created_at": "2026-07-21T22:59:07Z",
-    "updated_at": "2026-07-22T05:41:24Z",
-    "comments": 1,
-    "labels": [],
-    "body_preview": "I noticed in the CHANGELOGS that the RFC 8707 support was supposedly introduced in version 3.2.0 (Dec 2025), but the PR was only merged to master on July 8th 2026. This needs to be updated to be moved to the unreleased section  3.2.0 Changelogs: https://github.com/django-oauth/django-oauth-toolkit/blob/master/CHANGELOG.md#320---2025-11-13 PR of the change: https://github.com/django-oauth/django-oa...",
-    "is_new": true,
-    "priority": "low",
-    "is_bug": false,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
     "id": 4842836700,
     "repo": "jazzband/django-oauth-toolkit",
     "ecosystem": "django",
@@ -145,8 +120,8 @@
     "author": "dopry",
     "author_avatar": "https://avatars.githubusercontent.com/u/387640?v=4",
     "created_at": "2026-07-05T02:26:00Z",
-    "updated_at": "2026-07-22T05:40:28Z",
-    "comments": 2,
+    "updated_at": "2026-07-22T13:26:28Z",
+    "comments": 3,
     "labels": [
       "enhancement"
     ],
