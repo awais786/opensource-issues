@@ -679,7 +679,7 @@
     "comments": 1,
     "labels": [],
     "body_preview": "Although distutils_hack is deprecated (#4137), there are still consumers that rely on the presence of distutils or access to its internals to conduct some business (see the [distutils deprecation tag](https://github.com/pypa/setuptools/issues?q=is%3Aissue%20state%3Aopen%20label%3A%22distutils%20deprecation%22)).  One aspect of this deprecation is to make the compilers module independent. Some work...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
@@ -707,7 +707,7 @@
       "Needs Triage"
     ],
     "body_preview": "### setuptools version  setuptools<68.0.0  ### Python version  Python 3.14.6  ### OS  Windows  ### Additional environment information  _No response_  ### Description  I'm migrating my python 3.10 environment to 3.14.6. Some packages require a legacy version of setuptools, so I ran pip install \"setuptools<68.0.0\". After that, typing pip directly inside the terminal gave a AttributeError: 'NoneType'...",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,

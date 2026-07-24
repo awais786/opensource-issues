@@ -41,7 +41,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "## Versions  - @reduxjs/toolkit 2.11.2 (reproduced) - Regression introduced in 2.9.0. The same code on versions before 2.9.0 fails once and stops.  ## Summary  If the argument passed to a `useQuery` hook contains `NaN` anywhere, and the request returns an error, the hook dispatches the same query again in an endless loop. Each rejection causes a rerender, and each rerender dispatches a new request...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
