@@ -1,5 +1,30 @@
 [
   {
+    "id": 4973362062,
+    "repo": "django-oscar/django-oscar",
+    "ecosystem": "django",
+    "ecosystem_label": "Django",
+    "category": "ecommerce",
+    "category_label": "E-Commerce",
+    "number": 4599,
+    "title": "Possible redirect loop with Unicode product slugs in ProductDetailView",
+    "url": "https://github.com/django-oscar/django-oscar/issues/4599",
+    "author": "anooshiravan-G1",
+    "author_avatar": "https://avatars.githubusercontent.com/u/68273221?v=4",
+    "created_at": "2026-07-25T00:58:43Z",
+    "updated_at": "2026-07-25T00:58:43Z",
+    "comments": 0,
+    "labels": [],
+    "body_preview": "Hello,  I would like to report a possible issue with Unicode slugs in `ProductDetailView.redirect_if_necessary()`.  ## Environment  - Python: 3.11.15 - Django: 5.1.3 (also tested with Django 4.2.30) - django-oscar: 4.1  ## Problem  When a product has a Unicode slug (for example Persian characters), the product detail page enters a redirect loop.  Example product slug:  `\u06af\u0648\u0634\u06cc-\u0645\u0648\u0628\u0627\u06cc\u0644-\u0645\u0648\u062a\u0648\u0631\u0648\u0644\u0627-\u0645\u062f\u0644-ed...",
+    "is_new": true,
+    "priority": "low",
+    "is_bug": false,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 4793946977,
     "repo": "django-oscar/django-oscar",
     "ecosystem": "django",
@@ -62,8 +87,8 @@
     "author": "EugenBodanov",
     "author_avatar": "https://avatars.githubusercontent.com/u/124465640?v=4",
     "created_at": "2026-07-16T13:33:29Z",
-    "updated_at": "2026-07-22T11:35:42Z",
-    "comments": 3,
+    "updated_at": "2026-07-24T09:49:51Z",
+    "comments": 4,
     "labels": [
       "triage"
     ],

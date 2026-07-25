@@ -16,7 +16,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "hi! On [orbstack](https://orbstack.dev/), `docker.host.local` resolves to  0.250.250.254 (https://github.com/orgs/orbstack/discussions/1829) This means that the check in [middleware.show_toolbar_with_docker](https://github.com/django-commons/django-debug-toolbar/blob/9e9ebf974765308de1550002192782a50e64e969/debug_toolbar/middleware.py#L44) doesn't successfully compute the host IP address and the t...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
