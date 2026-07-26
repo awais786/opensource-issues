@@ -307,30 +307,5 @@
     "is_security": false,
     "is_good_first_issue": false,
     "is_help_wanted": false
-  },
-  {
-    "id": 4390842076,
-    "repo": "django/djangoproject.com",
-    "ecosystem": "django",
-    "ecosystem_label": "Django",
-    "category": "django_core",
-    "category_label": "Django Core",
-    "number": 2613,
-    "title": "Extend playwright E2E tests to run on multiple browsers (chromium and firefox)",
-    "url": "https://github.com/django/djangoproject.com/issues/2613",
-    "author": "sarahboyce",
-    "author_avatar": "https://avatars.githubusercontent.com/u/42296566?v=4",
-    "created_at": "2026-05-06T11:06:26Z",
-    "updated_at": "2026-05-06T11:06:26Z",
-    "comments": 0,
-    "labels": [],
-    "body_preview": "This follows the adding of playwright testing here: https://github.com/django/djangoproject.com/pull/2444 The current design does not allow multiple browsers to be tested. This suggested improvement would allow users to test with different browsers adding an option such as `--browser chromium --browser firefox` where only running on the chromium browser would be the default when no browser option...",
-    "is_new": false,
-    "priority": "low",
-    "is_bug": false,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
   }
 ]

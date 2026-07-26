@@ -40,8 +40,8 @@
     "author": "MaciekBaron",
     "author_avatar": "https://avatars.githubusercontent.com/u/1668712?v=4",
     "created_at": "2026-07-23T16:14:46Z",
-    "updated_at": "2026-07-23T16:14:46Z",
-    "comments": 0,
+    "updated_at": "2026-07-25T16:48:26Z",
+    "comments": 1,
     "labels": [
       "type:Bug",
       "status:Unconfirmed"
@@ -422,35 +422,6 @@
       "status:Unconfirmed"
     ],
     "body_preview": "### Issue summary  When performing a bulk action on pages with \"Select all in listing\", the URL contains id=all&childOf=<page_id>. If the page referenced by childOf no longer exists (e.g. deleted by another admin while the listing was open), the view crashes with an unhandled Page.DoesNotExist (500 error).  This occurs in get_all_objects_in_listing_query() in wagtail/admin/views/pages/bulk_actions...",
-    "is_new": false,
-    "priority": "high",
-    "is_bug": true,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
-    "id": 4812109127,
-    "repo": "wagtail/wagtail",
-    "ecosystem": "django",
-    "ecosystem_label": "Django",
-    "category": "cms",
-    "category_label": "CMS & Content",
-    "number": 14386,
-    "title": "ValueError and InvalidPage crash in workflow edit view when invalid page number provided",
-    "url": "https://github.com/wagtail/wagtail/issues/14386",
-    "author": "pegasus7d",
-    "author_avatar": "https://avatars.githubusercontent.com/u/98573940?v=4",
-    "created_at": "2026-07-05T08:11:45Z",
-    "updated_at": "2026-07-13T21:28:22Z",
-    "comments": 2,
-    "labels": [
-      "type:Bug",
-      "component:Workflow",
-      "status:Unconfirmed"
-    ],
-    "body_preview": "### Issue summary  When editing a workflow in the Wagtail admin, providing an invalid value for the `p` (page number) query parameter causes a 500 error. Two crash scenarios: 1. Non-numeric value: `/admin/workflows/edit/1/?p=abc` \u2192 ValueError: invalid literal for int() with base 10: 'abc' 2. Out-of-range number: `/admin/workflows/edit/1/?p=99999` \u2192 InvalidPage exception  This occurs in `get_pagina...",
     "is_new": false,
     "priority": "high",
     "is_bug": true,
