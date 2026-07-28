@@ -1,5 +1,30 @@
 [
   {
+    "id": 4992732576,
+    "repo": "facebook/react",
+    "ecosystem": "react",
+    "ecosystem_label": "React",
+    "category": "react_core",
+    "category_label": "React Core",
+    "number": 37138,
+    "title": "[Compiler Bug]: react-compiler-healthcheck 1.0.0 always reports 100% \u2014 isActionableDiagnostic switches on removed ErrorSeverity members",
+    "url": "https://github.com/react/react/issues/37138",
+    "author": "Ninfendo",
+    "author_avatar": "https://avatars.githubusercontent.com/u/1043590?v=4",
+    "created_at": "2026-07-27T22:06:45Z",
+    "updated_at": "2026-07-28T06:40:55Z",
+    "comments": 0,
+    "labels": [],
+    "body_preview": "## What happened  `react-compiler-healthcheck@1.0.0` reports a perfect score on every codebase, because it can never record a failure. `isActionableDiagnostic` switches on `ErrorSeverity` members that no longer exist in the enum the same bundle ships, so every `CompileError` falls through to `default:` and throws \u2014 inside a logger whose caller swallows it.  Both halves are in healthcheck's own `di...",
+    "is_new": true,
+    "priority": "low",
+    "is_bug": false,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 4977476367,
     "repo": "facebook/react",
     "ecosystem": "react",
@@ -77,6 +102,33 @@
     "is_help_wanted": false
   },
   {
+    "id": 4990301601,
+    "repo": "remix-run/react-router",
+    "ecosystem": "react",
+    "ecosystem_label": "React",
+    "category": "react_core",
+    "category_label": "React Core",
+    "number": 15350,
+    "title": "Base public path not working together with prerender anymore in v8",
+    "url": "https://github.com/remix-run/react-router/issues/15350",
+    "author": "codler",
+    "author_avatar": "https://avatars.githubusercontent.com/u/102052?v=4",
+    "created_at": "2026-07-27T16:53:19Z",
+    "updated_at": "2026-07-27T16:53:19Z",
+    "comments": 0,
+    "labels": [
+      "bug"
+    ],
+    "body_preview": "### Reproduction  https://stackblitz.com/edit/github-xzinw4xz?file=package.json  Set   `base: '/app/',` in vite.config.ts and `async prerender({ getStaticPaths }) {     return getStaticPaths();   },   ssr: false,` in react-router.config.ts  ### System Info  ```shell System:     OS: Linux 5.0 undefined     CPU: (8) x64 Intel(R) Core(TM) i9-9880H CPU @ 2.30GHz     Memory: 0 Bytes / 0 Bytes     Shell...",
+    "is_new": true,
+    "priority": "high",
+    "is_bug": true,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 4984524770,
     "repo": "remix-run/react-router",
     "ecosystem": "react",
@@ -89,8 +141,8 @@
     "author": "Verthon",
     "author_avatar": "https://avatars.githubusercontent.com/u/25480861?v=4",
     "created_at": "2026-07-27T05:09:32Z",
-    "updated_at": "2026-07-27T08:24:49Z",
-    "comments": 2,
+    "updated_at": "2026-07-28T08:07:14Z",
+    "comments": 9,
     "labels": [
       "bug"
     ],
@@ -231,7 +283,7 @@
       "feat:split-route-modules"
     ],
     "body_preview": "## Reproduction  Failing Framework Mode integration test based on the repository's `integration/bug-report-test.ts` template:  https://github.com/comp615/react-router/blob/d53520674e7b2b9281045c9aa597a01702ac9bf6/integration/bug-report-test.ts  Run from the repository root:  ```sh pnpm install pnpm build pnpm test:integration:run bug-report --project chromium ```  The fixture enables route-module...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
@@ -259,7 +311,7 @@
       "feat:split-route-modules"
     ],
     "body_preview": "## Reproduction  Failing integration test on the current `main` branch:  https://github.com/comp615/react-router/blob/5574f7ef87af726d1aedba2b2ed7520d71c40f3b/integration/bug-report-test.ts  The fixture configures Framework Mode with:  ```ts export default {   splitRouteModules: \"enforce\", } satisfies Config; ```  and uses the standard React Router and React Vite plugins:  ```ts export default def...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

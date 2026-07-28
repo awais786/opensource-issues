@@ -429,6 +429,36 @@
     "is_help_wanted": false
   },
   {
+    "id": 4812228168,
+    "repo": "wagtail/wagtail",
+    "ecosystem": "django",
+    "ecosystem_label": "Django",
+    "category": "cms",
+    "category_label": "CMS & Content",
+    "number": 14388,
+    "title": "Page.DoesNotExist crash in bulk action view when childOf page does not exist",
+    "url": "https://github.com/wagtail/wagtail/issues/14388",
+    "author": "pegasus7d",
+    "author_avatar": "https://avatars.githubusercontent.com/u/98573940?v=4",
+    "created_at": "2026-07-05T08:57:58Z",
+    "updated_at": "2026-07-08T08:37:59Z",
+    "comments": 1,
+    "labels": [
+      "type:Bug",
+      "component:Page",
+      "component:Bulk Actions",
+      "status:Unconfirmed"
+    ],
+    "body_preview": "### Issue summary  When performing a bulk action on pages with \"Select all in listing\", the URL contains id=all&childOf=<page_id>. If the page referenced by childOf no longer exists (e.g. deleted by another admin while the listing was open), the view crashes with an unhandled Page.DoesNotExist (500 error).  This occurs in get_all_objects_in_listing_query() in wagtail/admin/views/pages/bulk_actions...",
+    "is_new": false,
+    "priority": "high",
+    "is_bug": true,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 4571359216,
     "repo": "wagtail/django-modelcluster",
     "ecosystem": "django",

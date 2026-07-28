@@ -116,7 +116,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "Hello maintainers,  I am opening this issue to establish vendor contact for a security review of django-rest-knox. The local report identifies the following potential security findings:  - Race condition in token limit (TOCTOU) - `knox/views.py:66-78` - O(N) token cleanup DoS vector - `knox/auth.py:104-119` - Missing rate limiting on auth endpoints - `knox/views.py:16-81` - Token not salted - `kno...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

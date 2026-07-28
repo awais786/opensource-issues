@@ -41,7 +41,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "```rust #![feature(default_field_values)]  #[derive(serde::Deserialize)] struct S1 {     tag: i8,     data: Vec<i8> = Vec::new(), }  #[derive(serde::Deserialize)] struct S2 {     #[serde(default)]     field1: S1 = S1 { tag: 2, .. }, } ``` This code fails with: ``` error[E0277]: the trait bound `S1: Default` is not satisfied   --> core_lib/src/lib.rs:11:5    | 11 | /     #[serde(default)] 12 | |...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

@@ -18,7 +18,7 @@
       "RTK-Query"
     ],
     "body_preview": "Steps:  1. Create an API with a query and a mutation sharing the same cache tag 2. Start a request for the query with `subscribe: false` 3. Start a request for the mutation 4. If the mutation completes right before the query, the query returns `undefined`, breaking its API contract (types claim that `undefined` is never returned)  Here is a minimal reproducer: https://gist.github.com/emersion/1459...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

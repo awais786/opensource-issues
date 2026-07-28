@@ -47,7 +47,7 @@
       "S: needs triage"
     ],
     "body_preview": "### Description  Pip reports `no matching distributions available for your environment` for `urllib3`, but `urllib3==2.7.0` installs fine on its own.  ### Expected behavior  That message only names packages that really have no candidates for the current environment.  ### pip version  26.1.2  ### Python version  3.14  ### OS  macOS   ### How to Reproduce  ```console $ pip install --dry-run \"botocor...",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,
@@ -725,8 +725,8 @@
     "author": "cjames23",
     "author_avatar": "https://avatars.githubusercontent.com/u/8369962?v=4",
     "created_at": "2026-07-24T16:35:29Z",
-    "updated_at": "2026-07-24T23:41:48Z",
-    "comments": 2,
+    "updated_at": "2026-07-27T20:34:40Z",
+    "comments": 3,
     "labels": [
       "bug",
       "good first issue",
