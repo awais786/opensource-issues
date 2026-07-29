@@ -1,5 +1,32 @@
 [
   {
+    "id": 5002348072,
+    "repo": "facebook/react",
+    "ecosystem": "react",
+    "ecosystem_label": "React",
+    "category": "react_core",
+    "category_label": "React Core",
+    "number": 37141,
+    "title": "Bug: `@eslint-react/set-state-in-effect` does not ignore calls in `.finally()` blocks in useCallback",
+    "url": "https://github.com/react/react/issues/37141",
+    "author": "skondrashov",
+    "author_avatar": "https://avatars.githubusercontent.com/u/12279291?v=4",
+    "created_at": "2026-07-28T19:37:36Z",
+    "updated_at": "2026-07-28T19:42:35Z",
+    "comments": 0,
+    "labels": [
+      "Status: Unconfirmed"
+    ],
+    "body_preview": "<!--   Please provide a clear and concise description of what the bug is. Include   screenshots if needed. Please test using the latest version of the relevant   React packages to make sure your issue has not already been fixed. -->  React version: 18.2.0  ## Steps To Reproduce  1. Call a setter in a `.finally()` block inside a `useCallback`, where the callback is called in a `useEffect`. 2. The s...",
+    "is_new": true,
+    "priority": "low",
+    "is_bug": false,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 4992732576,
     "repo": "facebook/react",
     "ecosystem": "react",
@@ -141,8 +168,8 @@
     "author": "Verthon",
     "author_avatar": "https://avatars.githubusercontent.com/u/25480861?v=4",
     "created_at": "2026-07-27T05:09:32Z",
-    "updated_at": "2026-07-28T08:07:14Z",
-    "comments": 9,
+    "updated_at": "2026-07-28T22:12:53Z",
+    "comments": 15,
     "labels": [
       "bug"
     ],
@@ -227,7 +254,7 @@
       "feat:rsc"
     ],
     "body_preview": "## Summary  On an RSC **data request** (`.rsc`), when a route loader throws a non-redirect `Response` (or any error), `unstable_matchRSCServerRequest` runs with `skipLoaderErrorBubbling: true` and keys the error to the route's own id \u2014 but `getRSCRouteMatch` still creates that route's `element`, with `loaderData[routeId]` left `undefined` (the `null` backfill skips errored routes). The server the...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
@@ -255,7 +282,7 @@
       "feat:vite"
     ],
     "body_preview": "### I'm using React Router as a...  framework  ### Reproduction  When running a React Router framework app on localhost and opening the app in Chrome/Chromium, Chrome DevTools requests:  ```txt /.well-known/appspecific/com.chrome.devtools.json ```  React Router handles this like an application document request and logs/throws:  ```txt Error: No route matches URL \"/.well-known/appspecific/com.chrom...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
@@ -428,34 +455,6 @@
     "is_new": false,
     "priority": "high",
     "is_bug": true,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
-    "id": 4859591525,
-    "repo": "remix-run/react-router",
-    "ecosystem": "react",
-    "ecosystem_label": "React",
-    "category": "react_core",
-    "category_label": "React Core",
-    "number": 15303,
-    "title": "@react-router/dev watcher has no exclusion mechanism \u2014 chokidar 4 holds an fd per watched file on macOS; large trees under appDirectory break all child_process spawning (spawn EBADF)",
-    "url": "https://github.com/remix-run/react-router/issues/15303",
-    "author": "kadeangell",
-    "author_avatar": "https://avatars.githubusercontent.com/u/80499246?v=4",
-    "created_at": "2026-07-11T00:19:02Z",
-    "updated_at": "2026-07-13T12:47:59Z",
-    "comments": 1,
-    "labels": [
-      "pkg:@react-router/dev",
-      "feat:vite"
-    ],
-    "body_preview": "## Summary  `@react-router/dev`'s dev watcher (`chokidar.watch([root, appDirectory], { ignored: isIgnoredByWatcher })` \u2014 [`packages/react-router-dev/config/config.ts#L1231`](https://github.com/remix-run/react-router/blob/main/packages/react-router-dev/config/config.ts#L1231)) watches **everything under `appDirectory`** with a hardcoded ignore function that exposes no user configuration and does no...",
-    "is_new": false,
-    "priority": "low",
-    "is_bug": false,
     "is_feature": false,
     "is_security": false,
     "is_good_first_issue": false,

@@ -16,7 +16,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "Hello maintainers,  I am opening this issue to establish vendor contact for a security review of graphene-django. The local report identifies the following potential security findings:  - IDOR in BaseDjangoFormMutation - HIGH - IDOR in SerializerMutation - HIGH - Mass Assignment - HIGH - All Fields Exposed by Default - MEDIUM - Debug Middleware SQL Leak - MEDIUM - GraphiQL Without Auth - MEDIUM -...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
