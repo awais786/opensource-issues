@@ -83,35 +83,6 @@
     "is_help_wanted": false
   },
   {
-    "id": 4814580093,
-    "repo": "tokio-rs/tokio",
-    "ecosystem": "rust",
-    "ecosystem_label": "Rust",
-    "category": "rust_async",
-    "category_label": "Async & Web",
-    "number": 8255,
-    "title": "Use-after-free in io_uring driver when submit fails with a non-EBUSY error (EAGAIN)",
-    "url": "https://github.com/tokio-rs/tokio/issues/8255",
-    "author": "default-cybe",
-    "author_avatar": "https://avatars.githubusercontent.com/u/201046277?v=4",
-    "created_at": "2026-07-05T21:55:44Z",
-    "updated_at": "2026-07-10T11:50:52Z",
-    "comments": 1,
-    "labels": [
-      "C-bug",
-      "A-tokio",
-      "T-io-uring"
-    ],
-    "body_preview": "Filing publicly per maintainer guidance \u2014 flagged privately first; io-uring is unstable so no embargo needed.  ## Summary  `Handle::register_op` (`tokio/src/runtime/io/driver/uring.rs`) pushes an SQE into the submission ring \u2014 which is synced to the kernel when the temporary `SubmissionQueue` guard drops \u2014 then calls `submit`. `submit` only retries on `EBUSY` and returns every other error up. On s...",
-    "is_new": false,
-    "priority": "high",
-    "is_bug": true,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
     "id": 4977307562,
     "repo": "tokio-rs/axum",
     "ecosystem": "rust",

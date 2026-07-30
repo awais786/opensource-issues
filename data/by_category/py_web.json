@@ -75,31 +75,6 @@
     "is_help_wanted": false
   },
   {
-    "id": 4900029058,
-    "repo": "pallets/werkzeug",
-    "ecosystem": "python",
-    "ecosystem_label": "Python",
-    "category": "py_web",
-    "category_label": "Python Web",
-    "number": 3207,
-    "title": "Test error in python 3.15",
-    "url": "https://github.com/pallets/werkzeug/issues/3207",
-    "author": "coogor",
-    "author_avatar": "https://avatars.githubusercontent.com/u/5717703?v=4",
-    "created_at": "2026-07-16T08:08:43Z",
-    "updated_at": "2026-07-16T08:08:43Z",
-    "comments": 0,
-    "labels": [],
-    "body_preview": "Python-Werkzeug:Test fails due to deprecated modules in Python 3.15.   Visit https://build.opensuse.org/package/live_build_log/devel:languages:python/python-Werkzeug:test/py315/x86_64  Package devel:languages:python/python-Werkzeug:test failed to build in py315/x86_64  Last lines of build log: [   18s]     from cProfile import Profile [   18s] /usr/lib64/python3.15/cProfile.py:7: in <module> [   1...",
-    "is_new": false,
-    "priority": "low",
-    "is_bug": false,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
     "id": 4729607944,
     "repo": "pallets/werkzeug",
     "ecosystem": "python",
@@ -217,7 +192,7 @@
     "author": "maarten-ic",
     "author_avatar": "https://avatars.githubusercontent.com/u/110895564?v=4",
     "created_at": "2026-06-08T12:10:23Z",
-    "updated_at": "2026-07-20T20:01:40Z",
+    "updated_at": "2026-07-29T13:19:03Z",
     "comments": 1,
     "labels": [
       "bug"

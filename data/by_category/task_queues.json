@@ -1,32 +1,5 @@
 [
   {
-    "id": 4979546636,
-    "repo": "celery/celery",
-    "ecosystem": "django",
-    "ecosystem_label": "Django",
-    "category": "task_queues",
-    "category_label": "Task Queues & Async",
-    "number": 10434,
-    "title": "Buffered task events are silently dropped when the worker uses the threads pool",
-    "url": "https://github.com/celery/celery/issues/10434",
-    "author": "oliverhaas",
-    "author_avatar": "https://avatars.githubusercontent.com/u/4050664?v=4",
-    "created_at": "2026-07-26T07:12:42Z",
-    "updated_at": "2026-07-27T13:58:04Z",
-    "comments": 4,
-    "labels": [
-      "Issue Type: Bug Report"
-    ],
-    "body_preview": "<details> <summary><b>Checklist, related issues and environment</b></summary>  # Checklist  - [x] I have verified that the issue exists against the `main` branch of Celery. - [ ] This has already been asked to the [discussions forum](https://github.com/celery/celery/discussions) first. - [x] I have read the relevant section in the   [contribution guide](https://docs.celeryq.dev/en/main/contributin...",
-    "is_new": true,
-    "priority": "high",
-    "is_bug": true,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
     "id": 4890436708,
     "repo": "celery/celery",
     "ecosystem": "django",
