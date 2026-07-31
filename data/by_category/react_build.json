@@ -1,5 +1,32 @@
 [
   {
+    "id": 5021884114,
+    "repo": "vitejs/vite",
+    "ecosystem": "react",
+    "ecosystem_label": "React",
+    "category": "react_build",
+    "category_label": "Build & Tooling",
+    "number": 23108,
+    "title": "`?url` imports percent-encode IPv6 brackets from `server.origin`",
+    "url": "https://github.com/vitejs/vite/issues/23108",
+    "author": "mkopinsky",
+    "author_avatar": "https://avatars.githubusercontent.com/u/591435?v=4",
+    "created_at": "2026-07-30T16:29:21Z",
+    "updated_at": "2026-07-30T16:53:20Z",
+    "comments": 1,
+    "labels": [
+      "pending triage"
+    ],
+    "body_preview": "### Describe the bug  When `server.origin` contains an IPv6 address, Vite percent-encodes the square brackets when generating URLs for `?url` imports.  Given:  ```js export default {   server: {     origin: 'http://[::1]:5173',   }, } ```  and:  ```js import assetUrl from './assets/vite.svg?url' ```  Vite generates: `http://%5B::1%5D:5173/src/assets/vite.svg` instead of `http://[::1]:5173/src/asse...",
+    "is_new": true,
+    "priority": "low",
+    "is_bug": false,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 4999478845,
     "repo": "vitejs/vite",
     "ecosystem": "react",

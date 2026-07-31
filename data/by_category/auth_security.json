@@ -120,7 +120,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "Follow-up from #1749 (RFC 9700 compliance gates), where Copilot flagged that `validate_response_type()` matches OIDC response types by exact string while the new discovery gating treats them as space-separated sets.  ## Background  OIDC's [OAuth 2.0 Multiple Response Type Encoding Practices \u00a74](https://openid.net/specs/oauth-v2-multiple-response-types-1_0.html#terminology) says a `response_type` c...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
