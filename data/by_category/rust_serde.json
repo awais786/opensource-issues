@@ -41,7 +41,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "`serde_core` is version-locked to the same `serde_derive` via `target.'cfg(any())'.dependencies`. This is fine in theory, but they currently have different `rust-version` support, and Cargo's fallback resolver appears to be too greedy.  ``` $ cargo +1.70.0 new hello      Created binary (application) `hello` package $ cd hello/ $ sed -i '/^edition/a rust-version = \"1.70\"' Cargo.toml $ cargo +1.70.0...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
