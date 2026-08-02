@@ -112,8 +112,8 @@
     "author": "alphaveneno",
     "author_avatar": "https://avatars.githubusercontent.com/u/38662792?v=4",
     "created_at": "2026-06-01T18:15:26Z",
-    "updated_at": "2026-06-28T15:14:18Z",
-    "comments": 1,
+    "updated_at": "2026-08-01T18:58:34Z",
+    "comments": 2,
     "labels": [
       "bug"
     ],
@@ -394,9 +394,10 @@
     "author": "alexander-alderman-webb",
     "author_avatar": "https://avatars.githubusercontent.com/u/224035503?v=4",
     "created_at": "2026-07-31T13:37:04Z",
-    "updated_at": "2026-07-31T13:38:02Z",
-    "comments": 1,
+    "updated_at": "2026-08-01T18:47:41Z",
+    "comments": 2,
     "labels": [
+      "Waiting for: Product Owner",
       "Python",
       "Bug"
     ],

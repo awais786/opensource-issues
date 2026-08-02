@@ -16,7 +16,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "### Bug  `FileResponse._parse_range_header` rejects a Range only when `start > end`, but `bytes=5-4` parses to the empty half-open range `(5, 5)` and slips past that guard. The result is a malformed `206 Partial Content` (`Content-Length: 0`, a backwards `Content-Range: bytes 5-4/...`) instead of a `400`.  `bytes=10-5` is caught (it parses to `(10, 6)`, so `10 > 6`), but the off-by-one boundary ca...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
