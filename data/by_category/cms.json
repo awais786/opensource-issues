@@ -48,7 +48,7 @@
       "status:Unconfirmed"
     ],
     "body_preview": "### Issue summary  In our code, we have set our default primary key as a UUID. Creating a custom image model will correctly use that ID field, which is the behaviour we want and expect.  Unfortunately, all through wagtail the image URLs are explicitly defined as `<int:image_id>`. So despite implicitly supporting the user-specified ID field, the URLs end up breaking the editor (and I imagine the AP...",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,
