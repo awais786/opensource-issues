@@ -1,5 +1,33 @@
 [
   {
+    "id": 5053276776,
+    "repo": "tokio-rs/tokio",
+    "ecosystem": "rust",
+    "ecosystem_label": "Rust",
+    "category": "rust_async",
+    "category_label": "Async & Web",
+    "number": 8342,
+    "title": "multi_thread runtime deadlocks after Windows sleep/resume: all workers condvar-parked, IO/timer driver left unowned",
+    "url": "https://github.com/tokio-rs/tokio/issues/8342",
+    "author": "GlenDC",
+    "author_avatar": "https://avatars.githubusercontent.com/u/3900482?v=4",
+    "created_at": "2026-08-03T19:01:50Z",
+    "updated_at": "2026-08-03T19:02:57Z",
+    "comments": 1,
+    "labels": [
+      "C-bug",
+      "A-tokio"
+    ],
+    "body_preview": "**Version**  - tokio 1.53.1 (`multi_thread`, default `#[tokio::main]`, 8 workers on 8 logical CPUs) - mio 1.2.2 - rustc x86_64-pc-windows-msvc v1.97.0 - Windows 11 build 26200 (x64), observed on multiple machines (Dell XPS 13 9300 for the repro below)  **Platform**  Windows only as far as we can tell. Long-running network service under continuous TCP load (transparent proxy: high accept rate, thou...",
+    "is_new": true,
+    "priority": "high",
+    "is_bug": true,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 5005570514,
     "repo": "tokio-rs/tokio",
     "ecosystem": "rust",
@@ -162,36 +190,6 @@
     "is_security": false,
     "is_good_first_issue": false,
     "is_help_wanted": false
-  },
-  {
-    "id": 4672261570,
-    "repo": "tokio-rs/axum",
-    "ecosystem": "rust",
-    "ecosystem_label": "Rust",
-    "category": "rust_async",
-    "category_label": "Async & Web",
-    "number": 3799,
-    "title": "Support for the HTTP QUERY Method",
-    "url": "https://github.com/tokio-rs/axum/issues/3799",
-    "author": "breard-r",
-    "author_avatar": "https://avatars.githubusercontent.com/u/110785?v=4",
-    "created_at": "2026-06-16T08:01:59Z",
-    "updated_at": "2026-08-01T11:04:52Z",
-    "comments": 7,
-    "labels": [
-      "C-enhancement",
-      "E-easy",
-      "E-help-wanted",
-      "A-axum"
-    ],
-    "body_preview": "- [x] I have looked for existing issues (including closed) about this  ## Feature Request  ### Motivation  Recently the [RFC 10008](https://www.rfc-editor.org/info/rfc10008/) standardized the HTTP QUERY method, which is also registered at the [IANA HTTP Method Registry](https://www.iana.org/assignments/http-methods/http-methods.xml#methods). In short, this new method is a mix of GET and POST metho...",
-    "is_new": false,
-    "priority": "medium",
-    "is_bug": false,
-    "is_feature": true,
-    "is_security": false,
-    "is_good_first_issue": true,
-    "is_help_wanted": true
   },
   {
     "id": 4642891818,
