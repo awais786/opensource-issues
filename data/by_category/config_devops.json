@@ -354,6 +354,35 @@
     "is_help_wanted": false
   },
   {
+    "id": 5059810624,
+    "repo": "getsentry/sentry-python",
+    "ecosystem": "django",
+    "ecosystem_label": "Django",
+    "category": "config_devops",
+    "category_label": "Config & DevOps",
+    "number": 7031,
+    "title": "S3 HeadObject returns 403 when sentry_sdk.start_span and Datadog botocore instrumentation are both active",
+    "url": "https://github.com/getsentry/sentry-python/issues/7031",
+    "author": "andrey-berenda",
+    "author_avatar": "https://avatars.githubusercontent.com/u/8141226?v=4",
+    "created_at": "2026-08-04T11:16:48Z",
+    "updated_at": "2026-08-04T14:13:00Z",
+    "comments": 3,
+    "labels": [
+      "Integration: Boto3",
+      "Python",
+      "Bug"
+    ],
+    "body_preview": "### Environment  - Python 3.14 - Linux aarch64 - `sentry-sdk==2.66.0` - `ddtrace==4.12.1` (Datadog admission-controller library injection) - FastAPI - boto3/botocore with AWS SigV4  ### Description  An S3 `HeadObject` request against an existing, accessible object returns `403 Forbidden` only when it executes inside `sentry_sdk.start_span(...)` while Datadog's botocore integration is active. The s...",
+    "is_new": true,
+    "priority": "high",
+    "is_bug": true,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 5057637010,
     "repo": "getsentry/sentry-python",
     "ecosystem": "django",
@@ -494,34 +523,6 @@
     "is_help_wanted": false
   },
   {
-    "id": 5051991357,
-    "repo": "getsentry/sentry-python",
-    "ecosystem": "django",
-    "ecosystem_label": "Django",
-    "category": "config_devops",
-    "category_label": "Config & DevOps",
-    "number": 7017,
-    "title": "Add `langchain-core` to typing group",
-    "url": "https://github.com/getsentry/sentry-python/issues/7017",
-    "author": "alexander-alderman-webb",
-    "author_avatar": "https://avatars.githubusercontent.com/u/224035503?v=4",
-    "created_at": "2026-08-03T16:27:30Z",
-    "updated_at": "2026-08-03T16:28:14Z",
-    "comments": 1,
-    "labels": [
-      "Python",
-      "Improvement"
-    ],
-    "body_preview": "",
-    "is_new": true,
-    "priority": "low",
-    "is_bug": false,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
     "id": 5050884658,
     "repo": "getsentry/sentry-python",
     "ecosystem": "django",
@@ -534,9 +535,10 @@
     "author": "alexander-alderman-webb",
     "author_avatar": "https://avatars.githubusercontent.com/u/224035503?v=4",
     "created_at": "2026-08-03T14:26:59Z",
-    "updated_at": "2026-08-03T14:27:43Z",
-    "comments": 1,
+    "updated_at": "2026-08-04T16:14:08Z",
+    "comments": 2,
     "labels": [
+      "Waiting for: Product Owner",
       "Python",
       "Bug",
       "Errors"
@@ -640,8 +642,8 @@
     "author": "sentrivana",
     "author_avatar": "https://avatars.githubusercontent.com/u/131587164?v=4",
     "created_at": "2026-08-03T09:48:39Z",
-    "updated_at": "2026-08-04T06:36:09Z",
-    "comments": 3,
+    "updated_at": "2026-08-05T06:16:18Z",
+    "comments": 5,
     "labels": [
       "Python"
     ],
