@@ -298,7 +298,7 @@
     "author": "pavoljuhas",
     "author_avatar": "https://avatars.githubusercontent.com/u/1915760?v=4",
     "created_at": "2026-08-04T21:13:54Z",
-    "updated_at": "2026-08-04T21:13:54Z",
+    "updated_at": "2026-08-05T22:14:18Z",
     "comments": 0,
     "labels": [],
     "body_preview": "### Please tick this box to confirm you have reviewed the above.  - [x] I have a different issue.  ### What version of ripgrep are you using?  ripgrep 15.1.0  ### How did you install ripgrep?  Stock system APT package   ### What operating system are you using ripgrep on?  Debian GNU/Linux forky/sid   ### Describe your bug.  I'd like to match a start of a multi-line regular expression and show its...",
