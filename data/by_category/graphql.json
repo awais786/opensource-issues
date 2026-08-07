@@ -25,6 +25,33 @@
     "is_help_wanted": false
   },
   {
+    "id": 5080282291,
+    "repo": "strawberry-graphql/strawberry-django",
+    "ecosystem": "django",
+    "ecosystem_label": "Django",
+    "category": "graphql",
+    "category_label": "GraphQL",
+    "number": 941,
+    "title": "DjangoOptimizerExtension does not work on subscriptions",
+    "url": "https://github.com/strawberry-graphql/strawberry-django/issues/941",
+    "author": "rcybulski1122012",
+    "author_avatar": "https://avatars.githubusercontent.com/u/68512922?v=4",
+    "created_at": "2026-08-06T10:37:36Z",
+    "updated_at": "2026-08-07T05:43:28Z",
+    "comments": 2,
+    "labels": [
+      "bug"
+    ],
+    "body_preview": "## Describe the Bug  A queryset returned from a `strawberry_django.field` resolver is automatically optimized when the type is resolved as part of a **query or mutation**, but not when the exact same type is yielded from a **subscription** \u2014 there it silently N+1s.  ### Minimal example  ```python # models class Color(models.Model):     name = models.CharField(max_length=50)  class Fruit(models.Mod...",
+    "is_new": true,
+    "priority": "high",
+    "is_bug": true,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 5029446637,
     "repo": "strawberry-graphql/strawberry-django",
     "ecosystem": "django",
