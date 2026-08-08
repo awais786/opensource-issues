@@ -341,7 +341,7 @@
     "comments": 2,
     "labels": [],
     "body_preview": "Recently, I've noticed that `test_apply_pyproject_equivalent_to_setupcfg` will fail but then succeed on a retry. Here's an example run from a [distutils test](https://github.com/pypa/distutils/actions/runs/30634862970/job/91169771544?pr=421):  ``` =================================== FAILURES =================================== _ test_apply_pyproject_equivalent_to_setupcfg[https://github.com/sqlalc...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
