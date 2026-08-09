@@ -311,7 +311,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "## Expected Behavior  The error message should describe the nature of the \"payload error\", such as \"payload reached size limit\" or \"can not decode content-encoding\".  ## Current Behavior  The plaintext error that appears to users is not actionable.  ## Possible Solution  Looking at the [`MultipartError`](https://docs.rs/actix-multipart/latest/actix_multipart/enum.MultipartError.html) enum, it seem...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

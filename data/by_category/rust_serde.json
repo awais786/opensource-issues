@@ -191,7 +191,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "I repro this locally with serde_json 1.0.151: ```rust #[derive(serde::Deserialize, Debug, Clone)] pub struct IspData<'g> {     #[serde(default)]     isp: Option<String>,      #[serde(default, rename = \"isp-tags\")]     isp_tags: Option<Vec<String>>,      #[serde(flatten, borrow)]     garbage: std::collections::BTreeMap<&'g str, &'g serde_json::value::RawValue>,      #[serde(default, borrow)]     op...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

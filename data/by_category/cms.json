@@ -371,34 +371,6 @@
     "is_help_wanted": false
   },
   {
-    "id": 4873849457,
-    "repo": "wagtail/wagtail",
-    "ecosystem": "django",
-    "ecosystem_label": "Django",
-    "category": "cms",
-    "category_label": "CMS & Content",
-    "number": 14412,
-    "title": "Copied Rich text streamfield: Link can't be edited",
-    "url": "https://github.com/wagtail/wagtail/issues/14412",
-    "author": "benebun",
-    "author_avatar": "https://avatars.githubusercontent.com/u/1321740?v=4",
-    "created_at": "2026-07-13T12:59:19Z",
-    "updated_at": "2026-07-15T07:23:21Z",
-    "comments": 1,
-    "labels": [
-      "type:Bug",
-      "status:Unconfirmed"
-    ],
-    "body_preview": "### Issue summary  Couldn't find any ticket about this:  Wagtail 7.1.3  When copying a rich text streamfield with an inline link, this inline link in the copy can't be edited before saving the page. It always edits the link in the original streamfield. (Subsequent error is also that the link text gets emptied/not read anymore and shows empty in the link dialog even though it's still there in the r...",
-    "is_new": false,
-    "priority": "high",
-    "is_bug": true,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
     "id": 4571359216,
     "repo": "wagtail/django-modelcluster",
     "ecosystem": "django",
@@ -1055,7 +1027,7 @@
       "needs triage"
     ],
     "body_preview": "### Is there an existing issue for this?  - [x] I have searched the existing Issues  ### Current Behavior  FormAdmin.entries_view and FormAdmin.file_view in mezzanine/forms/admin.py are registered via get_urls() and wrapped only in admin_site.admin_view(...), which checks is_staff \u2014 not forms app permissions. Neither view calls has_perm(\"forms.view_formentry\") or similar. The only permission check...",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,

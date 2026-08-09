@@ -16,7 +16,7 @@
     "comments": 1,
     "labels": [],
     "body_preview": "When I attempt to save a form with a RichTextarea containing a hardbreak (made by pressing the button or shift+enter) I get an error.  I noticed that the templates/richtext/hardbreak.html does not exist on my PC or the repo, so I created the file with just a br tag in it and it appears to work normally now.  The error django shows: ``` TemplateDoesNotExist at /customers/tickets/10/detail richtext/...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
