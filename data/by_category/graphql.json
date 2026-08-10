@@ -25,6 +25,33 @@
     "is_help_wanted": false
   },
   {
+    "id": 5107319544,
+    "repo": "strawberry-graphql/strawberry-django",
+    "ecosystem": "django",
+    "ecosystem_label": "Django",
+    "category": "graphql",
+    "category_label": "GraphQL",
+    "number": 942,
+    "title": "Prevent subscription completion from dropping shared Channels groups",
+    "url": "https://github.com/strawberry-graphql/strawberry-django/issues/942",
+    "author": "moritz89",
+    "author_avatar": "https://avatars.githubusercontent.com/u/1592994?v=4",
+    "created_at": "2026-08-10T06:30:44Z",
+    "updated_at": "2026-08-10T06:31:14Z",
+    "comments": 0,
+    "labels": [
+      "bug"
+    ],
+    "body_preview": "<!-- Provide a general summary of the bug in the title above. --> Prevent one GraphQL subscription completion from unintentionally dropping sibling subscriptions sharing the same Channels group.  <!--- This template is entirely optional and can be removed, but is here to help both you and us. --> <!--- Anything on lines wrapped in comments like these will not show up in the final text. -->  ## Des...",
+    "is_new": true,
+    "priority": "high",
+    "is_bug": true,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 5080282291,
     "repo": "strawberry-graphql/strawberry-django",
     "ecosystem": "django",

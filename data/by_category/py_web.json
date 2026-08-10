@@ -12,8 +12,8 @@
     "author": "robkooper",
     "author_avatar": "https://avatars.githubusercontent.com/u/1580696?v=4",
     "created_at": "2026-08-08T15:15:19Z",
-    "updated_at": "2026-08-09T03:55:48Z",
-    "comments": 1,
+    "updated_at": "2026-08-09T18:37:51Z",
+    "comments": 0,
     "labels": [],
     "body_preview": "`stream_with_context` pushes the request's contexts onto whichever thread iterates the response body, and pops them only if the generator completes or is closed on that same thread. When a client disconnects mid-stream, the server abandons the body iterator and GC finalizes it later \u2014 often on a different thread. That cross-context pop fails (`LookupError`/`ValueError` from `ContextVar.reset`, swa...",
     "is_new": true,
@@ -140,8 +140,8 @@
     "author": "Rowlando13",
     "author_avatar": "https://avatars.githubusercontent.com/u/67291205?v=4",
     "created_at": "2026-07-16T20:45:19Z",
-    "updated_at": "2026-07-21T22:57:27Z",
-    "comments": 0,
+    "updated_at": "2026-08-10T04:13:46Z",
+    "comments": 1,
     "labels": [
       "docs",
       "typing"
