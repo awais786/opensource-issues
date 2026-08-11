@@ -303,34 +303,6 @@
     "is_help_wanted": false
   },
   {
-    "id": 4429557542,
-    "repo": "tokio-rs/axum",
-    "ecosystem": "rust",
-    "ecosystem_label": "Rust",
-    "category": "rust_async",
-    "category_label": "Async & Web",
-    "number": 3753,
-    "title": "Connection rotation / max lifetime",
-    "url": "https://github.com/tokio-rs/axum/issues/3753",
-    "author": "adriangb",
-    "author_avatar": "https://avatars.githubusercontent.com/u/1755071?v=4",
-    "created_at": "2026-05-12T13:35:09Z",
-    "updated_at": "2026-05-15T08:20:02Z",
-    "comments": 7,
-    "labels": [
-      "C-feature-request",
-      "A-axum"
-    ],
-    "body_preview": "We run a lot of bursty applications on Kubernetes. They tend to look like 1\u20133 pods of a low-replica coordinator and 4\u2192128 worker pods (depending on load). A problem I've consistently encountered across systems, made worse by this setup, is that connection pools don't respond to scale-up events: the connection pools (e.g. `reqwest`) on the controller pods keep sending work to the same initial 4 wor...",
-    "is_new": false,
-    "priority": "medium",
-    "is_bug": false,
-    "is_feature": true,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
     "id": 5038935772,
     "repo": "actix/actix-web",
     "ecosystem": "rust",
