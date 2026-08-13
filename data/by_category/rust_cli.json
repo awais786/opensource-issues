@@ -198,34 +198,6 @@
     "is_help_wanted": false
   },
   {
-    "id": 4446320797,
-    "repo": "clap-rs/clap",
-    "ecosystem": "rust",
-    "ecosystem_label": "Rust",
-    "category": "rust_cli",
-    "category_label": "CLI & Tooling",
-    "number": 6382,
-    "title": "Change crate repository links to subdirectories (help renovate find changelogs)",
-    "url": "https://github.com/clap-rs/clap/issues/6382",
-    "author": "notpeter",
-    "author_avatar": "https://avatars.githubusercontent.com/u/145113?v=4",
-    "created_at": "2026-05-14T13:34:38Z",
-    "updated_at": "2026-05-14T16:37:49Z",
-    "comments": 1,
-    "labels": [
-      "C-enhancement",
-      "S-triage"
-    ],
-    "body_preview": "### Please complete the following tasks  - [x] I have searched the [discussions](https://github.com/clap-rs/clap/discussions) - [x] I have searched the [open](https://github.com/clap-rs/clap/issues) and [rejected](https://github.com/clap-rs/clap/issues?q=is%3Aissue+label%3AS-wont-fix+is%3Aclosed) issues   - Somewhat related: https://github.com/clap-rs/clap/issues/5902  ### Clap Version  master  ##...",
-    "is_new": false,
-    "priority": "medium",
-    "is_bug": false,
-    "is_feature": true,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
     "id": 5099169713,
     "repo": "BurntSushi/ripgrep",
     "ecosystem": "rust",
