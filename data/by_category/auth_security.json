@@ -43,7 +43,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "As can be seen in recent pull requests, \"AI\" is not only used for code review, but entire PRs, issues, and changelogs are generated using LLMs.  This issue is intended to track any forks or alternatives to replace DOT.  So, if anyone knows of well-maintained forks that are not slop-infested, or of alternatives that can replace DOT, please add them here.",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

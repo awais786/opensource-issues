@@ -1,5 +1,33 @@
 [
   {
+    "id": 5139643009,
+    "repo": "tokio-rs/tokio",
+    "ecosystem": "rust",
+    "ecosystem_label": "Rust",
+    "category": "rust_async",
+    "category_label": "Async & Web",
+    "number": 8361,
+    "title": "add `has_time_driver` to check if timeout is available on a runtime without panicking",
+    "url": "https://github.com/tokio-rs/tokio/issues/8361",
+    "author": "yannham",
+    "author_avatar": "https://avatars.githubusercontent.com/u/6530104?v=4",
+    "created_at": "2026-08-13T09:00:23Z",
+    "updated_at": "2026-08-13T09:00:23Z",
+    "comments": 0,
+    "labels": [
+      "A-tokio",
+      "C-feature-request"
+    ],
+    "body_preview": "**Is your feature request related to a problem? Please describe.**  The creation of `tokio::timeout` might panic if no time driver is available/configured/enabled. This is decided at runtime creation time. Unfortunately, once created, it is impossible to know from a `Handle` that a runtime has a time driver or not. As a library, or in any setup that is generic over a tokio runtime (e.g. when multi...",
+    "is_new": true,
+    "priority": "medium",
+    "is_bug": false,
+    "is_feature": true,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 5005570514,
     "repo": "tokio-rs/tokio",
     "ecosystem": "rust",

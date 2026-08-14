@@ -70,7 +70,7 @@
       "bug"
     ],
     "body_preview": "## Describe the Bug  A queryset returned from a `strawberry_django.field` resolver is automatically optimized when the type is resolved as part of a **query or mutation**, but not when the exact same type is yielded from a **subscription** \u2014 there it silently N+1s.  ### Minimal example  ```python # models class Color(models.Model):     name = models.CharField(max_length=50)  class Fruit(models.Mod...",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,
