@@ -1,5 +1,57 @@
 [
   {
+    "id": 5150433970,
+    "repo": "wagtail/wagtail",
+    "ecosystem": "django",
+    "ecosystem_label": "Django",
+    "category": "cms",
+    "category_label": "CMS & Content",
+    "number": 14504,
+    "title": "Write API: v8.0 release candidate fixes",
+    "url": "https://github.com/wagtail/wagtail/issues/14504",
+    "author": "thibaudcolas",
+    "author_avatar": "https://avatars.githubusercontent.com/u/877585?v=4",
+    "created_at": "2026-08-14T09:51:55Z",
+    "updated_at": "2026-08-14T11:11:17Z",
+    "comments": 0,
+    "labels": [],
+    "body_preview": "Part of #14295. This is a running list of changes to the write API implementation / docs that are likely \"must\" or \"should\" for us to ship ahead of the v8.0 final release. **Please feel free to use this issue for bug reports or feedback on the write API**. For general Wagtail 8.0 feedback, see #14501  ## Feedback needed  We particularly want feedback on:  -  Initial API setup and compatibility woe...",
+    "is_new": true,
+    "priority": "low",
+    "is_bug": false,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
+    "id": 5150418408,
+    "repo": "wagtail/wagtail",
+    "ecosystem": "django",
+    "ecosystem_label": "Django",
+    "category": "cms",
+    "category_label": "CMS & Content",
+    "number": 14503,
+    "title": "v8.0 release candidate testing",
+    "url": "https://github.com/wagtail/wagtail/issues/14503",
+    "author": "thibaudcolas",
+    "author_avatar": "https://avatars.githubusercontent.com/u/877585?v=4",
+    "created_at": "2026-08-14T09:49:48Z",
+    "updated_at": "2026-08-14T09:51:00Z",
+    "comments": 0,
+    "labels": [
+      "type:Cleanup/Optimisation"
+    ],
+    "body_preview": "### Problem statement  \ud83d\ude80  We need a testing + compatibility fixes campaign for our upcoming [v8.0 release](https://docs.wagtail.org/en/latest/releases/8.0.html) \ud83d\ude80 **Please post suspected issues here**, and any other feedback in #14501  This includes specifically:  - Testing the upgrade with low/no changes on existing sites - Testing the upgrade on packages + compatibility fixes + new releases decl...",
+    "is_new": true,
+    "priority": "low",
+    "is_bug": false,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 5136727878,
     "repo": "wagtail/wagtail",
     "ecosystem": "django",
@@ -12,8 +64,8 @@
     "author": "coredumperror",
     "author_avatar": "https://avatars.githubusercontent.com/u/413571?v=4",
     "created_at": "2026-08-13T01:05:39Z",
-    "updated_at": "2026-08-13T01:05:39Z",
-    "comments": 0,
+    "updated_at": "2026-08-14T10:35:04Z",
+    "comments": 1,
     "labels": [
       "Documentation"
     ],
@@ -398,34 +450,6 @@
     "is_help_wanted": false
   },
   {
-    "id": 4873849457,
-    "repo": "wagtail/wagtail",
-    "ecosystem": "django",
-    "ecosystem_label": "Django",
-    "category": "cms",
-    "category_label": "CMS & Content",
-    "number": 14412,
-    "title": "Copied Rich text streamfield: Link can't be edited",
-    "url": "https://github.com/wagtail/wagtail/issues/14412",
-    "author": "benebun",
-    "author_avatar": "https://avatars.githubusercontent.com/u/1321740?v=4",
-    "created_at": "2026-07-13T12:59:19Z",
-    "updated_at": "2026-07-15T07:23:21Z",
-    "comments": 1,
-    "labels": [
-      "type:Bug",
-      "status:Unconfirmed"
-    ],
-    "body_preview": "### Issue summary  Couldn't find any ticket about this:  Wagtail 7.1.3  When copying a rich text streamfield with an inline link, this inline link in the copy can't be edited before saving the page. It always edits the link in the original streamfield. (Subsequent error is also that the link text gets emptied/not read anymore and shows empty in the link dialog even though it's still there in the r...",
-    "is_new": false,
-    "priority": "high",
-    "is_bug": true,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
     "id": 4571359216,
     "repo": "wagtail/django-modelcluster",
     "ecosystem": "django",
@@ -772,7 +796,7 @@
       "priority: high"
     ],
     "body_preview": "## Goal  Complete and verify django CMS support for the final Django 6.1 release without regressing the other supported Django series.  The repository already advertises Django 6.1 and its current unit suite passes on the final release. This tracker covers the remaining production deprecations, confirmed admin/signal compatibility changes, missing CI guarantees, operational documentation, and one...",
-    "is_new": true,
+    "is_new": false,
     "priority": "medium",
     "is_bug": false,
     "is_feature": true,
@@ -803,7 +827,7 @@
       "priority: medium"
     ],
     "body_preview": "## What to build  Add cross-version support for Django 6.1 CSP nonces to script, stylesheet, and form-media assets emitted by django CMS-owned templates.  This is a non-blocking Django 6.1 feature-integration ticket. Django's built-in admin templates now add `csp_nonce_attr`, but django CMS overrides and supplements those templates with its own asset tags. Under a nonce-based policy, the Django ad...",
-    "is_new": true,
+    "is_new": false,
     "priority": "medium",
     "is_bug": false,
     "is_feature": true,
@@ -833,7 +857,7 @@
       "priority: high"
     ],
     "body_preview": "## What to build  Document the exact Django 6.1 upgrade contract for django CMS operators and contributors.  The current release notes list all supported Python versions together, which can be read as allowing Python 3.10 or 3.11 with Django 6.1. The upgrade guide should state version combinations and database floors, explain the user-visible cache and signed-cookie behavior, summarize the mailer...",
-    "is_new": true,
+    "is_new": false,
     "priority": "medium",
     "is_bug": false,
     "is_feature": true,
@@ -864,7 +888,7 @@
       "github_actions"
     ],
     "body_preview": "## What to build  Make generated-project CI genuinely exercise each Django series supported by django CMS 5.1: Django 5.2, 6.0, and 6.1.  The current workflow labels rows as Django 4.2 through 5.2, installs that Django version, and then installs an editable package that requires Django 5.2 or newer. Pip may silently upgrade the selected version, so the row label is not proof of what was tested. In...",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,
@@ -895,7 +919,7 @@
       "github_actions"
     ],
     "body_preview": "## What to build  Turn final Django 6.1 compatibility into an explicit, deprecation-clean CI contract.  The normal matrix already executes Django 6.1, but the requirement still names the alpha floor and the jobs hide Django's pending 7.0 removals under the default warning filters. Add one focused gating configuration that proves the resolved version is final Django 6.1 and treats `RemovedInDjango7...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
@@ -926,7 +950,7 @@
       "priority: high"
     ],
     "body_preview": "## What to build  Make the django CMS permissions `m2m_changed` receiver safe when Django 6.1 fixture loading sends `raw=True` events.  The receiver currently accepts arbitrary keyword arguments, so it does not fail at call time, but it proceeds with menu-cache invalidation and may query related users. During raw fixture loading, related rows are not guaranteed to be in a consistent state. The rec...",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,
@@ -956,7 +980,7 @@
       "priority: medium"
     ],
     "body_preview": "## What to build  Audit django CMS's custom admin forms against Django 6.1's accessible vertical form layout, remove the obsolete `wide` fieldset class, and add focused UI regression coverage for layout-dependent CMS behavior.  This is primarily a compatibility-verification slice: the page form inherits Django's current fieldset include, but django CMS owns multiple change-form templates, JavaScri...",
-    "is_new": true,
+    "is_new": false,
     "priority": "medium",
     "is_bug": false,
     "is_feature": true,
@@ -987,7 +1011,7 @@
       "priority: high"
     ],
     "body_preview": "## What to build  Adapt the custom django CMS page change-form template to Django 6.1's new `object-tools` block location without regressing Django 5.2 or 6.0.  Django 6.1 renders `object-tools` outside `content`. The django CMS template replaces `content` and currently invokes the block inside that replacement. A downstream template overriding `object-tools` can consequently render in the wrong l...",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,
@@ -1018,7 +1042,7 @@
       "priority: high"
     ],
     "body_preview": "## What to build  Configure django CMS's test suite and standalone test server through Django 6.1's `MAILERS` setting while retaining compatibility with Django 5.2 and 6.0. Update the test manager-address format at the same compatibility boundary.  The implementation should use one shared feature-detection helper rather than duplicating version branches. It must also prove that django CMS works in...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
@@ -1048,7 +1072,7 @@
       "priority: high"
     ],
     "body_preview": "## What to build  Migrate django CMS production mail calls away from Django 6.1's deprecated `fail_silently` arguments while preserving django CMS's existing public behavior across Django 5.2, 6.0, and 6.1.  `cms.utils.mail.send_mail()` is a django CMS helper with its own `fail_silently` argument. Removing that public argument would be a separate django CMS API deprecation. This ticket should inst...",
-    "is_new": true,
+    "is_new": false,
     "priority": "medium",
     "is_bug": false,
     "is_feature": true,
