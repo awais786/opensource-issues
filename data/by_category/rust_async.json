@@ -12,10 +12,11 @@
     "author": "yannham",
     "author_avatar": "https://avatars.githubusercontent.com/u/6530104?v=4",
     "created_at": "2026-08-13T09:00:23Z",
-    "updated_at": "2026-08-13T09:00:23Z",
+    "updated_at": "2026-08-15T09:13:23Z",
     "comments": 0,
     "labels": [
       "A-tokio",
+      "M-time",
       "C-feature-request"
     ],
     "body_preview": "**Is your feature request related to a problem? Please describe.**  The creation of `tokio::timeout` might panic if no time driver is available/configured/enabled. This is decided at runtime creation time. Unfortunately, once created, it is impossible to know from a `Handle` that a runtime has a time driver or not. As a library, or in any setup that is generic over a tokio runtime (e.g. when multi...",

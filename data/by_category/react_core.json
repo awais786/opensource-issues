@@ -162,33 +162,6 @@
     "is_help_wanted": false
   },
   {
-    "id": 5108448900,
-    "repo": "facebook/react",
-    "ecosystem": "react",
-    "ecosystem_label": "React",
-    "category": "react_core",
-    "category_label": "React Core",
-    "number": 37257,
-    "title": "Bug: erro na cria\u00e7\u00e3o da conta",
-    "url": "https://github.com/react/react/issues/37257",
-    "author": "gilbertogama498-alt",
-    "author_avatar": "https://avatars.githubusercontent.com/u/312582658?v=4",
-    "created_at": "2026-08-10T09:06:02Z",
-    "updated_at": "2026-08-10T09:06:02Z",
-    "comments": 0,
-    "labels": [
-      "Status: Unconfirmed"
-    ],
-    "body_preview": "<!--   Please provide a clear and concise description of what the bug is. Include   screenshots if needed. Please test using the latest version of the relevant   React packages to make sure your issue has not already been fixed. -->  React version:  ## Steps To Reproduce  1. 2.  <!--   Your bug will get fixed much faster if we can run your code and it doesn't   have dependencies other than React....",
-    "is_new": true,
-    "priority": "low",
-    "is_bug": false,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
     "id": 5145758222,
     "repo": "remix-run/react-router",
     "ecosystem": "react",

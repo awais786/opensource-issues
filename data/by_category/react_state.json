@@ -186,7 +186,7 @@
       "Example-Apps"
     ],
     "body_preview": "(AI writeup result from my own research session)   ## Summary  The `examples/publish-ci/` set has not had a real review since it was built in 2023. Recent commits on those directories are dependency bumps and `chore:` changes, not maintenance. The result is that we are spending CI time on toolchains that no longer represent the ecosystem, several examples test the same resolution path as each othe...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
@@ -604,7 +604,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "### Describe the bug  `useMutationState()` in `@tanstack/svelte-query` never shrinks its returned array. Once a mutation stops matching the given `filters` (e.g. it settles and no longer matches `status: 'pending'`, or it's removed from the mutation cache), the stale entry stays in the returned array forever instead of being dropped.  Root cause: in `packages/svelte-query/src/useMutationState.svel...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
