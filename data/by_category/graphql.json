@@ -43,7 +43,7 @@
       "bug"
     ],
     "body_preview": "<!-- Provide a general summary of the bug in the title above. --> Prevent one GraphQL subscription completion from unintentionally dropping sibling subscriptions sharing the same Channels group.  <!--- This template is entirely optional and can be removed, but is here to help both you and us. --> <!--- Anything on lines wrapped in comments like these will not show up in the final text. -->  ## Des...",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,
