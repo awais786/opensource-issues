@@ -1,5 +1,32 @@
 [
   {
+    "id": 5196545264,
+    "repo": "django/djangoproject.com",
+    "ecosystem": "django",
+    "ecosystem_label": "Django",
+    "category": "django_core",
+    "category_label": "Django Core",
+    "number": 2784,
+    "title": "\ud83d\udc1b Entries with Markdown that include code removes line breaks",
+    "url": "https://github.com/django/djangoproject.com/issues/2784",
+    "author": "tim-schilling",
+    "author_avatar": "https://avatars.githubusercontent.com/u/1281215?v=4",
+    "created_at": "2026-08-19T19:49:16Z",
+    "updated_at": "2026-08-20T06:27:25Z",
+    "comments": 0,
+    "labels": [
+      "bug"
+    ],
+    "body_preview": "I noticed this when creating an Entry for Dan Ryan. The following code rendered the `<code>` with everything on a single line. The line break wasn't respected.   ``` \\```text * @django/coc-committee CODE_OF_CONDUCT.md @django/coc-committee @django/dsf-board \\``` ``` (the `\\` is there to get GitHub to render the markdown code nicely)  To work around this, I ended up adding the replacing the above w...",
+    "is_new": true,
+    "priority": "high",
+    "is_bug": true,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 5135050392,
     "repo": "django/djangoproject.com",
     "ecosystem": "django",
@@ -16,7 +43,7 @@
     "comments": 2,
     "labels": [],
     "body_preview": "Just noting, we used a flat page to get this page up quickly. It might be worthwhile, in a follow-up ticket, to move this page back to a template. Then we can link to page references directly. \r \r Nothing for you to do here. Just commenting so we can turn this into a follow-up issue.\r \r _Originally posted by @jefftriplett in https://github.com/django/djangoproject.com/pull/2771#discussion_r3770093...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

@@ -19,7 +19,7 @@
       "RTKQ-Codegen"
     ],
     "body_preview": "Part of [**#5368**](https://github.com/reduxjs/redux-toolkit/issues/5368).  JSDoc pass over the remaining files in **`src/`** - **`generate.ts`**, **`generators/`**, **`utils/`**, **`bin/cli.ts`**, and **`codegen.ts`**.  Includes the minor fix noted in [**#5368**](https://github.com/reduxjs/redux-toolkit/issues/5368): **`resolveOperationName`** in **`src/generate.ts`** uses [**`{@linkcode operatio...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
@@ -47,7 +47,7 @@
       "RTKQ-Codegen"
     ],
     "body_preview": "Part of [**#5368**](https://github.com/reduxjs/redux-toolkit/issues/5368).  Document the config option types in **`src/types.ts`** - **`Config`**, **`CommonOptions`**, **`OutputFileOptions`**, **`EndpointOverrides`**, the matcher types, and the exported string-union types.  This is the source of truth the docs page is generated from by hand, so it is the highest-leverage file to document first.  B...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
@@ -75,7 +75,7 @@
       "RTKQ-Codegen"
     ],
     "body_preview": "Part of [**#5368**](https://github.com/reduxjs/redux-toolkit/issues/5368).  Ten of the 27 options in **`src/types.ts`** are absent from the docs page: **`unionUndefined`**, **`encodePathParams`**, **`encodeQueryParams`**, **`includeDefault`**, **`mergeReadWriteOnly`**, **`useUnknown`**, **`esmExtensions`**, **`exportAllSchemas`**, and **`prettierConfigFile`**.  Also missing: the supporting types b...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
@@ -103,7 +103,7 @@
       "RTKQ-Codegen"
     ],
     "body_preview": "Part of [**#5368**](https://github.com/reduxjs/redux-toolkit/issues/5368).  The config options block on [the code generation page](https://redux-toolkit.js.org/rtk-query/usage/code-generation) does not parse as valid TypeScript. Four fields (**`useEnumType`**, **`enumStyle`**, **`outputRegexConstants`**, **`httpResolverOptions`**) sit outside any type, followed by a stray closing brace.  Introduce...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
@@ -131,7 +131,7 @@
       "RTKQ-Codegen"
     ],
     "body_preview": "## Summary  The [**`@rtk-query/codegen-openapi`**](https://www.npmjs.com/package/@rtk-query/codegen-openapi) docs have drifted from the source of truth in **`src/types.ts`**. The config options block on the docs page is currently malformed, and 10 of the 27 supported options are not documented at all.  This issue tracks bringing the page back in sync and improving the package's inline API document...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
@@ -452,7 +452,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "### Describe the bug  `ApplicationRef.whenStable()` resolves while a mutation started with `mutate()` is still running, so tests and SSR see the mutation as untouched.  `injectMutation` registers the Angular pending task from inside the observer subscription callback:  https://github.com/TanStack/query/blob/main/packages/angular-query-experimental/src/inject-mutation.ts#L135-L146  That callback is...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
