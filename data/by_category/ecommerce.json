@@ -247,7 +247,7 @@
       "bug"
     ],
     "body_preview": "**Describe the bug**  On stripe-python >= 15, syncing an object that came from the Stripe SDK (rather than a plain dict) fails when the row is written, with `TypeError: Object of type PaymentMethod|Whatever is not JSON serializable`. The class name in the message varies depending on what's being synced.  Two changes combine to cause it. Since 2.10 the raw payload is persisted into JSONField column...",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,

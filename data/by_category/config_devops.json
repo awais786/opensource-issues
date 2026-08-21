@@ -100,6 +100,33 @@
     "is_help_wanted": false
   },
   {
+    "id": 5203671721,
+    "repo": "cookiecutter/cookiecutter-django",
+    "ecosystem": "django",
+    "ecosystem_label": "Django",
+    "category": "config_devops",
+    "category_label": "Config & DevOps",
+    "number": 6826,
+    "title": "Webpack publicPath hardcoded",
+    "url": "https://github.com/cookiecutter/cookiecutter-django/issues/6826",
+    "author": "foarsitter",
+    "author_avatar": "https://avatars.githubusercontent.com/u/3885256?v=4",
+    "created_at": "2026-08-20T13:00:54Z",
+    "updated_at": "2026-08-20T15:55:00Z",
+    "comments": 1,
+    "labels": [
+      "bug"
+    ],
+    "body_preview": "Deployed an staging environment that needs to use an different CDN, but staticUrl is hardcoded in `prodt.conf.js`.   I don't understand the process yet, but setting it to auto solves it: https://github.com/django-webpack/django-webpack-loader#configuring-webpack-bundle-tracker",
+    "is_new": true,
+    "priority": "high",
+    "is_bug": true,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 5091674156,
     "repo": "cookiecutter/cookiecutter-django",
     "ecosystem": "django",
@@ -356,6 +383,35 @@
     "is_help_wanted": false
   },
   {
+    "id": 5203530772,
+    "repo": "getsentry/sentry-python",
+    "ecosystem": "django",
+    "ecosystem_label": "Django",
+    "category": "config_devops",
+    "category_label": "Config & DevOps",
+    "number": 7225,
+    "title": "MCPIntegration reports stateless StreamableHTTP servers as mcp.transport \"stdio\"",
+    "url": "https://github.com/getsentry/sentry-python/issues/7225",
+    "author": "Snaylaker",
+    "author_avatar": "https://avatars.githubusercontent.com/u/43219077?v=4",
+    "created_at": "2026-08-20T12:44:48Z",
+    "updated_at": "2026-08-20T13:10:15Z",
+    "comments": 3,
+    "labels": [
+      "Waiting for: Product Owner",
+      "Python",
+      "Bug"
+    ],
+    "body_preview": "### How do you use Sentry?  Sentry Saas (sentry.io)  ### Version  2.64.0  ### Steps to Reproduce  1. Serve an MCP server over StreamableHTTP with StreamableHTTPSessionManager(app=server, json_response=True, stateless=True), mounted in a Starlette app.   2. Initialise the SDK with MCPIntegration().   3. POST a tools/call request to the mount path and let the tool return normally.   4. Inspect the r...",
+    "is_new": true,
+    "priority": "high",
+    "is_bug": true,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 5185065600,
     "repo": "getsentry/sentry-python",
     "ecosystem": "django",
@@ -430,7 +486,7 @@
       "Python"
     ],
     "body_preview": "We use the deprecated `gen_ai.response.tool_calls` attribute in a number of places which has caused confusion in the data collection implementation because:  * tool calls are defined as \"inputs\" * they currently may appear in the response output if \"outputs\" are set to False but \"inputs\" are set to True  Mirroring what the JS SDK does, we should be doing the following:  * tool calls appearing in t...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
@@ -455,7 +511,7 @@
     "comments": 1,
     "labels": [],
     "body_preview": "See parent issue.<br><br>The integration doesn't create spans on its own, but it still checks whether there are streamed or not streamed spans active and does stuff with those. Also, in the tests we parametrize on span_streaming.",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
