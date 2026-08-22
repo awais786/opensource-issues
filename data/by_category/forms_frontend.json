@@ -16,7 +16,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "The `Layout` and `Fieldset` objects accept a list of fields to render. When using `{% crispy form \"<templatepack>\" %}`, these fields will then be rendered in the order as defined by the list of fields.  When a field is not mentioned in the list, dependent on the value of `CRISPY_FAIL_SILENTLY` one of the following happens:  * An exception is raised during rendering. * A warning is logged during re...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
