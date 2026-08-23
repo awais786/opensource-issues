@@ -149,7 +149,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "When not using the default config loader, the warnings shouldn\u2019t be shown.  At least not until other config loaders are deprecated, which they currently shouldn\u2019t, as the native loader breaks certain configurations with no workaround ([see here](https://github.com/vitejs/vite/issues/21546#issuecomment-5302011767))  https://github.com/vitejs/vite/blob/dcf88bd2ad2b1a8845f9029587cc8c825e382d42/packag...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

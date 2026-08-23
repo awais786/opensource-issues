@@ -572,7 +572,7 @@
       "bug"
     ],
     "body_preview": "> [!NOTE] > This issue was drafted by Claude.  ### Steps to reproduce 1. As course staff, open a course's Progress tab. 2. In the masquerade bar, choose \"View this course as\" \u2192 **Specific student**, and enter an enrolled learner. 3. Observe the Progress tab heading.  ### Expected Heading reads `Course progress for <username>` (the masqueraded learner).  ### Actual Heading reads \"Your progress\", ev...",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,
@@ -597,7 +597,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "Part of the Redux \u2192 React Query migration, epic #1946. **Related to the model-store dissolution (#1977)** \u2014 it lands as a piece of that, *not* as a standalone prerequisite for any single tab. See **Sequencing** below.  ## Summary  `useAccessExpirationMasqueradeBanner(courseId, tab)` \u2014 rendered by the shared `InstructorToolbar` \u2014 reads `accessExpiration.masqueradingExpiredCourse` via `useModel(tab,...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
