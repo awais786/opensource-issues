@@ -16,7 +16,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "When using a custom type and `#[serde(try_from = \"...\"]`, errors that the `try_from` call throws are not forwarded correctly. Instead, they are converted into strings with no control about how the conversion behaves, and the original error is dropped instead of saving it as a source. This means that the actual error that caused the deserialization to fail will be forgotten if it is wrapped in some...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

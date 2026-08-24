@@ -1,5 +1,32 @@
 [
   {
+    "id": 5225696563,
+    "repo": "celery/celery",
+    "ecosystem": "django",
+    "ecosystem_label": "Django",
+    "category": "task_queues",
+    "category_label": "Task Queues & Async",
+    "number": 10509,
+    "title": "`Certificate.verify()` accepts signatures from certificates that expired after being loaded",
+    "url": "https://github.com/celery/celery/issues/10509",
+    "author": "Namraa310806",
+    "author_avatar": "https://avatars.githubusercontent.com/u/131944677?v=4",
+    "created_at": "2026-08-23T06:41:37Z",
+    "updated_at": "2026-08-23T06:41:37Z",
+    "comments": 0,
+    "labels": [
+      "Issue Type: Bug Report"
+    ],
+    "body_preview": "<!-- Please fill this template entirely and do not erase parts of it. We reserve the right to close without a response bug reports which are incomplete. --> # Checklist <!-- To check an item on the list replace [ ] with [x]. --> - [x] I have verified that the issue exists against the `main` branch of Celery. - [ ] This has already been asked to the [discussions forum](https://github.com/celery/cel...",
+    "is_new": true,
+    "priority": "high",
+    "is_bug": true,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 5214429283,
     "repo": "celery/celery",
     "ecosystem": "django",
@@ -70,7 +97,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "<details> <summary><b>Checklist, related issues and environment</b></summary>  # Checklist  - [x] I have verified that the issue exists against the `main` branch of Celery. - [ ] This has already been asked to the [discussions forum](https://github.com/celery/celery/discussions) first. - [x] I have read the relevant section in the   [contribution guide](https://docs.celeryq.dev/en/main/contributin...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

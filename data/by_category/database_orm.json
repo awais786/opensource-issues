@@ -16,7 +16,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "## The issue  If you use `QueryArrayWidget` as the widget for a multi-value filter where **order matters** \u2014 most notably `OrderingFilter`, which supports multi-field sorting via `qs.order_by(*ordering)` \u2014 the order you submit values in isn't preserved. `?ordering[]=price&ordering[]=-name` (sort by price, then by name descending as a tiebreaker) can silently come back sorted as `-name,price` inste...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
