@@ -1,5 +1,32 @@
 [
   {
+    "id": 5240408437,
+    "repo": "jazzband/django-oauth-toolkit",
+    "ecosystem": "django",
+    "ecosystem_label": "Django",
+    "category": "auth_security",
+    "category_label": "Auth & Security",
+    "number": 1843,
+    "title": "3.4.1 update not functional on Oracle",
+    "url": "https://github.com/django-oauth/django-oauth-toolkit/issues/1843",
+    "author": "msmitherdc",
+    "author_avatar": "https://avatars.githubusercontent.com/u/1004755?v=4",
+    "created_at": "2026-08-24T23:25:55Z",
+    "updated_at": "2026-08-24T23:26:36Z",
+    "comments": 0,
+    "labels": [
+      "bug"
+    ],
+    "body_preview": "## Description  3.4.1's fix for #1687 (PR #1780) introduced a new query in `OAuth2Validator._save_bearer_token` that combines `select_for_update()` with an implicit `LIMIT 1` via `.first()`:  https://github.com/django-oauth/django-oauth-toolkit/blob/3.4.1/oauth2_provider/oauth2_validators.py#L1011-L1015  ```python previous_access_token = (     AccessToken.objects.select_for_update()     .filter(so...",
+    "is_new": true,
+    "priority": "high",
+    "is_bug": true,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 5217344831,
     "repo": "jazzband/django-oauth-toolkit",
     "ecosystem": "django",

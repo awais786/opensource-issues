@@ -1,5 +1,32 @@
 [
   {
+    "id": 5236851663,
+    "repo": "celery/celery",
+    "ecosystem": "django",
+    "ecosystem_label": "Django",
+    "category": "task_queues",
+    "category_label": "Task Queues & Async",
+    "number": 10514,
+    "title": "Enhancement: Add efficient progress tracking for large groups",
+    "url": "https://github.com/celery/celery/issues/10514",
+    "author": "Namraa310806",
+    "author_avatar": "https://avatars.githubusercontent.com/u/131944677?v=4",
+    "created_at": "2026-08-24T16:03:11Z",
+    "updated_at": "2026-08-24T16:03:11Z",
+    "comments": 0,
+    "labels": [
+      "Issue Type: Enhancement"
+    ],
+    "body_preview": "# Checklist - [ ] I have checked the issues list for similar or identical enhancement to an existing feature. - [ ] I have checked the pull requests list for existing proposed enhancements. - [ ] I have checked the commit log to find out if the same enhancement was already implemented in the main branch. - [x] I have included all related issues and possible duplicate issues in this issue (If there...",
+    "is_new": true,
+    "priority": "medium",
+    "is_bug": false,
+    "is_feature": true,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 5225696563,
     "repo": "celery/celery",
     "ecosystem": "django",
@@ -66,8 +93,8 @@
     "author": "qudwn1114",
     "author_avatar": "https://avatars.githubusercontent.com/u/39257040?v=4",
     "created_at": "2026-08-20T11:57:26Z",
-    "updated_at": "2026-08-21T18:07:17Z",
-    "comments": 5,
+    "updated_at": "2026-08-24T14:14:57Z",
+    "comments": 6,
     "labels": [
       "Issue Type: Bug Report"
     ],
@@ -320,8 +347,8 @@
     "author": "bao1018",
     "author_avatar": "https://avatars.githubusercontent.com/u/1821636?v=4",
     "created_at": "2026-08-05T07:48:36Z",
-    "updated_at": "2026-08-21T19:15:26Z",
-    "comments": 2,
+    "updated_at": "2026-08-25T05:02:36Z",
+    "comments": 3,
     "labels": [],
     "body_preview": "Hi Kombu maintainers, thanks for the work on the Azure Service Bus transport.  We maintain a service that depends on Kombu's ASB transport and are waiting for the ownership fix from #2543, merged in commit a731e629decedf4c4c30b1886806a1845402270b and currently associated with the 5.7.0 milestone. Do you have an expected release window for the first Kombu version that will include this fix?  **Why...",
     "is_new": false,

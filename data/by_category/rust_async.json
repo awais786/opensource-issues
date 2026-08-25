@@ -1,5 +1,33 @@
 [
   {
+    "id": 5237898866,
+    "repo": "tokio-rs/tokio",
+    "ecosystem": "rust",
+    "ecosystem_label": "Rust",
+    "category": "rust_async",
+    "category_label": "Async & Web",
+    "number": 8384,
+    "title": "`time::Interval` deadline arithmetic panics on overflow",
+    "url": "https://github.com/tokio-rs/tokio/issues/8384",
+    "author": "plotnick",
+    "author_avatar": "https://avatars.githubusercontent.com/u/602463?v=4",
+    "created_at": "2026-08-24T18:02:48Z",
+    "updated_at": "2026-08-24T18:02:48Z",
+    "comments": 0,
+    "labels": [
+      "C-bug",
+      "A-tokio"
+    ],
+    "body_preview": "**Version**  tokio v1.53.1, also present on master  **Platform**  All, but verified on x86_64 GNU/Linux.  **Description**  `time::Interval` is inconsistent in its use of saturating addition, and is thus prone to panicking under seemingly reasonable user input (e.g., `Duration::MAX`). In particular, `reset`, `reset_after`, and `MissedTickBehavior::next_timeout` all use bare `Instant + Duration` ari...",
+    "is_new": true,
+    "priority": "high",
+    "is_bug": true,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 5197379364,
     "repo": "tokio-rs/tokio",
     "ecosystem": "rust",
@@ -93,8 +121,8 @@
     "author": "kdn36",
     "author_avatar": "https://avatars.githubusercontent.com/u/184849070?v=4",
     "created_at": "2026-08-18T14:49:56Z",
-    "updated_at": "2026-08-18T18:51:37Z",
-    "comments": 0,
+    "updated_at": "2026-08-24T16:54:25Z",
+    "comments": 1,
     "labels": [
       "A-tokio",
       "C-feature-request"
@@ -162,33 +190,6 @@
     "priority": "medium",
     "is_bug": false,
     "is_feature": true,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
-    "id": 5005570514,
-    "repo": "tokio-rs/tokio",
-    "ecosystem": "rust",
-    "ecosystem_label": "Rust",
-    "category": "rust_async",
-    "category_label": "Async & Web",
-    "number": 8329,
-    "title": "`tokio_test::io::Mock` silently hangs on a write instead of panicking",
-    "url": "https://github.com/tokio-rs/tokio/issues/8329",
-    "author": "ameyypawar",
-    "author_avatar": "https://avatars.githubusercontent.com/u/138877912?v=4",
-    "created_at": "2026-07-29T04:53:44Z",
-    "updated_at": "2026-08-05T11:57:54Z",
-    "comments": 4,
-    "labels": [
-      "A-tokio-test"
-    ],
-    "body_preview": "**Version**  `tokio-test` 0.4.5 (current master)  **Platform**  Not platform specific \u2014 this is pure state-machine logic, reproduced on macOS aarch64.  **Description**  The crate documentation states:  > Attempting to write data that the mock isn't expecting will result in a panic.  Instead, `write_all` can hang forever without panicking.  `Inner::write` scans the action queue for a `Write` action...",
-    "is_new": false,
-    "priority": "low",
-    "is_bug": false,
-    "is_feature": false,
     "is_security": false,
     "is_good_first_issue": false,
     "is_help_wanted": false
@@ -364,7 +365,7 @@
     "comments": 1,
     "labels": [],
     "body_preview": "I've got a simpler web server that is best run using a single-threaded runtime (it's a local server), and about the only thing standing between me and using `Rc` for some of my app state internals is the fact they aren't `!Send`, and `HttpServer::new` requires its closure to be `Send + Sync`.  Here's what I want:  - A single-threaded local-only variant of `HttpServer::new` that uses only one worke...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
