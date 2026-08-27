@@ -12,8 +12,8 @@
     "author": "sepehr-rs",
     "author_avatar": "https://avatars.githubusercontent.com/u/176217911?v=4",
     "created_at": "2026-08-24T07:01:34Z",
-    "updated_at": "2026-08-24T07:05:17Z",
-    "comments": 0,
+    "updated_at": "2026-08-26T17:04:17Z",
+    "comments": 3,
     "labels": [
       "type: docs"
     ],
@@ -39,8 +39,8 @@
     "author": "replabrobin",
     "author_avatar": "https://avatars.githubusercontent.com/u/2532126?v=4",
     "created_at": "2026-08-22T10:53:12Z",
-    "updated_at": "2026-08-24T19:37:31Z",
-    "comments": 9,
+    "updated_at": "2026-08-27T15:39:36Z",
+    "comments": 12,
     "labels": [
       "type: bug",
       "C: build isolation"
@@ -99,7 +99,7 @@
       "S: needs triage"
     ],
     "body_preview": "### What's the problem this feature will solve?  this feature will solve custom GPUs toml file in sglang and similar issues in other repos  ### Describe the solution you'd like  add new argument like --toml-file for custom otherwise chosef default pyproject.toml  ### Alternative Solutions  workaround is copying custom toml to default toml  ### Additional context  if agreed, i can try to implement...",
-    "is_new": true,
+    "is_new": false,
     "priority": "medium",
     "is_bug": false,
     "is_feature": true,
@@ -300,62 +300,6 @@
     "is_help_wanted": false
   },
   {
-    "id": 4913827712,
-    "repo": "pypa/pip",
-    "ecosystem": "python",
-    "ecosystem_label": "Python",
-    "category": "py_packaging",
-    "category_label": "Packaging & Build",
-    "number": 14183,
-    "title": "Feature Request: Add `pip list-deps` to inspect dependencies of uninstalled packages.",
-    "url": "https://github.com/pypa/pip/issues/14183",
-    "author": "human-on-vm",
-    "author_avatar": "https://avatars.githubusercontent.com/u/288155666?v=4",
-    "created_at": "2026-07-17T18:25:25Z",
-    "updated_at": "2026-07-18T16:50:09Z",
-    "comments": 3,
-    "labels": [
-      "type: feature request",
-      "S: needs triage"
-    ],
-    "body_preview": "### What's the problem this feature will solve?  Currently, there is no native, straightforward way to inspect the full dependency tree of a package before installing it. The standard workaround is to use `pip install <package> --dry-run`. However, using `--dry-run` for this purpose is fundamentally flawed for several reasons:  1. **Environment Coupling:** `--dry-run` simulates an installation for...",
-    "is_new": false,
-    "priority": "medium",
-    "is_bug": false,
-    "is_feature": true,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
-    "id": 5250273554,
-    "repo": "pypa/setuptools",
-    "ecosystem": "python",
-    "ecosystem_label": "Python",
-    "category": "py_packaging",
-    "category_label": "Packaging & Build",
-    "number": 5315,
-    "title": "[Docs] Broken Intersphinx Inventory",
-    "url": "https://github.com/pypa/setuptools/issues/5315",
-    "author": "Paebbels",
-    "author_avatar": "https://avatars.githubusercontent.com/u/956109?v=4",
-    "created_at": "2026-08-25T20:23:39Z",
-    "updated_at": "2026-08-25T20:23:39Z",
-    "comments": 0,
-    "labels": [
-      "Needs Triage",
-      "documentation"
-    ],
-    "body_preview": "### Summary  I wanted to link from my Sphinx-based documentation ([pyTooling](https://github.com/pyTooling/pyTooling)) using intersphinx to the setuptools' documentation.   I see an inventory file, but it misses important elements like: * `setuptools.setup()` * `setuptools.find_packages()` * `setuptools.find_namespace_packages()`  It's a while since I updated my documentation, but I'm pretty sure...",
-    "is_new": true,
-    "priority": "low",
-    "is_bug": false,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
     "id": 5183176039,
     "repo": "pypa/setuptools",
     "ecosystem": "python",
@@ -533,7 +477,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "`PLUGIN_NAME` might contain dashes, for example [`pip-compile`](https://github.com/juftin/hatch-pip-compile/blob/main/hatch_pip_compile%2Fplugin.py#L33). This leads to incorrect formatting of the environment variable for the environment option.  Example: `PLUGIN_NAME`: `\"pip-compile\"` `option`: `\"uv_path\"`  leads to env var: `HATCH_ENV_TYPE_PIP-COMPILE_UV_PATH`  (notice the dash)",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

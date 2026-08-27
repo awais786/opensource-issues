@@ -1,5 +1,32 @@
 [
   {
+    "id": 5257235140,
+    "repo": "jazzband/django-oauth-toolkit",
+    "ecosystem": "django",
+    "ecosystem_label": "Django",
+    "category": "auth_security",
+    "category_label": "Auth & Security",
+    "number": 1845,
+    "title": "Support `private_key_jwt` in CIMD",
+    "url": "https://github.com/django-oauth/django-oauth-toolkit/issues/1845",
+    "author": "ewjoachim",
+    "author_avatar": "https://avatars.githubusercontent.com/u/1457576?v=4",
+    "created_at": "2026-08-26T12:54:14Z",
+    "updated_at": "2026-08-27T08:45:31Z",
+    "comments": 4,
+    "labels": [
+      "enhancement"
+    ],
+    "body_preview": "**Is your feature request related to a problem? Please describe.** <!-- A clear and concise description of what the problem is. Ex. I'm always frustrated when [...] -->  DOT's CIMD support cannot interoperate with ChatGPT, one of the two largest MCP clients. Somewhere between bug and feature request: the code does what its docs say, but the result is that a major spec-conformant client is rejected...",
+    "is_new": true,
+    "priority": "medium",
+    "is_bug": false,
+    "is_feature": true,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 5249327665,
     "repo": "jazzband/django-oauth-toolkit",
     "ecosystem": "django",
@@ -278,8 +305,8 @@
     "author": "ewjoachim",
     "author_avatar": "https://avatars.githubusercontent.com/u/1457576?v=4",
     "created_at": "2026-06-17T15:20:53Z",
-    "updated_at": "2026-07-10T13:56:28Z",
-    "comments": 6,
+    "updated_at": "2026-08-26T22:46:52Z",
+    "comments": 7,
     "labels": [
       "enhancement"
     ],
@@ -338,7 +365,7 @@
       "bug"
     ],
     "body_preview": "<!--- Provide a general summary of the issue in the Title above -->  ## Expected Behavior  Enabling `two_factor.plugins.phonenumber` after the system is live and running migrations creates `two_factor_phonedevice` table.  ## Current Behavior  `PhoneDevice` model table is not created.  ## Possible Solution  <!--- Not obligatory, but suggest a fix/reason for the bug -->  ## Steps to Reproduce (for b...",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,
