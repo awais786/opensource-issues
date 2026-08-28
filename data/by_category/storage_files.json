@@ -16,7 +16,7 @@
     "comments": 1,
     "labels": [],
     "body_preview": "I observed this issue when upgrading from Django 4 to Django 5 (and thus upgrading `django-storages` from 1.12 to 1.14).  I launched a Celery worker in my Kubernetes infra that would upload several big files (200+ MB) to S3 in a short period of time, within a loop. With `django-storages` 1.12, since I was holding this files in memory during the upload, the RAM usage would do like a \"saw\" shape, ho...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

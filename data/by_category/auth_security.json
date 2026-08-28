@@ -1,5 +1,32 @@
 [
   {
+    "id": 5278197789,
+    "repo": "jazzband/django-oauth-toolkit",
+    "ecosystem": "django",
+    "ecosystem_label": "Django",
+    "category": "auth_security",
+    "category_label": "Auth & Security",
+    "number": 1846,
+    "title": "RFC 9207: MUST include iss on error response",
+    "url": "https://github.com/django-oauth/django-oauth-toolkit/issues/1846",
+    "author": "ewjoachim",
+    "author_avatar": "https://avatars.githubusercontent.com/u/1457576?v=4",
+    "created_at": "2026-08-28T12:27:44Z",
+    "updated_at": "2026-08-28T12:27:44Z",
+    "comments": 0,
+    "labels": [
+      "bug"
+    ],
+    "body_preview": "**Describe the bug** <!-- A clear and concise description of what the bug is. -->  [RFC 9207 \u00a72](https://www.rfc-editor.org/rfc/rfc9207.txt):  > In authorization responses to the client, **including error responses**,   an authorization server supporting this specification MUST indicate   its identity by including the iss parameter in the response.  I believe that `_add_iss_to_redirect` is called...",
+    "is_new": true,
+    "priority": "high",
+    "is_bug": true,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 5257235140,
     "repo": "jazzband/django-oauth-toolkit",
     "ecosystem": "django",
@@ -224,8 +251,8 @@
     "author": "dopry",
     "author_avatar": "https://avatars.githubusercontent.com/u/387640?v=4",
     "created_at": "2026-07-07T02:01:54Z",
-    "updated_at": "2026-07-28T02:55:58Z",
-    "comments": 1,
+    "updated_at": "2026-08-28T17:39:08Z",
+    "comments": 2,
     "labels": [
       "enhancement"
     ],
@@ -315,33 +342,6 @@
     "priority": "medium",
     "is_bug": false,
     "is_feature": true,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
-    "id": 4552337769,
-    "repo": "jazzband/django-oauth-toolkit",
-    "ecosystem": "django",
-    "ecosystem_label": "Django",
-    "category": "auth_security",
-    "category_label": "Auth & Security",
-    "number": 1702,
-    "title": "oauth2_settings.AUTHENTICATION_SERVER_EXP_TIME_ZONE violates specification",
-    "url": "https://github.com/django-oauth/django-oauth-toolkit/issues/1702",
-    "author": "dopry",
-    "author_avatar": "https://avatars.githubusercontent.com/u/387640?v=4",
-    "created_at": "2026-05-29T23:57:06Z",
-    "updated_at": "2026-08-23T23:47:53Z",
-    "comments": 1,
-    "labels": [
-      "bug"
-    ],
-    "body_preview": "**Describe the bug** expiration is strictly defined as utc in specification. there is no known major IDP that alters this timezone. We shouldn't either.   marked deprecated in 3.3.1, to be removed in 4.0  **Expected behavior** exp claims are always utc.    **Version** 3.3.0",
-    "is_new": false,
-    "priority": "high",
-    "is_bug": true,
-    "is_feature": false,
     "is_security": false,
     "is_good_first_issue": false,
     "is_help_wanted": false
