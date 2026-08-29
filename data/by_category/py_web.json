@@ -62,7 +62,7 @@
     "author": "yorickdowne",
     "author_avatar": "https://avatars.githubusercontent.com/u/71337066?v=4",
     "created_at": "2026-08-28T16:16:08Z",
-    "updated_at": "2026-08-28T16:37:16Z",
+    "updated_at": "2026-08-28T20:39:07Z",
     "comments": 0,
     "labels": [],
     "body_preview": "## Bug  When a user uses Ctrl-C during `click.prompt()`, this may cause an unhandled exception. Seen during CI on an Ubuntu 22.04 arm github runner. The same test on Ubuntu 22.04 x64, macOS arm, Windows x64/arm succeeded. This is likely to be a race that doesn't pop up every time  ```     | --- tty: Ctrl+C aborts at a prompt ---     | spawn /home/runner/work/ethstaker-deposit-cli/ethstaker-deposit...",

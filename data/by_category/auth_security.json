@@ -126,7 +126,7 @@
       "enhancement"
     ],
     "body_preview": "## Summary  `BaseAuthorizationView` overrides `error_response()` with a *narrower* signature than the mixin it inherits from \u2014 it adds a required positional `application` parameter:  ```python # AuthorizationServerViewMixin  (oauth2_provider/views/mixins.py on master) def error_response(self, error, **kwargs):     ...  # BaseAuthorizationView  (oauth2_provider/views/base.py on master) def error_re...",
-    "is_new": true,
+    "is_new": false,
     "priority": "medium",
     "is_bug": false,
     "is_feature": true,
