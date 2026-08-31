@@ -184,7 +184,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "Bassically, it would be great if I could put: ```fish export RIPGREP_CONFIG_PATH=~/.ripgreprc:./.ripgreprc ``` (paths are seperated by `:`s as is \"standard\"?)  in my shell profile, and then ripgrep would use all the options I have in my global `~/.ripgreprc`, but allow me to override them on a per directory basis with a local `.ripgreprc` (e.g. to add folders to exclude).  And of course it should...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
