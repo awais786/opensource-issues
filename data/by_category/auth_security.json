@@ -99,7 +99,7 @@
       "bug"
     ],
     "body_preview": "## Description  3.4.1's fix for #1687 (PR #1780) introduced a new query in `OAuth2Validator._save_bearer_token` that combines `select_for_update()` with an implicit `LIMIT 1` via `.first()`:  https://github.com/django-oauth/django-oauth-toolkit/blob/3.4.1/oauth2_provider/oauth2_validators.py#L1011-L1015  ```python previous_access_token = (     AccessToken.objects.select_for_update()     .filter(so...",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,

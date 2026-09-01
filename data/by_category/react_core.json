@@ -50,31 +50,6 @@
     "is_help_wanted": false
   },
   {
-    "id": 5290904112,
-    "repo": "facebook/react",
-    "ecosystem": "react",
-    "ecosystem_label": "React",
-    "category": "react_core",
-    "category_label": "React Core",
-    "number": 37451,
-    "title": "Fragment observers retain removed child elements",
-    "url": "https://github.com/react/react/issues/37451",
-    "author": "OskarEichler",
-    "author_avatar": "https://avatars.githubusercontent.com/u/62393985?v=4",
-    "created_at": "2026-08-30T07:23:50Z",
-    "updated_at": "2026-08-30T07:23:50Z",
-    "comments": 0,
-    "labels": [],
-    "body_preview": "## Description  Experimental Fragment refs apply registered `IntersectionObserver` and `ResizeObserver` instances to newly inserted element children, but the deletion path never calls `unobserve` for those observers. Once the child leaves the Fragment, `unobserveUsing` can no longer traverse to it, leaving the detached element observed and retained.  ## Reproduction  Register an observer with a Fr...",
-    "is_new": true,
-    "priority": "low",
-    "is_bug": false,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
     "id": 5290897697,
     "repo": "facebook/react",
     "ecosystem": "react",
@@ -312,10 +287,12 @@
     "author": "Junk-debug",
     "author_avatar": "https://avatars.githubusercontent.com/u/77940841?v=4",
     "created_at": "2026-08-31T06:48:12Z",
-    "updated_at": "2026-08-31T06:48:12Z",
+    "updated_at": "2026-08-31T13:14:13Z",
     "comments": 0,
     "labels": [
-      "bug"
+      "bug",
+      "feat:typescript",
+      "pkg:@react-router/dev"
     ],
     "body_preview": "### Reproduction  https://github.com/Junk-debug/react-router-routemodules-repro  ``` git clone https://github.com/Junk-debug/react-router-routemodules-repro cd react-router-routemodules-repro npm install && node bench.mjs ```  The script typechecks the project twice with the same edits 1) without any changes in tsconfig 2) with .react-router/types/+routes.ts excluded from tsconfig   and prints the...",
     "is_new": true,
@@ -339,10 +316,12 @@
     "author": "divyeshsachan",
     "author_avatar": "https://avatars.githubusercontent.com/u/5191867?v=4",
     "created_at": "2026-08-30T13:15:05Z",
-    "updated_at": "2026-08-30T13:15:05Z",
-    "comments": 0,
+    "updated_at": "2026-09-01T08:16:44Z",
+    "comments": 1,
     "labels": [
-      "bug"
+      "bug",
+      "pkg:@react-router/dev",
+      "feat:vite"
     ],
     "body_preview": "### Reproduction  `react-router dev` always computes wrong req.url, it assumes protocol = http  Details follows:  In Fetcher action I get error in development mode   ``` Error: Bad Request     at singleFetchAction (file:///Users/node_modules/react-router/dist/development/lib/server-runtime/single-fetch.js:27:44)     at handleSingleFetchRequest (file:///Users/node_modules/react-router/dist/developm...",
     "is_new": true,
@@ -366,9 +345,13 @@
     "author": "ispradeep",
     "author_avatar": "https://avatars.githubusercontent.com/u/243550454?v=4",
     "created_at": "2026-08-27T16:22:44Z",
-    "updated_at": "2026-08-27T16:36:25Z",
+    "updated_at": "2026-08-31T13:14:18Z",
     "comments": 1,
-    "labels": [],
+    "labels": [
+      "pkg:@react-router/dev",
+      "feat:vite",
+      "feat:spa-mode"
+    ],
     "body_preview": "When building with `ssr: false` in `react-router.config.ts`, `index.html` in `build/client` comes out broken \u2014 it's just a handful of stray `<link>` tags with no `<html>`, `<body>`, or script tags at all. The actual working SPA shell (correct doctype, modulepreloads, `<Scripts />`, everything) gets written to `build/client/__spa-fallback.html` instead, which nothing serves by default.  This means...",
     "is_new": true,
     "priority": "low",
