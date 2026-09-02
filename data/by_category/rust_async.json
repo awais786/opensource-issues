@@ -12,7 +12,7 @@
     "author": "carllerche",
     "author_avatar": "https://avatars.githubusercontent.com/u/6180?v=4",
     "created_at": "2026-08-29T00:30:11Z",
-    "updated_at": "2026-08-31T15:40:37Z",
+    "updated_at": "2026-09-02T00:25:33Z",
     "comments": 3,
     "labels": [
       "C-bug",
@@ -132,7 +132,7 @@
       "A-ci"
     ],
     "body_preview": "The `Check semver for rest of the workspace` step in [`ci.yml`](https://github.com/tokio-rs/tokio/blob/ea91b33ca57ff0581b38e735cc108f831bccbdaa/.github/workflows/ci.yml#L511-L512) is guarded by  ```yaml if: ${{ !startsWith(github.event.pull_request.base.ref, 'tokio-1.') }} ```  `github.event.pull_request` only exists on `pull_request` events. On `push` events the operand is empty, the expression i...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
@@ -262,7 +262,7 @@
     "author": "kdn36",
     "author_avatar": "https://avatars.githubusercontent.com/u/184849070?v=4",
     "created_at": "2026-08-18T14:49:56Z",
-    "updated_at": "2026-08-24T16:54:25Z",
+    "updated_at": "2026-09-01T14:49:58Z",
     "comments": 1,
     "labels": [
       "A-tokio",
@@ -454,34 +454,6 @@
       "websockets"
     ],
     "body_preview": "## Summary  The `actix-http` WebSocket close-frame parser accepts invalid close status codes and lossily decodes invalid UTF-8 close reasons. Invalid close payloads should fail the connection instead of being exposed as a valid `CloseReason`.  ## Reproduction  Run the Autobahn fuzzing client against the `websockets/autobahn` example converted to `actix-ws` (Autobahn 25.10.1).  Affected cases:  - `...",
-    "is_new": true,
-    "priority": "high",
-    "is_bug": true,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
-    "id": 5307474345,
-    "repo": "actix/actix-web",
-    "ecosystem": "rust",
-    "ecosystem_label": "Rust",
-    "category": "rust_async",
-    "category_label": "Async & Web",
-    "number": 4215,
-    "title": "WebSocket codec accepts a new data frame during an active continuation",
-    "url": "https://github.com/actix/actix-web/issues/4215",
-    "author": "robjtede",
-    "author_avatar": "https://avatars.githubusercontent.com/u/3316789?v=4",
-    "created_at": "2026-09-01T03:28:47Z",
-    "updated_at": "2026-09-01T03:33:00Z",
-    "comments": 0,
-    "labels": [
-      "C-bug",
-      "websockets"
-    ],
-    "body_preview": "## Summary  The `actix-http` WebSocket codec accepts a complete Text or Binary frame while a fragmented message is already in progress. RFC 6455 requires all subsequent data frames in that message to use the continuation opcode (`0`).  ## Reproduction  Run the Autobahn fuzzing client against the `websockets/autobahn` example converted to `actix-ws`.  - Autobahn case: `5.18` - Description: send a t...",
     "is_new": true,
     "priority": "high",
     "is_bug": true,
