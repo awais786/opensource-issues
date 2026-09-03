@@ -43,7 +43,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "The `history_tr.html` template currently has a loop  `{% for key, value in history_context.history_stats.data.items %}`  Here, `history_context.history_stats.data` is captured via `HistoryPanel.generate_stats`: if request content type is `application/json`, it loads the JSON body. If the result dictionary contains key `items` itself, it uses the dictionary value under that key instead of calling d...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
