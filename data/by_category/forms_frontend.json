@@ -41,7 +41,7 @@
     "comments": 2,
     "labels": [],
     "body_preview": "### Description  htmx 4 is no longer experimental   https://four.htmx.org/announcements/2026-08-28-htmx-4.0.0-is-released",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

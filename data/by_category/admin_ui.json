@@ -18,7 +18,7 @@
       "Djangonaut Space :rocket:"
     ],
     "body_preview": "In #2216 [I observed that the toolbar state can appear inconsistent after using the History panel and switching to an earlier request](https://github.com/django-commons/django-debug-toolbar/issues/2216#issuecomment-5309871534).  When switching, everything in the toolbar updates to show the data for the earlier request _except for_ the subtitle in the History toolbar item itself.  In this example,...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
