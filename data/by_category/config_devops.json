@@ -542,7 +542,7 @@
       "Spans"
     ],
     "body_preview": "### How do you use Sentry?  Sentry SaaS (sentry.io)  ### Version  2.68.1  ### Steps to Reproduce  We ran into the tool-rebuild problem that #6961 fixed. Our agent crash-looped on `UserError: ToolSearchTool() requires at least one searchable Responses surface`, because `defer_loading` came back `False` on every tool. Moving to 2.67.0 fixed it for us, and the switch to `RunHooks` in #6994 looks like...",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,
