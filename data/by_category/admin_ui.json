@@ -197,7 +197,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "By default, admin actions are available on the change list page only, but [in Django 6.1 a `location` argument was introduced to the `@admin.action` decorator](https://docs.djangoproject.com/en/6.1/ref/contrib/admin/actions/#controlling-where-actions-are-available). It is now possible to add the admin action to the change form.",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

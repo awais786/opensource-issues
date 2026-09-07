@@ -12,7 +12,7 @@
     "author": "tritsystem",
     "author_avatar": "https://avatars.githubusercontent.com/u/279600467?v=4",
     "created_at": "2026-09-04T17:07:22Z",
-    "updated_at": "2026-09-05T04:15:51Z",
+    "updated_at": "2026-09-07T08:00:53Z",
     "comments": 1,
     "labels": [],
     "body_preview": "### Summary  `Signature.clone()`'s own inline comment says \"need to deepcopy options so origins links etc. is not modified\" \u2014 and `options` is indeed deep-copied \u2014 but the sibling field `kwargs` is NOT deep-copied when `clone()` is called with no override arguments (the common `sig.clone()` \"just give me an independent copy\" call). The clone ends up sharing the exact same `kwargs` dict object as t...",
@@ -91,7 +91,7 @@
     "author": "Namraa310806",
     "author_avatar": "https://avatars.githubusercontent.com/u/131944677?v=4",
     "created_at": "2026-08-21T13:16:06Z",
-    "updated_at": "2026-09-02T03:25:26Z",
+    "updated_at": "2026-09-07T07:22:36Z",
     "comments": 2,
     "labels": [
       "Issue Type: Bug Report"
@@ -170,9 +170,11 @@
     "author": "moti1976",
     "author_avatar": "https://avatars.githubusercontent.com/u/66723826?v=4",
     "created_at": "2026-07-15T07:47:08Z",
-    "updated_at": "2026-09-02T16:56:46Z",
+    "updated_at": "2026-09-07T10:35:13Z",
     "comments": 3,
-    "labels": [],
+    "labels": [
+      "pyamqp"
+    ],
     "body_preview": "### Summary Publishing a task via `Task.apply_async(headers=...)` with a custom header key present (e.g. Elastic APM's celery integration, which sets `headers[\"elasticapm\"][\"trace_parent_string\"]` from a `before_task_publish` signal handler) produces an AMQP header field-table that RabbitMQ cannot decode. The broker's channel process crashes (`function_clause` in `rabbit_binary_parser:parse_table`...",
     "is_new": false,
     "priority": "low",
