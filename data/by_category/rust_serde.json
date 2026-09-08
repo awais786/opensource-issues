@@ -12,7 +12,7 @@
     "author": "vidaunited",
     "author_avatar": "https://avatars.githubusercontent.com/u/275000043?v=4",
     "created_at": "2026-09-06T08:05:59Z",
-    "updated_at": "2026-09-06T13:53:08Z",
+    "updated_at": "2026-09-07T20:52:32Z",
     "comments": 2,
     "labels": [],
     "body_preview": "### Summary  The enum-representations docs say an internally tagged newtype variant that holds a sequence fails *at runtime*. In practice the derived `Serialize` impl does not compile at all when the newtype variant holds `Self` (directly via `Box<Self>` or via `Vec<Self>`): rustc reports E0275 at the default recursion limit, and if the user follows the diagnostic and raises the limit, rustc spins...",
