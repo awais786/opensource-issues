@@ -16,7 +16,7 @@
     "comments": 1,
     "labels": [],
     "body_preview": "## Summary  I'm using `pytest-django` with a MySQL Testcontainer and overriding Django's database settings via the documented `django_db_modify_db_settings` fixture.  The container starts correctly, but Django still tries to connect using the original `.env` database host/user from `settings.DATABASES`.  In my case, the app `.env` contains a Docker Compose hostname:  ```env DATABASE_URL=mysql://in...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
