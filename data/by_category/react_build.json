@@ -240,33 +240,6 @@
     "is_help_wanted": false
   },
   {
-    "id": 5253039898,
-    "repo": "vitejs/vite",
-    "ecosystem": "react",
-    "ecosystem_label": "React",
-    "category": "react_build",
-    "category_label": "Build & Tooling",
-    "number": 23367,
-    "title": "`prepare`-style subcommand that frameworks can extend",
-    "url": "https://github.com/vitejs/vite/issues/23367",
-    "author": "KTrain5169",
-    "author_avatar": "https://avatars.githubusercontent.com/u/69028025?v=4",
-    "created_at": "2026-08-26T03:34:06Z",
-    "updated_at": "2026-08-26T11:05:09Z",
-    "comments": 2,
-    "labels": [
-      "pending triage"
-    ],
-    "body_preview": "### Description  Various frameworks use some sort of `prepare` script (or have functionality that suits well for a `prepare` script):  - Nuxt and Astro generate `.nuxt`/`.astro` folders containing TypeScript definitions. As \"super meta-frameworks\" with their own CLIs that wrap everything Vite, they choose to have their own `prepare` subcommands in their CLIs (`nuxt prepare`/`astro prepare`) for th...",
-    "is_new": false,
-    "priority": "low",
-    "is_bug": false,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
     "id": 5352089509,
     "repo": "evanw/esbuild",
     "ecosystem": "react",
