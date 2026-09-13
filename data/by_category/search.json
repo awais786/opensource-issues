@@ -1,5 +1,32 @@
 [
   {
+    "id": 5432993100,
+    "repo": "django-haystack/django-haystack",
+    "ecosystem": "django",
+    "ecosystem_label": "Django",
+    "category": "search",
+    "category_label": "Search",
+    "number": 2076,
+    "title": "Whoosh: 97 currently open issues mention Whoosh",
+    "url": "https://github.com/django-haystack/django-haystack/issues/2076",
+    "author": "cclauss",
+    "author_avatar": "https://avatars.githubusercontent.com/u/3709715?v=4",
+    "created_at": "2026-09-12T11:24:59Z",
+    "updated_at": "2026-09-12T13:23:33Z",
+    "comments": 2,
+    "labels": [
+      "backend : whoosh"
+    ],
+    "body_preview": "https://github.com/django-haystack/django-haystack/issues?q=is%3Aissue state%3Aopen+Whoosh  @priya-sundaram-dev, as a  Whoosh maintainer, would you be willing to review those issues and provide some advice?  Many might just mention Whoosh in passing, so they can safely be ignored in this review.  If a `.github/skills/review-open-issue/SKILL.md` file would help, please create a pull request that ad...",
+    "is_new": true,
+    "priority": "low",
+    "is_bug": false,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 4831808360,
     "repo": "django-haystack/django-haystack",
     "ecosystem": "django",

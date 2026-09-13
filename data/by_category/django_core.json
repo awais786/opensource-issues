@@ -12,12 +12,12 @@
     "author": "pauloxnet",
     "author_avatar": "https://avatars.githubusercontent.com/u/521097?v=4",
     "created_at": "2026-09-09T10:32:44Z",
-    "updated_at": "2026-09-11T15:12:33Z",
-    "comments": 13,
+    "updated_at": "2026-09-12T14:59:31Z",
+    "comments": 18,
     "labels": [
       "content"
     ],
-    "body_preview": "Other than the \"Upcoming Events\" widget in the https://www.djangoproject.com/weblog/ page we don't have a way to share info about upcoming event or also past events.  It would be useful to have a \"Events\" page with \"Upcoming events\" and \"Past events\" sections where to find additional information, searchable.",
+    "body_preview": "Other than the \"Upcoming Events\" widget on the [weblog](https://www.djangoproject.com/weblog/), we currently don't have a public, centralized way to discover upcoming Django-related events or look back at past ones.  I propose adding an **Events** page at `https://www.djangoproject.com/events/`, with **Upcoming events** and **Past events** sections and simple search/filtering.  The goal is to have...",
     "is_new": true,
     "priority": "low",
     "is_bug": false,

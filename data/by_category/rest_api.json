@@ -93,7 +93,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "**Describe the bug**  When a schema dict contains a keyword that exists in a later JSON Schema draft but not in the OpenAPI 3.0 Schema Object \u2014 `propertyNames`, `const`, `prefixItems`, `if`/`then`/`else`, `unevaluated*` \u2014 `validate_schema()` fails with an error that never identifies the offending keyword.  The failure surfaces as the `oneOf` between `#/definitions/Schema` and `#/definitions/Refere...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
