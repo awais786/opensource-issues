@@ -143,7 +143,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "Hello. I am a new user to Knox. As far as I can see in Knox, expired tokens are automatically removed from the system. So, I would like to ask if there is any setting that can disable this feature?",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

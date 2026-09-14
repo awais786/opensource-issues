@@ -354,6 +354,60 @@
     "is_help_wanted": false
   },
   {
+    "id": 5447699142,
+    "repo": "getsentry/sentry-python",
+    "ecosystem": "django",
+    "ecosystem_label": "Django",
+    "category": "config_devops",
+    "category_label": "Config & DevOps",
+    "number": 7494,
+    "title": "Implement span attachments in streaming mode",
+    "url": "https://github.com/getsentry/sentry-python/issues/7494",
+    "author": "sentrivana",
+    "author_avatar": "https://avatars.githubusercontent.com/u/131587164?v=4",
+    "created_at": "2026-09-14T09:37:45Z",
+    "updated_at": "2026-09-14T09:47:42Z",
+    "comments": 1,
+    "labels": [
+      "Python"
+    ],
+    "body_preview": "I haven't found a single hit for `add_attachment(add_to_transactions=True)` anywhere on GitHub, so I don't believe this has super high priority, but we should add it at some point.  [https://develop.sentry.dev/sdk/telemetry/spans/span-protocol/#span-attachments](<https://develop.sentry.dev/sdk/telemetry/spans/span-protocol/#span-attachments>)",
+    "is_new": true,
+    "priority": "low",
+    "is_bug": false,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
+    "id": 5446861843,
+    "repo": "getsentry/sentry-python",
+    "ecosystem": "django",
+    "ecosystem_label": "Django",
+    "category": "config_devops",
+    "category_label": "Config & DevOps",
+    "number": 7490,
+    "title": "Change the default of `attach_stacktrace` to `True` in new major",
+    "url": "https://github.com/getsentry/sentry-python/issues/7490",
+    "author": "sentrivana",
+    "author_avatar": "https://avatars.githubusercontent.com/u/131587164?v=4",
+    "created_at": "2026-09-14T08:11:30Z",
+    "updated_at": "2026-09-14T08:11:32Z",
+    "comments": 1,
+    "labels": [
+      "Python"
+    ],
+    "body_preview": "",
+    "is_new": true,
+    "priority": "low",
+    "is_bug": false,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 5424967657,
     "repo": "getsentry/sentry-python",
     "ecosystem": "django",
@@ -592,7 +646,7 @@
     "author": "jap",
     "author_avatar": "https://avatars.githubusercontent.com/u/248953?v=4",
     "created_at": "2026-09-10T13:52:07Z",
-    "updated_at": "2026-09-10T13:53:36Z",
+    "updated_at": "2026-09-14T10:09:32Z",
     "comments": 2,
     "labels": [
       "Python",
@@ -628,7 +682,7 @@
       "Traces"
     ],
     "body_preview": "### Summary  `Transaction.__init__` unconditionally computes `_generate_sample_rand(self.trace_id)`, and `_generate_sample_rand` seeds a Mersenne Twister to produce a single float. That is **6.4 \u00b5s per call** on CPython 3.14 / Apple M2, paid on every request through the ASGI integrations even when tracing is disabled and the value can never be used.  Two independent problems:  **1. It is eager.**...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
@@ -658,7 +712,7 @@
       "Spans"
     ],
     "body_preview": "### Summary  When tracing is disabled (`traces_sample_rate` and `traces_sampler` both unset), `SentryAsgiMiddleware._run_app` still builds a full `Transaction` per request and immediately discards it. On a trivial FastAPI endpoint this is **~34 \u00b5s/request, more than half of the SDK's entire per-request cost**.  ### How I found it  Ablating every `sentry_sdk.init()` knob on a do-nothing `async def`...",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,
