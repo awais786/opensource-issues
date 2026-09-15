@@ -25,33 +25,6 @@
     "is_help_wanted": false
   },
   {
-    "id": 5410979775,
-    "repo": "jazzband/django-debug-toolbar",
-    "ecosystem": "django",
-    "ecosystem_label": "Django",
-    "category": "admin_ui",
-    "category_label": "Admin & UI",
-    "number": 2472,
-    "title": "Add repose argument to `SHOW_TOOLBAR_CALLBACK` callback",
-    "url": "https://github.com/django-commons/django-debug-toolbar/issues/2472",
-    "author": "codingjoe",
-    "author_avatar": "https://avatars.githubusercontent.com/u/1772890?v=4",
-    "created_at": "2026-09-10T10:24:53Z",
-    "updated_at": "2026-09-10T10:29:46Z",
-    "comments": 1,
-    "labels": [
-      "Feature"
-    ],
-    "body_preview": "Howdy! \ud83e\udd20  Currently we only pass the request to the `SHOW_TOOLBAR_CALLBACK`.  Inside the middleware we are capable of passing the response to the callback too, of course, with the caveat that the profiling must have already run. Thus, making the callback response dependent would be really only about \u201cshowing\u201d the toolbar.  Why do I still think it's worth it? Header-based omissions. Occasionally I...",
-    "is_new": true,
-    "priority": "medium",
-    "is_bug": false,
-    "is_feature": true,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
     "id": 5280289685,
     "repo": "jazzband/django-debug-toolbar",
     "ecosystem": "django",

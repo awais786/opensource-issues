@@ -1,5 +1,30 @@
 [
   {
+    "id": 5450673813,
+    "repo": "facebook/react",
+    "ecosystem": "react",
+    "ecosystem_label": "React",
+    "category": "react_core",
+    "category_label": "React Core",
+    "number": 37628,
+    "title": "Bug: dev-mode Component Performance Track prop diff re-walks aliased references; cost scales linearly with alias count",
+    "url": "https://github.com/react/react/issues/37628",
+    "author": "binaryphile",
+    "author_avatar": "https://avatars.githubusercontent.com/u/174352?v=4",
+    "created_at": "2026-09-14T14:32:31Z",
+    "updated_at": "2026-09-14T19:58:03Z",
+    "comments": 1,
+    "labels": [],
+    "body_preview": "## Summary  In development builds, the Component Performance Track's prop diff (`addObjectDiffToProperties` / `addValueToProperties`) keeps no record of objects it has already visited. When one prop object exposes the same underlying data under several names \u2014 a common shape in data-table and ORM-style libraries \u2014 the walk repeats in full for each name.  Cost scales **linearly with the number of a...",
+    "is_new": true,
+    "priority": "low",
+    "is_bug": false,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 5444779094,
     "repo": "facebook/react",
     "ecosystem": "react",
@@ -147,7 +172,7 @@
     "author": "switz",
     "author_avatar": "https://avatars.githubusercontent.com/u/990166?v=4",
     "created_at": "2026-09-12T18:26:19Z",
-    "updated_at": "2026-09-12T18:28:35Z",
+    "updated_at": "2026-09-14T19:51:47Z",
     "comments": 0,
     "labels": [
       "Status: Unconfirmed"
@@ -366,27 +391,27 @@
     "is_help_wanted": false
   },
   {
-    "id": 5441861988,
+    "id": 5454707255,
     "repo": "remix-run/react-router",
     "ecosystem": "react",
     "ecosystem_label": "React",
     "category": "react_core",
     "category_label": "React Core",
-    "number": 15501,
-    "title": "<Link> click handling freezes the page under rapid repeated navigation (react-router-dom v7.18.3)",
-    "url": "https://github.com/remix-run/react-router/issues/15501",
-    "author": "Duduceretta",
-    "author_avatar": "https://avatars.githubusercontent.com/u/108603083?v=4",
-    "created_at": "2026-09-13T18:14:32Z",
-    "updated_at": "2026-09-13T18:14:32Z",
+    "number": 15513,
+    "title": "[aw] /review pull request is missing required data",
+    "url": "https://github.com/remix-run/react-router/issues/15513",
+    "author": "github-actions[bot]",
+    "author_avatar": "https://avatars.githubusercontent.com/in/15368?v=4",
+    "created_at": "2026-09-14T21:17:57Z",
+    "updated_at": "2026-09-14T21:17:57Z",
     "comments": 0,
     "labels": [
-      "bug"
+      "agentic-workflows"
     ],
-    "body_preview": "### Reproduction  ## Reproduction  No minimal repro repo yet \u2014 found via progressive isolation of a larger app, not narrowed to a standalone repository. Happy to build one if maintainers want it.  Steps that reproduce reliably in the full app:  - `react-router-dom`: `7.18.3` - `react` / `react-dom`: `19.x` - App structure: `createBrowserRouter` with nested routes \u2014 `ProtectedRoute` (auth guard usi...",
+    "body_preview": "### Workflow Failure  **Workflow:** [/review pull request](https://github.com/remix-run/react-router/blob/main/.github/workflows/aw-command-review-pull-request.md)   **Branch:** main   **Run:** https://github.com/remix-run/react-router/actions/runs/34897399647   **Pull Request:** [#15436](https://github.com/remix-run/react-router/pull/15436)   > [!WARNING] > **Missing Data Reported**: The agent re...",
     "is_new": true,
-    "priority": "high",
-    "is_bug": true,
+    "priority": "low",
+    "is_bug": false,
     "is_feature": false,
     "is_security": false,
     "is_good_first_issue": false,
@@ -405,9 +430,12 @@
     "author": "TBeeren",
     "author_avatar": "https://avatars.githubusercontent.com/u/36151761?v=4",
     "created_at": "2026-09-10T07:10:58Z",
-    "updated_at": "2026-09-10T07:15:06Z",
+    "updated_at": "2026-09-14T13:59:46Z",
     "comments": 0,
-    "labels": [],
+    "labels": [
+      "pkg:react-router",
+      "feat:streaming"
+    ],
     "body_preview": "## Environment  - React Router: 8.x (SSR, `<Scripts />` component) - Affected browsers: **Chrome Mobile iOS**, Google Search app, and any other WKWebView-based browser on iOS - Unaffected: Safari iOS, all desktop browsers, Android Chrome  ## Symptom  Every SSR page load throws:  ``` RangeError: Maximum call stack size exceeded     at Tk (chrome-extension://\u2026)     at Rk (chrome-extension://\u2026)     a...",
     "is_new": true,
     "priority": "low",
@@ -430,9 +458,12 @@
     "author": "jbalsas",
     "author_avatar": "https://avatars.githubusercontent.com/u/905006?v=4",
     "created_at": "2026-09-09T20:40:51Z",
-    "updated_at": "2026-09-09T21:07:39Z",
+    "updated_at": "2026-09-14T13:59:48Z",
     "comments": 0,
-    "labels": [],
+    "labels": [
+      "pkg:react-router",
+      "feat:view-transitions"
+    ],
     "body_preview": "### Reproduction  Repo: https://github.com/jbalsas/react-router-pop-revalidation-view-transition StackBlitz: https://stackblitz.com/github/jbalsas/react-router-pop-revalidation-view-transition  The app wraps `document.startViewTransition` and prints every call to the page. Data mode, `createBrowserRouter`, one loader.  1. Click **Go to /a (view transition)** \u2192 1 `startViewTransition`. Expected. 2....",
     "is_new": true,
     "priority": "low",
@@ -455,10 +486,11 @@
     "author": "SabziDev",
     "author_avatar": "https://avatars.githubusercontent.com/u/242604396?v=4",
     "created_at": "2026-09-08T19:10:52Z",
-    "updated_at": "2026-09-08T19:10:52Z",
+    "updated_at": "2026-09-14T13:59:51Z",
     "comments": 0,
     "labels": [
-      "bug"
+      "bug",
+      "pkg:react-router"
     ],
     "body_preview": "### Reproduction  const navigation = useNavigation();  console.log(navigation.state);  <Link to=\"/dashboard\">Dashboard</Link>   Demo: https://sabzidev-visionui-dashboard.vercel.app/  ### System Info  ```shell npx envinfo --system --npmPackages '{vite,react-router,@react-router/*}' --binaries --browsers ```  ### Used Package Manager  npm  ### Expected Behavior  When navigating to the route that is...",
     "is_new": true,

@@ -16,7 +16,7 @@
     "comments": 5,
     "labels": [],
     "body_preview": "Jazzband is [sunsetting](https://jazzband.co/news/2026/03/14/sunsetting-jazzband) and projects like django-silk are being [encouraged to migrate away](https://jazzband.co/news/2026/03/14/wind-down-plan).  Since django-silk is still being used by many projects, I believe it should be transferred to another organization that can provide the support needed for collaborative maintenance.  Some possibl...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
