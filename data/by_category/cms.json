@@ -1,5 +1,34 @@
 [
   {
+    "id": 5469134974,
+    "repo": "wagtail/wagtail",
+    "ecosystem": "django",
+    "ecosystem_label": "Django",
+    "category": "cms",
+    "category_label": "CMS & Content",
+    "number": 14620,
+    "title": "Rich text page links read the site root paths cache, and query Locale, once per link instead of once per page",
+    "url": "https://github.com/wagtail/wagtail/issues/14620",
+    "author": "jpmckinney",
+    "author_avatar": "https://avatars.githubusercontent.com/u/26463?v=4",
+    "created_at": "2026-09-16T01:26:45Z",
+    "updated_at": "2026-09-16T09:53:27Z",
+    "comments": 1,
+    "labels": [
+      "type:Bug",
+      "\ud83d\ude80 Performance",
+      "status:Unconfirmed"
+    ],
+    "body_preview": "### Issue summary  `PageLinkHandler.expand_db_attributes_many()` batches the database access for the pages it links to, via `get_many()`, but then resolves each URL individually with `page.localized.url`. Both halves of that expression repeat work that the pass could share:  - `Page.get_url()` ends in `Page._get_site_root_paths()`, which memoizes on the `cache_object` it is given, and on the page...",
+    "is_new": true,
+    "priority": "high",
+    "is_bug": true,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 5450602759,
     "repo": "wagtail/wagtail",
     "ecosystem": "django",
@@ -12,11 +41,11 @@
     "author": "PanosDine",
     "author_avatar": "https://avatars.githubusercontent.com/u/45263292?v=4",
     "created_at": "2026-09-14T14:26:00Z",
-    "updated_at": "2026-09-14T14:29:26Z",
-    "comments": 1,
+    "updated_at": "2026-09-15T15:33:01Z",
+    "comments": 2,
     "labels": [
       "type:Bug",
-      "status:Unconfirmed"
+      "status:Needs Info"
     ],
     "body_preview": "### Issue summary  In Wagtail 7.0, unpublished DraftStateMixin objects have commit=True passed to form.save(), which triggers modelcluster to synchronize child relations to match the in-memory form state. If a ClusterableModel has ParentalKey child relations that are NOT included in the form panels, those relationships get deleted from the database on every draft save.  # Version Wagtail 7.0.9 (is...",
     "is_new": true,
@@ -50,7 +79,7 @@
       "Headless"
     ],
     "body_preview": "### Problem statement  We need a replacement for `ImageRenditionField` so that we can fully switch off DRF as part of #14315.  ### Proposed solution  Naively I think I\u2019d favor something that has a very similar signature to the existing, to facilitate v2 -> v3 migrations. A new homegrown \"field\" class with a `to_representation` method, and similar capabilities.  ### Alternative solutions  Could als...",
-    "is_new": true,
+    "is_new": false,
     "priority": "medium",
     "is_bug": false,
     "is_feature": true,
@@ -133,34 +162,6 @@
       "status:Unconfirmed"
     ],
     "body_preview": "### Issue summary  WorkflowState's [`.resume()`](https://github.com/wagtail/wagtail/blob/v7.4.3/wagtail/models/workflows.py#L201-L235), [`update()`](https://github.com/wagtail/wagtail/blob/v7.4.3/wagtail/models/workflows.py#L261-L299), and [`cancel()`](https://github.com/wagtail/wagtail/blob/v7.4.3/wagtail/models/workflows.py#L324-L359) each perform database writes without wrapping them in a trans...",
-    "is_new": false,
-    "priority": "high",
-    "is_bug": true,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
-    "id": 5326525752,
-    "repo": "wagtail/wagtail",
-    "ecosystem": "django",
-    "ecosystem_label": "Django",
-    "category": "cms",
-    "category_label": "CMS & Content",
-    "number": 14585,
-    "title": "Page history \"Copied from X\" names the parent of the copied page, not the page that was copied",
-    "url": "https://github.com/wagtail/wagtail/issues/14585",
-    "author": "oleksii-quinta",
-    "author_avatar": "https://avatars.githubusercontent.com/u/199903742?v=4",
-    "created_at": "2026-09-02T16:30:07Z",
-    "updated_at": "2026-09-02T16:30:07Z",
-    "comments": 0,
-    "labels": [
-      "type:Bug",
-      "status:Unconfirmed"
-    ],
-    "body_preview": "### Issue summary  Page history renders `wagtail.copy` log entries as \"Copied from <title>\", but the title shown is the **parent of the page that was copied**, not the page that was actually copied.  The result is a history line that names an unrelated page \u2014 often one of a completely different page type \u2014 and the identity of the real source page is never recorded anywhere in the log entry.  The s...",
     "is_new": false,
     "priority": "high",
     "is_bug": true,
@@ -312,6 +313,31 @@
     "is_help_wanted": false
   },
   {
+    "id": 5464337663,
+    "repo": "wagtail/wagtail-localize",
+    "ecosystem": "django",
+    "ecosystem_label": "Django",
+    "category": "cms",
+    "category_label": "CMS & Content",
+    "number": 962,
+    "title": "Support default Wagtail comments for translation review",
+    "url": "https://github.com/wagtail/wagtail-localize/issues/962",
+    "author": "Yemeni",
+    "author_avatar": "https://avatars.githubusercontent.com/u/4777388?v=4",
+    "created_at": "2026-09-15T16:00:32Z",
+    "updated_at": "2026-09-15T16:00:32Z",
+    "comments": 0,
+    "labels": [],
+    "body_preview": "## Background  Translation reviewers need a way to comment on translation quality and resolve those comments.  The goal is to inherit and reuse Wagtail's default features rather than introduce a separate review system. This includes the live preview work being addressed in [PR #961](https://github.com/wagtail/wagtail-localize/pull/961), `feat: add live translation preview`, as well as Wagtail's ex...",
+    "is_new": true,
+    "priority": "low",
+    "is_bug": false,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 5234042212,
     "repo": "wagtail/wagtail-localize",
     "ecosystem": "django",
@@ -399,8 +425,8 @@
     "author": "fsbraun",
     "author_avatar": "https://avatars.githubusercontent.com/u/16904477?v=4",
     "created_at": "2026-09-15T10:07:35Z",
-    "updated_at": "2026-09-15T10:07:35Z",
-    "comments": 0,
+    "updated_at": "2026-09-15T12:24:58Z",
+    "comments": 1,
     "labels": [
       "needs design decision",
       "kind: enhancement"
