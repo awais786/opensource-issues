@@ -16,7 +16,7 @@
     "comments": 1,
     "labels": [],
     "body_preview": "## Problem  `Storage.open()` returns a seekable Django file object. For the django-storages S3, Azure, and GCS backends, opening a file for reading currently materializes the complete remote object into a temporary file before the caller receives data.  This is problematic for applications that must proxy authenticated downloads through their application server. A chunked response loop cannot boun...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

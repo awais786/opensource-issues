@@ -143,7 +143,7 @@
     "comments": 1,
     "labels": [],
     "body_preview": "### What are you trying to achieve?  Create gift cards in successive batches using a shared campaign tag, while preserving that tag on previously issued cards.  In Saleor 3.21.16, `giftCardBulkCreate` replaces the existing card associations for each supplied tag with the newly created batch. Older gift cards silently lose the shared tag.  ### Steps to reproduce the problem  Use a disposable Saleor...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
