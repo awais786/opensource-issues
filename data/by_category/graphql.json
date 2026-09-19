@@ -77,5 +77,30 @@
     "is_security": false,
     "is_good_first_issue": false,
     "is_help_wanted": false
+  },
+  {
+    "id": 5498468923,
+    "repo": "graphql-python/graphene",
+    "ecosystem": "django",
+    "ecosystem_label": "Django",
+    "category": "graphql",
+    "category_label": "GraphQL",
+    "number": 1606,
+    "title": "Support OneOf input object types",
+    "url": "https://github.com/graphql-python/graphene/issues/1606",
+    "author": "allanlewis",
+    "author_avatar": "https://avatars.githubusercontent.com/u/194736?v=4",
+    "created_at": "2026-09-18T10:23:35Z",
+    "updated_at": "2026-09-18T10:43:05Z",
+    "comments": 0,
+    "labels": [],
+    "body_preview": "**Is your feature request related to a problem? Please describe.**  Graphene cannot currently express a GraphQL OneOf input object. This commonly arises when an input accepts one of several typed alternatives: defining every alternative as an optional field neither communicates the exactly-one constraint through the schema nor lets GraphQL enforce it during input coercion.  Related requests for in...",
+    "is_new": true,
+    "priority": "low",
+    "is_bug": false,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
   }
 ]

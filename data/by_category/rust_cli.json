@@ -388,7 +388,7 @@
       "bug"
     ],
     "body_preview": "**What steps will reproduce the bug?**  1. Open the MacOS Terminal app during light mode on the OS 2. Run bat on any file. I did it on my /etc/fstab  **What happens?** Notice how the font color of the the first words on some lines are white on the white background. <img width=\"888\" height=\"432\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/0fdda316-ace7-4aee-963f-9c960e9b0cf5\" /> **W...",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,
@@ -415,7 +415,7 @@
       "feature-request"
     ],
     "body_preview": "Programs like [innomd](https://github.com/Innomatica-GmbH/innomd) and [mdcat](https://github.com/BIRSAx2/mdcat) can convert latex math-blocks from `.md` files into plain ascii representations, so that they're somewhat readable in the terminal. Unfortunately, they're not as versatile/widespread as `bat`, and they both have some issues when the math becomes slightly complicated.  I was wondering whe...",
-    "is_new": true,
+    "is_new": false,
     "priority": "medium",
     "is_bug": false,
     "is_feature": true,

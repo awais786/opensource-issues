@@ -506,7 +506,7 @@
       "tech debt"
     ],
     "body_preview": "## Problem  `guardian.mixins.LoginRequiredMixin` cannot be used with an asynchronous class-based view. An unauthenticated user gets a `TypeError` instead of a redirect to the login page.  ```python from django.http import HttpResponse from django.views.generic import View  from guardian.mixins import LoginRequiredMixin   class MyView(LoginRequiredMixin, View):     async def get(self, request, *arg...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

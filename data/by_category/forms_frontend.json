@@ -118,7 +118,7 @@
     "comments": 1,
     "labels": [],
     "body_preview": "The example `tailwind-styles.css` asset referenced by the [documentation](https://django-formset.fly.dev/styling/#tailwind) 404s.  https://github.com/jrief/django-formset/blob/e97c68a7f89c9761bc9d8890d2a73601c5611fcf/docs/source/styling.rst?plain=1#L286  As a Tailwind user, I would love to see what the example looks like. I don't know how to fix this issue otherwise I would've opened a PR with a f...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

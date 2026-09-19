@@ -201,35 +201,6 @@
     "is_help_wanted": false
   },
   {
-    "id": 5351401158,
-    "repo": "tokio-rs/tokio",
-    "ecosystem": "rust",
-    "ecosystem_label": "Rust",
-    "category": "rust_async",
-    "category_label": "Async & Web",
-    "number": 8409,
-    "title": "`tokio::io::unix` should not be feature-gated on `net`",
-    "url": "https://github.com/tokio-rs/tokio/issues/8409",
-    "author": "dfoxfranke",
-    "author_avatar": "https://avatars.githubusercontent.com/u/4708206?v=4",
-    "created_at": "2026-09-04T18:00:10Z",
-    "updated_at": "2026-09-04T18:06:55Z",
-    "comments": 1,
-    "labels": [
-      "C-bug",
-      "A-tokio",
-      "M-io"
-    ],
-    "body_preview": "**Version** 1.53.1  **Description** The entire `tokio::io::unix` module is feature-gated on `net`. This seems inappropriate, since it just provides general facilities for checking file descriptor readiness. Nothing in it, except for some documentation examples, is at all specific to sockets.",
-    "is_new": false,
-    "priority": "high",
-    "is_bug": true,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
     "id": 5372289609,
     "repo": "tokio-rs/axum",
     "ecosystem": "rust",

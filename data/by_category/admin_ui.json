@@ -16,7 +16,7 @@
     "comments": 1,
     "labels": [],
     "body_preview": "It turns out LLMs are crap at following GitHub PR templates. What do people think about a light GitHub bot that spots that the PR template wasn't used and comments with a response that indicates they should switch to the PR template and if they're using AI, give them a prompt to make sure their submission is manageable?  I really don't enjoy reading 500 word PR descriptions for a +15 line change....",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
