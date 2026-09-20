@@ -18,7 +18,7 @@
       "backend : whoosh"
     ],
     "body_preview": "https://github.com/django-haystack/django-haystack/issues?q=is%3Aissue state%3Aopen+Whoosh  @priya-sundaram-dev, as a  Whoosh maintainer, would you be willing to review those issues and provide some advice?  Many might just mention Whoosh in passing, so they can safely be ignored in this review.  If a `.github/skills/review-open-issue/SKILL.md` file would help, please create a pull request that ad...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

@@ -1,5 +1,32 @@
 [
   {
+    "id": 5514413688,
+    "repo": "jazzband/django-oauth-toolkit",
+    "ecosystem": "django",
+    "ecosystem_label": "Django",
+    "category": "auth_security",
+    "category_label": "Auth & Security",
+    "number": 1855,
+    "title": "CIMD: a metadata document is rejected when it declares an extra grant_type the server doesn't support",
+    "url": "https://github.com/django-oauth/django-oauth-toolkit/issues/1855",
+    "author": "flaviovl",
+    "author_avatar": "https://avatars.githubusercontent.com/u/31935777?v=4",
+    "created_at": "2026-09-19T23:38:52Z",
+    "updated_at": "2026-09-20T03:34:23Z",
+    "comments": 1,
+    "labels": [
+      "bug"
+    ],
+    "body_preview": "*Describe the bug**  `_resolve_grant_type` requires exactly one non-`refresh_token` grant type, so a CIMD document that declares a supported grant *alongside* one this library doesn't implement is rejected as a whole and the client cannot be resolved at all:  ```python meaningful = [g for g in grant_types if g not in IGNORED_GRANT_TYPES] if len(meaningful) != 1:     raise CIMDError(\"client metadat...",
+    "is_new": true,
+    "priority": "high",
+    "is_bug": true,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 5475852614,
     "repo": "jazzband/django-oauth-toolkit",
     "ecosystem": "django",

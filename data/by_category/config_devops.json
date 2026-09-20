@@ -354,6 +354,33 @@
     "is_help_wanted": false
   },
   {
+    "id": 5515609242,
+    "repo": "getsentry/sentry-python",
+    "ecosystem": "django",
+    "ecosystem_label": "Django",
+    "category": "config_devops",
+    "category_label": "Config & DevOps",
+    "number": 7543,
+    "title": "`EventScrubber` doesn't scrub a request body that's a top level JSON array",
+    "url": "https://github.com/getsentry/sentry-python/issues/7543",
+    "author": "Om-singhaI",
+    "author_avatar": "https://avatars.githubusercontent.com/u/91667160?v=4",
+    "created_at": "2026-09-20T03:51:19Z",
+    "updated_at": "2026-09-20T03:51:26Z",
+    "comments": 1,
+    "labels": [
+      "Waiting for: Product Owner"
+    ],
+    "body_preview": "### How do you use Sentry?  Sentry Saas (sentry.io)  ### Version  2.69.2 (also on master at 494ecb3)  ### Steps to Reproduce  When a request body parses to a top level JSON array, nothing in it gets scrubbed. The same secrets in an object body are filtered normally. No `event_scrubber` argument, no `_experiments` data collection config, default `max_request_body_size`. The integration and the tran...",
+    "is_new": true,
+    "priority": "low",
+    "is_bug": false,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 5501582465,
     "repo": "getsentry/sentry-python",
     "ecosystem": "django",
@@ -693,33 +720,6 @@
     "priority": "medium",
     "is_bug": false,
     "is_feature": true,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
-    "id": 5424831510,
-    "repo": "getsentry/sentry-python",
-    "ecosystem": "django",
-    "ecosystem_label": "Django",
-    "category": "config_devops",
-    "category_label": "Config & DevOps",
-    "number": 7474,
-    "title": "ref(boto3): Own one logical botocore client-call lifecycle",
-    "url": "https://github.com/getsentry/sentry-python/issues/7474",
-    "author": "pabloDeputter",
-    "author_avatar": "https://avatars.githubusercontent.com/u/71842639?v=4",
-    "created_at": "2026-09-11T13:24:37Z",
-    "updated_at": "2026-09-11T13:24:38Z",
-    "comments": 1,
-    "labels": [
-      "Python"
-    ],
-    "body_preview": "### Problem  * spans are currently created in `request-created`. Botocore may emit this during retries; it's also too late to cover any failures during operation lookup, parameter construction, serialization, or other work before an HTTP request exists.  ### Proposed Solution  * patch `BaseClient._make_api_call` as [OTel](<https://github.com/open-telemetry/opentelemetry-python-contrib/blob/main/in...",
-    "is_new": false,
-    "priority": "low",
-    "is_bug": false,
-    "is_feature": false,
     "is_security": false,
     "is_good_first_issue": false,
     "is_help_wanted": false

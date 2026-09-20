@@ -37,7 +37,7 @@
     "author": "vasilisnasopoulos",
     "author_avatar": "https://avatars.githubusercontent.com/u/271032710?v=4",
     "created_at": "2026-09-08T16:07:21Z",
-    "updated_at": "2026-09-13T14:05:14Z",
+    "updated_at": "2026-09-20T05:50:04Z",
     "comments": 1,
     "labels": [
       "Issue Type: Bug Report"
@@ -101,6 +101,33 @@
     "priority": "medium",
     "is_bug": false,
     "is_feature": true,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
+    "id": 5214429283,
+    "repo": "celery/celery",
+    "ecosystem": "django",
+    "ecosystem_label": "Django",
+    "category": "task_queues",
+    "category_label": "Task Queues & Async",
+    "number": 10506,
+    "title": "`LimitedSet` can prematurely evict refreshed items due to stale heap entries",
+    "url": "https://github.com/celery/celery/issues/10506",
+    "author": "Namraa310806",
+    "author_avatar": "https://avatars.githubusercontent.com/u/131944677?v=4",
+    "created_at": "2026-08-21T13:16:06Z",
+    "updated_at": "2026-09-07T07:22:36Z",
+    "comments": 2,
+    "labels": [
+      "Issue Type: Bug Report"
+    ],
+    "body_preview": "# Checklist  <!-- To check an item on the list replace [ ] with [x]. -->  * [x] I have verified that the issue exists against the `main` branch of Celery. * [ ] This has already been asked to the [[discussions forum](https://github.com/celery/celery/discussions)](https://github.com/celery/celery/discussions) first. * [x] I have read the relevant section in the   [[contribution guide](https://docs....",
+    "is_new": false,
+    "priority": "high",
+    "is_bug": true,
+    "is_feature": false,
     "is_security": false,
     "is_good_first_issue": false,
     "is_help_wanted": false
@@ -283,33 +310,6 @@
     "is_help_wanted": false
   },
   {
-    "id": 5422424826,
-    "repo": "celery/kombu",
-    "ecosystem": "django",
-    "ecosystem_label": "Django",
-    "category": "task_queues",
-    "category_label": "Task Queues & Async",
-    "number": 2644,
-    "title": "Filesystem transport: exchange name is joined into a path without sanitisation",
-    "url": "https://github.com/celery/kombu/issues/2644",
-    "author": "ndaprela",
-    "author_avatar": "https://avatars.githubusercontent.com/u/25092016?v=4",
-    "created_at": "2026-09-11T09:00:23Z",
-    "updated_at": "2026-09-19T09:13:13Z",
-    "comments": 0,
-    "labels": [
-      "Issue Type: Bug Report"
-    ],
-    "body_preview": "## Component `kombu.transport.filesystem`  ## Behaviour  The filesystem transport persists each exchange's binding table as a file inside `control_folder`, building the path directly from the exchange name:  ```python # kombu/transport/filesystem.py file = self.control_folder / f\"{exchange}.exchange\" ```  This appears at three sites \u2014 `get_table()` (read), `_queue_bind()` (write/create), and `_del...",
-    "is_new": false,
-    "priority": "high",
-    "is_bug": true,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
     "id": 5412152007,
     "repo": "celery/kombu",
     "ecosystem": "django",
@@ -322,13 +322,15 @@
     "author": "ndaprela",
     "author_avatar": "https://avatars.githubusercontent.com/u/25092016?v=4",
     "created_at": "2026-09-10T12:27:09Z",
-    "updated_at": "2026-09-14T16:25:36Z",
+    "updated_at": "2026-09-20T05:35:35Z",
     "comments": 3,
-    "labels": [],
+    "labels": [
+      "Issue Type: Bug Report"
+    ],
     "body_preview": "## Description  A behaviour in Kombu may be undesired.  Kombu allows specifying a custom transport by passing a string such as `kombu.transport.pyamqp:Transport` as the `transport` parameter to the `Connection()` constructor. This is a documented, intended feature.  The transport can also be derived from the URL passed as the `hostname` parameter, e.g. `amqp://guest:guest@localhost:5672//`. In thi...",
     "is_new": false,
-    "priority": "low",
-    "is_bug": false,
+    "priority": "high",
+    "is_bug": true,
     "is_feature": false,
     "is_security": false,
     "is_good_first_issue": false,
