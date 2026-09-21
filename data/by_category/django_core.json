@@ -260,32 +260,5 @@
     "is_security": false,
     "is_good_first_issue": false,
     "is_help_wanted": false
-  },
-  {
-    "id": 5310448384,
-    "repo": "django/djangoproject.com",
-    "ecosystem": "django",
-    "ecosystem_label": "Django",
-    "category": "django_core",
-    "category_label": "Django Core",
-    "number": 2815,
-    "title": "[sponsor efforts] Make sponsorship pricing editable without a deploy",
-    "url": "https://github.com/django/djangoproject.com/issues/2815",
-    "author": "ericholscher",
-    "author_avatar": "https://avatars.githubusercontent.com/u/25510?v=4",
-    "created_at": "2026-09-01T09:58:47Z",
-    "updated_at": "2026-09-04T19:51:02Z",
-    "comments": 0,
-    "labels": [
-      "fundraising"
-    ],
-    "body_preview": "[From https://github.com/django/djangoproject.com/pull/2804/changes/96d178ef5ab0f3b3e08983c9126f518043d47047#r3884264506 ]   The banner sponsorship prices are hardcoded currently as a test. Longer term these should be changable without a PR -- probably a small model + admin. Filing this so we don't lose it.",
-    "is_new": false,
-    "priority": "low",
-    "is_bug": false,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
   }
 ]

@@ -354,6 +354,33 @@
     "is_help_wanted": false
   },
   {
+    "id": 5524141535,
+    "repo": "getsentry/sentry-python",
+    "ecosystem": "django",
+    "ecosystem_label": "Django",
+    "category": "config_devops",
+    "category_label": "Config & DevOps",
+    "number": 7550,
+    "title": "Dogfood SDK 3.0 in Sentry",
+    "url": "https://github.com/getsentry/sentry-python/issues/7550",
+    "author": "sentrivana",
+    "author_avatar": "https://avatars.githubusercontent.com/u/131587164?v=4",
+    "created_at": "2026-09-21T07:41:08Z",
+    "updated_at": "2026-09-21T07:41:10Z",
+    "comments": 1,
+    "labels": [
+      "Python"
+    ],
+    "body_preview": "",
+    "is_new": true,
+    "priority": "low",
+    "is_bug": false,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 5515609242,
     "repo": "getsentry/sentry-python",
     "ecosystem": "django",
@@ -465,36 +492,6 @@
     "is_help_wanted": false
   },
   {
-    "id": 5489615805,
-    "repo": "getsentry/sentry-python",
-    "ecosystem": "django",
-    "ecosystem_label": "Django",
-    "category": "config_devops",
-    "category_label": "Config & DevOps",
-    "number": 7532,
-    "title": "Logging integration for structlog",
-    "url": "https://github.com/getsentry/sentry-python/issues/7532",
-    "author": "kiambadavid",
-    "author_avatar": "https://avatars.githubusercontent.com/u/47317033?v=4",
-    "created_at": "2026-09-17T15:44:20Z",
-    "updated_at": "2026-09-17T15:45:05Z",
-    "comments": 1,
-    "labels": [
-      "Waiting for: Product Owner",
-      "Python",
-      "Feature",
-      "Logs"
-    ],
-    "body_preview": "### Problem Statement  i want to set up my api logs quickly to be send to sentry logs . i'm using structlog library, and there's currently no integration for it.  ### Solution Brainstorm  i see you support only Standard library logging and loguru. i trust that you have a super team to figure this out. GO TEAM.",
-    "is_new": true,
-    "priority": "medium",
-    "is_bug": false,
-    "is_feature": true,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
     "id": 5487594120,
     "repo": "getsentry/sentry-python",
     "ecosystem": "django",
@@ -519,33 +516,6 @@
     "priority": "medium",
     "is_bug": false,
     "is_feature": true,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
-    "id": 5460010461,
-    "repo": "getsentry/sentry-python",
-    "ecosystem": "django",
-    "ecosystem_label": "Django",
-    "category": "config_devops",
-    "category_label": "Config & DevOps",
-    "number": 7507,
-    "title": "Double-check that `set_transaction_name` is set early enough",
-    "url": "https://github.com/getsentry/sentry-python/issues/7507",
-    "author": "sentrivana",
-    "author_avatar": "https://avatars.githubusercontent.com/u/131587164?v=4",
-    "created_at": "2026-09-15T09:15:52Z",
-    "updated_at": "2026-09-15T09:15:54Z",
-    "comments": 1,
-    "labels": [
-      "Python"
-    ],
-    "body_preview": "In the new major, in our WSGI and ASGI integrations we used to rely on the event processor to set the correct transaction name. We had to move the transaction name setting to the patches in the scope of the span streaming refactor. Verify that we haven't missed any cases (errors captured too early, etc.) where we wouldn't attach the correct transaction name.",
-    "is_new": true,
-    "priority": "low",
-    "is_bug": false,
-    "is_feature": false,
     "is_security": false,
     "is_good_first_issue": false,
     "is_help_wanted": false
@@ -599,7 +569,7 @@
       "Python"
     ],
     "body_preview": "I haven't found a single hit for `add_attachment(add_to_transactions=True)` anywhere on GitHub, so I don't believe this has super high priority, but we should add it at some point.  [https://develop.sentry.dev/sdk/telemetry/spans/span-protocol/#span-attachments](<https://develop.sentry.dev/sdk/telemetry/spans/span-protocol/#span-attachments>)",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
