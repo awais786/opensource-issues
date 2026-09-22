@@ -93,7 +93,7 @@
       "bug"
     ],
     "body_preview": "The length that is displayed in the counter below the richtext area differs in certain cases from the length that is used for validation.  e. g. &nbsp; counts as 1 character in the displayed counter but as 6 characters for validation. In these cases validation fails but no error message is displayed.",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,

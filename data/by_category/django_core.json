@@ -16,7 +16,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "GH-199 discussed the idea of a `lifespan.shutdown.notice` event which would be fired as soon as the environment asks the server to shut down, likely after it stops accepting new connections, but *before* any existing connections were closed. That PR was closed without merging, but I\u2019d really like to reopen discussion on the topic, because two options compatible with the existing spec were proposed...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

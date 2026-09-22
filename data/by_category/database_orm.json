@@ -16,7 +16,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "Because we currently filter the root queryset given to the `ChangeList`, any filters specified in `list_filter` are also restricted to this queryset. This means the choices displayed for filtering are limited.   Ideally we should use the unfiltered queryset for those filters. This will likely require refactoring to do all the queryset filtering in the `ChangeList` class, rather than in the `ModelA...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

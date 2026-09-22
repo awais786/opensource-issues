@@ -404,30 +404,5 @@
     "is_security": false,
     "is_good_first_issue": false,
     "is_help_wanted": false
-  },
-  {
-    "id": 5394099233,
-    "repo": "TanStack/query",
-    "ecosystem": "react",
-    "ecosystem_label": "React",
-    "category": "react_state",
-    "category_label": "State Management",
-    "number": 11451,
-    "title": "useMutation invokes the next mutation's onSettled with the previous result",
-    "url": "https://github.com/TanStack/query/issues/11451",
-    "author": "MinsuPlaid",
-    "author_avatar": "https://avatars.githubusercontent.com/u/281104837?v=4",
-    "created_at": "2026-09-09T02:16:31Z",
-    "updated_at": "2026-09-20T15:26:05Z",
-    "comments": 1,
-    "labels": [],
-    "body_preview": "### Describe the bug  When a per-call `onSuccess` or `onError` callback starts another mutation using the same `useMutation` instance, the second mutation's `onSettled` callback receives the first mutation's result and variables. It runs again with its own result when the second mutation finishes.  The reproduction logs only the callback registered for the second mutation:  ```json [   { \"data\": \"...",
-    "is_new": false,
-    "priority": "low",
-    "is_bug": false,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
   }
 ]
