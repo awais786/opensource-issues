@@ -143,7 +143,7 @@
       "triage"
     ],
     "body_preview": "# Problem  An action cannot depend on **what the cart contains**. A promotion or a voucher can define what it applies to and under which price conditions, but not that it should apply only when some other specific item is in the cart.  Cases merchants cannot model:  - *product B costs 1 $ when product A is in the cart* \u2014 bundle / cross-sell pricing - *10 % off the Kitchen category when a stove is...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

@@ -12,13 +12,13 @@
     "author": "tbrlpld",
     "author_avatar": "https://avatars.githubusercontent.com/u/24797493?v=4",
     "created_at": "2026-09-17T22:43:52Z",
-    "updated_at": "2026-09-21T19:16:21Z",
-    "comments": 3,
+    "updated_at": "2026-09-23T08:16:55Z",
+    "comments": 4,
     "labels": [
       "type:Enhancement",
+      "status:Needs Design Decision",
       "component:Page",
-      "component:Panels",
-      "status:Needs Community Feedback"
+      "component:Panels"
     ],
     "body_preview": "### Problem statement  When models (pages, snippets, etc.) inherit from one another then it is pretty cumbersome to customize the panels (edit handler) on the child class. The only thing that works relatively straightforward is appending. However, this will lead to non-ideal ordering and grouping of fields as we can only extend the list at the bottom. Even at the top is weird because we typically...",
     "is_new": true,
@@ -42,8 +42,8 @@
     "author": "joepercival",
     "author_avatar": "https://avatars.githubusercontent.com/u/144360663?v=4",
     "created_at": "2026-09-17T14:35:12Z",
-    "updated_at": "2026-09-19T22:31:17Z",
-    "comments": 3,
+    "updated_at": "2026-09-23T08:14:24Z",
+    "comments": 4,
     "labels": [
       "type:Bug",
       "status:Unconfirmed"
@@ -79,7 +79,7 @@
       "\ud83d\ude80 Performance"
     ],
     "body_preview": "### Issue summary  `PageLinkHandler.expand_db_attributes_many()` batches the database access for the pages it links to, via `get_many()`, but then resolves each URL individually with `page.localized.url`. Both halves of that expression repeat work that the pass could share:  - `Page.get_url()` ends in `Page._get_site_root_paths()`, which memoizes on the `cache_object` it is given, and on the page...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
@@ -100,8 +100,8 @@
     "author": "PanosDine",
     "author_avatar": "https://avatars.githubusercontent.com/u/45263292?v=4",
     "created_at": "2026-09-14T14:26:00Z",
-    "updated_at": "2026-09-22T09:57:21Z",
-    "comments": 3,
+    "updated_at": "2026-09-22T14:40:02Z",
+    "comments": 6,
     "labels": [
       "type:Bug",
       "status:Needs Info"
@@ -159,8 +159,8 @@
     "author": "gasman",
     "author_avatar": "https://avatars.githubusercontent.com/u/85097?v=4",
     "created_at": "2026-09-04T13:08:12Z",
-    "updated_at": "2026-09-04T13:08:33Z",
-    "comments": 0,
+    "updated_at": "2026-09-22T16:49:15Z",
+    "comments": 2,
     "labels": [
       "type:Cleanup/Optimisation"
     ],
@@ -186,11 +186,11 @@
     "author": "alxbridge",
     "author_avatar": "https://avatars.githubusercontent.com/u/8955716?v=4",
     "created_at": "2026-09-03T11:59:22Z",
-    "updated_at": "2026-09-03T19:24:05Z",
-    "comments": 1,
+    "updated_at": "2026-09-22T15:53:38Z",
+    "comments": 2,
     "labels": [
       "type:Bug",
-      "status:Unconfirmed"
+      "component:Workflow"
     ],
     "body_preview": "### Issue summary  WorkflowState's [`.resume()`](https://github.com/wagtail/wagtail/blob/v7.4.3/wagtail/models/workflows.py#L201-L235), [`update()`](https://github.com/wagtail/wagtail/blob/v7.4.3/wagtail/models/workflows.py#L261-L299), and [`cancel()`](https://github.com/wagtail/wagtail/blob/v7.4.3/wagtail/models/workflows.py#L324-L359) each perform database writes without wrapping them in a trans...",
     "is_new": false,
@@ -356,7 +356,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "## Background  Translation reviewers need a way to comment on translation quality and resolve those comments.  The goal is to inherit and reuse Wagtail's default features rather than introduce a separate review system. This includes the live preview work being addressed in [PR #961](https://github.com/wagtail/wagtail-localize/pull/961), `feat: add live translation preview`, as well as Wagtail's ex...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
