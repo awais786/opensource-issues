@@ -148,7 +148,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "### Summary `LogoThumbnailMixin` in `djangoproject/thumbnails.py` defines a property `logo_is_svg` to check if an uploaded model logo is an SVG file, avoiding thumbnail processing errors with `sorl-thumbnail`. Currently, there are no unit tests verifying this mixin's behavior for `.svg` vs non-SVG files.  ### Proposed Location `djangoproject/tests.py`  ### Test Code ```python from django.test impo...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

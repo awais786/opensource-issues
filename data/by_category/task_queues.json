@@ -106,33 +106,6 @@
     "is_help_wanted": false
   },
   {
-    "id": 5214429283,
-    "repo": "celery/celery",
-    "ecosystem": "django",
-    "ecosystem_label": "Django",
-    "category": "task_queues",
-    "category_label": "Task Queues & Async",
-    "number": 10506,
-    "title": "`LimitedSet` can prematurely evict refreshed items due to stale heap entries",
-    "url": "https://github.com/celery/celery/issues/10506",
-    "author": "Namraa310806",
-    "author_avatar": "https://avatars.githubusercontent.com/u/131944677?v=4",
-    "created_at": "2026-08-21T13:16:06Z",
-    "updated_at": "2026-09-07T07:22:36Z",
-    "comments": 2,
-    "labels": [
-      "Issue Type: Bug Report"
-    ],
-    "body_preview": "# Checklist  <!-- To check an item on the list replace [ ] with [x]. -->  * [x] I have verified that the issue exists against the `main` branch of Celery. * [ ] This has already been asked to the [[discussions forum](https://github.com/celery/celery/discussions)](https://github.com/celery/celery/discussions) first. * [x] I have read the relevant section in the   [[contribution guide](https://docs....",
-    "is_new": false,
-    "priority": "high",
-    "is_bug": true,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
     "id": 5125704569,
     "repo": "celery/django-celery-beat",
     "ecosystem": "django",
@@ -174,7 +147,7 @@
     "comments": 1,
     "labels": [],
     "body_preview": "Hi!   There's a few changes sitting in main which haven't been released yet (https://github.com/celery/django-celery-results/compare/v2.6.0...main), which would allow them to be used (for example the OOM fix of cleanup) or address outstanding issues in https://github.com/celery/django-celery-results/issues/500  Would it be possible to do a new release with latest changes? Does anything need to hap...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
