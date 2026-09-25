@@ -354,6 +354,62 @@
     "is_help_wanted": false
   },
   {
+    "id": 5571974936,
+    "repo": "getsentry/sentry-python",
+    "ecosystem": "django",
+    "ecosystem_label": "Django",
+    "category": "config_devops",
+    "category_label": "Config & DevOps",
+    "number": 7709,
+    "title": "AsyncioIntegration hides an eager task factory from anyio, which breaks anyio task groups",
+    "url": "https://github.com/getsentry/sentry-python/issues/7709",
+    "author": "iainmcgin",
+    "author_avatar": "https://avatars.githubusercontent.com/u/309153?v=4",
+    "created_at": "2026-09-24T17:18:50Z",
+    "updated_at": "2026-09-24T17:19:39Z",
+    "comments": 1,
+    "labels": [
+      "Waiting for: Product Owner",
+      "Bug"
+    ],
+    "body_preview": "### How do you use Sentry?  Sentry Saas (sentry.io)  ### Version  2.70.0  ### Steps to Reproduce  Python 3.12 or later, `anyio` 4.8 or later.  ```python import asyncio  import anyio import sentry_sdk from sentry_sdk.integrations.asyncio import AsyncioIntegration   async def child(event):     await event.wait()   async def main():     asyncio.get_running_loop().set_task_factory(asyncio.eager_task_f...",
+    "is_new": true,
+    "priority": "high",
+    "is_bug": true,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
+    "id": 5567601835,
+    "repo": "getsentry/sentry-python",
+    "ecosystem": "django",
+    "ecosystem_label": "Django",
+    "category": "config_devops",
+    "category_label": "Config & DevOps",
+    "number": 7702,
+    "title": "Drop events if a processor raises",
+    "url": "https://github.com/getsentry/sentry-python/issues/7702",
+    "author": "sentrivana",
+    "author_avatar": "https://avatars.githubusercontent.com/u/131587164?v=4",
+    "created_at": "2026-09-24T11:29:15Z",
+    "updated_at": "2026-09-24T11:29:35Z",
+    "comments": 1,
+    "labels": [
+      "Python",
+      "SDK 3.0"
+    ],
+    "body_preview": "As this is a breaking change, we're splitting this from the other user callback isolation issues and will do it in the next major.",
+    "is_new": true,
+    "priority": "low",
+    "is_bug": false,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 5554109830,
     "repo": "getsentry/sentry-python",
     "ecosystem": "django",
@@ -366,39 +422,13 @@
     "author": "sentrivana",
     "author_avatar": "https://avatars.githubusercontent.com/u/131587164?v=4",
     "created_at": "2026-09-23T13:26:09Z",
-    "updated_at": "2026-09-23T13:34:44Z",
+    "updated_at": "2026-09-25T09:31:45Z",
     "comments": 1,
     "labels": [
-      "Python"
+      "Python",
+      "Improvement"
     ],
     "body_preview": "For example, `include_local_variables` and `include_source_context`",
-    "is_new": true,
-    "priority": "low",
-    "is_bug": false,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
-    "id": 5553159947,
-    "repo": "getsentry/sentry-python",
-    "ecosystem": "django",
-    "ecosystem_label": "Django",
-    "category": "config_devops",
-    "category_label": "Config & DevOps",
-    "number": 7671,
-    "title": "Remove send_default_pii from stdlib",
-    "url": "https://github.com/getsentry/sentry-python/issues/7671",
-    "author": "sentrivana",
-    "author_avatar": "https://avatars.githubusercontent.com/u/131587164?v=4",
-    "created_at": "2026-09-23T12:09:00Z",
-    "updated_at": "2026-09-24T10:02:24Z",
-    "comments": 1,
-    "labels": [
-      "Python"
-    ],
-    "body_preview": "See parent issue. Even if the integration itself doesn't branch based on send_default_pii, its tests still need adapting.",
     "is_new": true,
     "priority": "low",
     "is_bug": false,
@@ -420,10 +450,11 @@
     "author": "sentrivana",
     "author_avatar": "https://avatars.githubusercontent.com/u/131587164?v=4",
     "created_at": "2026-09-23T12:09:00Z",
-    "updated_at": "2026-09-23T12:09:32Z",
+    "updated_at": "2026-09-25T09:31:55Z",
     "comments": 1,
     "labels": [
-      "Python"
+      "Python",
+      "Task"
     ],
     "body_preview": "See parent issue. Even if the integration itself doesn't branch based on send_default_pii, its tests still need adapting.",
     "is_new": true,
@@ -447,10 +478,11 @@
     "author": "sentrivana",
     "author_avatar": "https://avatars.githubusercontent.com/u/131587164?v=4",
     "created_at": "2026-09-23T12:08:59Z",
-    "updated_at": "2026-09-23T12:09:28Z",
+    "updated_at": "2026-09-25T09:31:55Z",
     "comments": 1,
     "labels": [
-      "Python"
+      "Python",
+      "Task"
     ],
     "body_preview": "See parent issue. Even if the integration itself doesn't branch based on send_default_pii, its tests still need adapting.",
     "is_new": true,
@@ -474,37 +506,11 @@
     "author": "sentrivana",
     "author_avatar": "https://avatars.githubusercontent.com/u/131587164?v=4",
     "created_at": "2026-09-23T12:08:59Z",
-    "updated_at": "2026-09-23T12:09:24Z",
+    "updated_at": "2026-09-25T09:31:55Z",
     "comments": 1,
     "labels": [
-      "Python"
-    ],
-    "body_preview": "See parent issue. Even if the integration itself doesn't branch based on send_default_pii, its tests still need adapting.",
-    "is_new": true,
-    "priority": "low",
-    "is_bug": false,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
-    "id": 5553159575,
-    "repo": "getsentry/sentry-python",
-    "ecosystem": "django",
-    "ecosystem_label": "Django",
-    "category": "config_devops",
-    "category_label": "Config & DevOps",
-    "number": 7660,
-    "title": "Remove send_default_pii from pyreqwest",
-    "url": "https://github.com/getsentry/sentry-python/issues/7660",
-    "author": "sentrivana",
-    "author_avatar": "https://avatars.githubusercontent.com/u/131587164?v=4",
-    "created_at": "2026-09-23T12:08:58Z",
-    "updated_at": "2026-09-24T09:43:16Z",
-    "comments": 1,
-    "labels": [
-      "Python"
+      "Python",
+      "Task"
     ],
     "body_preview": "See parent issue. Even if the integration itself doesn't branch based on send_default_pii, its tests still need adapting.",
     "is_new": true,
@@ -528,37 +534,11 @@
     "author": "sentrivana",
     "author_avatar": "https://avatars.githubusercontent.com/u/131587164?v=4",
     "created_at": "2026-09-23T12:08:58Z",
-    "updated_at": "2026-09-23T12:09:22Z",
+    "updated_at": "2026-09-25T09:31:55Z",
     "comments": 1,
     "labels": [
-      "Python"
-    ],
-    "body_preview": "See parent issue. Even if the integration itself doesn't branch based on send_default_pii, its tests still need adapting.",
-    "is_new": true,
-    "priority": "low",
-    "is_bug": false,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
-    "id": 5553159543,
-    "repo": "getsentry/sentry-python",
-    "ecosystem": "django",
-    "ecosystem_label": "Django",
-    "category": "config_devops",
-    "category_label": "Config & DevOps",
-    "number": 7658,
-    "title": "Remove send_default_pii from boto3",
-    "url": "https://github.com/getsentry/sentry-python/issues/7658",
-    "author": "sentrivana",
-    "author_avatar": "https://avatars.githubusercontent.com/u/131587164?v=4",
-    "created_at": "2026-09-23T12:08:58Z",
-    "updated_at": "2026-09-23T12:19:45Z",
-    "comments": 1,
-    "labels": [
-      "Python"
+      "Python",
+      "Task"
     ],
     "body_preview": "See parent issue. Even if the integration itself doesn't branch based on send_default_pii, its tests still need adapting.",
     "is_new": true,
@@ -582,10 +562,11 @@
     "author": "sentrivana",
     "author_avatar": "https://avatars.githubusercontent.com/u/131587164?v=4",
     "created_at": "2026-09-23T12:08:58Z",
-    "updated_at": "2026-09-23T12:09:15Z",
+    "updated_at": "2026-09-25T09:31:55Z",
     "comments": 1,
     "labels": [
-      "Python"
+      "Python",
+      "Task"
     ],
     "body_preview": "See parent issue. Even if the integration itself doesn't branch based on send_default_pii, its tests still need adapting.",
     "is_new": true,
@@ -609,10 +590,11 @@
     "author": "sentrivana",
     "author_avatar": "https://avatars.githubusercontent.com/u/131587164?v=4",
     "created_at": "2026-09-23T12:08:58Z",
-    "updated_at": "2026-09-23T12:09:18Z",
+    "updated_at": "2026-09-25T09:31:55Z",
     "comments": 1,
     "labels": [
-      "Python"
+      "Python",
+      "Task"
     ],
     "body_preview": "See parent issue. Even if the integration itself doesn't branch based on send_default_pii, its tests still need adapting.",
     "is_new": true,
@@ -636,7 +618,7 @@
     "author": "sentrivana",
     "author_avatar": "https://avatars.githubusercontent.com/u/131587164?v=4",
     "created_at": "2026-09-23T12:08:57Z",
-    "updated_at": "2026-09-23T12:09:14Z",
+    "updated_at": "2026-09-24T14:33:30Z",
     "comments": 1,
     "labels": [
       "Python"
@@ -663,7 +645,7 @@
     "author": "sentrivana",
     "author_avatar": "https://avatars.githubusercontent.com/u/131587164?v=4",
     "created_at": "2026-09-23T12:08:57Z",
-    "updated_at": "2026-09-23T12:09:13Z",
+    "updated_at": "2026-09-24T14:33:24Z",
     "comments": 1,
     "labels": [
       "Python"
@@ -690,10 +672,11 @@
     "author": "sentrivana",
     "author_avatar": "https://avatars.githubusercontent.com/u/131587164?v=4",
     "created_at": "2026-09-23T12:08:57Z",
-    "updated_at": "2026-09-23T12:09:11Z",
+    "updated_at": "2026-09-25T09:31:55Z",
     "comments": 1,
     "labels": [
-      "Python"
+      "Python",
+      "Task"
     ],
     "body_preview": "See parent issue. Even if the integration itself doesn't branch based on send_default_pii, its tests still need adapting.",
     "is_new": true,
@@ -744,10 +727,11 @@
     "author": "sentrivana",
     "author_avatar": "https://avatars.githubusercontent.com/u/131587164?v=4",
     "created_at": "2026-09-23T12:08:56Z",
-    "updated_at": "2026-09-23T12:09:04Z",
+    "updated_at": "2026-09-25T09:31:55Z",
     "comments": 1,
     "labels": [
-      "Python"
+      "Python",
+      "Task"
     ],
     "body_preview": "See parent issue. Even if the integration itself doesn't branch based on send_default_pii, its tests still need adapting.",
     "is_new": true,
@@ -771,10 +755,11 @@
     "author": "sentrivana",
     "author_avatar": "https://avatars.githubusercontent.com/u/131587164?v=4",
     "created_at": "2026-09-23T12:08:56Z",
-    "updated_at": "2026-09-23T12:09:00Z",
+    "updated_at": "2026-09-25T09:31:55Z",
     "comments": 1,
     "labels": [
-      "Python"
+      "Python",
+      "Task"
     ],
     "body_preview": "See parent issue. Even if the integration itself doesn't branch based on send_default_pii, its tests still need adapting.",
     "is_new": true,
@@ -798,10 +783,11 @@
     "author": "sentrivana",
     "author_avatar": "https://avatars.githubusercontent.com/u/131587164?v=4",
     "created_at": "2026-09-23T12:08:56Z",
-    "updated_at": "2026-09-23T12:08:59Z",
+    "updated_at": "2026-09-25T09:32:09Z",
     "comments": 1,
     "labels": [
-      "Python"
+      "Python",
+      "Task"
     ],
     "body_preview": "See parent issue. Even if the integration itself doesn't branch based on send_default_pii, its tests still need adapting.",
     "is_new": true,
@@ -852,10 +838,11 @@
     "author": "sentrivana",
     "author_avatar": "https://avatars.githubusercontent.com/u/131587164?v=4",
     "created_at": "2026-09-23T12:08:55Z",
-    "updated_at": "2026-09-23T12:08:57Z",
+    "updated_at": "2026-09-25T09:32:09Z",
     "comments": 1,
     "labels": [
-      "Python"
+      "Python",
+      "Task"
     ],
     "body_preview": "See parent issue. Even if the integration itself doesn't branch based on send_default_pii, its tests still need adapting.",
     "is_new": true,
@@ -879,10 +866,11 @@
     "author": "sentrivana",
     "author_avatar": "https://avatars.githubusercontent.com/u/131587164?v=4",
     "created_at": "2026-09-23T09:04:43Z",
-    "updated_at": "2026-09-23T09:04:44Z",
+    "updated_at": "2026-09-25T09:32:09Z",
     "comments": 1,
     "labels": [
-      "Python"
+      "Python",
+      "Task"
     ],
     "body_preview": "Attempt an agent-driven migration of an existing codebase and tweak documentation based on the findings.  Consider adding a Verification step in the docs that checks for any forgotten old APIs etc.",
     "is_new": true,
@@ -906,10 +894,11 @@
     "author": "sentrivana",
     "author_avatar": "https://avatars.githubusercontent.com/u/131587164?v=4",
     "created_at": "2026-09-23T08:42:40Z",
-    "updated_at": "2026-09-23T08:42:43Z",
+    "updated_at": "2026-09-25T09:32:10Z",
     "comments": 1,
     "labels": [
-      "Python"
+      "Python",
+      "Task"
     ],
     "body_preview": "When it's not needed anymore by any part of the SDK, remove the option and any associated helpers like `should_send_default_pii`.",
     "is_new": true,

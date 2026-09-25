@@ -95,7 +95,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "**Is your feature request related to a problem? Please describe.**  Graphene cannot currently express a GraphQL OneOf input object. This commonly arises when an input accepts one of several typed alternatives: defining every alternative as an optional field neither communicates the exactly-one constraint through the schema nor lets GraphQL enforce it during input coercion.  Related requests for in...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
