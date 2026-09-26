@@ -1,5 +1,32 @@
 [
   {
+    "id": 5587256936,
+    "repo": "vitejs/vite",
+    "ecosystem": "react",
+    "ecosystem_label": "React",
+    "category": "react_build",
+    "category_label": "Build & Tooling",
+    "number": 23588,
+    "title": "New Vite SVG logo renders incorrectly in WebKit",
+    "url": "https://github.com/vitejs/vite/issues/23588",
+    "author": "ChisakaKanako",
+    "author_avatar": "https://avatars.githubusercontent.com/u/103566952?v=4",
+    "created_at": "2026-09-25T19:02:27Z",
+    "updated_at": "2026-09-26T08:39:54Z",
+    "comments": 1,
+    "labels": [
+      "pending triage"
+    ],
+    "body_preview": "### Describe the bug  The official Vite light and dark SVG logos can render inconsistently in WebKit when displayed at small icon sizes.  Affected official assets: - https://vite.dev/vite-light.svg - https://vite.dev/vite-dark.svg  These assets were introduced by #21339.  In WebKit 27 on macOS 27, rendering either SVG at approximately 24px height can produce: - A soft or blurry appearance - Color...",
+    "is_new": true,
+    "priority": "low",
+    "is_bug": false,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 5580178111,
     "repo": "vitejs/vite",
     "ecosystem": "react",
@@ -87,8 +114,8 @@
     "author": "king123715",
     "author_avatar": "https://avatars.githubusercontent.com/u/49137496?v=4",
     "created_at": "2026-09-22T03:49:42Z",
-    "updated_at": "2026-09-25T03:23:46Z",
-    "comments": 8,
+    "updated_at": "2026-09-26T08:28:18Z",
+    "comments": 9,
     "labels": [
       "pending triage"
     ],
