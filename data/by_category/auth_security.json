@@ -39,7 +39,7 @@
     "author": "flaviovl",
     "author_avatar": "https://avatars.githubusercontent.com/u/31935777?v=4",
     "created_at": "2026-09-20T18:11:08Z",
-    "updated_at": "2026-09-20T18:19:09Z",
+    "updated_at": "2026-09-26T23:33:57Z",
     "comments": 0,
     "labels": [
       "bug"
@@ -66,13 +66,13 @@
     "author": "flaviovl",
     "author_avatar": "https://avatars.githubusercontent.com/u/31935777?v=4",
     "created_at": "2026-09-19T23:38:52Z",
-    "updated_at": "2026-09-20T03:34:23Z",
+    "updated_at": "2026-09-26T23:33:55Z",
     "comments": 1,
     "labels": [
       "bug"
     ],
     "body_preview": "*Describe the bug**  `_resolve_grant_type` requires exactly one non-`refresh_token` grant type, so a CIMD document that declares a supported grant *alongside* one this library doesn't implement is rejected as a whole and the client cannot be resolved at all:  ```python meaningful = [g for g in grant_types if g not in IGNORED_GRANT_TYPES] if len(meaningful) != 1:     raise CIMDError(\"client metadat...",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,
@@ -578,8 +578,8 @@
     "author": "Natgho",
     "author_avatar": "https://avatars.githubusercontent.com/u/6623948?v=4",
     "created_at": "2026-09-12T00:41:56Z",
-    "updated_at": "2026-09-15T09:49:28Z",
-    "comments": 0,
+    "updated_at": "2026-09-26T16:31:36Z",
+    "comments": 2,
     "labels": [
       "needs tests",
       "good first issue",
