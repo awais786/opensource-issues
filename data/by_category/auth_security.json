@@ -45,7 +45,7 @@
       "bug"
     ],
     "body_preview": "**Describe the bug**  `_build_application_kwargs` reads only `token_endpoint_auth_method` and rejects anything other than `none`. A client metadata document may also publish `token_endpoint_auth_methods_supported`, listing every method the client can use. The draft permits this in section 4.1: \"The client metadata document MAY define additional properties\".  ChatGPT's published document chooses `p...",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,
