@@ -87,8 +87,8 @@
     "author": "jefftriplett",
     "author_avatar": "https://avatars.githubusercontent.com/u/50527?v=4",
     "created_at": "2026-09-18T01:22:43Z",
-    "updated_at": "2026-09-18T02:22:34Z",
-    "comments": 1,
+    "updated_at": "2026-09-30T04:33:17Z",
+    "comments": 2,
     "labels": [
       "fundraising",
       "help needed"
@@ -169,7 +169,7 @@
     "author": "pauloxnet",
     "author_avatar": "https://avatars.githubusercontent.com/u/521097?v=4",
     "created_at": "2026-09-09T10:32:44Z",
-    "updated_at": "2026-09-17T22:52:20Z",
+    "updated_at": "2026-09-30T05:39:30Z",
     "comments": 26,
     "labels": [
       "content"
@@ -232,31 +232,6 @@
     "priority": "medium",
     "is_bug": false,
     "is_feature": true,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
-    "id": 5329114489,
-    "repo": "django/djangoproject.com",
-    "ecosystem": "django",
-    "ecosystem_label": "Django",
-    "category": "django_core",
-    "category_label": "Django Core",
-    "number": 2819,
-    "title": "[checklists] If the next feature release's EOM release is *this* bugfix release, don't create stub release notes",
-    "url": "https://github.com/django/djangoproject.com/issues/2819",
-    "author": "jacobtylerwalls",
-    "author_avatar": "https://avatars.githubusercontent.com/u/38668450?v=4",
-    "created_at": "2026-09-02T20:54:24Z",
-    "updated_at": "2026-09-02T20:54:24Z",
-    "comments": 0,
-    "labels": [],
-    "body_preview": "On 8/4/2026 we released 6.0.8.  We knew that on 8/5/2026 we would release 6.1, and set 6.0.8 as EOM (end of mainstream support).  The checklist prompted to create a 6.0.9 release note stub.  The checklist could should avoid prompting that. Instead, the 6.0.9 release note stub will be added *if* we have any security/data loss fixes. You know, in case we keep confirming security reports. \ud83d\ude04   /cc @ne...",
-    "is_new": false,
-    "priority": "low",
-    "is_bug": false,
-    "is_feature": false,
     "is_security": false,
     "is_good_first_issue": false,
     "is_help_wanted": false

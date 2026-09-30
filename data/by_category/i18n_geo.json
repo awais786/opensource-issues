@@ -75,6 +75,35 @@
     "is_help_wanted": false
   },
   {
+    "id": 5630567097,
+    "repo": "GeoNode/geonode",
+    "ecosystem": "django",
+    "ecosystem_label": "Django",
+    "category": "i18n_geo",
+    "category_label": "i18n & Geo",
+    "number": 14673,
+    "title": "Upload fails with \"duplicate key value violates unique constraint\" when column names start with a digit",
+    "url": "https://github.com/GeoNode/geonode/issues/14673",
+    "author": "mwallschlaeger",
+    "author_avatar": "https://avatars.githubusercontent.com/u/17499481?v=4",
+    "created_at": "2026-09-29T12:29:33Z",
+    "updated_at": "2026-09-29T16:13:38Z",
+    "comments": 1,
+    "labels": [
+      "minor",
+      "bug",
+      "5.1.x"
+    ],
+    "body_preview": "Uploading a vector dataset whose table has several columns starting with a digit fails. The import gets past import_resource and then stops with a database error: ``` Task: geonode.upload.create_dynamic_structure raised an error during actions for layer: <layer>: duplicate key value violates unique constraint \"dynamic_models_fieldschema_name_model_schema_id_4aa32e03_uniq\" DETAIL:  Key (name, model...",
+    "is_new": true,
+    "priority": "high",
+    "is_bug": true,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 5570949801,
     "repo": "GeoNode/geonode",
     "ecosystem": "django",

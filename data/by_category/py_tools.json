@@ -1,5 +1,32 @@
 [
   {
+    "id": 5632343289,
+    "repo": "astral-sh/ruff",
+    "ecosystem": "python",
+    "ecosystem_label": "Python",
+    "category": "py_tools",
+    "category_label": "Dev Tools",
+    "number": 28998,
+    "title": "PLW0108 False positive when lambda executes a list element",
+    "url": "https://github.com/astral-sh/ruff/issues/28998",
+    "author": "pkasprzyk-starfish",
+    "author_avatar": "https://avatars.githubusercontent.com/u/212667338?v=4",
+    "created_at": "2026-09-29T14:42:47Z",
+    "updated_at": "2026-09-30T07:47:47Z",
+    "comments": 2,
+    "labels": [
+      "question"
+    ],
+    "body_preview": "### Summary  Example: ``` def a():     pass  def foo():     return [a]   if __name__ == \"__main__\":     example = lambda: foo()[0]() ```  This raises \"[PLW0108](https://docs.astral.sh/ruff/rules/unnecessary-lambda) Lambda may be unnecessary; consider inlining inner function\".  This is a false positive - the lambda does change logic. Inlining it to `example = foo()[0]` would cause `foo()` to evalua...",
+    "is_new": true,
+    "priority": "low",
+    "is_bug": false,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 5628032755,
     "repo": "astral-sh/ruff",
     "ecosystem": "python",
@@ -12,13 +39,15 @@
     "author": "JimMajor",
     "author_avatar": "https://avatars.githubusercontent.com/u/45186810?v=4",
     "created_at": "2026-09-29T09:04:44Z",
-    "updated_at": "2026-09-29T09:04:44Z",
-    "comments": 0,
-    "labels": [],
+    "updated_at": "2026-09-29T13:35:55Z",
+    "comments": 1,
+    "labels": [
+      "bug"
+    ],
     "body_preview": "### Summary  If constructor magic method `__new__` is used also to set some private attributes of the new object, it is reported by ruff as violation of rule SLF001.  Example: using  `ruff check ./test.py --select SLF` on test.py: ```python class A:     def __new__(cls):         obj = object().__new__(cls)         obj.public_attr = 'foo'         obj._private_attr = 'bar' ``` returns: ``` SLF001 Pr...",
     "is_new": true,
-    "priority": "low",
-    "is_bug": false,
+    "priority": "high",
+    "is_bug": true,
     "is_feature": false,
     "is_security": false,
     "is_good_first_issue": false,
@@ -136,6 +165,33 @@
     "is_help_wanted": false
   },
   {
+    "id": 5642057742,
+    "repo": "astral-sh/uv",
+    "ecosystem": "python",
+    "ecosystem_label": "Python",
+    "category": "py_tools",
+    "category_label": "Dev Tools",
+    "number": 22089,
+    "title": "Flag '--no-default-groups' has no effect with uv audit",
+    "url": "https://github.com/astral-sh/uv/issues/22089",
+    "author": "aseelmannfuzzy",
+    "author_avatar": "https://avatars.githubusercontent.com/u/330844429?v=4",
+    "created_at": "2026-09-30T06:29:11Z",
+    "updated_at": "2026-09-30T06:29:11Z",
+    "comments": 0,
+    "labels": [
+      "bug"
+    ],
+    "body_preview": "### Summary  Although `uv help audit` explicitly advertizes the flag `--no-default-groups` with \"Don't audit the default dependency groups\", passing this flag seems to have literally no effect. For instance, although `default-groups = [\"dev\"]` is specified in the `[tool.uv]` section of `pyproject.toml`, `uv audit` and `uv audit --no-default-groups` produce the same result (auditing *all* dependenc...",
+    "is_new": true,
+    "priority": "high",
+    "is_bug": true,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 5620394108,
     "repo": "astral-sh/uv",
     "ecosystem": "python",
@@ -244,33 +300,6 @@
     "is_help_wanted": false
   },
   {
-    "id": 5599355463,
-    "repo": "astral-sh/uv",
-    "ecosystem": "python",
-    "ecosystem_label": "Python",
-    "category": "py_tools",
-    "category_label": "Dev Tools",
-    "number": 22006,
-    "title": "uv tool install --force --reinstall mutates the tool environment in place: concurrent readers observe missing files for tens of seconds while the install exits 0",
-    "url": "https://github.com/astral-sh/uv/issues/22006",
-    "author": "osteele",
-    "author_avatar": "https://avatars.githubusercontent.com/u/674?v=4",
-    "created_at": "2026-09-27T03:11:06Z",
-    "updated_at": "2026-09-28T12:50:50Z",
-    "comments": 1,
-    "labels": [
-      "enhancement"
-    ],
-    "body_preview": "### Summary  ### Summary  `uv tool install --force --reinstall <tool>` replaces the tool environment *in place*. A concurrent reader of that environment, such as the running tool itself, or any process importing from its site-packages, observes missing modules and files for the duration of the replacement, while the reinstall exits 0, implying success.  I measured the window with a 10 Hz observer...",
-    "is_new": true,
-    "priority": "medium",
-    "is_bug": false,
-    "is_feature": true,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
     "id": 5299028049,
     "repo": "psf/black",
     "ecosystem": "python",
@@ -337,14 +366,14 @@
     "author": "SlowMo24",
     "author_avatar": "https://avatars.githubusercontent.com/u/12476914?v=4",
     "created_at": "2026-09-23T07:26:18Z",
-    "updated_at": "2026-09-23T07:27:46Z",
-    "comments": 0,
+    "updated_at": "2026-09-29T17:34:04Z",
+    "comments": 1,
     "labels": [
       "kind/bug",
       "status/triage"
     ],
     "body_preview": "### Description  When adding a file-script under `[tool.poetry.scripts]` as documented in https://python-poetry.org/docs/pyproject/#scripts-1 it gets added to the `bin` directory, thanks to solving #10664 .  Yet it is not executable via `poetry run <my-script>` and raises an error: \"'callable'\"  Example project:   [run-script-file.zip](https://github.com/user-attachments/files/32551620/run-script-...",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,
@@ -390,8 +419,8 @@
     "author": "Mindstan",
     "author_avatar": "https://avatars.githubusercontent.com/u/22504670?v=4",
     "created_at": "2026-09-21T13:52:22Z",
-    "updated_at": "2026-09-21T19:33:05Z",
-    "comments": 3,
+    "updated_at": "2026-09-29T17:43:21Z",
+    "comments": 4,
     "labels": [
       "kind/bug",
       "area/config"

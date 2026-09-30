@@ -43,7 +43,7 @@
       "bug"
     ],
     "body_preview": "I have a Django application that uses django-oauth-toolkit in conjunction with django-unfold.  I have custom admin classes like this:  ```python # project/admin.py  # Provide oauth2_provide admin classes with unfold admin, # selection of admin classes is done in settings module.  from oauth2_provider.admin import (     ApplicationAdmin as BaseApplicationAdmin,     AccessTokenAdmin as BaseAccessTok...",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,
