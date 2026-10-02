@@ -116,7 +116,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "plumbing.py imports APIRequestFactory at module scope, but it's only used inside build_mock_request():  ```python from rest_framework.test import APIRequestFactory ```  rest_framework.test imports django.test.testcases, which imports unittest and unittest.mock. Since drf_spectacular.plumbing loads as soon as drf_spectacular.views does (e.g. registering SpectacularAPIView in a URL conf), every proc...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
