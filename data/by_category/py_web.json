@@ -41,7 +41,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "https://werkzeug.palletsprojects.com/en/stable/levels/#high-or-low suggests that you might want to choose to use the individual utility functions on an `environ` rather than using `Request`. But I'm not sure any of the reasons hold up.  `Request` is an extremely lightweight wrapper around `environ`. There's essentially no cost to constructing it, and then it offers a way better (and more complete)...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

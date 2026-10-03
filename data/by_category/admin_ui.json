@@ -19,7 +19,7 @@
       "Frontend"
     ],
     "body_preview": "I first noticed this after upgrading to 8.0.0. When I load a page in Firefox, the toolbar briefly appears without its styling: the menu text is visible in the page, and huge blue theme icons fill the screen. A fraction of a second later everything looks normal. It's very brief, but hard to miss and quite distracting, even with the toolbar collapsed.  We've narrowed it down to a plain HTML page wit...",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,
