@@ -1,5 +1,33 @@
 [
   {
+    "id": 5692633333,
+    "repo": "clap-rs/clap",
+    "ecosystem": "rust",
+    "ecosystem_label": "Rust",
+    "category": "rust_cli",
+    "category_label": "CLI & Tooling",
+    "number": 6544,
+    "title": "Default value t fails when the implementation of display conflicts with the implementation of ValueEnum",
+    "url": "https://github.com/clap-rs/clap/issues/6544",
+    "author": "janTatesa",
+    "author_avatar": "https://avatars.githubusercontent.com/u/100917739?v=4",
+    "created_at": "2026-10-03T19:01:08Z",
+    "updated_at": "2026-10-03T19:02:29Z",
+    "comments": 1,
+    "labels": [
+      "C-bug",
+      "S-triage"
+    ],
+    "body_preview": "### Please complete the following tasks  - [x] I have searched the [discussions](https://github.com/clap-rs/clap/discussions) - [x] I have searched the [open](https://github.com/clap-rs/clap/issues) and [rejected](https://github.com/clap-rs/clap/issues?q=is%3Aissue+label%3AS-wont-fix+is%3Aclosed) issues  ### Rust Version  rustc 1.99.0-nightly (11177f223 2026-08-02)  ### Clap Version  4.6.7  ### Mi...",
+    "is_new": true,
+    "priority": "high",
+    "is_bug": true,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 5602995218,
     "repo": "clap-rs/clap",
     "ecosystem": "rust",
@@ -370,6 +398,33 @@
     "is_help_wanted": false
   },
   {
+    "id": 5690525842,
+    "repo": "sharkdp/bat",
+    "ecosystem": "rust",
+    "ecosystem_label": "Rust",
+    "category": "rust_cli",
+    "category_label": "CLI & Tooling",
+    "number": 4039,
+    "title": "Capacity overflow panic with huge negative --line-range on macOS",
+    "url": "https://github.com/sharkdp/bat/issues/4039",
+    "author": "vardaanexe",
+    "author_avatar": "https://avatars.githubusercontent.com/u/282897192?v=4",
+    "created_at": "2026-10-03T14:30:02Z",
+    "updated_at": "2026-10-03T16:36:53Z",
+    "comments": 1,
+    "labels": [
+      "bug"
+    ],
+    "body_preview": "<!--  Hey there, thank you for reporting a bug!  Please note that the following bugs have already been reported:  * dpkg: error processing archive /some/path/some-program.deb (--unpack):   trying to overwrite '/usr/.crates2.json'    See https://github.com/sharkdp/bat/issues/938  -->  1. Install bat 0.26.1 via Homebrew on macOS. 2. Run:    printf 'line1\\nline2\\nline3\\n' | bat --line-range ':-999999...",
+    "is_new": true,
+    "priority": "high",
+    "is_bug": true,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 5667022490,
     "repo": "sharkdp/bat",
     "ecosystem": "rust",
@@ -413,7 +468,7 @@
       "feature-request"
     ],
     "body_preview": "When using `-pp`, it uses plain style and disables paging. This makes looks like cat but with the exception of having syntax colors. I would like to have another `p` that disables syntax color so this will make an output exactly like cat does.  Thanks for your work on bat",
-    "is_new": true,
+    "is_new": false,
     "priority": "medium",
     "is_bug": false,
     "is_feature": true,
