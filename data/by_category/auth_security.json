@@ -451,33 +451,6 @@
     "is_help_wanted": false
   },
   {
-    "id": 4824539279,
-    "repo": "jazzband/django-oauth-toolkit",
-    "ecosystem": "django",
-    "ecosystem_label": "Django",
-    "category": "auth_security",
-    "category_label": "Auth & Security",
-    "number": 1731,
-    "title": "DCR: allowlist settings for registration metadata (grant_types, token_endpoint_auth_method, redirect_uris)",
-    "url": "https://github.com/django-oauth/django-oauth-toolkit/issues/1731",
-    "author": "dopry",
-    "author_avatar": "https://avatars.githubusercontent.com/u/387640?v=4",
-    "created_at": "2026-07-07T02:01:54Z",
-    "updated_at": "2026-09-01T21:16:11Z",
-    "comments": 3,
-    "labels": [
-      "enhancement"
-    ],
-    "body_preview": "## Context  Proposed by @zacharypodbela during the Dynamic Client Registration work (#1667, [comment](https://github.com/django-oauth/django-oauth-toolkit/pull/1667#issuecomment-4256765084)):  > Currently any DOT-supported values can be passed in for `grant_types`, `token_endpoint_auth_method`, or `redirect_uris`. There aren't any inherent security risks or attack vectors, but could imagine server...",
-    "is_new": false,
-    "priority": "medium",
-    "is_bug": false,
-    "is_feature": true,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
     "id": 5203003587,
     "repo": "jazzband/django-two-factor-auth",
     "ecosystem": "django",
@@ -517,7 +490,7 @@
     "author": "Natgho",
     "author_avatar": "https://avatars.githubusercontent.com/u/6623948?v=4",
     "created_at": "2026-09-17T00:32:01Z",
-    "updated_at": "2026-09-21T17:24:12Z",
+    "updated_at": "2026-10-04T23:16:39Z",
     "comments": 2,
     "labels": [],
     "body_preview": "# Content  With `GUARDIAN_AUTO_PREFETCH = True`, every permission check against a model that declares its own object permission model returns `False`, even when the permission exists in that model's table.  ## Reproduce  Using the test app, where `Project` has `ProjectUserObjectPermission` and `ProjectGroupObjectPermission`:  ```python group = Group.objects.create(name=\"g\") user = User.objects.cre...",
@@ -588,36 +561,6 @@
     "is_feature": true,
     "is_security": false,
     "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
-    "id": 5430150657,
-    "repo": "django-guardian/django-guardian",
-    "ecosystem": "django",
-    "ecosystem_label": "Django",
-    "category": "auth_security",
-    "category_label": "Auth & Security",
-    "number": 1022,
-    "title": "LoginRequiredMixin raises TypeError on asynchronous class-based views",
-    "url": "https://github.com/django-guardian/django-guardian/issues/1022",
-    "author": "Natgho",
-    "author_avatar": "https://avatars.githubusercontent.com/u/6623948?v=4",
-    "created_at": "2026-09-12T00:41:56Z",
-    "updated_at": "2026-09-26T16:31:36Z",
-    "comments": 2,
-    "labels": [
-      "needs tests",
-      "good first issue",
-      "testing",
-      "tech debt"
-    ],
-    "body_preview": "## Problem  `guardian.mixins.LoginRequiredMixin` cannot be used with an asynchronous class-based view. An unauthenticated user gets a `TypeError` instead of a redirect to the login page.  ```python from django.http import HttpResponse from django.views.generic import View  from guardian.mixins import LoginRequiredMixin   class MyView(LoginRequiredMixin, View):     async def get(self, request, *arg...",
-    "is_new": false,
-    "priority": "low",
-    "is_bug": false,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": true,
     "is_help_wanted": false
   }
 ]

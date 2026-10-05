@@ -1,5 +1,32 @@
 [
   {
+    "id": 5703658945,
+    "repo": "facebook/react",
+    "ecosystem": "react",
+    "ecosystem_label": "React",
+    "category": "react_core",
+    "category_label": "React Core",
+    "number": 37755,
+    "title": "Bug: add 3d garphique built on three.js for make easy devlope a game on react ",
+    "url": "https://github.com/react/react/issues/37755",
+    "author": "Ghanmidev2012",
+    "author_avatar": "https://avatars.githubusercontent.com/u/242857573?v=4",
+    "created_at": "2026-10-04T21:54:07Z",
+    "updated_at": "2026-10-04T22:01:08Z",
+    "comments": 1,
+    "labels": [
+      "Status: Unconfirmed"
+    ],
+    "body_preview": "<!--   Please provide a clear and concise description of what the bug is. Include   screenshots if needed. Please test using the latest version of the relevant   React packages to make sure your issue has not already been fixed. -->  React version:  ## Steps To Reproduce  1. 2.  <!--   Your bug will get fixed much faster if we can run your code and it doesn't   have dependencies other than React....",
+    "is_new": true,
+    "priority": "low",
+    "is_bug": false,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 5695576323,
     "repo": "facebook/react",
     "ecosystem": "react",

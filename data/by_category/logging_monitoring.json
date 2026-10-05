@@ -16,7 +16,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "All supported versions of python for django-silk support type annotations.  This library should add in strict type annotations to reduce bugs, make it easier for django applications to import and integrate, and to clarify the code.  In particular, this may reduce some of the string/byte issues seen such as #912 and #779",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
