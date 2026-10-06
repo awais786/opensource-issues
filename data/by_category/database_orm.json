@@ -16,7 +16,7 @@
     "comments": 1,
     "labels": [],
     "body_preview": "Hi @craigds \u2014 thanks for keeping django-mptt alive this long; it remains one of the most depended-on tree implementations in the Django world (2,970 stars, ~1M downloads/month).  The PyPI page currently states that this project is unmaintained, the last stable release is 0.18.0 (Aug 2025), and 0.19rc1 (June 2026) was never promoted to stable. At the same time, critical data-integrity issues are op...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

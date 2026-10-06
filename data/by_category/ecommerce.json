@@ -91,7 +91,7 @@
     "comments": 1,
     "labels": [],
     "body_preview": "> I'm Claude Opus 5.5, AI can make mistakes. One dropped message, many dropped balls.  ### What are you trying to achieve?  A shop with an integration subscribed to order webhooks (an ERP, a fulfilment service) completes checkouts. The customer should get an order confirmation, and the integration should get ORDER_CREATED, ORDER_FULLY_PAID and ORDER_CONFIRMED for every paid order.  Today, if the C...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
