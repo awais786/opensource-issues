@@ -54,33 +54,6 @@
     "is_help_wanted": false
   },
   {
-    "id": 5678742098,
-    "repo": "jazzband/django-oauth-toolkit",
-    "ecosystem": "django",
-    "ecosystem_label": "Django",
-    "category": "auth_security",
-    "category_label": "Auth & Security",
-    "number": 1918,
-    "title": "Invalid redirect URI ports pass validation and can cause logout HTTP 500",
-    "url": "https://github.com/django-oauth/django-oauth-toolkit/issues/1918",
-    "author": "dopry",
-    "author_avatar": "https://avatars.githubusercontent.com/u/387640?v=4",
-    "created_at": "2026-10-02T14:20:26Z",
-    "updated_at": "2026-10-02T14:20:26Z",
-    "comments": 0,
-    "labels": [
-      "bug"
-    ],
-    "body_preview": "## Describe the bug  The default redirect URI validator accepts malformed HTTP(S) ports, including `https://rp.example.com:abc/bye` and `https://rp.example.com:99999/bye`. When a stored post-logout URI contains one of these ports, the logout URI matcher accesses `urlsplit(...).port` and raises an uncaught `ValueError`, producing HTTP 500.  A malformed entry can also prevent a valid URI later in th...",
-    "is_new": true,
-    "priority": "high",
-    "is_bug": true,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
     "id": 5678164009,
     "repo": "jazzband/django-oauth-toolkit",
     "ecosystem": "django",
@@ -126,7 +99,7 @@
       "enhancement"
     ],
     "body_preview": "Part of #1884 (warning **W4**).  > **Needs definition.** This needs a data-model change, so the design has to be agreed first.  **Is your feature request related to a problem? Please describe.**  [RFC 6749 \u00a74.1.2](https://www.rfc-editor.org/rfc/rfc6749#section-4.1.2) says that if an authorization code is used more than once, the authorization server MUST deny the request and **SHOULD revoke (when...",
-    "is_new": true,
+    "is_new": false,
     "priority": "medium",
     "is_bug": false,
     "is_feature": true,
@@ -153,7 +126,7 @@
       "enhancement"
     ],
     "body_preview": "Part of #1884 (warning **W2**).  > **Needs definition.** This issue records the gap and the open questions. Scope and design have to be agreed before work starts.  **Is your feature request related to a problem? Please describe.**  [OpenID Connect Core 1.0 \u00a75.5](https://openid.net/specs/openid-connect-core-1_0.html#ClaimsParameter) lets a client request individual claims for the ID Token and for U...",
-    "is_new": true,
+    "is_new": false,
     "priority": "medium",
     "is_bug": false,
     "is_feature": true,
@@ -180,7 +153,7 @@
       "bug"
     ],
     "body_preview": "**Describe the bug**  When the resource owner denies consent, the authorization endpoint redirects `access_denied` to the `redirect_uri` from the posted consent form, without checking that it is registered for the client.  `OAuthLibCore.create_authorization_response` (`oauth2_provider/core/backends_oauthlib.py`) raises `oauth2.AccessDeniedError` when `allow` is false. That happens before oauthlib'...",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,
@@ -207,7 +180,7 @@
       "bug"
     ],
     "body_preview": "**Describe the bug**  `oauth2_provider.oauth2_validators.OAuth2Validator` does not implement oauthlib's OpenID Connect hooks `validate_silent_login(request)` and `validate_silent_authorization(request)`. oauthlib's base `RequestValidator` raises `NotImplementedError` for both.  `openid_authorization_validator` (`oauthlib/openid/connect/core/grant_types/base.py`) calls these hooks for any request w...",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,
@@ -232,7 +205,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "Tracks the toolkit's progress against the OpenID Foundation conformance plans that `tests/openid-conformance-suite` runs in CI (#1870). We start with the `basic` plan, and aim to make certification (#1105) a formality.  Each plan's baseline in `tests/openid-conformance-suite/expected/` works as a ratchet. A PR that closes a gap deletes that gap's entries, regenerating them with `baseline.py` from...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
@@ -257,7 +230,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "## Summary  Add an option to the token introspection endpoint (RFC 7662) that answers `{\"active\": true, ...}` only when the authenticated introspecting client is an audience of the token being introspected. For any other token it would answer `{\"active\": false}`.  This is follow-up planning for #1451, building on the `Application.can_introspect` capability in #1877.  ## Background  After #1877, an...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
@@ -284,7 +257,7 @@
       "security"
     ],
     "body_preview": "## Summary  A CIMD-registered `Application` is cached until `cimd_expires_at`. When it expires, `refresh_if_stale` re-fetches the client's metadata document. If that re-fetch fails or is skipped, the stored row is returned unchanged and stays usable with no time limit. This issue is for planning a bound on that.  ## Current behaviour  `oauth2_provider/authorization_server/cimd.py`, `refresh_if_sta...",
-    "is_new": true,
+    "is_new": false,
     "priority": "critical",
     "is_bug": false,
     "is_feature": false,

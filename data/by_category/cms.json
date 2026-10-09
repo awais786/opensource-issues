@@ -1,5 +1,33 @@
 [
   {
+    "id": 5777580561,
+    "repo": "wagtail/wagtail",
+    "ecosystem": "django",
+    "ecosystem_label": "Django",
+    "category": "cms",
+    "category_label": "CMS & Content",
+    "number": 14713,
+    "title": "\u201cReset to default\u201d checkbox does not remove an uploaded avatar in Account settings",
+    "url": "https://github.com/wagtail/wagtail/issues/14713",
+    "author": "MarkVanAcker",
+    "author_avatar": "https://avatars.githubusercontent.com/u/23064486?v=4",
+    "created_at": "2026-10-09T11:47:31Z",
+    "updated_at": "2026-10-09T11:49:47Z",
+    "comments": 0,
+    "labels": [
+      "type:Bug",
+      "status:Unconfirmed"
+    ],
+    "body_preview": "### Issue summary  On the Account \u2192 Profile picture panel, ticking \u201cReset to default\u201d and saving has no effect, the previously uploaded avatar remains.   There\u2019s no way to remove a custom avatar through the UI.  **Root cause** The clear checkbox (avatar-avatar-clear) is handled by the field\u2019s default ClearableFileInput widget, which sets cleaned_data[\"avatar\"] to False to signal removal. But Avata...",
+    "is_new": true,
+    "priority": "high",
+    "is_bug": true,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 5759983488,
     "repo": "wagtail/wagtail",
     "ecosystem": "django",
@@ -12,8 +40,8 @@
     "author": "tandrieuxx",
     "author_avatar": "https://avatars.githubusercontent.com/u/22955971?v=4",
     "created_at": "2026-10-08T10:17:46Z",
-    "updated_at": "2026-10-08T10:18:08Z",
-    "comments": 0,
+    "updated_at": "2026-10-08T17:07:19Z",
+    "comments": 2,
     "labels": [
       "type:Bug",
       "status:Unconfirmed"
@@ -464,7 +492,7 @@
     "author": "vstoykov",
     "author_avatar": "https://avatars.githubusercontent.com/u/902381?v=4",
     "created_at": "2026-10-07T12:01:02Z",
-    "updated_at": "2026-10-07T12:01:02Z",
+    "updated_at": "2026-10-08T13:15:58Z",
     "comments": 0,
     "labels": [],
     "body_preview": "## Description  After update from Django CMS 5.1.2 to 5.1.3 restrictions defined in `CMS_PLACEHOLDER_CONF` somehow stopped working (or actually are working where should not). The idea is that when particular plugin which can have children is restricted for what type of children to have in particular placeholder then the same restriction is applied to all other placeholders.  ## Steps to reproduce...",
@@ -602,9 +630,11 @@
     "author": "MacLake",
     "author_avatar": "https://avatars.githubusercontent.com/u/9460962?v=4",
     "created_at": "2026-08-31T17:35:08Z",
-    "updated_at": "2026-09-08T13:18:04Z",
-    "comments": 14,
-    "labels": [],
+    "updated_at": "2026-10-09T01:27:30Z",
+    "comments": 15,
+    "labels": [
+      "stale"
+    ],
     "body_preview": "## Description After upgrading to django-cms 5.1.1 or 5.1.2  I get an error in my multi site instance. <!-- If this is a security issue stop immediately and follow the instructions at: http://docs.django-cms.org/en/latest/contributing/development-policies.html#reporting-security-issues -->  ## Steps to reproduce I guess the reason is triggered by the multi site setup with site ids, as the error me...",
     "is_new": false,
     "priority": "low",
