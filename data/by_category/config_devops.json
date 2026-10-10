@@ -717,7 +717,7 @@
       "Component: Monitoring"
     ],
     "body_preview": "### Problem  When `CeleryIntegration(monitor_beat_tasks=True)` is used, the SDK auto-creates a Cron Monitor per Celery Beat task. The monitor config it sends is derived from the schedule only:  - `schedule` - `timezone`  (see `_get_monitor_config` in `sentry_sdk/integrations/celery/beat.py`).  There is currently no way to set `max_runtime`, `checkin_margin`, `failure_issue_threshold`, `recovery_th...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

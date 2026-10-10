@@ -1,5 +1,30 @@
 [
   {
+    "id": 5787796011,
+    "repo": "clap-rs/clap",
+    "ecosystem": "rust",
+    "ecosystem_label": "Rust",
+    "category": "rust_cli",
+    "category_label": "CLI & Tooling",
+    "number": 6548,
+    "title": "clap_complete env (PowerShell): values after a space don't complete in Windows PowerShell 5.1",
+    "url": "https://github.com/clap-rs/clap/issues/6548",
+    "author": "millsks",
+    "author_avatar": "https://avatars.githubusercontent.com/u/35641675?v=4",
+    "created_at": "2026-10-10T03:45:57Z",
+    "updated_at": "2026-10-10T03:45:57Z",
+    "comments": 0,
+    "labels": [],
+    "body_preview": "### Please complete the following tasks  - [x] I have searched the [discussions](https://github.com/clap-rs/clap/discussions) - [x] I have searched the [open](https://github.com/clap-rs/clap/issues) and [rejected](https://github.com/clap-rs/clap/issues?q=is%3Aissue+label%3AS-wont-fix+is%3Aclosed) issues  ### Rust Version  rustc 1.98.1 (48a229cea 2026-09-01)  ### Clap Version  clap 4.6.7, clap_comp...",
+    "is_new": true,
+    "priority": "low",
+    "is_bug": false,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 5718495674,
     "repo": "clap-rs/clap",
     "ecosystem": "rust",
@@ -12,8 +37,8 @@
     "author": "WesleyAC",
     "author_avatar": "https://avatars.githubusercontent.com/u/5001092?v=4",
     "created_at": "2026-10-05T20:29:23Z",
-    "updated_at": "2026-10-06T15:55:21Z",
-    "comments": 3,
+    "updated_at": "2026-10-09T13:47:42Z",
+    "comments": 4,
     "labels": [
       "C-bug",
       "S-triage"
@@ -40,11 +65,13 @@
     "author": "janTatesa",
     "author_avatar": "https://avatars.githubusercontent.com/u/100917739?v=4",
     "created_at": "2026-10-03T19:01:08Z",
-    "updated_at": "2026-10-05T16:00:48Z",
-    "comments": 3,
+    "updated_at": "2026-10-09T15:39:31Z",
+    "comments": 7,
     "labels": [
       "C-bug",
-      "S-triage"
+      "A-derive",
+      "C-dependencies",
+      "S-waiting-on-design"
     ],
     "body_preview": "### Please complete the following tasks  - [x] I have searched the [discussions](https://github.com/clap-rs/clap/discussions) - [x] I have searched the [open](https://github.com/clap-rs/clap/issues) and [rejected](https://github.com/clap-rs/clap/issues?q=is%3Aissue+label%3AS-wont-fix+is%3Aclosed) issues  ### Rust Version  rustc 1.99.0-nightly (11177f223 2026-08-02)  ### Clap Version  4.6.7  ### Mi...",
     "is_new": true,
