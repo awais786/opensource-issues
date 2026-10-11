@@ -18,7 +18,7 @@
       "bug"
     ],
     "body_preview": "**Describe the bug**  For a signed-in End-User, an OpenID Connect authorization request with `prompt=none` that needs consent gets the consent page (HTTP 200) instead of a `consent_required` error redirect.  [OpenID Connect Core 1.0 \u00a73.1.2.1](https://openid.net/specs/openid-connect-core-1_0.html#AuthRequest) says that with `prompt=none` the Authorization Server MUST NOT display any authentication...",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,
