@@ -41,7 +41,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "## Feature Request Type  - [ ] Core functionality - [ ] Alteration (enhancement/optimization) of existing feature(s) - [x] New behavior  ## Description  Complex geometries (administrative boundaries, coastlines, satellite image footprints) can have tens of thousands of vertices. Returned through GraphQL, every coordinate becomes JSON text, so a single field can produce megabytes of response, even...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

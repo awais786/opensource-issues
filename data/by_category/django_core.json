@@ -224,7 +224,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "The following needs to happen when there is a release with a CVE followup.  1. During the release, apply the patches to all branches 2. In the blog post, mention the followup in the description and summary. See as an example: https://www.djangoproject.com/weblog/2026/oct/06/security-releases/ 3. Update the published json    You can edit the CVE in the admin to add the followup releases with their...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
