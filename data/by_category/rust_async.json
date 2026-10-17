@@ -104,7 +104,7 @@
       "M-codec"
     ],
     "body_preview": "The [extra Encoder<&[u8]> impl on LengthDelimitedCodec](https://github.com/tokio-rs/tokio/pull/8355) introduced in tokio-util 0.7.20 makes ordinary `Framed` + `SinkExt` code ambiguous, and the only fix rustc offers is to spell the full type.    `Framed<T, LengthDelimitedCodec>` now implements both `Sink<Bytes>` and `Sink<&[u8]>`. `SinkExt<Item>` carries Item on the trait, not on the method. Combin...",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,
