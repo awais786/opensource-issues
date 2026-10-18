@@ -421,5 +421,30 @@
     "is_security": false,
     "is_good_first_issue": false,
     "is_help_wanted": false
+  },
+  {
+    "id": 5594557068,
+    "repo": "TanStack/query",
+    "ecosystem": "react",
+    "ecosystem_label": "React",
+    "category": "react_state",
+    "category_label": "State Management",
+    "number": 11663,
+    "title": "persistQueryClientSubscribe drops the persistQueryClientSave promise, causing unhandled rejections when persisting fails",
+    "url": "https://github.com/TanStack/query/issues/11663",
+    "author": "n-satoshi061",
+    "author_avatar": "https://avatars.githubusercontent.com/u/60376145?v=4",
+    "created_at": "2026-09-26T14:04:30Z",
+    "updated_at": "2026-09-28T12:26:19Z",
+    "comments": 3,
+    "labels": [],
+    "body_preview": "`persistQueryClientSubscribe` calls `persistQueryClientSave(props)` on every cache event, but it doesn't handle the returned promise. So if saving fails, I get an unhandled promise rejection on each cache update.  I noticed this while reading the code and confirmed it with a test. It can happen with a custom persister like the IndexedDB example in the docs, because `set()` from idb-keyval can reje...",
+    "is_new": false,
+    "priority": "low",
+    "is_bug": false,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
   }
 ]
