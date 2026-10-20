@@ -16,7 +16,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "Support for python 3.15 was merged last month, but the latest version on pypi is 3.12.1, which doesn't support py3.15 (at least from the metadata perspective). Now that py3.15 is officially out - would it be possible to cut a new release and push it to pypi?  Context: I'm working on adding py3.15 support to Apache Airflow (apache/airflow#74555), and `asgiref` was flagged as not having a compatible...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

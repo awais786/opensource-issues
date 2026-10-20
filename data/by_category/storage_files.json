@@ -16,7 +16,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "With `GS_FILE_OVERWRITE = False`, `GoogleCloudStorage` avoids replacing an existing object through `get_available_name()`, which calls `exists()` and appends a random suffix when the name is taken.   The `exists()` check and the upload are two separate requests, so two concurrent saves to the same name can both see the name as free, and the second upload then silently replaces the first object des...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
