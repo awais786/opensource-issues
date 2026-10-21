@@ -12,8 +12,8 @@
     "author": "rossng",
     "author_avatar": "https://avatars.githubusercontent.com/u/565371?v=4",
     "created_at": "2026-10-20T09:57:59Z",
-    "updated_at": "2026-10-20T09:57:59Z",
-    "comments": 0,
+    "updated_at": "2026-10-20T11:23:37Z",
+    "comments": 1,
     "labels": [],
     "body_preview": "### Describe the bug  If two workers both start the same nested worker, `vite build` can bundle that nested worker twice. The output is the same both times, so the second build is wasted work.  This happens when the two parent workers are bundled at the same time. `bundleWorkerEntry` only checks the cache for worker bundles that have already *finished*:  https://github.com/vitejs/vite/blob/467f7ac...",
     "is_new": true,
@@ -37,8 +37,8 @@
     "author": "Cherepanov-Pavel",
     "author_avatar": "https://avatars.githubusercontent.com/u/43110141?v=4",
     "created_at": "2026-10-20T09:36:03Z",
-    "updated_at": "2026-10-20T09:36:03Z",
-    "comments": 0,
+    "updated_at": "2026-10-20T12:27:16Z",
+    "comments": 2,
     "labels": [
       "pending triage"
     ],
@@ -64,8 +64,8 @@
     "author": "matkoniecz",
     "author_avatar": "https://avatars.githubusercontent.com/u/899988?v=4",
     "created_at": "2026-10-19T20:43:33Z",
-    "updated_at": "2026-10-19T20:43:44Z",
-    "comments": 0,
+    "updated_at": "2026-10-20T12:54:23Z",
+    "comments": 3,
     "labels": [
       "documentation"
     ],
@@ -194,15 +194,16 @@
     "author": "lucasvidela94",
     "author_avatar": "https://avatars.githubusercontent.com/u/69171039?v=4",
     "created_at": "2026-10-17T17:17:25Z",
-    "updated_at": "2026-10-18T06:24:14Z",
-    "comments": 1,
+    "updated_at": "2026-10-21T02:28:50Z",
+    "comments": 2,
     "labels": [
-      "needs reproduction"
+      "p3-minor-bug",
+      "feat: sourcemap"
     ],
     "body_preview": "### Versions  - vite 8.3.4 - rolldown 1.2.14 - `@cloudflare/vite-plugin` 1.64.0 - `@tanstack/react-start` 1.169.3 - `@tailwindcss/vite` 4.x  ### What happens  `vite build` for an SSR/server environment with sourcemaps enabled prints:  ``` [plugin vite:css-post] [SOURCEMAP_BROKEN] Sourcemap is likely to be incorrect: a plugin (vite:css-post) was used to transform files, but didn't generate a source...",
     "is_new": true,
-    "priority": "low",
-    "is_bug": false,
+    "priority": "high",
+    "is_bug": true,
     "is_feature": false,
     "is_security": false,
     "is_good_first_issue": false,

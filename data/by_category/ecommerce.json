@@ -115,8 +115,8 @@
     "author": "AbdallahGasem",
     "author_avatar": "https://avatars.githubusercontent.com/u/148467729?v=4",
     "created_at": "2026-10-16T05:06:42Z",
-    "updated_at": "2026-10-19T06:35:28Z",
-    "comments": 1,
+    "updated_at": "2026-10-21T05:08:27Z",
+    "comments": 2,
     "labels": [
       "bug",
       "triage"
@@ -147,7 +147,7 @@
     "comments": 2,
     "labels": [],
     "body_preview": "### What happened  In `saleor/warehouse/management.py`, `allocate_stocks` and `decrease_stock` register one `transaction.on_commit(lambda: trigger_product_variant_out_of_stock(<loop var>, requestor=requestor))` callback per exhausted stock inside a `for` loop. The lambda closes over the loop variable (`allocation` / `stock`), not its value; callbacks run after commit, when the loop is over, so eve...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
