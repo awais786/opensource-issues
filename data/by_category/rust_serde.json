@@ -41,7 +41,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "Deriving `Deserialize` for a packed struct fails with E0793 when `serde_derive`\u2019s `deserialize_in_place` feature is enabled. The same type compiles when that feature is disabled.  Reproduced with Rust 1.97.1 and `serde` / `serde_derive` 1.0.229.  Online reproduction: [Rust Explorer (Serde 1.0.228)](https://www.rustexplorer.com/b#LyoKW2RlcGVuZGVuY2llc10Kc2VyZGUgPSAiPTEuMC4yMjgiCnNlcmRlX2Rlcml2ZSA9I...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

@@ -191,7 +191,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "**Describe the bug**  With `OAS_VERSION` set to `3.1.0` or `3.2.0`, schema generation fails with `KeyError: 'type'` when a serializer has a `ChoiceField` whose choices give no single type. The common case is choices that are empty when the schema is generated because they are filled in at runtime, e.g. a `MultiSelectField(choices=[])` whose choices are set per instance. `build_choice_field` only s...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
