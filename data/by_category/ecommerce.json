@@ -122,7 +122,7 @@
       "triage"
     ],
     "body_preview": "### What are you trying to achieve?  # **Bug: Voucher Usage is not released on failure in create_order_from_checkout** Hello Dears, I have found a bug that i will explain in this issue and i would like to submit a PR to fix it.   ## **Bug Description** On main, complete_checkout.py in `create_order_from_checkout(...)` fn https://github.com/saleor/saleor/blob/dfa97c976418c4760ffd63d34b5e13698dfd85e...",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,

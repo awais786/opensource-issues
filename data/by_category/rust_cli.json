@@ -448,7 +448,7 @@
       "feature-request"
     ],
     "body_preview": "For example, CSV files. Would it be possible to align columns?",
-    "is_new": true,
+    "is_new": false,
     "priority": "medium",
     "is_bug": false,
     "is_feature": true,
