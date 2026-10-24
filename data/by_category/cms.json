@@ -1,5 +1,33 @@
 [
   {
+    "id": 6005023000,
+    "repo": "wagtail/wagtail",
+    "ecosystem": "django",
+    "ecosystem_label": "Django",
+    "category": "cms",
+    "category_label": "CMS & Content",
+    "number": 14764,
+    "title": "contrib sitemaps at wagtail 8.0.1",
+    "url": "https://github.com/wagtail/wagtail/issues/14764",
+    "author": "carlos-m-a",
+    "author_avatar": "https://avatars.githubusercontent.com/u/79377445?v=4",
+    "created_at": "2026-10-23T20:32:56Z",
+    "updated_at": "2026-10-23T20:32:56Z",
+    "comments": 0,
+    "labels": [
+      "type:Bug",
+      "status:Unconfirmed"
+    ],
+    "body_preview": "### Issue summary  Hello!  With: dependencies = [     \"Django>=6.1\",     \"wagtail>=8.0.1\", ] and  \"wagtail.contrib.sitemaps\", in INSTALLED_APPS and in urls.py: from wagtail.contrib.sitemaps.views import sitemap urlpatterns = [     path('sitemap.xml', sitemap),     path(\"django-admin/\", admin.site.urls),     path(\"admin/\", include(wagtailadmin_urls)),     path(\"documents/\", include(wagtaildocs_urls...",
+    "is_new": true,
+    "priority": "high",
+    "is_bug": true,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 5983383617,
     "repo": "wagtail/wagtail",
     "ecosystem": "django",
@@ -12,8 +40,8 @@
     "author": "chosak",
     "author_avatar": "https://avatars.githubusercontent.com/u/654645?v=4",
     "created_at": "2026-10-22T16:28:58Z",
-    "updated_at": "2026-10-22T16:28:58Z",
-    "comments": 0,
+    "updated_at": "2026-10-24T09:16:05Z",
+    "comments": 2,
     "labels": [
       "type:Bug",
       "status:Unconfirmed"
@@ -212,8 +240,8 @@
     "author": "remo-breitenmoser",
     "author_avatar": "https://avatars.githubusercontent.com/u/134341921?v=4",
     "created_at": "2026-10-20T10:17:42Z",
-    "updated_at": "2026-10-20T10:17:42Z",
-    "comments": 0,
+    "updated_at": "2026-10-23T11:05:13Z",
+    "comments": 1,
     "labels": [
       "type:Bug",
       "status:Unconfirmed"
@@ -359,34 +387,6 @@
       "status:Unconfirmed"
     ],
     "body_preview": "### Issue summary  On the Account \u2192 Profile picture panel, ticking \u201cReset to default\u201d and saving has no effect, the previously uploaded avatar remains.   There\u2019s no way to remove a custom avatar through the UI.  **Root cause** The clear checkbox (avatar-avatar-clear) is handled by the field\u2019s default ClearableFileInput widget, which sets cleaned_data[\"avatar\"] to False to signal removal. But Avata...",
-    "is_new": false,
-    "priority": "high",
-    "is_bug": true,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
-    "id": 5759983488,
-    "repo": "wagtail/wagtail",
-    "ecosystem": "django",
-    "ecosystem_label": "Django",
-    "category": "cms",
-    "category_label": "CMS & Content",
-    "number": 14709,
-    "title": "Translation of three-dot menu on a snippet chooser",
-    "url": "https://github.com/wagtail/wagtail/issues/14709",
-    "author": "tandrieuxx",
-    "author_avatar": "https://avatars.githubusercontent.com/u/22955971?v=4",
-    "created_at": "2026-10-08T10:17:46Z",
-    "updated_at": "2026-10-21T14:50:12Z",
-    "comments": 3,
-    "labels": [
-      "type:Bug",
-      "status:Unconfirmed"
-    ],
-    "body_preview": "### Issue summary  My instance has the default language set to french, but my wagtail user_profile has english as a preferred language. The whole admin UI shows up in english except for some labels in the three-dot menu on a snippet chooser which stays in french, example with the last 2 dropdown items (don't mind the object name):   <img width=\"522\" height=\"248\" alt=\"Image\" src=\"https://github.com...",
     "is_new": false,
     "priority": "high",
     "is_bug": true,

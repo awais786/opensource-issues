@@ -16,7 +16,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "- [x] Tested with the latest Haystack release - [ ] Tested with the current Haystack master branch (not run, but `update_index.py` on `master` is identical to `v3.4.0`)  ## Expected behaviour  `update_index -k N` indexes in N worker processes, the same as `-k 0` does in one process.  ## Actual behaviour  Every worker fails when `DATABASES` has an alias that was not accessed in the parent process:...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

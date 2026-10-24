@@ -1,5 +1,30 @@
 [
   {
+    "id": 6009931973,
+    "repo": "django/asgiref",
+    "ecosystem": "django",
+    "ecosystem_label": "Django",
+    "category": "django_core",
+    "category_label": "Django Core",
+    "number": 607,
+    "title": "`test_benchmark_local.py` failure",
+    "url": "https://github.com/django/asgiref/issues/607",
+    "author": "mtelka",
+    "author_avatar": "https://avatars.githubusercontent.com/u/3000173?v=4",
+    "created_at": "2026-10-24T06:00:45Z",
+    "updated_at": "2026-10-24T06:00:45Z",
+    "comments": 0,
+    "labels": [],
+    "body_preview": "The `test_benchmark_local.py` fails when `pytest-benchmark` is installed, but disabled (e.g. using `PYTEST_DISABLE_PLUGIN_AUTOLOAD=1`): ``` py314: commands[0]> python -m pytest -v ============================= test session starts ============================== platform sunos5 -- Python 3.14.9, pytest-9.1.1, pluggy-1.7.0 -- /data/builds/ul-mass-rebuild/components/python/asgiref/build/amd64-3.14/.to...",
+    "is_new": true,
+    "priority": "low",
+    "is_bug": false,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 5612423948,
     "repo": "django/asgiref",
     "ecosystem": "django",
@@ -75,6 +100,33 @@
     "is_help_wanted": false
   },
   {
+    "id": 6004959879,
+    "repo": "django/djangoproject.com",
+    "ecosystem": "django",
+    "ecosystem_label": "Django",
+    "category": "django_core",
+    "category_label": "Django Core",
+    "number": 2925,
+    "title": "Screen readers read out the \u2665 in the \"Donate\" nav link",
+    "url": "https://github.com/django/djangoproject.com/issues/2925",
+    "author": "Mr-Sunglasses",
+    "author_avatar": "https://avatars.githubusercontent.com/u/81439109?v=4",
+    "created_at": "2026-10-23T20:28:33Z",
+    "updated_at": "2026-10-23T20:45:54Z",
+    "comments": 0,
+    "labels": [
+      "Djangonaut Space \ud83d\ude80"
+    ],
+    "body_preview": "## Note: This issue is for Team cassiopeia from Djangonaut Space!   The Donate link in the main nav has a heart in front of it. It looks nice, but screen readers read it out literally. VoiceOver says something like \"black heart suit, Donate, link\". It's purely decorative, so its better to for the screen readers to read Donate link only.  ### Steps to reproduce! - Enable Screen Reader ( Voice Over...",
+    "is_new": true,
+    "priority": "low",
+    "is_bug": false,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 5976167968,
     "repo": "django/djangoproject.com",
     "ecosystem": "django",
@@ -141,8 +193,8 @@
     "author": "Mr-Sunglasses",
     "author_avatar": "https://avatars.githubusercontent.com/u/81439109?v=4",
     "created_at": "2026-10-15T07:59:43Z",
-    "updated_at": "2026-10-15T09:33:49Z",
-    "comments": 1,
+    "updated_at": "2026-10-23T15:12:21Z",
+    "comments": 3,
     "labels": [
       "Djangonaut Space \ud83d\ude80"
     ],
