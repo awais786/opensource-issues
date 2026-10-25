@@ -1,5 +1,33 @@
 [
   {
+    "id": 6012841650,
+    "repo": "vercel/next.js",
+    "ecosystem": "react",
+    "ecosystem_label": "React",
+    "category": "react_meta",
+    "category_label": "Meta Frameworks",
+    "number": 100695,
+    "title": "ISR pages never revalidate when build output files have an epoch (0) mtime",
+    "url": "https://github.com/vercel/next.js/issues/100695",
+    "author": "MoeeinAali",
+    "author_avatar": "https://avatars.githubusercontent.com/u/118152946?v=4",
+    "created_at": "2026-10-24T12:18:09Z",
+    "updated_at": "2026-10-24T12:18:23Z",
+    "comments": 0,
+    "labels": [
+      "Output",
+      "Runtime"
+    ],
+    "body_preview": "### Link to the code that reproduces this issue  https://github.com/MoeeinAali/nextjs-isr-epoch-mtime  ### To Reproduce  1. Clone the reproduction and run `npm install`. 2. Run `./repro.sh`. It runs `next build`, sets the mtime of every file in `.next` to `0` (the Unix epoch) with `zero-mtimes.mjs`, starts `next start`, and requests `/` five times, 12 seconds apart. The page has `export const reva...",
+    "is_new": true,
+    "priority": "low",
+    "is_bug": false,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 6005435446,
     "repo": "vercel/next.js",
     "ecosystem": "react",
@@ -65,8 +93,8 @@
     "author": "arnaud-coral",
     "author_avatar": "https://avatars.githubusercontent.com/u/38693862?v=4",
     "created_at": "2026-10-23T15:40:05Z",
-    "updated_at": "2026-10-23T20:57:01Z",
-    "comments": 0,
+    "updated_at": "2026-10-25T01:27:40Z",
+    "comments": 1,
     "labels": [
       "Metadata",
       "Error Handling"
