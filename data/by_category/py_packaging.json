@@ -66,8 +66,8 @@
     "author": "notatallshaw",
     "author_avatar": "https://avatars.githubusercontent.com/u/8070352?v=4",
     "created_at": "2026-10-20T15:38:31Z",
-    "updated_at": "2026-10-25T01:19:35Z",
-    "comments": 9,
+    "updated_at": "2026-10-25T15:59:17Z",
+    "comments": 10,
     "labels": [
       "type: security",
       "type: feature request"
@@ -94,8 +94,8 @@
     "author": "notatallshaw",
     "author_avatar": "https://avatars.githubusercontent.com/u/8070352?v=4",
     "created_at": "2026-10-16T17:50:03Z",
-    "updated_at": "2026-10-17T03:49:02Z",
-    "comments": 1,
+    "updated_at": "2026-10-26T04:29:51Z",
+    "comments": 2,
     "labels": [
       "type: maintenance"
     ],
@@ -657,7 +657,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "## Summary  `python -m build --report report.json` writes the JSON report with mode `0600` (owner read/write only), while every other file the build produces honors the process umask (`0644` under the usual `umask 022`).  The result is a report that other users and processes cannot read, even though it sits right next to the `0644` artifacts it describes.  ## Reproduction  ```console $ umask 0022...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

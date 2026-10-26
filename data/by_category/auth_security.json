@@ -422,7 +422,7 @@
       "api consistency"
     ],
     "body_preview": "**Location:** `guardian/shortcuts.py:679-686`  **Description:** `ObjectPermissionChecker` and `ObjectPermissionBackend` deny every permission to inactive users. `get_objects_for_user` never checks `user.is_active`. A deactivated user still gets every object they hold an object permission for. An inactive superuser gets the whole queryset through the `with_superuser` shortcut. List views (`Permissi...",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,
@@ -451,7 +451,7 @@
       "user experience"
     ],
     "body_preview": "**Location:** `guardian/managers.py:145-151`, `guardian/shortcuts.py:181-187`  **Description:** The warnings say the old name \"will be depreciated in 2.0 version\". The package is at 3.5.1 and the alias still exists. The message also misspells \"deprecated\".  **Expected:** State a real removal version (or remove the alias) and fix the wording.",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
@@ -481,7 +481,7 @@
       "api consistency"
     ],
     "body_preview": "**Location:** `guardian/shortcuts.py:685-686`, `guardian/utils.py:59-63` / `129-130`, `guardian/backends.py:36-44`  **Description:** - With `ANONYMOUS_USER_NAME = None` (anonymous support disabled), the backend correctly returns `False`. `get_objects_for_user(AnonymousUser(), ...)` and every shortcut that goes through `get_identity()` instead query for `username=None` and raise `User.DoesNotExist`...",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,
@@ -512,7 +512,7 @@
       "user experience"
     ],
     "body_preview": "**Location:** `guardian/admin.py:41-91`  **Description:** Django admin calls inline `has_*_permission(request, obj)` with `obj` set to the **parent** object being edited, not an inline instance. The mixin builds the inline model's permission (for example `app.change_child`) and checks it against the parent instance. The consequences: - Guardian looks for the child codename among the parent's objec...",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,
@@ -542,7 +542,7 @@
       "api consistency"
     ],
     "body_preview": "**Location:** `guardian/__init__.py:30-52` (`monkey_patch_user`, `monkey_patch_group`), `guardian/mixins.py:356-377` (`GuardianUserMixin`, `GuardianGroupMixin`)  **Description:** These helpers call `get_user_obj_perms_model()` / `get_group_obj_perms_model()` **without** the target object, so they always return the generic model. For a model with a direct permission model (for example `ProjectUserO...",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,
@@ -571,7 +571,7 @@
       "api consistency"
     ],
     "body_preview": "**Location:** `guardian/managers.py:104-117`  **Description:** `bulk_assign_perm` decides whether to create a row with `ObjectPermissionChecker.has_perm()`. That check also counts group permissions and returns `True` for superusers. The decision should only depend on whether a direct row already exists. The results: - A user who already has the permission through a group gets **no** direct permiss...",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,
@@ -599,7 +599,7 @@
       "needs tests"
     ],
     "body_preview": "**Location:** `guardian/shortcuts.py:725-756`  **Description:** If a model has a direct `UserObjectPermission` and a generic group permission, or the other way round, the values come from different columns. Generic rows return `object_pk` as `str`. Direct rows return `content_object__pk` as `int` or `UUID`. The multi-permission path (`any_perm=False`, `use_groups=True`, more than one codename) con...",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,
