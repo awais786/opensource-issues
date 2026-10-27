@@ -29,35 +29,6 @@
     "is_help_wanted": false
   },
   {
-    "id": 5556606000,
-    "repo": "jazzband/django-debug-toolbar",
-    "ecosystem": "django",
-    "ecosystem_label": "Django",
-    "category": "admin_ui",
-    "category_label": "Admin & UI",
-    "number": 2481,
-    "title": "Toolbar should have some padding at the bottom",
-    "url": "https://github.com/django-commons/django-debug-toolbar/issues/2481",
-    "author": "tim-schilling",
-    "author_avatar": "https://avatars.githubusercontent.com/u/1281215?v=4",
-    "created_at": "2026-09-23T16:51:50Z",
-    "updated_at": "2026-10-13T14:41:28Z",
-    "comments": 1,
-    "labels": [
-      "Improvement",
-      "Frontend",
-      "Djangonaut Space :rocket:"
-    ],
-    "body_preview": "Running the toolbar with my [debug tutorial](https://github.com/tim-schilling/debug-tutorial/blob/main/docs/lab2.md#lab-21), I noticed that we don't have any padding at the bottom of the pane. This means if there's a vertical scroll content, that content will always appear at the bottom. With a bit of padding, we could allow the user to scroll down further to bring the content up further on the pa...",
-    "is_new": false,
-    "priority": "low",
-    "is_bug": false,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
     "id": 5542930222,
     "repo": "jazzband/django-debug-toolbar",
     "ecosystem": "django",

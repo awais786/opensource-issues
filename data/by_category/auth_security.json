@@ -54,33 +54,6 @@
     "is_help_wanted": false
   },
   {
-    "id": 5678752577,
-    "repo": "jazzband/django-oauth-toolkit",
-    "ecosystem": "django",
-    "ecosystem_label": "Django",
-    "category": "auth_security",
-    "category_label": "Auth & Security",
-    "number": 1919,
-    "title": "Lone Unicode surrogates in DCR redirect metadata cause HTTP 500 during save",
-    "url": "https://github.com/django-oauth/django-oauth-toolkit/issues/1919",
-    "author": "dopry",
-    "author_avatar": "https://avatars.githubusercontent.com/u/387640?v=4",
-    "created_at": "2026-10-02T14:21:18Z",
-    "updated_at": "2026-10-02T14:21:18Z",
-    "comments": 0,
-    "labels": [
-      "bug"
-    ],
-    "body_preview": "## Describe the bug  A JSON-escaped lone Unicode surrogate in a post-logout redirect URI passes DCR's string/whitespace checks and the default URI validator. Saving the Application then raises `UnicodeEncodeError`, so both registration and registration updates return HTTP 500 instead of a metadata validation error.  This report concerns malformed-input handling. No cross-client authorization bypas...",
-    "is_new": false,
-    "priority": "high",
-    "is_bug": true,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
     "id": 5678164009,
     "repo": "jazzband/django-oauth-toolkit",
     "ecosystem": "django",
@@ -391,7 +364,7 @@
       "tech debt"
     ],
     "body_preview": "GitHub is moving `ubuntu-latest` from Ubuntu 24.04 to 26.04 between Oct 19 and Nov 19, 2026 ([actions/runner-images#14748](https://github.com/actions/runner-images/issues/14748)). The 3.5.2 release run already shows the notice. Runs still land on 24.04 for now.  **Affected jobs (`ubuntu-latest`):** - `release-publish.yml`: `release`, `publish` - `coverage.yml`: `coverage` - `tests.yml`: `pre-commi...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
@@ -443,8 +416,8 @@
     "author": "Natgho",
     "author_avatar": "https://avatars.githubusercontent.com/u/6623948?v=4",
     "created_at": "2026-10-19T10:16:29Z",
-    "updated_at": "2026-10-19T10:22:06Z",
-    "comments": 0,
+    "updated_at": "2026-10-27T09:32:24Z",
+    "comments": 1,
     "labels": [
       "good first issue",
       "tech debt",
