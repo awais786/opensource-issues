@@ -166,7 +166,7 @@
     "comments": 4,
     "labels": [],
     "body_preview": "click.Path exposes a path_type but does currently not use it for path sanity checks such as exists, file_okay, dir_okay etc. If path_type is for instance a cloudpathlib.AnyPath and the cli user points to a S3 those checks will always go wrong since they expect path_type to handle only local paths. Issue #2661 addressed similar thoughts but when the path_type itself is pathlib compliant, I would ho...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

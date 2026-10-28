@@ -343,7 +343,7 @@
     "comments": 1,
     "labels": [],
     "body_preview": "Related to [django-commons/membership#616](https://github.com/django-commons/membership/issues/616)  Don't merge this until the repo has been transferred to the Django Commons GitHub org and the PyPI org.",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
