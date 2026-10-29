@@ -1,5 +1,35 @@
 [
   {
+    "id": 6079530268,
+    "repo": "tokio-rs/tokio",
+    "ecosystem": "rust",
+    "ecosystem_label": "Rust",
+    "category": "rust_async",
+    "category_label": "Async & Web",
+    "number": 8733,
+    "title": "current_thread runtime is left unusable after a waker panics during a driver turn",
+    "url": "https://github.com/tokio-rs/tokio/issues/8733",
+    "author": "PedroRosalba",
+    "author_avatar": "https://avatars.githubusercontent.com/u/89936970?v=4",
+    "created_at": "2026-10-28T13:07:14Z",
+    "updated_at": "2026-10-29T09:46:07Z",
+    "comments": 0,
+    "labels": [
+      "C-bug",
+      "A-tokio",
+      "M-runtime",
+      "I-crash"
+    ],
+    "body_preview": "**Version** tokio 1.54.1. The relevant code is unchanged on master (0d38f834).  **Platform** Darwin 25.3.0 arm64. The code path is not platform-specific.  **Description** If a waker panics while the `current_thread` scheduler is parked in the driver (for example when a timer fires and wakes a foreign waker), the panic comes out of `block_on`, which is fine. But the runtime does not recover. The ne...",
+    "is_new": true,
+    "priority": "high",
+    "is_bug": true,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 5988694842,
     "repo": "tokio-rs/tokio",
     "ecosystem": "rust",
@@ -12,8 +42,8 @@
     "author": "BlackRabbitCoder",
     "author_avatar": "https://avatars.githubusercontent.com/u/412965?v=4",
     "created_at": "2026-10-22T22:48:55Z",
-    "updated_at": "2026-10-26T18:27:48Z",
-    "comments": 3,
+    "updated_at": "2026-10-28T22:43:36Z",
+    "comments": 4,
     "labels": [
       "A-tokio",
       "M-runtime",
@@ -49,7 +79,7 @@
       "M-time"
     ],
     "body_preview": "**Version** tokio v1.54.1 (also reproduces on current `master`)  **Platform** Linux 7.0.0-38-generic x86_64, rustc 1.98.0  **Description** With `test-util`, the timer driver can panic with `time is not frozen` when another thread calls `time::resume()` while the driver is auto-advancing the paused clock. Only public APIs are used, and every `resume()`/`pause()` call is valid for the clock state at...",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,
@@ -78,7 +108,7 @@
       "M-time"
     ],
     "body_preview": "**Version** tokio v1.54.1 (also reproduces on current `master`)  **Platform** Linux 7.0.0-38-generic x86_64, rustc 1.98.0  **Description** With `test-util`, `time::advance()` doesn't wake the runtime driver. While a `spawn_blocking` task is running, auto-advance is inhibited, so the driver parks for the timer's remaining duration in real time. Advancing the clock past the timer's deadline from ano...",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,

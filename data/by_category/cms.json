@@ -1,5 +1,33 @@
 [
   {
+    "id": 6085271782,
+    "repo": "wagtail/wagtail",
+    "ecosystem": "django",
+    "ecosystem_label": "Django",
+    "category": "cms",
+    "category_label": "CMS & Content",
+    "number": 14777,
+    "title": "Documents served via sendfile send an invalid `Content-Encoding: None` header",
+    "url": "https://github.com/wagtail/wagtail/issues/14777",
+    "author": "sei-dwtompkins",
+    "author_avatar": "https://avatars.githubusercontent.com/u/157037505?v=4",
+    "created_at": "2026-10-28T18:42:37Z",
+    "updated_at": "2026-10-28T18:42:37Z",
+    "comments": 0,
+    "labels": [
+      "type:Bug",
+      "status:Unconfirmed"
+    ],
+    "body_preview": "### Issue summary  Documents served through `wagtail.utils.sendfile` (the default path for local-storage documents) always get a `Content-Encoding` response header. For almost every file type (`.pdf`, `.doc`, `.docx`, ...) its value is the literal string `None`:  ``` content-type: application/pdf content-encoding: None ```  `sendfile()` ends with:  ```python response[\"Content-Encoding\"] = encoding...",
+    "is_new": true,
+    "priority": "high",
+    "is_bug": true,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 6014614274,
     "repo": "wagtail/wagtail",
     "ecosystem": "django",
@@ -98,8 +126,8 @@
     "author": "fransbernhard",
     "author_avatar": "https://avatars.githubusercontent.com/u/15129080?v=4",
     "created_at": "2026-10-20T14:18:30Z",
-    "updated_at": "2026-10-20T14:18:30Z",
-    "comments": 0,
+    "updated_at": "2026-10-28T18:57:30Z",
+    "comments": 2,
     "labels": [
       "type:Bug",
       "status:Unconfirmed"
@@ -270,7 +298,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "### Problem statement  In testing this library on Wagtail 8.0.1 I can't:  * choose the initial language for a new snippet * initiate translation from the snippet edit view (only from the listing view)  ### Proposed solution  I'd like to be able to do both of those things. I've been discussing the library with a client who has a use case for translatable snippets that don't all have the same \"sourc...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
