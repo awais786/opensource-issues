@@ -54,33 +54,6 @@
     "is_help_wanted": false
   },
   {
-    "id": 5673748001,
-    "repo": "jazzband/django-oauth-toolkit",
-    "ecosystem": "django",
-    "ecosystem_label": "Django",
-    "category": "auth_security",
-    "category_label": "Auth & Security",
-    "number": 1891,
-    "title": "prompt=none OIDC requests fail with a 500 on the stock OAuth2Validator: silent-login hooks not implemented",
-    "url": "https://github.com/django-oauth/django-oauth-toolkit/issues/1891",
-    "author": "dopry",
-    "author_avatar": "https://avatars.githubusercontent.com/u/387640?v=4",
-    "created_at": "2026-10-02T06:25:17Z",
-    "updated_at": "2026-10-02T06:25:17Z",
-    "comments": 0,
-    "labels": [
-      "bug"
-    ],
-    "body_preview": "**Describe the bug**  `oauth2_provider.oauth2_validators.OAuth2Validator` does not implement oauthlib's OpenID Connect hooks `validate_silent_login(request)` and `validate_silent_authorization(request)`. oauthlib's base `RequestValidator` raises `NotImplementedError` for both.  `openid_authorization_validator` (`oauthlib/openid/connect/core/grant_types/base.py`) calls these hooks for any request w...",
-    "is_new": false,
-    "priority": "high",
-    "is_bug": true,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
     "id": 5671798428,
     "repo": "jazzband/django-oauth-toolkit",
     "ecosystem": "django",
@@ -455,8 +428,8 @@
     "author": "Natgho",
     "author_avatar": "https://avatars.githubusercontent.com/u/6623948?v=4",
     "created_at": "2026-10-19T10:07:22Z",
-    "updated_at": "2026-10-27T14:51:03Z",
-    "comments": 2,
+    "updated_at": "2026-10-29T14:51:21Z",
+    "comments": 3,
     "labels": [
       "bug",
       "needs tests",

@@ -1,5 +1,33 @@
 [
   {
+    "id": 6107413746,
+    "repo": "tokio-rs/tokio",
+    "ecosystem": "rust",
+    "ecosystem_label": "Rust",
+    "category": "rust_async",
+    "category_label": "Async & Web",
+    "number": 8740,
+    "title": "Cross-thread wakeups wait for the next timer on `wasm32-wasip3`",
+    "url": "https://github.com/tokio-rs/tokio/issues/8740",
+    "author": "landonxjames",
+    "author_avatar": "https://avatars.githubusercontent.com/u/6853441?v=4",
+    "created_at": "2026-10-29T19:54:50Z",
+    "updated_at": "2026-10-29T19:54:50Z",
+    "comments": 0,
+    "labels": [
+      "C-bug",
+      "A-tokio"
+    ],
+    "body_preview": "**Version** ``` tokio-wasip3-park-repro v0.1.0 \u2514\u2500\u2500 tokio v1.54.1 ```  **Platform** This is a WASM issue so a few runtime versions at play here: - Target: `wasm32-wasip3` (tier 3). `rustc --print cfg --target wasm32-wasip3` lists `target_has_atomic` but no `target_feature=\"atomics\"`. - Toolchain: `rustc 1.100.0-nightly (a36d05efa 2026-09-09)` with `-Zbuild-std=std,panic_abort`, linked against the w...",
+    "is_new": true,
+    "priority": "high",
+    "is_bug": true,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 6079530268,
     "repo": "tokio-rs/tokio",
     "ecosystem": "rust",
@@ -50,7 +78,7 @@
       "C-feature-request"
     ],
     "body_preview": "**Is your feature request related to a problem? Please describe.**  `RuntimeMetrics` holds a strong `Handle`, so a long-lived observer that keeps one (a metrics exporter or a flight recorder, for example) keeps a dropped runtime's internals alive, including the I/O driver and its file descriptors. For the multi-thread scheduler this is the whole `Driver`, because `multi_thread::Handle` reaches it...",
-    "is_new": true,
+    "is_new": false,
     "priority": "medium",
     "is_bug": false,
     "is_feature": true,
@@ -141,35 +169,6 @@
     "priority": "high",
     "is_bug": true,
     "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
-    "id": 5932251270,
-    "repo": "tokio-rs/tokio",
-    "ecosystem": "rust",
-    "ecosystem_label": "Rust",
-    "category": "rust_async",
-    "category_label": "Async & Web",
-    "number": 8675,
-    "title": "io_uring: discussion on lock-free multi-producer submission (tracked in tokio-rs/io-uring#413)",
-    "url": "https://github.com/tokio-rs/tokio/issues/8675",
-    "author": "Ez-FlawLess",
-    "author_avatar": "https://avatars.githubusercontent.com/u/58356172?v=4",
-    "created_at": "2026-10-19T21:59:54Z",
-    "updated_at": "2026-10-20T06:17:18Z",
-    "comments": 0,
-    "labels": [
-      "A-tokio",
-      "C-feature-request",
-      "T-io-uring"
-    ],
-    "body_preview": "## Context  The io_uring-backed operations in the runtime currently serialize access to the shared ring with a lock. That means every thread submitting an operation contends on the same mutex.  ## What this issue is for  I opened [tokio-rs/io-uring#413](https://github.com/tokio-rs/io-uring/issues/413) to discuss whether the `io-uring` crate could support, or document a pattern for, multiple thread...",
-    "is_new": false,
-    "priority": "medium",
-    "is_bug": false,
-    "is_feature": true,
     "is_security": false,
     "is_good_first_issue": false,
     "is_help_wanted": false

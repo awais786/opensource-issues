@@ -370,30 +370,5 @@
     "is_security": false,
     "is_good_first_issue": false,
     "is_help_wanted": false
-  },
-  {
-    "id": 5944717032,
-    "repo": "TanStack/query",
-    "ecosystem": "react",
-    "ecosystem_label": "React",
-    "category": "react_state",
-    "category_label": "State Management",
-    "number": 12213,
-    "title": "[query-broadcast-client-experimental] broadcastQueryClient: an `added` event overwrites a receiving query that has no data (e.g. in error) with the sender's empty state",
-    "url": "https://github.com/TanStack/query/issues/12213",
-    "author": "Madoid82",
-    "author_avatar": "https://avatars.githubusercontent.com/u/64068447?v=4",
-    "created_at": "2026-10-20T15:40:55Z",
-    "updated_at": "2026-10-20T15:40:55Z",
-    "comments": 0,
-    "labels": [],
-    "body_preview": "**Package:** `@tanstack/query-broadcast-client-experimental` 5.104.3 (with `@tanstack/query-core` 5.104.3)  ## Describe the bug  When another tab creates a query, the receiving tab applies the sender's state on `added` whenever its own query has no `data`. A query that has no data but did settle (a failed query: `status: 'error'`, `errorUpdatedAt > 0`) is replaced with the sender's brand-new stat...",
-    "is_new": false,
-    "priority": "low",
-    "is_bug": false,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
   }
 ]
