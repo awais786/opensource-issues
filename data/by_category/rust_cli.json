@@ -403,6 +403,33 @@
     "is_help_wanted": false
   },
   {
+    "id": 6120988656,
+    "repo": "sharkdp/bat",
+    "ecosystem": "rust",
+    "ecosystem_label": "Rust",
+    "category": "rust_cli",
+    "category_label": "CLI & Tooling",
+    "number": 4105,
+    "title": "Questions to theme format",
+    "url": "https://github.com/sharkdp/bat/issues/4105",
+    "author": "Baerbeisser",
+    "author_avatar": "https://avatars.githubusercontent.com/u/22264628?v=4",
+    "created_at": "2026-10-30T14:30:01Z",
+    "updated_at": "2026-10-30T17:26:33Z",
+    "comments": 3,
+    "labels": [
+      "question"
+    ],
+    "body_preview": "Hi, i'm trying to port `highlight`s Candy theme over. One issue is that highlight uses semantic tokens (function, keyword, regexp, ...) that don't map 1:1, but i can sort that out.  The other, that i can find nowhere documentation to some of the keys. Like, plist is a deprecated [Apple contact list format](https://github.com/sokol2000/adium-macos-tahoe/blob/main/docs/PLIST_FORMAT.md) (reverse engi...",
+    "is_new": true,
+    "priority": "low",
+    "is_bug": false,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 6021533813,
     "repo": "sharkdp/bat",
     "ecosystem": "rust",
@@ -477,33 +504,6 @@
     "priority": "medium",
     "is_bug": false,
     "is_feature": true,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
-    "id": 5835626883,
-    "repo": "sharkdp/bat",
-    "ecosystem": "rust",
-    "ecosystem_label": "Rust",
-    "category": "rust_cli",
-    "category_label": "CLI & Tooling",
-    "number": 4061,
-    "title": "non-consistent higlighting",
-    "url": "https://github.com/sharkdp/bat/issues/4061",
-    "author": "regpacy",
-    "author_avatar": "https://avatars.githubusercontent.com/u/198238842?v=4",
-    "created_at": "2026-10-13T18:31:03Z",
-    "updated_at": "2026-10-16T21:35:10Z",
-    "comments": 0,
-    "labels": [
-      "bug"
-    ],
-    "body_preview": "<!--  Hey there, thank you for reporting a bug!  Please note that the following bugs have already been reported:  * dpkg: error processing archive /some/path/some-program.deb (--unpack):   trying to overwrite '/usr/.crates2.json'    See https://github.com/sharkdp/bat/issues/938  -->  **What steps will reproduce the bug?**  1. run bat on attached file [zqlite.txt](https://github.com/user-attachment...",
-    "is_new": false,
-    "priority": "high",
-    "is_bug": true,
-    "is_feature": false,
     "is_security": false,
     "is_good_first_issue": false,
     "is_help_wanted": false

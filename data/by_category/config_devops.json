@@ -396,8 +396,8 @@
     "author": "bogdan-zs",
     "author_avatar": "https://avatars.githubusercontent.com/u/29174296?v=4",
     "created_at": "2026-10-29T11:33:20Z",
-    "updated_at": "2026-10-29T11:34:05Z",
-    "comments": 1,
+    "updated_at": "2026-10-31T00:48:11Z",
+    "comments": 2,
     "labels": [
       "Python",
       "Bug"
@@ -649,33 +649,6 @@
       "Improvement"
     ],
     "body_preview": "### Problem Statement  When `include_source_context=True` (the default), `get_lines_from_file()` calls `loader.get_source(module)` and then `.splitlines()` for **every frame of every event**, whenever the frame's module has a `__loader__` with `get_source` (i.e. any normally imported module). `SourceFileLoader.get_source()` re-reads and decodes the whole file each time; `linecache`, which is the f...",
-    "is_new": false,
-    "priority": "low",
-    "is_bug": false,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
-    "id": 5944994132,
-    "repo": "getsentry/sentry-python",
-    "ecosystem": "django",
-    "ecosystem_label": "Django",
-    "category": "config_devops",
-    "category_label": "Config & DevOps",
-    "number": 8088,
-    "title": "Decide on boto3 span creation",
-    "url": "https://github.com/getsentry/sentry-python/issues/8088",
-    "author": "pabloDeputter",
-    "author_avatar": "https://avatars.githubusercontent.com/u/71842639?v=4",
-    "created_at": "2026-10-20T15:57:20Z",
-    "updated_at": "2026-10-29T13:33:58Z",
-    "comments": 1,
-    "labels": [
-      "Python"
-    ],
-    "body_preview": "1. boto3 only creates spans under an active parent, so calls outside aren't instrumented currently. => add in docs that you use root span; 2. `http.client` child on every AWS call, which repeats the parent and basically doubles the amount of spans send; omit it and only keep it for retried calls? 3. auto-enable `AwsLambdaIntegration`? since if you do it manually and forget to add it to sentry_init...",
     "is_new": false,
     "priority": "low",
     "is_bug": false,

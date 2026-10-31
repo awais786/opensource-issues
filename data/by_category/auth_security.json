@@ -1,5 +1,32 @@
 [
   {
+    "id": 6133556280,
+    "repo": "jazzband/django-oauth-toolkit",
+    "ecosystem": "django",
+    "ecosystem_label": "Django",
+    "category": "auth_security",
+    "category_label": "Auth & Security",
+    "number": 1949,
+    "title": "Unhandled exceptions in OAuth2Validator._get_key_for_token for malformed bearer JWTs (HTTP 500)",
+    "url": "https://github.com/django-oauth/django-oauth-toolkit/issues/1949",
+    "author": "JonathaCosta10",
+    "author_avatar": "https://avatars.githubusercontent.com/u/69131210?v=4",
+    "created_at": "2026-10-31T09:57:48Z",
+    "updated_at": "2026-10-31T09:57:48Z",
+    "comments": 0,
+    "labels": [
+      "bug"
+    ],
+    "body_preview": "**Describe the bug**  Follow-up to #964. That issue was fixed upstream in oauthlib (oauthlib/oauthlib#760), but `OAuth2Validator._get_key_for_token` still parses the unverified token outside any try/except. A malformed bearer token therefore raises instead of being treated as an invalid token, and the request ends in HTTP 500 instead of 401.  RP-initiated logout (`authorization_server/oidc/views.p...",
+    "is_new": true,
+    "priority": "high",
+    "is_bug": true,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 5678164009,
     "repo": "jazzband/django-oauth-toolkit",
     "ecosystem": "django",
