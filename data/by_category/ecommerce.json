@@ -197,7 +197,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "**Describe the bug**  Since API version `2025-03-31.basil`, Stripe no longer returns `current_period_start` / `current_period_end` on a Subscription; they are on each item, `items.data[].current_period_*` ([changelog](https://docs.stripe.com/changelog/basil/2025-03-31/deprecate-subscription-current-period-start-and-end)). dj-stripe's own default is `2026-05-27.dahlia`, and with stripe-python 15 th...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

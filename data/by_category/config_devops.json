@@ -268,7 +268,7 @@
     "comments": 1,
     "labels": [],
     "body_preview": "Although I think attacking whitenoise based on the [CVE](https://app.opencve.io/cve/CVE-2026-111497) is not viable, as: i) whitenoise primarily serves static files, that would already be on the target/victim server, and  ii) there is only one single call in the entirety of whitenoise to the brotli module.  And it's for compression ([here](https://github.com/evansd/whitenoise/blob/7a621703af47328a9...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
@@ -396,8 +396,8 @@
     "author": "bogdan-zs",
     "author_avatar": "https://avatars.githubusercontent.com/u/29174296?v=4",
     "created_at": "2026-10-29T11:33:20Z",
-    "updated_at": "2026-10-31T00:48:11Z",
-    "comments": 2,
+    "updated_at": "2026-10-31T17:01:52Z",
+    "comments": 3,
     "labels": [
       "Python",
       "Bug"
@@ -487,7 +487,7 @@
       "Feature"
     ],
     "body_preview": "### Problem Statement  Brotli is only half-supported by Google anyway, and appears \"somewhat underspecified\".  The python Brotli package (which builds on C libraries) had an RCE in it till 1.2.0. There is some reason to think this might not be the last security problem in that package.  sentry-python is, AFAICT, the only sentry SDK that actually uses brotli (when it is available).   Getting rid of...",
-    "is_new": true,
+    "is_new": false,
     "priority": "medium",
     "is_bug": false,
     "is_feature": true,
