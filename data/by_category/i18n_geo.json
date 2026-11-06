@@ -411,30 +411,5 @@
     "is_security": false,
     "is_good_first_issue": false,
     "is_help_wanted": false
-  },
-  {
-    "id": 5383309757,
-    "repo": "GeoNode/geonode",
-    "ecosystem": "django",
-    "ecosystem_label": "Django",
-    "category": "i18n_geo",
-    "category_label": "i18n & Geo",
-    "number": 14588,
-    "title": "Support uploading NetCDF (.nc) files as documents",
-    "url": "https://github.com/GeoNode/geonode/issues/14588",
-    "author": "TheStarsBlink",
-    "author_avatar": "https://avatars.githubusercontent.com/u/132535285?v=4",
-    "created_at": "2026-09-08T06:57:29Z",
-    "updated_at": "2026-09-08T07:23:22Z",
-    "comments": 1,
-    "labels": [],
-    "body_preview": "## Use case  I would like to upload NetCDF (`.nc`) files to GeoNode as **documents**, so users can catalogue, manage permissions, and download the original files. GeoServer publishing or map visualization is not required.  ## Current behavior  In my current checkout (GeoNode 5.1.0 dev), `.nc` is not included in `DOCUMENT_TYPE_MAP`. Adding `nc` to `ALLOWED_DOCUMENT_TYPES` alone does not enable it b...",
-    "is_new": false,
-    "priority": "low",
-    "is_bug": false,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
   }
 ]
