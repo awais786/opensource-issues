@@ -50,6 +50,31 @@
     "is_help_wanted": false
   },
   {
+    "id": 6243534619,
+    "repo": "saleor/saleor",
+    "ecosystem": "django",
+    "ecosystem_label": "Django",
+    "category": "ecommerce",
+    "category_label": "E-Commerce",
+    "number": 19999,
+    "title": "Entire-order voucher amount is a snapshot that ignores catalogue promotions not yet stored on checkout lines",
+    "url": "https://github.com/saleor/saleor/issues/19999",
+    "author": "radenpy",
+    "author_avatar": "https://avatars.githubusercontent.com/u/74736333?v=4",
+    "created_at": "2026-11-06T13:29:46Z",
+    "updated_at": "2026-11-06T13:29:46Z",
+    "comments": 0,
+    "labels": [],
+    "body_preview": "**Saleor version:** 3.23.44 (same logic in 3.23.3)  **What happened**  With a product discounted by a catalogue promotion in the checkout, a percentage `ENTIRE_ORDER` voucher can be computed from pre-promotion prices. The wrong amount then stays in `checkout.discount`, `subtotalPrice` and `totalPrice` on every query until a mutation that recalculates discounts (lines update, shipping address, deli...",
+    "is_new": true,
+    "priority": "low",
+    "is_bug": false,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 6201244876,
     "repo": "saleor/saleor",
     "ecosystem": "django",
@@ -62,8 +87,8 @@
     "author": "FrancescoPezzella",
     "author_avatar": "https://avatars.githubusercontent.com/u/204509862?v=4",
     "created_at": "2026-11-04T10:50:38Z",
-    "updated_at": "2026-11-04T10:50:38Z",
-    "comments": 0,
+    "updated_at": "2026-11-07T04:09:54Z",
+    "comments": 1,
     "labels": [
       "bug",
       "triage"

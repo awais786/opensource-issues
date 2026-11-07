@@ -102,7 +102,7 @@
       "5.1.x"
     ],
     "body_preview": "In the csv output there's a column reporting the total number of errors for a resource. The same number is repeated in all the lines in which the resource shows up. Fact is, if some errors are removed, also the other lines are affected, preventing the `diff` on the output files to find out validation changes.",
-    "is_new": true,
+    "is_new": false,
     "priority": "medium",
     "is_bug": false,
     "is_feature": true,
@@ -130,7 +130,7 @@
       "Breaking change"
     ],
     "body_preview": "**Description**  `featureinfo_custom_template` was a field in GeoNode's legacy metadata editor, intended to allow users to customize the information displayed by MapStore through the GetFeatureInfo action.  Although the GeoNode client still expects this field to be present when initializing the GetFeatureInfo information, customization is now handled entirely on the client side, rather than throug...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
