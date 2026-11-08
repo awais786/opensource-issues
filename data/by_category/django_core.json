@@ -16,7 +16,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "`CookieMiddleware.set_cookie()` raises `AttributeError` on Django 5.0+ when `expires` is a timezone-aware datetime:  ```   File \".../channels/sessions.py\", line 75, in set_cookie     expires = timezone.make_naive(expires, timezone.utc) AttributeError: module 'django.utils.timezone' has no attribute 'utc' ```  `django.utils.timezone.utc` was deprecated in Django 4.1 and removed in 5.0. channels req...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
