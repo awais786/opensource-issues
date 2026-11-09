@@ -141,7 +141,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "Daphne's standalone CLI already supports TLS through Twisted endpoint descriptions, but the Django `runserver` command always constructs a plain TCP endpoint and exposes no TLS configuration.  This prevents applications from using local HTTPS and Daphne's existing HTTP/2 support while retaining the standard `manage.py runserver` workflow, including IDE run/debug configurations, the configured ASGI...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

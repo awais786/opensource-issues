@@ -1,5 +1,33 @@
 [
   {
+    "id": 6272088130,
+    "repo": "pypa/pip",
+    "ecosystem": "python",
+    "ecosystem_label": "Python",
+    "category": "py_packaging",
+    "category_label": "Packaging & Build",
+    "number": 14432,
+    "title": "pip config edit expands $(...) and backticks in the config file path",
+    "url": "https://github.com/pypa/pip/issues/14432",
+    "author": "sucloudflare",
+    "author_avatar": "https://avatars.githubusercontent.com/u/135662753?v=4",
+    "created_at": "2026-11-08T14:45:53Z",
+    "updated_at": "2026-11-08T17:43:11Z",
+    "comments": 5,
+    "labels": [
+      "type: bug",
+      "S: needs triage"
+    ],
+    "body_preview": "### Description  open_in_editor in src/pip/_internal/commands/configuration.py runs the editor with subprocess.check_call(f'{editor} \"{fname}\"', shell=True). It rejects \" in the path, but inside double quotes the shell still expands $(...), backticks and $VAR, so such a path is interpreted instead of passed literally.  Reproduction (pip 27.0.dev0, Linux, Python 3.13)  HOME='/tmp/h$(echo X)' python...",
+    "is_new": true,
+    "priority": "high",
+    "is_bug": true,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 6268889148,
     "repo": "pypa/pip",
     "ecosystem": "python",
@@ -12,11 +40,11 @@
     "author": "mattip",
     "author_avatar": "https://avatars.githubusercontent.com/u/823911?v=4",
     "created_at": "2026-11-08T07:53:55Z",
-    "updated_at": "2026-11-08T08:19:44Z",
-    "comments": 2,
+    "updated_at": "2026-11-08T19:13:47Z",
+    "comments": 4,
     "labels": [
       "type: bug",
-      "S: needs triage"
+      "project: vendored dependency"
     ],
     "body_preview": "### Description  In SafeFileCach::get_body, the happy path is to return an open file https://github.com/pypa/pip/blob/4b71f36fb4dfbc87ce65ac4710eeccf81d379f55/src/pip/_internal/network/cache.py#L119  This is called by CacheController::_load_from_cache which never closes the file https://github.com/pypa/pip/blob/4b71f36fb4dfbc87ce65ac4710eeccf81d379f55/src/pip/_vendor/cachecontrol/controller.py#L15...",
     "is_new": true,
@@ -537,34 +565,6 @@
     "is_help_wanted": false
   },
   {
-    "id": 5307851957,
-    "repo": "pypa/setuptools",
-    "ecosystem": "python",
-    "ecosystem_label": "Python",
-    "category": "py_packaging",
-    "category_label": "Packaging & Build",
-    "number": 5322,
-    "title": "Setuptool",
-    "url": "https://github.com/pypa/setuptools/issues/5322",
-    "author": "vien97",
-    "author_avatar": "https://avatars.githubusercontent.com/u/202563433?v=4",
-    "created_at": "2026-09-01T04:35:59Z",
-    "updated_at": "2026-09-01T04:35:59Z",
-    "comments": 0,
-    "labels": [
-      "Needs Triage",
-      "distutils deprecation"
-    ],
-    "body_preview": "### setuptools version  Setuptool==84.0.0  ### Python version  Python 3.15  ### OS  Linux  ### Additional environment information  _No response_  ### Description  H\u00e3y \u0111\u1ea3m b\u1ea3o r\u1eb1ng t\u1ea5t c\u1ea3 th\u00f4ng tin c\u1ea7n thi\u1ebft \u0111\u1ec3 t\u00e1i hi\u1ec7n s\u1ef1 c\u1ed1 \u0111\u1ec1u \u0111\u01b0\u1ee3c tr\u00ecnh b\u00e0y \u0111\u1ea7y \u0111\u1ee7 trong c\u00e2u h\u1ecfi.  [KH\u00d4NG s\u1eed d\u1ee5ng h\u00ecnh \u1ea3nh m\u00e3 ngu\u1ed3n](https://meta.stackoverflow.com/q/285551) . H\u00e3y sao ch\u00e9p v\u0103n b\u1ea3n g\u1ed1c t\u1eeb tr\u00ecnh so\u1ea1n th\u1ea3o m\u00e3 c\u1ee7a b\u1ea1n,...",
-    "is_new": false,
-    "priority": "low",
-    "is_bug": false,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
     "id": 6261266695,
     "repo": "pypa/build",
     "ecosystem": "python",
@@ -685,8 +685,8 @@
     "author": "gaborbernat",
     "author_avatar": "https://avatars.githubusercontent.com/u/690238?v=4",
     "created_at": "2026-11-07T15:31:47Z",
-    "updated_at": "2026-11-08T10:57:37Z",
-    "comments": 5,
+    "updated_at": "2026-11-08T22:06:31Z",
+    "comments": 6,
     "labels": [
       "bug"
     ],
