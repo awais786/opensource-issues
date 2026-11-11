@@ -94,7 +94,7 @@
       "triage"
     ],
     "body_preview": "### What are you trying to achieve?  Hi, the issue should be relatively straight forward.  There are many instances of orphaned (dead code) Type Parameters in the code. I believe this is a leftover, when someone modernized the syntax. This is not automatically detected by any lint checkers.   An example:  `T = TypeVar(\"T\")` Type Var is declared, but then...  ``` def skip_invalid_literal[T](value:...",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,
