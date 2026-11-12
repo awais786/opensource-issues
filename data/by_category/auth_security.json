@@ -779,7 +779,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "**Problem Statement**  on a live database I was calling `populate_history --auto` which was always producing the same output between executions:  ``` Saving historical records for <class 'tcms.management.models.Version'> Starting bulk creating history models for <class 'tcms.management.models.Version'> instances 0-200 Finished saving historical records for <class 'tcms.management.models.Version'>...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

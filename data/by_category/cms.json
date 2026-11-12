@@ -99,7 +99,7 @@
       "Infrastructure"
     ],
     "body_preview": "### Problem statement  We need faster builds!  ### Proposed solution   @laymonage has been experimenting with Rspack and it works well enough(?)  ### Alternative solutions  _No response_  ### Additional context  _No response_  ### Working on this  Assigning @laymonage",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
@@ -128,7 +128,7 @@
       "status:Needs Maintainer Feedback"
     ],
     "body_preview": "### Problem statement  With recent trends in our issues, I think having such a large backlog of bug reports and feature requests is becoming a liability. It creates a lot of work for us to triage things promptly or else **people start creating PRs for things that are just not relevant**.  And for PRs, we also get a lot of volume. PRs need extensive manual input to figure out what to do with them,...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
@@ -639,7 +639,7 @@
     "comments": 2,
     "labels": [],
     "body_preview": "For our installation of django-CMS we must override the template `admin/cms/page/tree/base.html`. This to replace the WEBSITES selector against a department selector. Currently I can extend this template and replace the whole `{% block content %}` but it would be beneficial if this could be more fine grained, so that every element has its own overridable block.  Applyig this patch would be a good...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
