@@ -16,7 +16,7 @@
     "comments": 2,
     "labels": [],
     "body_preview": "Serializing a `#[serde(flatten)]` enum whose struct-variant field reports a large sequence length hint panics with \"capacity overflow\", even though no elements are written.  ```rust // Cargo.toml: serde = { version = \"1.0.229\", features = [\"derive\"] }, serde_json = \"1.0.154\" use serde::ser::{SerializeSeq, Serializer}; use serde::Serialize;  struct Hint; impl Serialize for Hint {     fn serialize<S...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
