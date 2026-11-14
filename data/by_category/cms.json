@@ -101,7 +101,7 @@
       "status:Unconfirmed"
     ],
     "body_preview": "### Issue summary  Copying a snippet that has an `InlinePanel`, on a model with `RevisionMixin` (so autosave is on), inserts another copy of each inline row on every save after the first. Each autosave and each click of Save adds one more row. If the inline model has a unique constraint, the first re-save raises an `IntegrityError` instead (a 500 in the admin).  This does not appear to be the same...",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,
@@ -637,14 +637,16 @@
     "author": "jrief",
     "author_avatar": "https://avatars.githubusercontent.com/u/1132472?v=4",
     "created_at": "2026-11-05T10:12:28Z",
-    "updated_at": "2026-11-05T15:19:50Z",
+    "updated_at": "2026-11-14T12:19:34Z",
     "comments": 2,
-    "labels": [],
+    "labels": [
+      "Feature request"
+    ],
     "body_preview": "For our installation of django-CMS we must override the template `admin/cms/page/tree/base.html`. This to replace the WEBSITES selector against a department selector. Currently I can extend this template and replace the whole `{% block content %}` but it would be beneficial if this could be more fine grained, so that every element has its own overridable block.  Applyig this patch would be a good...",
     "is_new": false,
-    "priority": "low",
+    "priority": "medium",
     "is_bug": false,
-    "is_feature": false,
+    "is_feature": true,
     "is_security": false,
     "is_good_first_issue": false,
     "is_help_wanted": false

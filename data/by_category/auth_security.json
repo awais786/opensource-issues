@@ -754,7 +754,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "`clean_duplicate_history --minutes N` can delete a changed historical record whose timestamp equals the time cutoff. That record is selected twice, both in the in-window queryset (`history_date__gte`) and as the extra comparison record (`history_date__lte`). When it compares the record with itself it treats the change as a duplicate.  A deterministic reproduction is to create two different values...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

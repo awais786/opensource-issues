@@ -16,7 +16,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "`ModelSearchForm` always builds its model choices from the default connection, even when its `searchqueryset` explicitly uses another backend. If those backends index different models, the form offers models absent from the selected backend and rejects valid models that only exist there.  With two configured backends that index different models  ```python form = ModelSearchForm(searchqueryset=Sear...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

@@ -12,10 +12,11 @@
     "author": "laikamari",
     "author_avatar": "https://avatars.githubusercontent.com/u/80819316?v=4",
     "created_at": "2026-11-12T21:32:55Z",
-    "updated_at": "2026-11-12T21:32:55Z",
-    "comments": 0,
+    "updated_at": "2026-11-13T20:13:57Z",
+    "comments": 1,
     "labels": [
       "C-bug",
+      "A-completion",
       "S-triage"
     ],
     "body_preview": "### Please complete the following tasks  - [x] I have searched the [discussions](https://github.com/clap-rs/clap/discussions) - [x] I have searched the [open](https://github.com/clap-rs/clap/issues) and [rejected](https://github.com/clap-rs/clap/issues?q=is%3Aissue+label%3AS-wont-fix+is%3Aclosed) issues  ### Rust Version  N/A \u2014 I'm reporting as a user of jj 0.47.1 (prebuilt by nixpkgs with rustc 1...",
@@ -429,6 +430,33 @@
     "is_help_wanted": false
   },
   {
+    "id": 6377110811,
+    "repo": "sharkdp/bat",
+    "ecosystem": "rust",
+    "ecosystem_label": "Rust",
+    "category": "rust_cli",
+    "category_label": "CLI & Tooling",
+    "number": 4124,
+    "title": "Syntax request: Confetti 1.0 (`.confetti`)",
+    "url": "https://github.com/sharkdp/bat/issues/4124",
+    "author": "unclechu",
+    "author_avatar": "https://avatars.githubusercontent.com/u/799353?v=4",
+    "created_at": "2026-11-13T18:03:03Z",
+    "updated_at": "2026-11-13T18:03:03Z",
+    "comments": 0,
+    "labels": [
+      "syntax-request"
+    ],
+    "body_preview": "**Syntax:** Confetti.sublime-syntax  I\u2019d like to propose syntax highlighting for [Confetti 1.0](https://confetti.hgs3.me/specification/), a small, application-independent directive syntax. It\u2019s used by [Lispico Confetti](https://github.com/unclechu/lispico-confetti) (it uses bat to render source location in case of evaluation failure with syntax highlighting).  I have a standalone Sublime Text syn...",
+    "is_new": true,
+    "priority": "low",
+    "is_bug": false,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 6306261491,
     "repo": "sharkdp/bat",
     "ecosystem": "rust",
@@ -522,8 +550,8 @@
     "author": "tadghh",
     "author_avatar": "https://avatars.githubusercontent.com/u/47073445?v=4",
     "created_at": "2026-10-17T20:02:48Z",
-    "updated_at": "2026-10-17T20:02:48Z",
-    "comments": 0,
+    "updated_at": "2026-11-14T00:36:55Z",
+    "comments": 2,
     "labels": [
       "feature-request"
     ],
