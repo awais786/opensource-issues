@@ -1,5 +1,33 @@
 [
   {
+    "id": 6392492123,
+    "repo": "pypa/pip",
+    "ecosystem": "python",
+    "ecosystem_label": "Python",
+    "category": "py_packaging",
+    "category_label": "Packaging & Build",
+    "number": 14438,
+    "title": "Git.get_url_rev_and_auth() fails on SCP-style stub URLs with Python 3.16 (urlsplit now validates ports)",
+    "url": "https://github.com/pypa/pip/issues/14438",
+    "author": "orsenthil",
+    "author_avatar": "https://avatars.githubusercontent.com/u/332330?v=4",
+    "created_at": "2026-11-14T16:02:00Z",
+    "updated_at": "2026-11-14T16:02:00Z",
+    "comments": 0,
+    "labels": [
+      "type: bug",
+      "S: needs triage"
+    ],
+    "body_preview": "### Description  I made a change in https://github.com/python/cpython/pull/159122 to make urlparse valid ate port early and reject non integer port.   This breaks some URLs that used to parse as valid previously by some APIs. For e.g  ``` ~/pip-repro \u276f python Python 3.15.2 (main, Oct 26 2026, 14:06:56) [Clang 23.1.3 ] on linux Type \"help\", \"copyright\", \"credits\" or \"license\" for more information....",
+    "is_new": true,
+    "priority": "high",
+    "is_bug": true,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 6389212011,
     "repo": "pypa/pip",
     "ecosystem": "python",
@@ -12,11 +40,11 @@
     "author": "webknjaz",
     "author_avatar": "https://avatars.githubusercontent.com/u/578543?v=4",
     "created_at": "2026-11-14T11:13:01Z",
-    "updated_at": "2026-11-14T11:13:01Z",
-    "comments": 0,
+    "updated_at": "2026-11-14T23:29:57Z",
+    "comments": 13,
     "labels": [
-      "type: bug",
-      "S: needs triage"
+      "type: docs",
+      "resolution: not a bug"
     ],
     "body_preview": "### Description  I have a `pip-tools` driven workflow in GHA that updates a matrix of constraint files that are then integrated via smth like `pip install -r ... -c constraint-<plat..>.txt` into `tox`. And this all works well in CI.  Yesterday, I merged a [PR](https://github.com/cherrypy/cheroot/pull/884) made by that workflow that among other changes *yesterday (Nov 13)*, which performed the foll...",
     "is_new": true,
@@ -102,7 +130,7 @@
       "project: vendored dependency"
     ],
     "body_preview": "### Description  In SafeFileCach::get_body, the happy path is to return an open file https://github.com/pypa/pip/blob/4b71f36fb4dfbc87ce65ac4710eeccf81d379f55/src/pip/_internal/network/cache.py#L119  This is called by CacheController::_load_from_cache which never closes the file https://github.com/pypa/pip/blob/4b71f36fb4dfbc87ce65ac4710eeccf81d379f55/src/pip/_vendor/cachecontrol/controller.py#L15...",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,
@@ -613,7 +641,7 @@
       "bug"
     ],
     "body_preview": "This issue was created with AI assistance. Whether to fix the reported behavior remains to be decided.  With the default pip installer, a package on the caller's `PYTHONPATH` can cause build to skip installing a requirement returned by `get_requires_for_build_wheel` into its isolated environment. The later build hook cannot import it, and the build fails. Removing `PYTHONPATH` makes the same proje...",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,
@@ -640,7 +668,7 @@
       "bug"
     ],
     "body_preview": "This issue was created with AI assistance. Whether to fix the reported behavior remains to be decided.  `python -m build` accepts a `backend-path` entry that is a symlink to a directory outside the source tree and builds a wheel with code from that directory. Naming the same directory directly as `../outside` is rejected. [PEP 517](https://peps.python.org/pep-0517/#in-tree-build-backends) requires...",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,
@@ -667,7 +695,7 @@
       "bug"
     ],
     "body_preview": "This issue was created with AI assistance. Whether to fix the reported behavior remains to be decided.  When a `[build-system]` table has an unknown quoted key containing terminal controls, `python -m build` prints those controls in its own error message. A key containing `ESC[2K` and a carriage return can make a terminal show a success line in place of the error. The command still exits with stat...",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,
@@ -694,7 +722,7 @@
       "bug"
     ],
     "body_preview": "This issue was created with AI assistance. Whether to fix the reported behavior remains to be decided.  On `main`, `python -m build demo-1.0.tar.gz` can write an archive member outside its temporary extraction directory through a symlink chain. The write happens before build rejects the archive for lacking a Python project. Build 1.6.1 and `python -m tarfile --filter data` reject the same archive...",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,
@@ -721,7 +749,7 @@
       "bug"
     ],
     "body_preview": "This issue was created with AI assistance. Whether to fix the reported behavior remains to be decided.  Several malformed project configurations and archive inputs fail with raw Python exceptions instead of a `BuildException`. API callers following the documented `except BuildException` pattern do not catch them, and the CLI prints a traceback before its error line. The inputs are rejected either...",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,
@@ -748,7 +776,7 @@
       "bug"
     ],
     "body_preview": "This issue was created with AI assistance. Whether to fix the reported behavior remains to be decided.  When a wheel hook returns a path containing a directory, `ProjectBuilder.build()` returns that path, but the CLI strips it to a basename before writing `--report`. If an older wheel with the same basename remains at the output root, the report records its path and SHA-256 while the hook's wheel...",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,
