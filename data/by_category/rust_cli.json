@@ -1,5 +1,33 @@
 [
   {
+    "id": 6417434800,
+    "repo": "clap-rs/clap",
+    "ecosystem": "rust",
+    "ecosystem_label": "Rust",
+    "category": "rust_cli",
+    "category_label": "CLI & Tooling",
+    "number": 6573,
+    "title": "[Feature]: Built-in CLI Version Update Prompt Mechanism",
+    "url": "https://github.com/clap-rs/clap/issues/6573",
+    "author": "wiseaidev",
+    "author_avatar": "https://avatars.githubusercontent.com/u/62179149?v=4",
+    "created_at": "2026-11-16T08:37:53Z",
+    "updated_at": "2026-11-16T13:17:35Z",
+    "comments": 2,
+    "labels": [
+      "C-enhancement",
+      "S-triage"
+    ],
+    "body_preview": "### Please complete the following tasks  - [x] I have searched the [discussions](https://github.com/clap-rs/clap/discussions) - [x] I have searched the [open](https://github.com/clap-rs/clap/issues) and [rejected](https://github.com/clap-rs/clap/issues?q=is%3Aissue+label%3AS-wont-fix+is%3Aclosed) issues  ### Clap Version  main  ### Describe your use case  Hiya (\u00b4\u2022 \u03c9 \u2022)\uff89!  This feature request has...",
+    "is_new": true,
+    "priority": "medium",
+    "is_bug": false,
+    "is_feature": true,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 6402933108,
     "repo": "clap-rs/clap",
     "ecosystem": "rust",
@@ -530,7 +558,7 @@
       "bug"
     ],
     "body_preview": "`bat --language NoSuch` correctly errors with `unknown syntax` when color is on (`--color=always`, or a TTY). With `--color=never`, or `--color=auto` when stdout is redirected/piped, the same unknown language is accepted: bat prints the file as plain text and exits 0 with no message. The same split applies to `--map-syntax glob:NoSuch`.  Scripts and CI that pipe `bat` (the common case) therefore c...",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,

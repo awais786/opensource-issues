@@ -33,7 +33,7 @@
     "category_label": "Database & ORM",
     "number": 671,
     "title": "Choices.subset drops selected choices inside option groups",
-    "url": "https://github.com/jazzband/django-model-utils/issues/671",
+    "url": "https://github.com/django-commons/django-model-utils/issues/671",
     "author": "IlyaKhalafi",
     "author_avatar": "https://avatars.githubusercontent.com/u/80855937?v=4",
     "created_at": "2026-11-06T17:36:30Z",
