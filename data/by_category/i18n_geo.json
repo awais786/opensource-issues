@@ -125,6 +125,34 @@
     "is_help_wanted": false
   },
   {
+    "id": 6447140898,
+    "repo": "GeoNode/geonode",
+    "ecosystem": "django",
+    "ecosystem_label": "Django",
+    "category": "i18n_geo",
+    "category_label": "i18n & Geo",
+    "number": 14772,
+    "title": "Cloning a resource does not copy its custom metadata",
+    "url": "https://github.com/GeoNode/geonode/issues/14772",
+    "author": "etj",
+    "author_avatar": "https://avatars.githubusercontent.com/u/717359?v=4",
+    "created_at": "2026-11-17T14:46:27Z",
+    "updated_at": "2026-11-17T15:07:32Z",
+    "comments": 0,
+    "labels": [
+      "bug",
+      "metadata"
+    ],
+    "body_preview": "`BaseResourceManager.copy()` (`geonode/resource/manager.py`) re-links each join-table keyed by the source resource's pk individually and by hand: keywords, regions, tkeywords, contacts (`ContactRole`), and `LinkedResource`. `SparseField` \u2014 the table backing custom/sparse metadata fields \u2014 isn't in that list and is never copied, so any custom metadata on the source resource is silently dropped from...",
+    "is_new": true,
+    "priority": "high",
+    "is_bug": true,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 6398945351,
     "repo": "GeoNode/geonode",
     "ecosystem": "django",
