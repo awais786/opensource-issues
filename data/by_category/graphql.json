@@ -41,7 +41,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "An older tag (0.86.5) declared 0.86.4; recent ones match.  I've been testing a small read-only check for release-version consistency: on a tag push it checks that the tag names the version its commit declares, and fails if it doesn't. Would you be open to trying it in one release workflow? I'm particularly interested in whether it adds anything to your existing checks.  Five scenarios running in p...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

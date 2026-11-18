@@ -326,8 +326,8 @@
     "author": "oreilm49",
     "author_avatar": "https://avatars.githubusercontent.com/u/34400288?v=4",
     "created_at": "2026-11-17T14:56:45Z",
-    "updated_at": "2026-11-17T14:56:45Z",
-    "comments": 0,
+    "updated_at": "2026-11-17T16:23:39Z",
+    "comments": 1,
     "labels": [
       "enhancement"
     ],
@@ -336,33 +336,6 @@
     "priority": "medium",
     "is_bug": false,
     "is_feature": true,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
-    "id": 5203003587,
-    "repo": "jazzband/django-two-factor-auth",
-    "ecosystem": "django",
-    "ecosystem_label": "Django",
-    "category": "auth_security",
-    "category_label": "Auth & Security",
-    "number": 800,
-    "title": "BUG: Enabling phonenumber app when it was not used previously leads to corrupted database state",
-    "url": "https://github.com/jazzband/django-two-factor-auth/issues/800",
-    "author": "esperonus-karolis",
-    "author_avatar": "https://avatars.githubusercontent.com/u/40856414?v=4",
-    "created_at": "2026-08-20T11:44:26Z",
-    "updated_at": "2026-08-20T11:44:26Z",
-    "comments": 0,
-    "labels": [
-      "bug"
-    ],
-    "body_preview": "<!--- Provide a general summary of the issue in the Title above -->  ## Expected Behavior  Enabling `two_factor.plugins.phonenumber` after the system is live and running migrations creates `two_factor_phonedevice` table.  ## Current Behavior  `PhoneDevice` model table is not created.  ## Possible Solution  <!--- Not obligatory, but suggest a fix/reason for the bug -->  ## Steps to Reproduce (for b...",
-    "is_new": false,
-    "priority": "high",
-    "is_bug": true,
-    "is_feature": false,
     "is_security": false,
     "is_good_first_issue": false,
     "is_help_wanted": false
