@@ -41,7 +41,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "### Description  The package bundles multiple upstream Javascript files, but omits their origin and license. While the license might can be ignored due to the upstream files usually being subject to the 0BSD license, it highly complicates license reviews.  The bundled versions are not available in a machine-readable fashion from the distribution and can only be derived from the changelog and/or by...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

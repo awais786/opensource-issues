@@ -1024,7 +1024,7 @@
       "Next Major"
     ],
     "body_preview": "We want to send JSON values without stringifying them from the SDK for various reasons. This only applies to GenAI attributes in automatic instrumentation. I don't have many details right now.",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
