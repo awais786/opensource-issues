@@ -51,7 +51,7 @@
       "T-performance"
     ],
     "body_preview": "I've been experimenting with Linux UDP batching on top of Tokio, mainly to see how much overhead we could avoid by sending and receiving multiple datagrams in a single syscall instead of processing them individually.  I've got a working prototype now, along with some benchmarks comparing regular Tokio UDP, grouped nonblocking I/O, and native batching.  ## The idea  Right now, `UdpSocket::send_to()...",
-    "is_new": true,
+    "is_new": false,
     "priority": "medium",
     "is_bug": false,
     "is_feature": true,

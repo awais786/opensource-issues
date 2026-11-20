@@ -269,7 +269,7 @@
     "comments": 1,
     "labels": [],
     "body_preview": "### What are you trying to achieve?  Serve storefront product listings that use the `stockAvailability` filter under moderate concurrency (ASGI/uvicorn, 2 workers) without requests queueing behind a process-wide lock.  ### Steps to reproduce the problem  Environment: Saleor 3.23.49 (the module is unchanged on `main` as of 2026-11-13), uvicorn with 2 worker processes, PostgreSQL 17.  1. `saleor/gra...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
