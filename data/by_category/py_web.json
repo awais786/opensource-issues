@@ -137,7 +137,7 @@
     "author": "hunter-bot-cheater",
     "author_avatar": "https://avatars.githubusercontent.com/u/182210419?v=4",
     "created_at": "2026-11-10T11:49:10Z",
-    "updated_at": "2026-11-18T05:24:19Z",
+    "updated_at": "2026-11-20T19:43:35Z",
     "comments": 0,
     "labels": [],
     "body_preview": "### Bug description  `PowerShellComplete.get_completion_args()` splits the `COMP_WORDS` environment variable with `split_arg_string()`, which is implemented on top of `shlex` with `posix=True`. In PowerShell a backslash is an ordinary character (it is the path separator on Windows), while in POSIX shells it escapes the next character, so every backslash in an unquoted Windows path is dropped befor...",

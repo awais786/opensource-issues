@@ -336,6 +336,36 @@
     "is_help_wanted": false
   },
   {
+    "id": 5956158560,
+    "repo": "wagtail/wagtail",
+    "ecosystem": "django",
+    "ecosystem_label": "Django",
+    "category": "cms",
+    "category_label": "CMS & Content",
+    "number": 14749,
+    "title": "Support for sitemap indexes",
+    "url": "https://github.com/wagtail/wagtail/issues/14749",
+    "author": "thibaudcolas",
+    "author_avatar": "https://avatars.githubusercontent.com/u/877585?v=4",
+    "created_at": "2026-10-21T07:20:08Z",
+    "updated_at": "2026-11-05T13:44:16Z",
+    "comments": 2,
+    "labels": [
+      "type:Enhancement",
+      "component:i18n",
+      "component:Sitemaps",
+      "status:Needs Community Feedback"
+    ],
+    "body_preview": "### Problem statement  Follow-up to #1698 / #2329 - from [Google sitemap best practices](https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap), there is a hard cap on 50k URLs or 50MB (uncompressed). It feels likely we would hit this on lots of sites with high page counts.  My AI (\u2026) says we would hit 50MB _before_ 50k URLs for sites with more than 10 translations per...",
+    "is_new": false,
+    "priority": "medium",
+    "is_bug": false,
+    "is_feature": true,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 5474827603,
     "repo": "wagtail/django-modelcluster",
     "ecosystem": "django",

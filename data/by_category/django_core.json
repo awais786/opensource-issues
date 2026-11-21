@@ -116,7 +116,7 @@
     "comments": 1,
     "labels": [],
     "body_preview": "## Summary  The WebSocket connection scope in `specs/www.rst` restricts `asgi[\"spec_version\"]` to 2.0\u20132.3, although the same document defines versions 2.4 and 2.5. This leaves the documented scope values inconsistent with the specification's version history. This report concerns documentation only; it does not establish an asgiref runtime defect.  ## Steps to reproduce  1. Open `specs/www.rst` at...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

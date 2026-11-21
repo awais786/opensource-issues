@@ -16,7 +16,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "#### Description  The stub strategy fails when a declaration has lazy parameters. The internal `DictFactory` used to resolve those parameters also runs with the stub strategy, so consumers receive a `StubObject` where they expect a mapping. This affects the documented use of `SelfAttribute` in Faker keyword arguments and lazy post-generation arguments.  #### To Reproduce  ##### Model / Factory cod...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

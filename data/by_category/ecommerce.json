@@ -344,7 +344,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "`Charge._calculate_refund_amount()` checks `if amount` to decide whether a partial amount was passed:  https://github.com/dj-stripe/dj-stripe/blob/40882bbcd7e44710244372dec44d9f0e494c7432/djstripe/models/core.py#L294-L299  `Decimal(\"0\")` is falsy, so `charge.refund(amount=Decimal(\"0\"))` takes the full-refund branch and refunds the whole remaining balance. If an app works out a partial refund amoun...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
