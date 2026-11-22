@@ -248,7 +248,7 @@
     "comments": 1,
     "labels": [],
     "body_preview": "**Is your feature request related to a problem? Please describe.** No  **Describe the solution you'd like** It would be nice to be able to upgrade Postgres to v18.  **Describe alternatives you've considered** It seems like I maybe just could, but it doesnt look like GeoNode officially supports it.  **Additional context** I couldnt find anywhere that listed the supported versions.",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

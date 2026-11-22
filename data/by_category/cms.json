@@ -336,36 +336,6 @@
     "is_help_wanted": false
   },
   {
-    "id": 5956158560,
-    "repo": "wagtail/wagtail",
-    "ecosystem": "django",
-    "ecosystem_label": "Django",
-    "category": "cms",
-    "category_label": "CMS & Content",
-    "number": 14749,
-    "title": "Support for sitemap indexes",
-    "url": "https://github.com/wagtail/wagtail/issues/14749",
-    "author": "thibaudcolas",
-    "author_avatar": "https://avatars.githubusercontent.com/u/877585?v=4",
-    "created_at": "2026-10-21T07:20:08Z",
-    "updated_at": "2026-11-05T13:44:16Z",
-    "comments": 2,
-    "labels": [
-      "type:Enhancement",
-      "component:i18n",
-      "component:Sitemaps",
-      "status:Needs Community Feedback"
-    ],
-    "body_preview": "### Problem statement  Follow-up to #1698 / #2329 - from [Google sitemap best practices](https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap), there is a hard cap on 50k URLs or 50MB (uncompressed). It feels likely we would hit this on lots of sites with high page counts.  My AI (\u2026) says we would hit 50MB _before_ 50k URLs for sites with more than 10 translations per...",
-    "is_new": false,
-    "priority": "medium",
-    "is_bug": false,
-    "is_feature": true,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
     "id": 5474827603,
     "repo": "wagtail/django-modelcluster",
     "ecosystem": "django",
@@ -518,36 +488,6 @@
     "is_security": false,
     "is_good_first_issue": false,
     "is_help_wanted": false
-  },
-  {
-    "id": 5234042212,
-    "repo": "wagtail/wagtail-localize",
-    "ecosystem": "django",
-    "ecosystem_label": "Django",
-    "category": "cms",
-    "category_label": "CMS & Content",
-    "number": 956,
-    "title": "Move ModelAdmin support out of wagtail-localize",
-    "url": "https://github.com/wagtail/wagtail-localize/issues/956",
-    "author": "thibaudcolas",
-    "author_avatar": "https://avatars.githubusercontent.com/u/877585?v=4",
-    "created_at": "2026-08-24T11:09:57Z",
-    "updated_at": "2026-10-08T10:52:31Z",
-    "comments": 0,
-    "labels": [
-      "type:enhancement",
-      "help wanted",
-      "component:Backend",
-      "dependencies"
-    ],
-    "body_preview": "### Problem statement  I see #949 is blocked by ModelAdmin updates (https://github.com/wagtail-nest/wagtail-modeladmin/pull/65). Now that ModelAdmin is outside Wagtail core, in the Nest organization, it doesn\u2019t feel like work on it should hold up other improvements to this package.  ### Proposed solution  Move the wagtail-localize ModelAdmin work to the ModelAdmin package, with an optional `[local...",
-    "is_new": false,
-    "priority": "medium",
-    "is_bug": false,
-    "is_feature": true,
-    "is_security": false,
-    "is_good_first_issue": true,
-    "is_help_wanted": true
   },
   {
     "id": 6492314699,

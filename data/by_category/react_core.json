@@ -1,5 +1,32 @@
 [
   {
+    "id": 6536346842,
+    "repo": "facebook/react",
+    "ecosystem": "react",
+    "ecosystem_label": "React",
+    "category": "react_core",
+    "category_label": "React Core",
+    "number": 38345,
+    "title": "Bug: stupid empty garbage issues",
+    "url": "https://github.com/react/react/issues/38345",
+    "author": "tj-commits",
+    "author_avatar": "https://avatars.githubusercontent.com/u/158522817?v=4",
+    "created_at": "2026-11-22T00:30:13Z",
+    "updated_at": "2026-11-22T00:30:13Z",
+    "comments": 0,
+    "labels": [
+      "Status: Unconfirmed"
+    ],
+    "body_preview": "#38277 and others from @10wandile @vinculbr-sketch and other bastards  maybe make some script to auto close all issues with nothing in the fields.",
+    "is_new": true,
+    "priority": "low",
+    "is_bug": false,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 6524313522,
     "repo": "facebook/react",
     "ecosystem": "react",
@@ -106,31 +133,6 @@
     "is_help_wanted": false
   },
   {
-    "id": 6471957982,
-    "repo": "facebook/react",
-    "ecosystem": "react",
-    "ecosystem_label": "React",
-    "category": "react_core",
-    "category_label": "React Core",
-    "number": 38306,
-    "title": "gitGost open proxy test",
-    "url": "https://github.com/react/react/issues/38306",
-    "author": "gitgost-anonymous",
-    "author_avatar": "https://avatars.githubusercontent.com/u/246907436?v=4",
-    "created_at": "2026-11-18T16:37:36Z",
-    "updated_at": "2026-11-18T16:37:36Z",
-    "comments": 0,
-    "labels": [],
-    "body_preview": "testing if gitGost allows anonymous issue creation in arbitrary repos  ---  *gitGost helps developers protect their privacy by removing identifying information from commits and squashing changes.*  *While this may limit context for maintainers, remember that not everyone enjoys the same freedoms. For some, privacy is a necessity.*  *Learn more at [gitGost](https://gitgost.livrasand.com).*",
-    "is_new": true,
-    "priority": "low",
-    "is_bug": false,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
     "id": 6518234493,
     "repo": "remix-run/react-router",
     "ecosystem": "react",
@@ -195,7 +197,7 @@
     "author": "strooooke",
     "author_avatar": "https://avatars.githubusercontent.com/u/856723?v=4",
     "created_at": "2026-11-02T12:56:54Z",
-    "updated_at": "2026-11-12T08:16:38Z",
+    "updated_at": "2026-11-21T16:41:20Z",
     "comments": 0,
     "labels": [
       "bug",
