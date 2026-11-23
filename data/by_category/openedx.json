@@ -243,7 +243,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "**Env:** `master` dev server against a Tutor (Verawood) LMS, demo course  **Preconditions:** - Courseware search is enabled for the course: the `courseware.mfe_courseware_search` waffle flag is on, and the course is indexed. - A query returns more results than fit on the screen. In the demo course, `open edx` returns 20.  **Steps to reproduce:** 1. Open the course home and click **Search within th...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
