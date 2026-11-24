@@ -51,7 +51,7 @@
       "C-feature-request"
     ],
     "body_preview": "### Problem  Batching messages from a `broadcast::Receiver` is possible with the existing `recv()` and `try_recv()` APIs, but the documentation doesn't show how to do it without losing lag notifications.  A typical implementation awaits the first message, then drains available messages using `while let Ok(value) = rx.try_recv()`.  The problem is that this loop stops on any error, including `Lagged...",
-    "is_new": true,
+    "is_new": false,
     "priority": "medium",
     "is_bug": false,
     "is_feature": true,

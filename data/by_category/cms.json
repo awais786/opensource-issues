@@ -1,5 +1,34 @@
 [
   {
+    "id": 6577145913,
+    "repo": "wagtail/wagtail",
+    "ecosystem": "django",
+    "ecosystem_label": "Django",
+    "category": "cms",
+    "category_label": "CMS & Content",
+    "number": 14834,
+    "title": "`assertPageIsEditable` and `assertPageIsPreviewable` break on pages with stream fields",
+    "url": "https://github.com/wagtail/wagtail/issues/14834",
+    "author": "Mr0grog",
+    "author_avatar": "https://avatars.githubusercontent.com/u/74178?v=4",
+    "created_at": "2026-11-24T07:49:58Z",
+    "updated_at": "2026-11-24T15:57:27Z",
+    "comments": 2,
+    "labels": [
+      "type:Bug",
+      "type:Cleanup/Optimisation",
+      "DX"
+    ],
+    "body_preview": "### Issue summary  On page models with stream fields, the `assertPageIsEditable` and `assertPageIsPreviewable` assertions will always fail with an error about the `-count` field for the stream field (unless you manually specify a good value for the assertion\u2019s `post_data` kwarg).  For example, on a `HomePage` model with a stream field named `body`, calling `assertPageIsEditable()` raises `Assertio...",
+    "is_new": true,
+    "priority": "high",
+    "is_bug": true,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 6443075441,
     "repo": "wagtail/wagtail",
     "ecosystem": "django",
@@ -21,7 +50,7 @@
       "SEO"
     ],
     "body_preview": "### Problem statement  Follow-up to #14737. We want to refine the UI / how it\u2019s integrated in the CMS, based on feedback and user needs still unaddressed.  ### Proposed solution  - [ ] Preview images as as well as title / description - [ ] Better length checks - [ ] More integrated guidance  ### Alternative solutions  _No response_  ### Additional context  _No response_  ### Working on this  Assig...",
-    "is_new": true,
+    "is_new": false,
     "priority": "medium",
     "is_bug": false,
     "is_feature": true,
@@ -48,7 +77,7 @@
       "type:Bug"
     ],
     "body_preview": "### Issue summary  In the image chooser modal, if I switch the layout (grid / list) while I am on page 2 or a later page, the results reload and I am sent back to page 1. The layout changes correctly, but the page I was on is lost.  https://github.com/user-attachments/assets/108c06d4-a442-465f-88df-d290c9f46426  ### Steps to reproduce  1. Start a new project with `wagtail start myproject` and add...",
-    "is_new": true,
+    "is_new": false,
     "priority": "high",
     "is_bug": true,
     "is_feature": false,

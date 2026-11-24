@@ -41,7 +41,7 @@
     "comments": 1,
     "labels": [],
     "body_preview": "When a string arrives where another type is expected, the error message quotes the entire string through `Debug` ([serde_core/src/de/mod.rs#L410](https://github.com/serde-rs/serde/blob/v1.0.229/serde_core/src/de/mod.rs#L410), serde 1.0.229):  ```rust Str(s) => write!(formatter, \"string {:?}\", s), ```  So a type mismatch on a long string produces an error message at least as long as the string, and...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
