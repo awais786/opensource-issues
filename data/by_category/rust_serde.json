@@ -16,7 +16,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "Currently, implementations such as `Serialize for [T; N]` are implemented in the \"old\" way of expanding a macro for a finite set of array lengths `N`:  https://github.com/serde-rs/serde/blob/e306b0c7c40ad21d5bdf52bcd20da513904682ae/serde_core/src/ser/impls.rs#L143-L171  Unfortunately, this prevents automatic derives of structs that contain an array whose length is a const generic parameter, or tha...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

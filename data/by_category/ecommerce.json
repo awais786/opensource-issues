@@ -16,7 +16,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "Should you get the error:  TemplateSyntaxError at /dashboard/users/ Could not parse the remainder: '=column.order_by_alias.next' from 'table.prefixed_order_by_field=column.order_by_alias.next'  It's because you have django-tables > 2.7.  This templatetag has been renamed:  https://github.com/django-oscar/django- oscar/blob/a5ed3c9c17d4cf6ee18aa9795b493172416ab68b/src/oscar/templates/oscar/dashboar...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
