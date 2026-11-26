@@ -151,7 +151,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "Upgrading from 3.0.1 to 3.0.5 (Django 5.2), a few admin regressions show up in a stock setup. Each item below has a reproduction and the CSS/template workaround we are using; happy to turn them into a PR if that helps.  **Environment:** django-jazzmin 3.0.5, Django 5.2.19 and 6.0.10, Python 3.13\u20133.15, default theme.  ### 1. `navbar-<colour>` from `JAZZMIN_UI_TWEAKS` has no effect  ```python JAZZMI...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
