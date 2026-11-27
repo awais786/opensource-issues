@@ -16,7 +16,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "## Problem  The Dependencies section of the setup guide lists Django 3.2+ and Python 3.7+. The current checkout declares Django 4.2+ and Python 3.10+ in `setup.py`. Could the documentation be aligned with those package requirements?  ## Environment  - Django Model Utils version: source commit `9724749c0aae` - Django version: not needed to reproduce this documentation mismatch - Python version: not...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,

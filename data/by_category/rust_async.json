@@ -1,34 +1,5 @@
 [
   {
-    "id": 6593870192,
-    "repo": "tokio-rs/tokio",
-    "ecosystem": "rust",
-    "ecosystem_label": "Rust",
-    "category": "rust_async",
-    "category_label": "Async & Web",
-    "number": 8828,
-    "title": "Registration of `AsyncFd` from any `T: From<OwnedFd>`",
-    "url": "https://github.com/tokio-rs/tokio/issues/8828",
-    "author": "cbranch",
-    "author_avatar": "https://avatars.githubusercontent.com/u/341121?v=4",
-    "created_at": "2026-11-24T23:54:48Z",
-    "updated_at": "2026-11-25T02:05:36Z",
-    "comments": 0,
-    "labels": [
-      "A-tokio",
-      "M-io",
-      "C-feature-request"
-    ],
-    "body_preview": "**Is your feature request related to a problem? Please describe.** As of version 1.53.3, there is no way to create an `AsyncFd` with purely safe Rust, even though identical constructions are possible with other tokio types e.g. a conversion chain of `std::os::fd::OwnedFd` -> `std::net::UdpSocket` -> `tokio::net::UdpSocket`.  **Describe the solution you'd like** The trivial implementation of this i...",
-    "is_new": true,
-    "priority": "medium",
-    "is_bug": false,
-    "is_feature": true,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
     "id": 6532328061,
     "repo": "tokio-rs/tokio",
     "ecosystem": "rust",
@@ -41,8 +12,8 @@
     "author": "Hawk777",
     "author_avatar": "https://avatars.githubusercontent.com/u/365236?v=4",
     "created_at": "2026-11-21T17:48:23Z",
-    "updated_at": "2026-11-21T20:04:49Z",
-    "comments": 0,
+    "updated_at": "2026-11-27T10:53:20Z",
+    "comments": 1,
     "labels": [
       "C-bug",
       "T-docs",
@@ -265,7 +236,7 @@
     "author": "robjtede",
     "author_avatar": "https://avatars.githubusercontent.com/u/3316789?v=4",
     "created_at": "2026-11-26T04:29:07Z",
-    "updated_at": "2026-11-26T04:31:00Z",
+    "updated_at": "2026-11-27T15:28:47Z",
     "comments": 0,
     "labels": [
       "A-awc",
