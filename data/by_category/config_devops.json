@@ -789,32 +789,5 @@
     "is_security": false,
     "is_good_first_issue": false,
     "is_help_wanted": false
-  },
-  {
-    "id": 6464924780,
-    "repo": "getsentry/sentry-python",
-    "ecosystem": "django",
-    "ecosystem_label": "Django",
-    "category": "config_devops",
-    "category_label": "Config & DevOps",
-    "number": 8323,
-    "title": "Enforce sentry-conventions in integrations",
-    "url": "https://github.com/getsentry/sentry-python/issues/8323",
-    "author": "linear-code[bot]",
-    "author_avatar": "https://avatars.githubusercontent.com/in/1658531?v=4",
-    "created_at": "2026-11-18T10:18:48Z",
-    "updated_at": "2026-11-25T13:52:48Z",
-    "comments": 1,
-    "labels": [
-      "Python"
-    ],
-    "body_preview": "",
-    "is_new": false,
-    "priority": "low",
-    "is_bug": false,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
   }
 ]

@@ -1,5 +1,32 @@
 [
   {
+    "id": 6655948622,
+    "repo": "vitejs/vite",
+    "ecosystem": "react",
+    "ecosystem_label": "React",
+    "category": "react_build",
+    "category_label": "Build & Tooling",
+    "number": 24245,
+    "title": "In dev, `this.resolve()` answers an id a plugin resolved as a string without `external`, unlike `vite build` and `ResolvedId`",
+    "url": "https://github.com/vitejs/vite/issues/24245",
+    "author": "YevheniiKotyrlo",
+    "author_avatar": "https://avatars.githubusercontent.com/u/44449990?v=4",
+    "created_at": "2026-11-27T23:15:40Z",
+    "updated_at": "2026-11-27T23:36:44Z",
+    "comments": 0,
+    "labels": [
+      "pending triage"
+    ],
+    "body_preview": "### Describe the bug  In dev, `this.resolve()` answers with what the plugin container's `resolveId` builds. When the plugin that resolves the id returns a string, [`partial`](https://github.com/vitejs/vite/blob/7d0c054f41ba1107a1d7d9ddae23930d9d6b4f8e/packages/vite/src/node/server/pluginContainer.ts#L396) only [gets that `id`](https://github.com/vitejs/vite/blob/7d0c054f41ba1107a1d7d9ddae23930d9d6...",
+    "is_new": true,
+    "priority": "low",
+    "is_bug": false,
+    "is_feature": false,
+    "is_security": false,
+    "is_good_first_issue": false,
+    "is_help_wanted": false
+  },
+  {
     "id": 6647216975,
     "repo": "vitejs/vite",
     "ecosystem": "react",
@@ -137,34 +164,6 @@
     "is_help_wanted": false
   },
   {
-    "id": 6525220202,
-    "repo": "vitejs/vite",
-    "ecosystem": "react",
-    "ecosystem_label": "React",
-    "category": "react_build",
-    "category_label": "Build & Tooling",
-    "number": 24172,
-    "title": "Dev server pins a CPU core forever on Windows after vite build (or any tool) deletes and recreates a watched folder",
-    "url": "https://github.com/vitejs/vite/issues/24172",
-    "author": "imunisasi",
-    "author_avatar": "https://avatars.githubusercontent.com/u/60685489?v=4",
-    "created_at": "2026-11-21T05:58:02Z",
-    "updated_at": "2026-11-26T12:06:37Z",
-    "comments": 1,
-    "labels": [
-      "pending triage",
-      "feat: watcher"
-    ],
-    "body_preview": "**Environment**  - vite 8.2.1 and 8.3.7, both bundling chokidar 3.6.0 with vite's `patches/chokidar@3.6.0.patch`; the 8.2.2 to   8.4.0-beta.1 changelogs carry no change in this area, and 8.3.8 was not tested - Node v24.18.0 (libuv 1.52.1), Windows 10 Pro 10.0.19045, NTFS - Seen with SvelteKit apps using adapter-node or adapter-static (both wipe and rewrite `build/`), but the repro   below needs no...",
-    "is_new": true,
-    "priority": "low",
-    "is_bug": false,
-    "is_feature": false,
-    "is_security": false,
-    "is_good_first_issue": false,
-    "is_help_wanted": false
-  },
-  {
     "id": 6543408074,
     "repo": "evanw/esbuild",
     "ecosystem": "react",
@@ -206,7 +205,7 @@
     "comments": 0,
     "labels": [],
     "body_preview": "<!-- When reporting a bug or requesting a feature, please do the following:  * Describe what esbuild is doing incorrectly and what it should be doing instead.  * Provide a way to reproduce the issue. The best way to do this is to demonstrate the issue on the playground (https://esbuild.github.io/try/) and paste the URL here. A link to a minimal code sample with instructions for how to reproduce th...",
-    "is_new": true,
+    "is_new": false,
     "priority": "low",
     "is_bug": false,
     "is_feature": false,
